@@ -1,0 +1,51 @@
+.topic_kn_2_0_0 {
+    &__title {
+        text-align: center;
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 23px;
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        overflow-x: scroll;
+        position: relative;
+        // &::-webkit-scrollbar-track {
+        //     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        //     border-radius: 10px;
+        //     background-color: #F5F5F5;
+        // }
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 12px;
+            margin-top: -20px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+            background-color: #FFF;
+        }
+    }
+    &__item {
+        position: relative;
+    }
+    &__pic {
+        width: 420px;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__content {
+        position: absolute;
+        bottom: 0;
+        background: #BEE0FF;
+        padding: 18px;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+    }
+}

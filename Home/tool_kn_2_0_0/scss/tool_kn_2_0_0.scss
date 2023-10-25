@@ -1,0 +1,27 @@
+.tool_kn_2_0_0 {
+    position: fixed;
+    right: 0;
+    top: 50vh;
+    display: flex;
+    flex-direction: column;
+    background: #051b52cc;
+    border-radius: 20px 0 0 20px;
+    padding: 20px 10px;
+    &__item {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
