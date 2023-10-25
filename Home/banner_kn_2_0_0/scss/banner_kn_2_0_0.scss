@@ -1,0 +1,121 @@
+.banner_kn_2_0_0 {
+    background: #ffd2d2;
+    &__box {
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+    &__item {
+        text-align: center;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+        button {
+            font-size: 16px;
+            color: #595959;
+            border-radius: 31px;
+            border: 1px solid #595959;
+            background: transparent;
+            padding: 5px 20px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+            &:hover {
+                background: #595959;
+                color: #fff;
+            }
+        }
+    }
+    &__banner {
+        background: url(../images/banner.jpg) center 0 no-repeat;
+        background-size: 1920px;
+        min-height: 702px;
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+        margin-left: auto;
+        width: 48%;
+        color: #fff;
+        margin-top: 120px;
+        span {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 32px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+    @media (max-width: 1440px) {
+        &__banner {
+            background-size: 1440px;
+            min-height: 525px;
+        }
+    }
+    @media (max-width: 1180px) {
+        &__text {
+            span {
+                font-size: 28px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+    @media (max-width: 912px) {
+        &__banner {
+            background-size: 1080px;
+            min-height: 396px;
+        }
+        &__text {
+            width: 50%;
+            margin-top: 30px;
+            span {
+                font-size: 23px;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        &__banner {
+            display: none;
+        }
+        &__item {
+            p {
+                font-size: 14px;
+            }
+            button {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+    }
+    @media (max-width: 350px) {
+        &__box {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        &__item {
+            p {
+                font-size: 14px;
+            }
+            button {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}

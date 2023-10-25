@@ -1,0 +1,77 @@
+.service_kn_2_0_0 {
+    &__title {
+        text-align: center;
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 23px;
+    }
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+    }
+    &__item {
+        display: flex;
+        width: calc(50% - 12px);
+    }
+    &__pic {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__boxContent {
+        background: #D0A86870;
+        width: 100%;
+        max-width: 250px;
+        height: fit-content;
+        padding: 10px;
+    }
+    &__titleChild {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        width: 130px;
+        border-bottom: 1px solid #000;
+        display: block;
+        margin: 20px auto 10px;
+        padding-bottom: 10px;
+    }
+    &__text {
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+    &__btn {
+        float: right;
+        border-bottom: 1px solid #000;
+        padding-top: 92px;
+    }
+    @media (max-width: 1200px) {
+        &__btn {
+            padding-top: 0px;
+        }
+    }
+    @media (max-width: 990px) {
+        &__boxContent {
+            padding: 7px;
+        }
+        &__titleChild {
+            margin: 8px auto;
+            padding-bottom: 4px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 768px) {
+        &__text {
+            font-size: 18px;
+        }
+    }
+}
