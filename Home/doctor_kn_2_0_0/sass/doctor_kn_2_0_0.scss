@@ -19,10 +19,15 @@
     height: 700px;
   }
   &__pic {
+    overflow: hidden;
     img {
       width: 100%;
       height: auto;
       display: block;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
   &__des {
@@ -57,13 +62,22 @@
     color: #fff;
     margin-bottom: 15px;
     cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      background: #444;
+    }
   }
   &__img {
     width: 26%;
+    overflow: hidden;
     img {
       width: 100%;
       height: auto;
       display: block;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
   &__text {
