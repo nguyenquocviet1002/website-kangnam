@@ -1,5 +1,5 @@
 .location_kn_2_0_0 {
-    padding: 40px 0;
+    margin: 40px 0;
     &__title {
         text-align: center;
         font-size: 32px;
@@ -64,17 +64,20 @@
         }
     }
     &__location {
-        background: url(../images/location-icon.png) center 0 no-repeat;
+        background: url(../images/location-icon.webp) center 0 no-repeat;
         background-size: 100%;
     }
     &__call {
-        background: url(../images/phone-icon.png) center 0 no-repeat;
+        background: url(../images/phone-icon.webp) center 0 no-repeat;
         background-size: 100%;
+        &.callMB {
+            display: none;
+        }
     }
     &__plus {
         position: absolute;
         left: 0;
-        background: url(../images/plus-icon.png) center 0 no-repeat;
+        background: url(../images/plus-icon.webp) center 0 no-repeat;
         background-size: 100%;
         width: 43px;
         height: 49px;
@@ -109,6 +112,16 @@
             }
             b {
                 font-size: 16px;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        &__call {
+            &.callPC {
+                display: none;
+            }
+            &.callMB {
+                display: block;
             }
         }
     }

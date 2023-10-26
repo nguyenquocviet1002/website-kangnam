@@ -17,12 +17,35 @@
     width: 56%;
     overflow-y: auto;
     height: 700px;
+    &::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #d6dee1;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #a8bbbf;
+    }
   }
   &__pic {
+    overflow: hidden;
     img {
       width: 100%;
       height: auto;
       display: block;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
   &__des {
@@ -57,13 +80,22 @@
     color: #fff;
     margin-bottom: 15px;
     cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      background: #444;
+    }
   }
   &__img {
     width: 26%;
+    overflow: hidden;
     img {
       width: 100%;
       height: auto;
       display: block;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
   &__text {
