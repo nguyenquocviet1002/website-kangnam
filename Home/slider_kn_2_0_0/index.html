@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://huudinh.github.io/assets/sass/lib.min.css">
+    <link rel="stylesheet" href="./sass/slider_kn_2_0_0.min.css">
 </head>
 <body>
-    
+    <section class="slider_kn_2_0_0">
+        <picture>
+            <source media="(max-width: 1025px)" srcset="./images/slide1-mb.jpg">
+            <img class="ani" width="1920" height="702" src="./images/slide1.jpg" alt="">
+        </picture>
+    </section>
+
+    <script src="https://huudinh.github.io/assets/js/lib.min.js"></script>
+    <script src="./js/slider_kn_2_0_0.js"></script>
+    <script>
+        const dataSlide1 = [
+            '<img width="1920" height="702" class="lazy" data-src="./images/slide1.jpg" alt="">',
+            '<img width="1920" height="702" class="lazy" data-src="./images/slide2.jpg" alt="">',
+        ];
+        const dataSlide1Mb = [
+            '<img width="1920" height="702" class="lazy" data-src="./images/slide1-mb.jpg" alt="">',
+            '<img width="1920" height="702" class="lazy" data-src="./images/slide2-mb.jpg" alt="">',
+        ];
+
+        const resize = () => {
+            if(window.innerWidth < 1025){
+                runSlide({
+                    data: dataSlide1Mb,
+                    position: 'slider_kn_2_0_0',
+                    isPagination: true,
+                });
+            } else {
+                runSlide({
+                    data: dataSlide1,
+                    position: 'slider_kn_2_0_0',
+                    isPagination: true,
+                });
+            }
+        }
+        resize();
+    </script>
 </body>
 </html>
