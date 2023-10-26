@@ -150,12 +150,10 @@
             display: none;
         }
     }
-    @media (max-width: 768px) {
-        &__item {
-            width: 100%;
+    @media (max-width: 600px) {
+        &__title {
+            font-size: 24px;
         }
-    }
-    @media (max-width: 480px) {
         &__item {
             width: 100%;
         }
