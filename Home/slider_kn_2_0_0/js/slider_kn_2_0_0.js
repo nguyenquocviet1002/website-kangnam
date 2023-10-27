@@ -1,4 +1,4 @@
-function runSlide ({ data = [], position = '', isPagination = false, isControl = false, time = 6000 }) {
+function runSlide({ data = [], position = '', isPagination = false, isControl = false, time = 6000 }) {
     try {
         let index = 0;
 
@@ -7,7 +7,7 @@ function runSlide ({ data = [], position = '', isPagination = false, isControl =
         document.querySelector(`.${position}`).appendChild(innerSlide);
 
         const removeSlideIndex = () => {
-            if(document.querySelector(`.${position} picture`)){
+            if (document.querySelector(`.${position} picture`)) {
                 document.querySelector(`.${position} picture`).remove();
             }
         }
@@ -107,3 +107,21 @@ function runSlide ({ data = [], position = '', isPagination = false, isControl =
         console.log('error')
     }
 }
+
+// Resize images
+const resize = () => {
+    if (window.innerWidth < 1025) {
+        runSlide({
+            data: dataSlide1Mb,
+            position: 'slider_kn_2_0_0',
+            isPagination: true,
+        });
+    } else {
+        runSlide({
+            data: dataSlide1,
+            position: 'slider_kn_2_0_0',
+            isPagination: true,
+        });
+    }
+}
+resize();

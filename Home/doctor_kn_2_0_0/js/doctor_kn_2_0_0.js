@@ -1,47 +1,3 @@
-const doctors = [
-  {
-    name: "Bác sĩ 1",
-    image: "images/bacsi-small.jpg",
-    picture: "images/bacsi.jpg",
-    level: "Thạc sĩ - Bác sĩ",
-    position: "Giám đốc chuyên môn Da liễu",
-    note: "Nội dung 1"
-  },
-  {
-    name: "Bác sĩ 2",
-    image: "images/bacsi-small.jpg",
-    picture: "images/bacsi.jpg",
-    level: "Thạc sĩ - Bác sĩ",
-    position: "Giám đốc chuyên môn Da liễu",
-    note: "Nội dung 2"
-  },
-  {
-    name: "Bác sĩ 3",
-    image: "images/bacsi-small.jpg",
-    picture: "images/bacsi.jpg",
-    level: "Thạc sĩ - Bác sĩ",
-    position: "Giám đốc chuyên môn Da liễu",
-    note: "Nội dung 3"
-  },
-  {
-    name: "Bác sĩ 4",
-    image: "images/bacsi-small.jpg",
-    picture: "images/bacsi.jpg",
-    level: "Thạc sĩ - Bác sĩ",
-    position: "Giám đốc chuyên môn Da liễu",
-    note: "Nội dung 4"
-  },
-  {
-    name: "Bác sĩ 5",
-    image: "images/bacsi-small.jpg",
-    picture: "images/bacsi.jpg",
-    level: "Thạc sĩ - Bác sĩ",
-    position: "Giám đốc chuyên môn Da liễu",
-    note: "Nội dung 5"
-  }
-  // Thêm các thông tin của bác sĩ khác vào đây
-];
-
 const contentContainer = document.querySelector(".doctor_kn_2_0_0__content");
 const detailContainer = document.querySelector(".doctor_kn_2_0_0__detail");
 const popup = document.getElementById("popup");
@@ -84,7 +40,7 @@ doctors.forEach((doctor, index) => {
 `;
   const icon = document.createElement("div");
   icon.classList.add("doctor_kn_2_0_0__icon");
-  icon.innerHTML = `<img src="images/icon.png" alt="">`;
+  icon.innerHTML = `<img src="images/icon.webp" alt="">`;
   item.appendChild(img);
   item.appendChild(text);
   item.appendChild(icon);
