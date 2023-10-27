@@ -12,13 +12,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
     }
     &__item {
         position: relative;
         width: 48%;
         border: 1px solid #000000;
-        padding: 15px 20px;
+        padding: 10px 20px;
         border-radius: 15px;
         p {
             text-align: center;
@@ -148,6 +148,9 @@
         }
     }
     @media (max-width: 600px) {
+        &__box {
+            gap: 10px;
+        }
         &__call {
             &.callPC {
                 display: none;
