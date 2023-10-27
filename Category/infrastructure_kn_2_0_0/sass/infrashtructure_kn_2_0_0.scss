@@ -1,0 +1,20 @@
+.infrashtructure_kn_2_0_0 {
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 25px;
+    }
+    &__line {
+        border: 1px solid #ccc;
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+    &__desc {
+        text-align: center;
+        width: 550px;
+        display: block;
+        margin: 15px auto;
+    }
+}
