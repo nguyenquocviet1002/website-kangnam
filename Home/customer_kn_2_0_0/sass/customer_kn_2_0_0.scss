@@ -9,6 +9,7 @@
     }
     &__box {
         overflow-x: overlay;
+        display: flex;
         img {
             height: auto;
         }
