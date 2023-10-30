@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kangnam</title>
     <link rel="stylesheet" href="https://huudinh.github.io/assets/sass/lib.min.css">
+    <link rel="stylesheet" href="./assets/sass/custom.min.css">
     <script src="https://huudinh.github.io/assets/js/lib.min.js"></script>
     <script src="https://huudinh.github.io/assets/js/module.min.js"></script>
 </head>
@@ -14,6 +15,10 @@
     <!-- HEADER -->
     <div id="header_kn_2_0_0"></div>
     <!-- END HEADER -->
+
+    <!-- TOOL -->
+    <div id="tool_kn_2_0_0"></div>
+    <!-- END TOOL -->
 
     <!-- SLIDER -->
     <div id="slider_kn_2_0_0"></div>
@@ -59,9 +64,10 @@
 
 <script>
     renderModule('Home', 'header_kn_2_0_0', '', 'logic');
+    renderModule('Home', 'tool_kn_2_0_0', '', '');
     renderModule('Home', 'slider_kn_2_0_0', 'data', 'logic');
     renderModule('Home', 'topic_kn_2_0_0', '', '');
-    renderModule('Home', 'service_kn_2_0_0', '', '');
+    renderModule('Home', 'service_kn_2_0_0', '', 'logic');
     renderModule('Home', 'contact_kn_2_0_0', '', '');
     renderModule('Home', 'customer_kn_2_0_0', '', '');
     renderModule('Home', 'banner_kn_2_0_0', '', '');
