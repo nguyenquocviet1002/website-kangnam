@@ -154,6 +154,113 @@ function inputHidden() {
   }
 }
 
+var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
+var currentPage = 1; // Trang hiện tại
+
+function showPage(page) {
+  var startIndex = (page - 1) * itemsPerPage;
+  var endIndex = startIndex + itemsPerPage;
+  var serviceImages = services[currentServiceId].images.slice(
+    startIndex,
+    endIndex
+  );
+
+  var imageElements = "";
+  for (var i = 0; i < serviceImages.length; i++) {
+    imageElements +=
+      '<div class="screen1__item"><img width="327" height="259" src="' +
+      serviceImages[i] +
+      '" alt=""></div>';
+  }
+  imageContainer.innerHTML = imageElements;
+}
+
+function createPagination() {
+  var totalItems = services[currentServiceId].images.length;
+  var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  var paginationElement = document.querySelector(".pagination");
+  paginationElement.innerHTML = "";
+
+  var prevButton = document.createElement("a");
+  prevButton.href = "#";
+  prevButton.classList.add("pagination__item");
+  prevButton.id = "prev";
+  prevButton.innerHTML = "&laquo;";
+  paginationElement.appendChild(prevButton);
+
+  for (var i = 1; i <= totalPages; i++) {
+    var pageButton = document.createElement("a");
+    pageButton.href = "#";
+    pageButton.classList.add("pagination__item");
+    pageButton.id = i;
+    pageButton.innerHTML = i;
+    paginationElement.appendChild(pageButton);
+
+    // Kích hoạt số 1 khi trang được tải lần đầu tiên
+    if (i === 1) {
+      pageButton.classList.add("active");
+    }
+  }
+
+  var nextButton = document.createElement("a");
+  nextButton.href = "#";
+  nextButton.classList.add("pagination__item");
+  nextButton.id = "next";
+  nextButton.innerHTML = "&raquo;";
+  paginationElement.appendChild(nextButton);
+}
+
+function changePage(page) {
+  currentPage = page;
+  showPage(currentPage);
+
+  var paginationItems = document.querySelectorAll(".pagination__item");
+  for (var i = 0; i < paginationItems.length; i++) {
+    paginationItems[i].classList.remove("active");
+  }
+  document.getElementById(currentPage).classList.add("active");
+
+  // Disable/enable prev/next buttons
+  if (currentPage == 1) {
+    document.getElementById("prev").classList.add("disabled");
+  } else {
+    document.getElementById("prev").classList.remove("disabled");
+  }
+  if (currentPage == totalPages) {
+    document.getElementById("next").classList.add("disabled");
+  } else {
+    document.getElementById("next").classList.remove("disabled");
+  }
+}
+
+var totalItems = services[currentServiceId].images.length;
+var totalPages = Math.ceil(totalItems / itemsPerPage);
+createPagination();
+showPage(currentPage);
+
+document.getElementById("prev").addEventListener("click", function () {
+  if (currentPage > 1) {
+    changePage(currentPage - 1);
+  }
+});
+
+document.getElementById("next").addEventListener("click", function () {
+  if (currentPage < totalPages) {
+    changePage(currentPage + 1);
+  }
+});
+
+var paginationItems = document.querySelectorAll(".pagination__item");
+for (var i = 0; i < paginationItems.length; i++) {
+  paginationItems[i].addEventListener("click", function () {
+    var page = parseInt(this.id);
+    if (page) {
+      changePage(page);
+    }
+  });
+}
+
 window.addEventListener("scroll", function () {
   // Lazy Images
   myLazy("img.lazy", "src");
