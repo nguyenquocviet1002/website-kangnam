@@ -1,0 +1,353 @@
+.introduce_kn_2_0_0 {
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 22px;
+        padding-bottom: 10px;
+        &.titleTop {
+            font-size: 32px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__line {
+        border: 1px solid #ccc;
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__desc {
+        text-align: center;
+        display: block;
+        margin: 30px auto;
+    }
+
+    &__content {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__itemLeft {
+        width: 47%;
+    }
+
+    &__pic {
+        width: 47%;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 300;
+    }
+
+    &__boxSystem {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        overflow-x: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #868686 #f5f5f5;
+        position: relative;
+        &::-webkit-scrollbar {
+            // width: 6px;
+            height: 7px;
+            // margin-top: -20px;
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+        &::-webkit-scrollbar-thumb {
+            // border-radius: 5px;
+            // -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+            // background-color: #FFF;
+            background-color: #868686;
+        }
+        &::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); */
+            background-color: #f5f5f5;
+        }
+    }
+    &__itemBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(208,168,104,.4392156863);
+        position: relative;
+        &:hover {
+            .introduce_kn_2_0_0__picSystem {
+                transform: scale(1.03);
+                transition: all 0.4s linear;
+            }
+        }
+    }
+    &__picSystem {
+        width: 300px;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__boxContent {
+        width: 100%;
+        max-width: 50%;
+        height: fit-content;
+        padding: 10px;
+    }
+    &__titleChild {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        width: 130px;
+        border-bottom: 1px solid #000;
+        display: block;
+        margin: 10px auto;
+        padding-bottom: 10px;
+    }
+    &__textSystem {
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 30px;
+        font-size: 22px;
+        margin: 0;
+    }
+    &__btn {
+        border: 1px solid #000;
+        padding: 6px 10px;
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+        width: 145px;
+        text-align: center;
+        margin-top: 20px;
+        background: #fff;
+            &:hover {
+                background: #000;
+                transition: all 0.2s linear;
+                color: #fff;
+            }
+    }
+    &__desSystem {
+        text-align: center;
+        font-size: 16px;
+        margin: 50px auto;
+        width: 500px;
+        display: block;
+    }
+    &__banner {
+        background: url(../images/banner.webp) center 0 no-repeat;
+        background-size: 1920px;
+        min-height: 702px;
+        display: flex;
+        align-items: center;
+    }
+    &__textBanner {
+        margin-left: auto;
+        width: 48%;
+        color: #fff;
+        margin-top: 120px;
+        span {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 32px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+    &__programme {
+        &Box {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 80px 0;
+        }
+        &Left {
+            width: 60%;
+        }
+        &Right {
+            width: 40%;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+        &Item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            a {
+                border-bottom: 1px solid #ccc;
+                &:hover {
+                    color: #82bdf4;
+                    transition: all .2s linear;
+                }
+            }
+        }
+        &Title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        &Text {
+            margin-bottom: 40px;
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+    &__boxTopic {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        overflow-x: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #868686 #f5f5f5;
+        position: relative;
+        &::-webkit-scrollbar {
+            // width: 6px;
+            height: 7px;
+            // margin-top: -20px;
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+        &::-webkit-scrollbar-thumb {
+            // border-radius: 5px;
+            // -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+            // background-color: #FFF;
+            background-color: #868686;
+        }
+        &::-webkit-scrollbar-track {
+            /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); */
+            background-color: #f5f5f5;
+        }
+    }
+    &__itemTopic {
+        position: relative;
+    }
+    &__picTopic {
+        width: 380px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.4s linear;
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+    &__contentTopic {
+        position: absolute;
+        bottom: 0;
+        background: #BEE0FF;
+        padding: 18px;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    @media (max-width: 1440px) {
+        &__title {
+            &.titleTop {
+                font-size: 25px;
+            }
+        }
+        &__banner {
+            background-size: 1440px;
+            min-height: 525px;
+        }
+        &__picTopic {
+            width: 305px;
+        }
+        &__textBanner {
+            span {
+                font-size: 28px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+    @media (max-width: 912px) {
+        &__banner {
+            background-size: 1080px;
+            min-height: 396px;
+        }
+        &__textBanner {
+            width: 50%;
+            margin-top: 30px;
+            span {
+                font-size: 23px;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        &__item {
+            flex-direction: column;
+        }
+        &__itemLeft,
+        &__pic {
+            width: 100%;
+        }
+        &__banner {
+            display: none;
+        }
+        &__programme {
+            &Box {
+                flex-direction: column;
+            }
+            &Left, 
+            &Right {
+                width: 100%;
+            }
+        }
+        &__desSystem {
+            display: none;
+        }
+    }
+    @media (max-width: 280px) {
+        &__programme {
+            &Box {
+                margin: 40px 0;
+            }
+            &Title {
+                font-size: 15px;
+            }
+            &Item {
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
