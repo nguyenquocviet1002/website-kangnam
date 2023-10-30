@@ -61,9 +61,11 @@
             cursor: pointer;
         }
     }
+    &__categoryActive {
+        font-weight: 700;
+    }
     &__doctor {
         display: flex;
-        justify-content: center;
         gap: 20px;
         flex-wrap: wrap;
     }
@@ -208,6 +210,9 @@
     @media (max-width: 767px) {
         &__banner {
             display: none;
+        }
+        &__doctor {
+            justify-content: center;
         }
         &__category {
             ul {
