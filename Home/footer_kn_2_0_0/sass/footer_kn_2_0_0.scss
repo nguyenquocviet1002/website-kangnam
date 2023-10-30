@@ -85,6 +85,10 @@
       width: 27px !important;
       height: auto;
       display: block;
+      &:hover {
+        opacity: 0.8;
+        transition: all .2s linear;
+      }
     }
   }
   &__list {
@@ -96,6 +100,11 @@
       padding: 5px 15px;
       border-radius: 30px;
       border: 1px solid #fff;
+      &:hover {
+        background-color: #fff;
+        color: #003c77;
+        transition: all 0.2s linear;
+      }
     }
     img {
       width: 100%;
