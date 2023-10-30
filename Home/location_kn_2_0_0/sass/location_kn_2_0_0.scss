@@ -1,5 +1,5 @@
 .location_kn_2_0_0 {
-    padding: 40px 0;
+    margin: 40px 0;
     &__title {
         text-align: center;
         font-size: 32px;
@@ -12,13 +12,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
     }
     &__item {
         position: relative;
         width: 48%;
         border: 1px solid #000000;
-        padding: 15px 20px;
+        padding: 10px 20px;
         border-radius: 15px;
         p {
             text-align: center;
@@ -64,17 +64,20 @@
         }
     }
     &__location {
-        background: url(../images/location-icon.png) center 0 no-repeat;
+        background: url(../images/location-icon.webp) center 0 no-repeat;
         background-size: 100%;
     }
     &__call {
-        background: url(../images/phone-icon.png) center 0 no-repeat;
+        background: url(../images/phone-icon.webp) center 0 no-repeat;
         background-size: 100%;
+        &.callMB {
+            display: none;
+        }
     }
     &__plus {
         position: absolute;
         left: 0;
-        background: url(../images/plus-icon.png) center 0 no-repeat;
+        background: url(../images/plus-icon.webp) center 0 no-repeat;
         background-size: 100%;
         width: 43px;
         height: 49px;
@@ -132,7 +135,7 @@
             transform: translateY(-50%);
         }
         &__title {
-            font-size: 23px;
+            font-size: 24px;
         }
         &__item {
             width: 100%;
@@ -142,6 +145,19 @@
         }
         &__line {
             display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        &__box {
+            gap: 10px;
+        }
+        &__call {
+            &.callPC {
+                display: none;
+            }
+            &.callMB {
+                display: block;
+            }
         }
     }
     @media (max-width: 320px) {
