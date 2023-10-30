@@ -1,4 +1,5 @@
 .infrashtructure_kn_2_0_0 {
+    padding: 30px 0 0;
     &__title {
         text-align: center;
         text-transform: uppercase;
@@ -21,10 +22,17 @@
     &__desc {
         text-align: center;
         display: block;
-        margin: 15px auto;
+        margin: 30px auto;
     }
 
-    padding: 30px 0 0;
+    &__content {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 60px;
+        }
+    }
 
     &__item {
         display: flex;
@@ -48,14 +56,8 @@
         }
     }
 
-    &__des {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 18px;
-    }
-
     &__text {
-        text-align: justify;
+        text-align: center;
         padding-top: 10px;
         font-weight: 300;
     }
@@ -72,6 +74,10 @@
         }
         &__item {
             flex-direction: column;
+            &:nth-child(2),
+            &:nth-child(4) {
+                flex-direction: column-reverse;
+            }
         }
         &__itemLeft {
             width: 100%;
