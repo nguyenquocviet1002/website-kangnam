@@ -7,12 +7,8 @@
         text-transform: uppercase;
         margin-bottom: 20px;
     }
-    &__box {
+    &__boxMain {
         overflow-x: overlay;
-        display: flex;
-        img {
-            height: auto;
-        }
         &::-webkit-scrollbar {
             width: 20px;
         }
@@ -30,6 +26,12 @@
         
         &::-webkit-scrollbar-thumb:hover {
             background-color: #a8bbbf;
+        }
+    }
+    &__box {
+        display: flex;
+        img {
+            height: auto;
         }
     }
     &__btn {
