@@ -22,7 +22,6 @@
   &__logo {
     display: block;
     width: 180px;
-    margin:0;
     img {
       width: 100%;
       height: auto;
@@ -96,7 +95,7 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    background-color:rgba(255,255,255,.8);
+    background-color: #ffffff80;
     max-width: 220px;
     width: max-content;
     &Item {
@@ -115,7 +114,7 @@
       &:hover {
         background-color: #fff;
         > a {
-          border-color: #fff;
+          border-color: #9c7235;
         }
       }
     }
