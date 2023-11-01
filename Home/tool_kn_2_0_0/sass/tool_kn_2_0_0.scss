@@ -25,6 +25,20 @@
             display: block;
         }
     }
+    @media (max-width: 1024px){
+        bottom: 10px;
+        right: unset;
+        left: 50%;
+        top: unset;
+        transform: translateX(-50%);
+        flex-direction: row;
+        gap: 30px;
+        border-radius: 50px;
+        padding: 10px 30px;
+        &__item{
+            margin-bottom: 0;
+        }
+    }
     @media (max-width: 600px) {
         &__item {
             width: 38px;
