@@ -1,87 +1,3 @@
-const video_kn_2_0_0_data = [
-    {
-        category: 'Show Hành trình lột xác',
-        description: 'Hành trình lột xác - show thẩm mỹ "đắt giá" được tổ chức bởi Hệ thống Thẩm mỹ Kangnam. Chương trình mang đậm tính nhân văn sâu sắc, giúp thí sinh “lột xác” với diện mạo mới, đón nhận nhiều cơ hội mới trong cuộc sống.',
-        thumb: './images/thumb-video.webp',
-        item: [
-            {
-                season: 'Mùa 1',
-                episode: 'Tập 1',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-            {
-                season: 'Mùa 1',
-                episode: 'Tập 2',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-            {
-                season: 'Mùa 2',
-                episode: 'Tập 2',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-        ]
-    },
-    {
-        category: 'Show Beauty Up',
-        description: 'Show Beauty Up - show thẩm mỹ "đắt giá" được tổ chức bởi Hệ thống Thẩm mỹ Kangnam. Chương trình mang đậm tính nhân văn sâu sắc, giúp thí sinh “lột xác” với diện mạo mới, đón nhận nhiều cơ hội mới trong cuộc sống.',
-        thumb: 'thumb-video.webp',
-        item: [
-            {
-                season: 'Mùa 1',
-                episode: 'Tập 1',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-            {
-                season: 'Mùa 1',
-                episode: 'Tập 2',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-            {
-                season: 'Mùa 2',
-                episode: 'Tập 1',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-        ]
-    },
-    {
-        category: 'Giải cứu mũi hỏng',
-        description: 'Giải cứu mũi hỏng - show thẩm mỹ "đắt giá" được tổ chức bởi Hệ thống Thẩm mỹ Kangnam. Chương trình mang đậm tính nhân văn sâu sắc, giúp thí sinh “lột xác” với diện mạo mới, đón nhận nhiều cơ hội mới trong cuộc sống.',
-        thumb: 'thumb-video.webp',
-        item: [
-            {
-                season: 'Mùa 2',
-                episode: 'Tập 1',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-            {
-                season: 'Mùa 3',
-                episode: 'Tập 2',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-            {
-                season: 'Mùa 2',
-                episode: 'Tập 2',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-            {
-                season: 'Mùa 2',
-                episode: 'Tập 3',
-                thumb: './images/thumb.webp',
-                link: '/',
-            },
-        ]
-    },
-];
-
 let cateVideo = 'Show Hành trình lột xác';
 let cateIndexVideo = 0;
 const tabsVideo = [];
@@ -162,7 +78,7 @@ const renderVideoLink = (cate, season, ep) => {
     if(ep) epNow = document.querySelector(`.${ep}`).value
     const dataVideo = dataCate[0].item.filter(item => item.season === seasonNow && item.episode === epNow)
     document.querySelector('.video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="./images/play.webp" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
@@ -196,7 +112,7 @@ const renderVideoLinkMB = (cate, season, ep) => {
     const dataCate = filterDataVideo(cate);
     const dataVideo = dataCate[0].item.filter(item => item.season === season && item.episode === ep)
     document.querySelector('.video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="play.png" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
