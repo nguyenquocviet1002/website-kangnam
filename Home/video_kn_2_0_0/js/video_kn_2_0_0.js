@@ -2,24 +2,24 @@ const video_kn_2_0_0_data = [
     {
         category: 'Show Hành trình lột xác',
         description: 'Hành trình lột xác - show thẩm mỹ "đắt giá" được tổ chức bởi Hệ thống Thẩm mỹ Kangnam. Chương trình mang đậm tính nhân văn sâu sắc, giúp thí sinh “lột xác” với diện mạo mới, đón nhận nhiều cơ hội mới trong cuộc sống.',
-        thumb: 'thumb-video.jpg',
+        thumb: './images/thumb-video.webp',
         item: [
             {
                 season: 'Mùa 1',
                 episode: 'Tập 1',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
             {
                 season: 'Mùa 1',
                 episode: 'Tập 2',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 2',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
         ]
@@ -27,24 +27,24 @@ const video_kn_2_0_0_data = [
     {
         category: 'Show Beauty Up',
         description: 'Show Beauty Up - show thẩm mỹ "đắt giá" được tổ chức bởi Hệ thống Thẩm mỹ Kangnam. Chương trình mang đậm tính nhân văn sâu sắc, giúp thí sinh “lột xác” với diện mạo mới, đón nhận nhiều cơ hội mới trong cuộc sống.',
-        thumb: 'thumb-video.jpg',
+        thumb: 'thumb-video.webp',
         item: [
             {
                 season: 'Mùa 1',
                 episode: 'Tập 1',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
             {
                 season: 'Mùa 1',
                 episode: 'Tập 2',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 1',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
         ]
@@ -52,30 +52,30 @@ const video_kn_2_0_0_data = [
     {
         category: 'Giải cứu mũi hỏng',
         description: 'Giải cứu mũi hỏng - show thẩm mỹ "đắt giá" được tổ chức bởi Hệ thống Thẩm mỹ Kangnam. Chương trình mang đậm tính nhân văn sâu sắc, giúp thí sinh “lột xác” với diện mạo mới, đón nhận nhiều cơ hội mới trong cuộc sống.',
-        thumb: 'thumb-video.jpg',
+        thumb: 'thumb-video.webp',
         item: [
             {
                 season: 'Mùa 2',
                 episode: 'Tập 1',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
             {
                 season: 'Mùa 3',
                 episode: 'Tập 2',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 2',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 3',
-                thumb: 'thumb.jpg',
+                thumb: './images/thumb.webp',
                 link: '/',
             },
         ]
@@ -162,7 +162,7 @@ const renderVideoLink = (cate, season, ep) => {
     if(ep) epNow = document.querySelector(`.${ep}`).value
     const dataVideo = dataCate[0].item.filter(item => item.season === seasonNow && item.episode === epNow)
     document.querySelector('.video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="./images/${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="./images/play.png" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="./images/play.webp" alt=""></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
@@ -176,7 +176,7 @@ const renderVideoBox = (data) => {
     document.querySelector('.video_kn_2_0_0__inner').innerHTML = `
     <div class="video_kn_2_0_0__select">
         <div class="video_kn_2_0_0__thumbCate">
-            <img width="271" height="275" src="./images/${dataItem.thumb}" alt="">
+            <img width="271" height="275" src="${dataItem.thumb}" alt="">
         </div>
         <div class="video_kn_2_0_0__selectVideo">
             <select class="video_kn_2_0_0__selectChoice video_kn_2_0_0__selectChoice--ss" onchange="renderSeasonEp('${cateVideo}', 'video_kn_2_0_0__selectChoice--ss')"></select>
@@ -196,7 +196,7 @@ const renderVideoLinkMB = (cate, season, ep) => {
     const dataCate = filterDataVideo(cate);
     const dataVideo = dataCate[0].item.filter(item => item.season === season && item.episode === ep)
     document.querySelector('.video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="./images/${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="./images/play.png" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="play.png" alt=""></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
@@ -213,7 +213,7 @@ const renderVideoBoxMb = () => {
             <div class="video_kn_2_0_0__item" onclick="renderVideoLinkMB('${video_kn_2_0_0_data[i].category}', '${video_kn_2_0_0_data[i].item[j].season}', '${video_kn_2_0_0_data[i].item[j].episode}')">
                 <div class="video_kn_2_0_0__titleItem">${video_kn_2_0_0_data[i].category} <br> ${video_kn_2_0_0_data[i].item[j].season} ${video_kn_2_0_0_data[i].item[j].episode}</div>
                 <div class="video_kn_2_0_0__thumb">
-                    <img src="./images/${video_kn_2_0_0_data[i].thumb}">
+                    <img width="271" height="275" src="${video_kn_2_0_0_data[i].thumb}" alt="">
                 </div>
             </div>
             </div>
