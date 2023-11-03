@@ -1,4 +1,5 @@
 .service_kn_2_0_0 {
+    font-family: var(--primary-font);
     margin: 20px 0 40px;
     &__title {
         text-align: center;
@@ -35,9 +36,12 @@
         align-items: center;
         background: rgba(208,168,104,.4392156863);
         position: relative;
+        &--1{
+            background: #D8E5EE;
+        }
     }
     &__pic {
-        width: 50%;
+        width: 55%;
         position: relative;
         img {
             width: 100%;
@@ -47,11 +51,12 @@
     }
     &__boxContent {
         width: 100%;
-        max-width: 50%;
+        max-width: 45%;
         height: fit-content;
         padding: 10px;
     }
     &__titleChild {
+        font-family: var(--primary-font);
         text-align: center;
         text-transform: uppercase;
         font-weight: 600;
@@ -61,6 +66,7 @@
         display: block;
         margin: 10px auto;
         padding-bottom: 10px;
+        width: fit-content;
         &.titleHover {
             color: #fff;
             border-bottom: 1px solid #fff;
@@ -68,6 +74,7 @@
         }
     }
     &__text {
+        font-family: var(--primary-font);
         font-weight: 600;
         text-align: center;
         text-transform: uppercase;
@@ -79,23 +86,43 @@
         }
     }
     &__btn {
-        border: 1px solid #000;
-        padding: 6px 10px;
-        border-radius: 20px;
-        display: block;
-        margin: 0 auto;
-        width: 145px;
-        text-align: center;
-        margin-top: 20px;
-        background: #fff;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        &--1{
+            display: none;
+        }
+        span{
+            display: block;
+            line-height: 1;
+            width: 30px;
+            height: 27px;
+            background-color: #000;
+            -webkit-mask:  url('../images/icon-more.svg') no-repeat 50% 50%;
+            mask: url('../images/icon-more.svg') no-repeat 50% 50%;
+            mask-size: contain;
+        }
         &.btnHover {
+            padding: 6px 15px;
+            border-radius: 50px;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 155px;
+            text-align: center;
+            margin-top: 20px;
             border: 1px solid #fff;
             background: none;
             color: #fff;
+            span{
+                background-color: #fff;
+            }
             &:hover {
                 background: #fff;
                 transition: all 0.2s linear;
                 color: #000;
+                span{
+                    background-color: #000;
+                }
             }
         }
     }
@@ -103,8 +130,9 @@
         position: absolute;
         visibility: hidden;
         opacity: 0;
-        transition: visibility 0s,opacity .2s linear;
+        transition: visibility 0s,opacity .1s linear;
         width: 100%;
+        backdrop-filter: blur(5px);
     }
     &__list {
         display: flex;
@@ -126,7 +154,6 @@
         &__btn {
             &.btnHover {
                 margin-top: -10px;
-                padding: 4px;
             }
         }
     }
@@ -141,10 +168,20 @@
         &__text {
             font-size: 20px;
         }
-        &__btn {
-            margin-top: 8px;
-            padding: 2px;
-            width: 128px;
+        &__btn--1 {
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            border-bottom: 1px solid #333;
+            width: fit-content;
+            text-align: right;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            span{
+                width: 10px;
+                height: 9px;
+            }
         }
         &__itemHover {
             display: none;
@@ -168,7 +205,8 @@
             line-height: 23px;
         }
         &__btn {
-            width: 102px;
+            font-size: 13px;
+            bottom: 5px;
         }
     }
 }
