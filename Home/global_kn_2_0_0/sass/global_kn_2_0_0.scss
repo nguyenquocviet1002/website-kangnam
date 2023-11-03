@@ -1,4 +1,7 @@
 .global_kn_2_0_0 {
+    font-family: var(--primary-font);
+    width: fit-content;
+    margin: auto;
     &__box {
         background: url(../images/banner.webp) center 0 no-repeat;
         background-size: 1140px;
