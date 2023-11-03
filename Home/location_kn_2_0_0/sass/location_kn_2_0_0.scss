@@ -12,13 +12,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 20px;
     }
     &__item {
         position: relative;
         width: 48%;
         border: 1px solid #000000;
-        padding: 10px 20px;
+        padding: 15px 20px;
         border-radius: 15px;
         p {
             text-align: center;
@@ -55,7 +55,7 @@
         display: flex;
         gap: 10px;
         align-items: center;
-        a {
+        &Item {
             padding: 0;
             border: none;
             cursor: pointer;
@@ -64,11 +64,11 @@
         }
     }
     &__location {
-        background: url(../images/location-icon.webp) center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/location-icon.webp') center 0 no-repeat;
         background-size: 100%;
     }
     &__call {
-        background: url(../images/phone-icon.webp) center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/phone-icon.webp') center 0 no-repeat;
         background-size: 100%;
         &.callMB {
             display: none;
@@ -77,7 +77,7 @@
     &__plus {
         position: absolute;
         left: 0;
-        background: url(../images/plus-icon.webp) center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/plus-icon.webp') center 0 no-repeat;
         background-size: 100%;
         width: 43px;
         height: 49px;
@@ -148,9 +148,6 @@
         }
     }
     @media (max-width: 600px) {
-        &__box {
-            gap: 10px;
-        }
         &__call {
             &.callPC {
                 display: none;
