@@ -1,4 +1,5 @@
 .banner_kn_2_0_0 {
+    font-family: var(--primary-font);
     &__banner {
         background: url(../images/banner.webp) center 0 no-repeat;
         background-size: 1920px;
@@ -14,7 +15,7 @@
         span {
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 32px;
+            font-size: 31px;
             display: block;
             margin-bottom: 10px;
         }

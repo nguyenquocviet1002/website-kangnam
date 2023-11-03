@@ -9,7 +9,7 @@ const eventService = () => {
                 }
             }
             const elmId = elmHover[i].getAttribute('data-id');
-            const innerData = data.filter(item => item.label === elmId);
+            const innerData = dataService.filter(item => item.label === elmId);
             if (innerData.length > 0) {
                 document.getElementById(elmId).innerHTML = innerData[0].layout;
             }
