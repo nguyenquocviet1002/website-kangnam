@@ -67,32 +67,64 @@
                     `${images}media/images/nangmui-kh3.webp`,
                     `${images}media/images/nangmui-kh4.webp`,
                     `${images}media/images/nangmui-kh5.webp`,
-                    `${images}media/images/nangmui-kh6.webp`
+                    `${images}media/images/nangmui-kh6.webp`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 1
                 ]
             },
             {
-                name: "Dịch vụ 2",
+                name: "Dịch vụ cắt mí",
                 images: [
-                    `${images}media/images/pic2.jpg`,
-                    `${images}media/images/pic2.jpg`,
-                    `${images}media/images/pic2.jpg`,
-                    `${images}media/images/pic2.jpg`,
-                    `${images}media/images/pic2.jpg`,
-                    `${images}media/images/pic2.jpg`,
-                    `${images}media/images/pic1.jpg`
+                    `${images}media/images/nangmui-kh5.webp`,
+                    `${images}media/images/nangmui-kh6.webp`,
+                    `${images}media/images/nangmui-kh1.webp`,
+                    `${images}media/images/nangmui-kh2.webp`,
+                    `${images}media/images/nangmui-kh3.webp`,
+                    `${images}media/images/nangmui-kh4.webp`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 2
                 ]
             },
             {
-                name: "Dịch vụ 3",
+                name: "Dịch vụ giảm mỡ",
                 images: [
-                    `${images}media/images/pic1.jpg`,
-                    `${images}media/images/pic1.jpg`,
-                    `${images}media/images/pic1.jpg`
+                    `${images}media/images/nangmui-kh3.webp`,
+                    `${images}media/images/nangmui-kh4.webp`,
+                    `${images}media/images/nangmui-kh5.webp`,
+                    `${images}media/images/nangmui-kh6.webp`,
+                    `${images}media/images/nangmui-kh1.webp`,
+                    `${images}media/images/nangmui-kh2.webp`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
                 ]
-            }
+            },
+            {
+                name: "Dịch vụ hàm mặt",
+                images: [
+                    `${images}media/images/nangmui-kh1.webp`,
+                    `${images}media/images/nangmui-kh2.webp`,
+                    `${images}media/images/nangmui-kh3.webp`,
+                    `${images}media/images/nangmui-kh4.webp`,
+                    `${images}media/images/nangmui-kh5.webp`,
+                    `${images}media/images/nangmui-kh6.webp`,
+                    // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+                ]
+            },
+            {
+                name: "Dịch vụ nâng ngực",
+                images: [
+                    `${images}media/images/nangmui-kh3.webp`,
+                    `${images}media/images/nangmui-kh4.webp`,
+                    `${images}media/images/nangmui-kh5.webp`,
+                    // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+                ]
+            },
+            {
+                name: "Dịch vụ trẻ hóa",
+                images: [
+                    `${images}media/images/nangmui-kh4.webp`,
+                    `${images}media/images/nangmui-kh5.webp`,
+                    `${images}media/images/nangmui-kh6.webp`,
+                    // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+                ]
+            },
             // Thêm các đối tượng dịch vụ khác vào mảng services
         ];
         var menuItems = document.getElementById("menuItems");
@@ -297,7 +329,15 @@
         var totalItems = services[currentServiceId].images.length;
         var totalPages = Math.ceil(totalItems / itemsPerPage);
         createPagination();
-        showPage(currentPage);
+        var screenWidth =
+                window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+        if (screenWidth <= 767) {
+            showPage(currentPage);
+        } else {
+        }
+        
 
         document.getElementById("prev").addEventListener("click", function () {
             if (currentPage > 1) {
