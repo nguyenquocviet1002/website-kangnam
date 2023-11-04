@@ -1,6 +1,8 @@
 .infrashtructure_kn_2_0_0 {
+    font-family: var(--primary-font);
     padding: 55px 0 30px;
     &__title {
+        font-family: var(--primary-font);
         text-align: center;
         text-transform: uppercase;
         font-weight: 600;
@@ -43,7 +45,8 @@
     }
 
     &__itemLeft {
-        width: 47%;
+        width: 40%;
+        margin: auto;
     }
 
     &__pic {
