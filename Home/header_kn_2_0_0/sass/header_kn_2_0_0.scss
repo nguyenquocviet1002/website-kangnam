@@ -178,9 +178,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      >span{
-        display: block;
-      }
     }
   }
   @media (max-width: 1024px) {
@@ -250,6 +247,9 @@
         > a {
           padding: 10px 20px;
           text-transform: uppercase;
+        }
+        >span{
+          display: block;
         }
         &:not(:last-child) > a {
           border-bottom: 1px solid #e1dddd;
