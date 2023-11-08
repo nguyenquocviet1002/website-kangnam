@@ -114,6 +114,7 @@
     }
     &__img {
         overflow: hidden;
+        height: 400px;
         img {
             width: 100%;
             height: auto;
@@ -182,6 +183,11 @@
             min-height: 525px;
         }
     }
+    @media (max-width: 1200px) {
+        &__img {
+            height: 360px;
+        }
+    }
     @media (max-width: 1180px) {
         &__text {
             span {
@@ -192,6 +198,11 @@
             }
         }
     }
+    @media (max-width: 1024px){
+        &__img {
+            height: 35vw;
+        }
+    }
     @media (max-width: 912px) {
         &__banner {
             background-size: 1080px;
@@ -199,6 +210,9 @@
         }
         &__item {
             width: 31%;
+        }
+        &__img {
+            height: 40vw;
         }
         &__text {
             width: 50%;
@@ -230,6 +244,9 @@
         }
         &__doctor {
             gap: 10px;
+        }
+        &__img {
+            height: 300px;
         }
         &__item {
             width: 48%;
