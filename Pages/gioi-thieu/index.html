@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ thống bệnh viện & viện thẩm mỹ chuẩn hàn</title>
-    <link rel="stylesheet" href="../../assets/sass/custom.min.css">
     <link rel="stylesheet" href="https://benhvienthammykangnam.vn/css/lib/lib.min.css">
-    <link rel="stylesheet" href="media/sass/introduce_kn_2_0_0.min.css?v=1">
-    <script src="https://benhvienthammykangnam.vn/css/lib/module.min.js"></script>
+    <link rel="stylesheet" href="media/sass/introduce_kn_2_0_0.min.css?v=2">
 </head>
 
 <body>
@@ -228,43 +226,9 @@
 </body>
 
 <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
+<script src="https://benhvienthammykangnam.vn/css/lib/module.min.js?v=1"></script>
+
 <script>
-    function scrollHorizontal(className) {
-        const scroll = document.querySelector(className);
-        var isDown = false;
-        var scrollX;
-        var scrollLeft;
-
-        // Mouse Up Function
-        scroll.addEventListener("mouseup", () => {
-            isDown = false;
-            scroll.classList.remove("active");
-        });
-
-        // Mouse Leave Function
-        scroll.addEventListener("mouseleave", () => {
-            isDown = false;
-            scroll.classList.remove("active");
-        });
-
-        // Mouse Down Function
-        scroll.addEventListener("mousedown", (e) => {
-            e.preventDefault();
-            isDown = true;
-            scroll.classList.add("active");
-            scrollX = e.pageX - scroll.offsetLeft;
-            scrollLeft = scroll.scrollLeft;
-        });
-
-        // Mouse Move Function
-        scroll.addEventListener("mousemove", (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            var element = e.pageX - scroll.offsetLeft;
-            var scrolling = (element - scrollX) * 2;
-            scroll.scrollLeft = scrollLeft - scrolling;
-        });
-    }
     scrollHorizontal('.introduce_kn_2_0_0__boxSystem');
     scrollHorizontal('.introduce_kn_2_0_0__boxTopic');
 </script>
