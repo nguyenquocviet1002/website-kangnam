@@ -22,10 +22,12 @@
         padding: 15px 20px;
         border-radius: 15px;
         p {
-            text-align: center;
             margin: 0;
             font-size: 16px;
         }
+    }
+    &__address{
+        padding-left: 15px;
     }
     &__wrapper {
         display: flex;
@@ -33,18 +35,19 @@
         align-items: center;
         gap: 10px;
         &:nth-child(2n) {
-            padding-left: 30px;
+            padding-left: 15px;
         }
     }
     &__text {
         text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        flex: 1;
         span {
-            display: block;
-            font-size: 16px;
+            font-size: 15px;
         }
         b {
-            display: block;
-            font-size: 20px;
+            font-size: 18px;
         }
     }
     &__line {
@@ -56,12 +59,13 @@
         display: flex;
         gap: 10px;
         align-items: center;
+        width: 60px;
         &Item {
             padding: 0;
             border: none;
             cursor: pointer;
-            width: 36px;
-            height: 36px;
+            width: 25px;
+            height: 25px;
         }
     }
     &__location {
@@ -80,8 +84,8 @@
         left: 0;
         background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/plus-icon.webp') center 0 no-repeat;
         background-size: 100%;
-        width: 43px;
-        height: 49px;
+        width: 30px;
+        height: 34px;
     }
     &__btn {
         display: none;
@@ -142,6 +146,11 @@
             width: 100%;
             p {
                 display: none;
+            }
+        }
+        &__text {
+            b {
+                display: block;
             }
         }
         &__line {
