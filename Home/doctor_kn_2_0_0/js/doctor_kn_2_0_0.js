@@ -12,7 +12,7 @@ function displayDoctor(doctor) {
     doctor.name;
   contentContainer.querySelector(".doctor_kn_2_0_0__position").textContent =
     doctor.position;
-  contentContainer.querySelector(".doctor_kn_2_0_0__note").textContent =
+  contentContainer.querySelector(".doctor_kn_2_0_0__note").innerHTML =
     doctor.note;
 }
 
