@@ -2,6 +2,7 @@
   font-family: var(--primary-font);
   background: #003c77;
   padding: 30px 0;
+  font-size:14px;
   &__header {
     display: flex;
     gap: 30px;
@@ -24,13 +25,15 @@
     color: #fec465;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
   }
   &__box {
     display: flex;
     padding: 0 30px 20px;
     border-bottom: 1px solid #fff;
     justify-content: space-between;
+    text-align: justify;
+    font-size:13px;
   }
   &__item {
     width: 47%;
@@ -41,7 +44,8 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
     img {
       width: 22px;
       height: auto;
@@ -83,12 +87,11 @@
   }
   &__icon {
     img {
-      width: 27px !important;
       height: auto;
       display: block;
+      transition: .5s;
       &:hover {
-        opacity: 0.8;
-        transition: all .2s linear;
+        opacity: 0.5;
       }
     }
   }
@@ -107,21 +110,10 @@
         transition: all 0.2s linear;
       }
     }
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
   }
   @media (max-width: 1180px) {
-    &__title {
-      font-size: 20px;
-    }
     &__logo {
       max-width: 190px;
-    }
-    &__item {
-      font-size: 14px;
     }
     &__header {
       padding: 0 20px 20px;
@@ -174,19 +166,11 @@
     }
     &__list {
       justify-content: center;
-      span {
-        font-size: 14px;
-      }
     }
     &__pic {
       width: 43%;
       img {
         width: 100%;
-      }
-    }
-    &__icon {
-      img {
-        width: 100% !important;
       }
     }
   }

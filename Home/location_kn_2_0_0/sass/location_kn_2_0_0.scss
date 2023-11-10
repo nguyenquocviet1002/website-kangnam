@@ -13,7 +13,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
     }
     &__item {
         position: relative;
@@ -23,8 +23,7 @@
         border-radius: 15px;
         p {
             margin: 0;
-            font-size: 16px;
-        }
+        }       
     }
     &__address{
         padding-left: 15px;
@@ -66,6 +65,10 @@
             cursor: pointer;
             width: 25px;
             height: 25px;
+            transition: 0.3s;
+            &:hover{
+                opacity: .5;
+            }
         }
     }
     &__location {
@@ -123,7 +126,7 @@
     @media (max-width: 767px) {
         &__btn {
             display: block;
-            margin-top: 20px;
+            margin-top: 10px;
             button {
                 width: 100%;
                 border: none;
@@ -158,6 +161,9 @@
         }
     }
     @media (max-width: 600px) {
+        &__box{
+            gap:10px;
+        }
         &__call {
             &.callPC {
                 display: none;
