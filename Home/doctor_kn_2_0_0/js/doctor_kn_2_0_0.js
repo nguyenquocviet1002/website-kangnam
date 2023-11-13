@@ -22,7 +22,7 @@ function displayDoctorPopup(doctor) {
   popup.querySelector(".doctor_kn_2_0_0__name").textContent = doctor.name;
   popup.querySelector(".doctor_kn_2_0_0__position").textContent =
     doctor.position;
-  popup.querySelector(".doctor_kn_2_0_0__note").textContent = doctor.note;
+  popup.querySelector(".doctor_kn_2_0_0__note").innerHTML = doctor.note;
 }
 
 doctors.forEach((doctor, index) => {
