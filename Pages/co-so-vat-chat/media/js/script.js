@@ -6,8 +6,8 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
         innerSlide.classList.add('inner__slide');
         document.querySelector(`.${position}`).appendChild(innerSlide);
 
-        const img = document.querySelector(`.${position} img`);
-        document.querySelector(`.${position}`).setAttribute('style', 'min-height:' + (img.clientHeight + 5) + 'px');
+        const img = document.querySelector(`.${position} img`).clientHeight;
+        document.querySelector(`.${position}`).setAttribute('style', 'min-height:' + img + 'px');
         
 
         const removeSlideIndex = () => {
@@ -100,7 +100,6 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
         isControl ? nextPrevSlide() : '';
 
         function checkVisible(elm) {
-            console.log("elm: ", elm);
             let rect = elm.getBoundingClientRect();
             let viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
             return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
