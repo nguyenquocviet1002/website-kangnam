@@ -7,19 +7,19 @@ const video_kn_2_0_0_data = [
             {
                 season: 'Mùa 1',
                 episode: 'Tập 1',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
             {
                 season: 'Mùa 1',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
         ]
@@ -32,19 +32,19 @@ const video_kn_2_0_0_data = [
             {
                 season: 'Mùa 1',
                 episode: 'Tập 1',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
             {
                 season: 'Mùa 1',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 1',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
         ]
@@ -57,25 +57,25 @@ const video_kn_2_0_0_data = [
             {
                 season: 'Mùa 2',
                 episode: 'Tập 1',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
             {
                 season: 'Mùa 3',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
             {
                 season: 'Mùa 2',
                 episode: 'Tập 3',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp`,
+                thumb: `${video_kn_2_0_0_url}images/thumb.webp?ver=1`,
                 link: '/',
             },
         ]

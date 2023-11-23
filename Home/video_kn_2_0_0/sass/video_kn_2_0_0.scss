@@ -89,6 +89,9 @@
         -moz-appearance: none;
         appearance: none;
     }
+    &__desc{
+        text-align: justify;
+    }
     &__video{
         flex: 1;
     }
