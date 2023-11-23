@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/sass/custom.css">
     <link rel="stylesheet" href="https://benhvienthammykangnam.vn/css/lib/lib.min.css">
     <link rel="stylesheet" href="media/sass/doctor_kn_2_1_0.min.css">
-    <title>doctor_kn_2_1_0</title>
+    <title>Đội ngũ chuyên gia Kangnam</title>
 </head>
 
 <body>
@@ -37,7 +36,7 @@
 <script>
     // Get API User
     const getDoctor = async () => {
-        const response = await fetch(`https://benhvienthammykangnam.vn/css/landing/doctor.json`);
+        const response = await fetch(`https://benhvienthammykangnam.vn/wp-json/api/v1/doctor-list/`);
         const data = await response.json();
         console.log("data: ", data);
         return data;
@@ -46,113 +45,6 @@
     let doctor_kn_2_1_0__data = [];
 
     const categories = ['Bác sĩ phẫu thuật thẩm mỹ', 'Bác sĩ da liễu', 'Bác sĩ răng hàm mặt']
-    // const doctor_kn_2_1_0__url = '';
-    // const doctor_kn_2_1_0__url = '/cp/pages/bac-si/';
-    // const doctor_kn_2_1_0__data = [{
-    //     id: 1,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ phẫu thuật thẩm mỹ'
-    // }, {
-    //     id: 2,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ phẫu thuật thẩm mỹ'
-    // }, {
-    //     id: 3,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ phẫu thuật thẩm mỹ'
-    // }, {
-    //     id: 4,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 5,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 6,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 7,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 8,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ răng hàm mặt'
-    // }, {
-    //     id: 9,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 10,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 11,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 12,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }, {
-    //     id: 13,
-    //     degree: 'Thạc sĩ - Bác sĩ',
-    //     name: 'JOLIE HUYNH',
-    //     pos: 'GIÁM ĐỐC CHUYÊN MÔN DA LIỄU',
-    //     experience: '20 năm <br> kn',
-    //     image: `${doctor_kn_2_1_0__url}media/images/doctor.jpg`,
-    //     category: 'Bác sĩ da liễu'
-    // }]
 
     let cate = 'Bác sĩ da liễu'
     let cateIndex = 0
@@ -177,22 +69,30 @@
         render()
     }
     const renderDoctor = (data) => {
-        document.querySelector('.doctor_kn_2_1_0__doctor').innerHTML = data.map(item => `<div class="doctor_kn_2_1_0__item">
-            <div class="doctor_kn_2_1_0__img">
-                <img width="269" height="456" src="${item.image}" alt="">
-            </div>
-            <div class="doctor_kn_2_1_0__box">
-                <div class="doctor_kn_2_1_0__info">
-                    <a href="#" class="doctor_kn_2_1_0__content">
-                        
-                        <div class="doctor_kn_2_1_0__name">${item.name}</div>
-                    </a>
-                    <span>${item.experience}</span>
-                </div>
-                <div class="doctor_kn_2_1_0__line"></div>
-                <div class="doctor_kn_2_1_0__pos">${item.pos}</div>
-            </div>
-        </div>`).join('')
+        document.querySelector('.doctor_kn_2_1_0__doctor')
+            .innerHTML = data.map((item) => {
+                let experience = '';
+                if (item.experience){
+                    experience =  `<span>${item.experience}</span>`;
+                }
+                return `
+                    <a class="doctor_kn_2_1_0__item" href="${item.url}">
+                    <div class="doctor_kn_2_1_0__img">
+                        <img width="269" height="456" src="${item.image}" alt="">
+                    </div>
+                    <div class="doctor_kn_2_1_0__box">
+                        <div class="doctor_kn_2_1_0__info">
+                            <div class="doctor_kn_2_1_0__content">                                
+                                <div class="doctor_kn_2_1_0__degree">${item.degree}</div>
+                                <div class="doctor_kn_2_1_0__name">${item.name}</div>
+                            </div>
+                            ${experience}
+                        </div>
+                        <div class="doctor_kn_2_1_0__line"></div>
+                        <div class="doctor_kn_2_1_0__pos">${item.pos}</div>
+                    </div>
+                </a>`
+        }).join('')
     }
     const renderCate = () => {
             document.querySelector('.doctor_kn_2_1_0__category').innerHTML = ` 
