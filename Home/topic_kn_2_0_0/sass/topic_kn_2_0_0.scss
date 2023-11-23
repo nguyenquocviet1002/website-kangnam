@@ -46,14 +46,14 @@
     }
     &__content {
         font-family: var(--primary-font);
-        position: absolute;
-        bottom: 0;
+        font-weight: 600;
         // background: #BEE0FF;
         padding: 18px;
         font-size: 15px;
         text-align: center;
         width: 100%;
         margin-bottom: 0;
+        margin-top: 0;
         background: rgba(190,224,255,.9);
         min-height: 80px;
         box-shadow: 0 0 4px rgba(0,0,0,.1);
