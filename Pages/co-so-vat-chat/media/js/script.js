@@ -110,18 +110,18 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
 }
 
 const dataRoom = [
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page4-1.webp?ver=1" alt="">',
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page4-2.webp" alt="">',
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page4-3.webp" alt="">',
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page4-4.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page4-1.webp?ver=1" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page4-2.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page4-3.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page4-4.webp" alt="">',
 ]
 
 const dataRoom2 = [
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page5-1.webp" alt="">',
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page5-2.webp" alt="">',
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page5-3.webp" alt="">',
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page5-4.webp" alt="">',
-    '<img width="1920" height="850" class="lazy" data-src="media/images/page5-5.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page5-1.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page5-2.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page5-3.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page5-4.webp" alt="">',
+    '<img width="1920" height="850" class="lazy" data-src="https://benhvienthammykangnam.vn/cp/pages/co-so-vat-chat/media/images/page5-5.webp" alt="">',
 ]
 
 runSlide({
