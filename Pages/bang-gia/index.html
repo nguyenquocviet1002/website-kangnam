@@ -64,6 +64,7 @@
         var services = [
             {
                 name: "Bảng giá thẩm mỹ mũi",
+                link: '#bang-gia-tham-my-mui',
                 images: [
                     {
                         title: "nâng mũi 6d không đau - nanoform",
@@ -114,6 +115,7 @@
             },
             {
                 name: "Bảng giá thẩm mỹ mắt",
+                link: '#bang-gia-tham-my-mat',
                 images: [
                     {
                         title: "Cắt mí Hàn Quốc Plasma",
@@ -148,6 +150,7 @@
             },
             {
                 name: "Bảng giá thẩm mỹ hàm mặt",
+                link: '#bang-gia-tham-my-ham-mat',
                 images: [
                     {
                         title: "Chỉnh Hàm hô móm 3D",
@@ -182,6 +185,7 @@
             },
             {
                 name: "bảng giá thẩm mỹ vóc dáng",
+                link: '#bang-gia-tham-my-voc-dang',
                 images: [
                     {
                         title: "Nâng ngực K-Nature 4D",
@@ -224,6 +228,7 @@
             },
             {
                 name: "bảng giá điều trị da công nghệ cao",
+                link: '#bang-gia-dieu-tri-da-cong-nghe-cao',
                 images: [
                     {
                         title: "Điều trị nám",
@@ -258,6 +263,7 @@
             },
             {
                 name: "bảng giá trẻ hóa da công nghệ cao",
+                link: '#bang-gia-tre-hoa-da-cong-nghe-cao',
                 images: [
                     {
                         title: "Căng chỉ X-line Bio Young",
@@ -292,6 +298,7 @@
             },
             {
                 name: "bảng giá nha khoa thẩm mỹ",
+                link: '#bang-gia-nha-khoa-tham-my',
                 images: [
                     {
                         title: "Tẩy trắng răng",
@@ -325,40 +332,9 @@
         var hideButton = document.getElementById("screen1__hide");
         var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
-        function removeVietnameseTones(str) {
-            str = str.toLowerCase();
-            str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
-            str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
-            str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
-            str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
-            str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
-            str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
-            str = str.replace(/đ/g, "d");
-            str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
-            str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
-            str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
-            str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
-            str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
-            str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
-            str = str.replace(/Đ/g, "D");
-            // Some system encode vietnamese combining accent as individual utf-8 characters
-            // Một vài bộ encode coi các dấu mũ, dấu chữ như một kí tự riêng biệt nên thêm hai dòng này
-            str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // ̀ ́ ̃ ̉ ̣  huyền, sắc, ngã, hỏi, nặng
-            str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // ˆ ̆ ̛  Â, Ê, Ă, Ơ, Ư
-            // Remove extra spaces
-            // Bỏ các khoảng trắng liền nhau
-            str = str.replace(/ + /g, " ");
-            str = str.trim();
-            str = str.split(' ').join('-');
-            // Remove punctuations
-            // Bỏ dấu câu, kí tự đặc biệt
-            str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|{|}|\||\\/g, " ");
-            return str;
-        }
-
         function showImage(serviceId, element) {
             var serviceImages = services[serviceId].images;
-            window.location.hash = removeVietnameseTones(services[serviceId].name);
+            window.location.hash = services[serviceId].link;
             var imageElements = "";
 
             var titleElement = document.querySelector(".screen1__title");
@@ -430,7 +406,18 @@
             menuItems.appendChild(menuItem);
         }
 
-        showImage(0, document.querySelector(".menu__item"));
+        if(window.location.hash === '')window.location.hash=services[0].link
+        const functionChangeHash = () => {
+            services.forEach(item=>{
+                if( window.location.hash===item.link) {
+                    const index = services.findIndex(x => x.link === item.link)
+                    showImage(index, document.querySelectorAll(".menu__item")[index]);
+                }
+            })
+        }
+        functionChangeHash()
+
+        window.addEventListener('hashchange', functionChangeHash);
 
         // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
         viewMoreButton.addEventListener("click", function () {

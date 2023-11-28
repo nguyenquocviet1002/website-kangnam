@@ -62,6 +62,7 @@
         var services = [
             {
                 name: "Dịch vụ cắt mí",
+                link: '#dich-vu-cat-mi',
                 images: [
                     `${images}media/images/mat-p1.webp`,
                     `${images}media/images/mat-p2.webp`,
@@ -74,6 +75,7 @@
             },
             {
                 name: "Dịch vụ nâng mũi",
+                link: '#dich-vu-nang-mui',
                 images: [
                     `${images}media/images/nangmui-p1.webp`,
                     `${images}media/images/nangmui-p2.webp`,
@@ -86,6 +88,7 @@
             },
             {
                 name: "Dịch vụ giảm mỡ",
+                link: '#dich-vu-giam-mo',
                 images: [
                     `${images}media/images/mo-p1.webp`,
                     `${images}media/images/mo-p2.webp`,
@@ -98,6 +101,7 @@
             },
             {
                 name: "Dịch vụ hàm mặt",
+                link: '#dich-vu-ham-mat',
                 images: [
                     `${images}media/images/hammat-p1.webp`,
                     `${images}media/images/hammat-p2.webp`,
@@ -110,6 +114,7 @@
             },
             {
                 name: "Dịch vụ trẻ hóa",
+                link: '#dich-vu-tre-hoa',
                 images: [
                     `${images}media/images/trehoa-p1.webp`,
                     `${images}media/images/trehoa-p2.webp`,
@@ -122,6 +127,7 @@
             },
             {
                 name: "Dịch vụ nâng ngực",
+                link: '#dich-vu-nang-nguc',
                 images: [
                     `${images}media/images/nangnguc-p1.webp`,
                     `${images}media/images/nangnguc-p2.webp`,
@@ -129,6 +135,19 @@
                     `${images}media/images/nangnguc-p4.webp`,
                     `${images}media/images/nangnguc-p5.webp`,
                     `${images}media/images/nangnguc-p6.webp`,
+                    // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+                ]
+            },
+            {
+                name: "Dịch vụ nha khoa",
+                link: '#dich-vu-nha-khoa',
+                images: [
+                    `${images}media/images/nhakhoa-p1.webp`,
+                    `${images}media/images/nhakhoa-p2.webp`,
+                    `${images}media/images/nhakhoa-p3.webp`,
+                    `${images}media/images/nhakhoa-p4.webp`,
+                    `${images}media/images/nhakhoa-p5.webp`,
+                    `${images}media/images/nhakhoa-p6.webp`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
                 ]
             },
@@ -140,40 +159,9 @@
         var hideButton = document.getElementById("screen1__hide");
         var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
-        function removeVietnameseTones(str) {
-            str = str.toLowerCase();
-            str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
-            str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
-            str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
-            str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
-            str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
-            str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
-            str = str.replace(/đ/g, "d");
-            str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
-            str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
-            str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
-            str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
-            str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
-            str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
-            str = str.replace(/Đ/g, "D");
-            // Some system encode vietnamese combining accent as individual utf-8 characters
-            // Một vài bộ encode coi các dấu mũ, dấu chữ như một kí tự riêng biệt nên thêm hai dòng này
-            str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // ̀ ́ ̃ ̉ ̣  huyền, sắc, ngã, hỏi, nặng
-            str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // ˆ ̆ ̛  Â, Ê, Ă, Ơ, Ư
-            // Remove extra spaces
-            // Bỏ các khoảng trắng liền nhau
-            str = str.replace(/ + /g," ");
-            str = str.trim();
-            str = str.split(' ').join('-');
-            // Remove punctuations
-            // Bỏ dấu câu, kí tự đặc biệt
-            str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|{|}|\||\\/g," ");
-            return str;
-        }
-
         function showImage(serviceId, element) {
             var serviceImages = services[serviceId].images;
-            window.location.hash = removeVietnameseTones(services[serviceId].name);
+            window.location.hash = services[serviceId].link;
             var imageElements = "";
             for (var i = 0; i < serviceImages.length; i++) {
                 imageElements +=
@@ -222,8 +210,19 @@
             menuItem.setAttribute("onclick", "showImage(" + i + ", this)");
             menuItems.appendChild(menuItem);
         }
+        
+        if(window.location.hash === '')window.location.hash=services[0].link
+        const functionChangeHash = () => {
+            services.forEach(item=>{
+                if( window.location.hash===item.link) {
+                    const index = services.findIndex(x => x.link === item.link)
+                    showImage(index, document.querySelectorAll(".menu__item")[index]);
+                }
+            })
+        }
+        functionChangeHash()
 
-        showImage(0, document.querySelector(".menu__item"));
+        window.addEventListener('hashchange', functionChangeHash);
 
         // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
         viewMoreButton.addEventListener("click", function () {
@@ -399,6 +398,7 @@
                 }
             });
         }
+
     </script>
     <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
     <script src="https://benhvienthammykangnam.vn/css/lib/module.min.js?v=1"></script>

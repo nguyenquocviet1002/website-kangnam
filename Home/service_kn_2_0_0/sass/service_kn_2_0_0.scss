@@ -35,8 +35,6 @@
                 width: 45%;
             }
         }
-        // &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5){
-        // }
     }
     &__itemBox {
         display: flex;
@@ -148,6 +146,7 @@
         padding: 10px;
     }
     &__list {
+        margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
