@@ -8,7 +8,7 @@ const video_kn_2_0_0_data = [
                 season: 'Mùa 1',
                 episode: 'Tập 1',
                 thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                link: 'https://www.youtube.com/watch?v=eAIudrFNEKg&list=PLROTewhS4-MYcFAX_cJVY9GWnrqHR5M8u',
             },
             {
                 season: 'Mùa 1',
@@ -58,7 +58,7 @@ const video_kn_2_0_0_data = [
                 season: 'Mùa 2',
                 episode: 'Tập 1',
                 thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                link: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
             },
             {
                 season: 'Mùa 3',
