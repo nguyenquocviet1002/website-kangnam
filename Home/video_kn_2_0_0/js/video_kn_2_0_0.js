@@ -3,6 +3,15 @@ let cateIndexVideo = 0;
 const tabsVideo = [];
 video_kn_2_0_0_data.map(item => tabsVideo.push(item.category));
 
+const getThumbYoutube = (url) => {
+    let video_id = url.split('v=')[1];
+    const ampersandPosition = video_id.indexOf('&');
+    if(ampersandPosition != -1) {
+        video_id = video_id.substring(0, ampersandPosition);
+    }
+    return `https://img.youtube.com/vi/${video_id}/maxresdefault.jpg`
+}
+
 const filterDataVideo = (filter) => video_kn_2_0_0_data.filter(item => item.category === filter);
 const handleCateVideo = (item) => {
     cateVideo = item
@@ -77,8 +86,9 @@ const renderVideoLink = (cate, season, ep) => {
     if(season) seasonNow = document.querySelector(`.${season}`).value
     if(ep) epNow = document.querySelector(`.${ep}`).value
     const dataVideo = dataCate[0].item.filter(item => item.season === seasonNow && item.episode === epNow)
+
     document.querySelector('.video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb ? dataVideo[0].thumb : getThumbYoutube(dataVideo[0].link)}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
@@ -112,7 +122,7 @@ const renderVideoLinkMB = (cate, season, ep) => {
     const dataCate = filterDataVideo(cate);
     const dataVideo = dataCate[0].item.filter(item => item.season === season && item.episode === ep)
     document.querySelector('.video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb ? dataVideo[0].thumb : getThumbYoutube(dataVideo[0].link)}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
