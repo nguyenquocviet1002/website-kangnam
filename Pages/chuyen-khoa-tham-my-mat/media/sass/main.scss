@@ -18,7 +18,8 @@
     margin: 15px auto;
   }
   &__des {
-    text-align: center;
+    text-align: justify;
+    text-align-last: center;
     width: 60%;
     margin: 0 auto;
   }
@@ -229,6 +230,7 @@
 }
 
 .screen4{
+  padding-bottom: 40px;
   &__head{
     text-align: center;
     font-size: 32px;
@@ -273,6 +275,7 @@
     }
   }
   @media (max-width: 767px){
+    padding-bottom: 20px;
     &__head{
       font-size: 24px;
     }
