@@ -40,7 +40,7 @@ doctors.forEach((doctor, index) => {
 `;
   const icon = document.createElement("div");
   icon.classList.add("doctor_kn_2_0_0__icon");
-  icon.innerHTML = `<img src="images/icon.webp" alt="" loading="lazy">`;
+  icon.innerHTML = `<img src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/doctor_kn_2_0_0/images/icon.webp" alt="" loading="lazy">`;
   item.appendChild(img);
   item.appendChild(text);
   item.appendChild(icon);
