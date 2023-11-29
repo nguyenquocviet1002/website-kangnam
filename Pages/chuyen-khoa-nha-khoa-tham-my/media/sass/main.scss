@@ -222,7 +222,9 @@
     }
     &__box {
       gap: 20px;
-      &:nth-child(2) {
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(6) {
         flex-direction: column-reverse;
       }
     }
