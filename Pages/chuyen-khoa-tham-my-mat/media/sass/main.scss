@@ -229,6 +229,7 @@
 }
 
 .screen4{
+  padding-bottom: 40px;
   &__head{
     text-align: center;
     font-size: 32px;
@@ -273,6 +274,7 @@
     }
   }
   @media (max-width: 767px){
+    padding-bottom: 20px;
     &__head{
       font-size: 24px;
     }
