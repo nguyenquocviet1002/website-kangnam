@@ -45,7 +45,7 @@
 
     const categories = ['Bác sĩ phẫu thuật thẩm mỹ', 'Bác sĩ da liễu', 'Bác sĩ răng hàm mặt']
 
-    let cate = 'Bác sĩ da liễu'
+    let cate = 'Bác sĩ phẫu thuật thẩm mỹ';
     let cateIndex = 0
     const filterData = (filter) => doctor_kn_2_1_0__data.filter(item => item.category === filter)
     const handleCate = (item) => {
@@ -120,7 +120,7 @@
     
     const render=()=>{
         renderCate()
-        renderPagination()
+        // renderPagination()
         renderDoctor(filterData(cate))
     }
     
