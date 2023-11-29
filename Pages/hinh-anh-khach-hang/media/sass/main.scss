@@ -25,6 +25,31 @@
     justify-content: space-between;
     gap: 30px;
   }
+  &__video{
+    position: relative;
+    margin-top: 30px;
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  &__note{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
   &__menu {
     width: 100%;
     max-width: 280px;
@@ -58,7 +83,7 @@
     }
   }
   &__item {
-    width: 48%;
+    width: calc(50% - 10px);
     overflow: hidden;
     img {
       width: 100%;
@@ -107,6 +132,10 @@
     }
     &__pic {
       gap: 15px;
+    }
+    &__play{
+      width: 70px;
+      height: 70px;
     }
   }
   @media (max-width: 767px) {
@@ -185,7 +214,10 @@
     }
   }
 }
-
+.modal-pic iframe {
+  margin: 0 auto;
+  display: block;
+}
 .menu__item.active {
   background: #bee0ff;
   @media (max-width: 767px) {

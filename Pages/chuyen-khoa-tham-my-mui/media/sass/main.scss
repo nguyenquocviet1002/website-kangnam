@@ -18,8 +18,9 @@
     margin: 15px auto;
   }
   &__des {
-    text-align: center;
-    width: 60%;
+    text-align: justify;
+    text-align-last: center;
+    width: 66%;
     margin: 0 auto;
   }
   &__box {
@@ -221,7 +222,9 @@
     }
     &__box {
       gap: 20px;
-      &:nth-child(2) {
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(6) {
         flex-direction: column-reverse;
       }
     }
@@ -229,6 +232,7 @@
 }
 
 .screen4{
+  padding-bottom: 40px;
   &__head{
     text-align: center;
     font-size: 32px;
@@ -273,6 +277,7 @@
     }
   }
   @media (max-width: 767px){
+    padding-bottom: 20px;
     &__head{
       font-size: 24px;
     }
