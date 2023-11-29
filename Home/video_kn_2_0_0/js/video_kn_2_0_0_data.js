@@ -5,22 +5,20 @@ const video_kn_2_0_0_data = [
         thumb: `${video_kn_2_0_0_url}images/thumb-video.webp?v=1`,
         item: [
             {
-                season: 'Mùa 1',
+                season: 'Mùa 5',
                 episode: 'Tập 1',
                 thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: 'https://www.youtube.com/watch?v=dv1RTya0xGw&list=PLROTewhS4-MbBQxTj8FnOFThQUTuntfcb',
+                link: 'https://www.youtube.com/watch?v=LlNsk4aCDgU&list=PLROTewhS4-MbT2mRXeL80UBeJlAQ_Fp9s&index=3',
             },
             {
-                season: 'Mùa 1',
+                season: 'Mùa 5',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                link: 'https://www.youtube.com/watch?v=YREI2_aGd7I&list=PLROTewhS4-MbT2mRXeL80UBeJlAQ_Fp9s&index=4',
             },
             {
-                season: 'Mùa 2',
-                episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                season: 'Mùa 5',
+                episode: 'Tập 3',
+                link: 'https://www.youtube.com/watch?v=wJrM3rEx1pY&list=PLROTewhS4-MbT2mRXeL80UBeJlAQ_Fp9s&index=5',
             },
         ]
     },
@@ -38,14 +36,12 @@ const video_kn_2_0_0_data = [
             {
                 season: 'Mùa 1',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                link: 'https://www.youtube.com/watch?v=7syiXqDLfI8&list=PLROTewhS4-MYcFAX_cJVY9GWnrqHR5M8u&index=2',
             },
             {
-                season: 'Mùa 2',
-                episode: 'Tập 1',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                season: 'Mùa 1',
+                episode: 'Tập 3',
+                link: 'https://www.youtube.com/watch?v=iNUiO3V3Oz0&list=PLROTewhS4-MYcFAX_cJVY9GWnrqHR5M8u&index=3',
             },
         ]
     },
@@ -55,28 +51,19 @@ const video_kn_2_0_0_data = [
         thumb: `https://benhvienthammykangnam.vn/wp-content/uploads/2023/11/thumb-gc.webp`,
         item: [
             {
-                season: 'Mùa 2',
+                season: 'Mùa 1',
                 episode: 'Tập 1',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
+                link: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R&index=1',
             },
             {
-                season: 'Mùa 3',
+                season: 'Mùa 1',
                 episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                link: 'https://www.youtube.com/watch?v=fCLVfMpUeR0&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R&index=2',
             },
             {
-                season: 'Mùa 2',
-                episode: 'Tập 2',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
-            },
-            {
-                season: 'Mùa 2',
+                season: 'Mùa 1',
                 episode: 'Tập 3',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
-                link: '/',
+                link: 'https://www.youtube.com/watch?v=iCdaVXNX_ig&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R&index=3',
             },
         ]
     },
