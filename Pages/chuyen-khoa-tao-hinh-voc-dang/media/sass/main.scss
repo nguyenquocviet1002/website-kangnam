@@ -2,11 +2,13 @@
   font-family: var(--primary-font);
   padding: 55px 0 30px;
   &__title {
+    font-family: var(--primary-font);
     font-size: 26px;
     text-align: center;
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
+    margin: 0;
     br {
       display: none;
     }
@@ -54,16 +56,19 @@
     justify-content: center;
   }
   &__name {
+    font-family: var(--primary-font);
     font-weight: 600;
     font-size: 20px;
-    color: #464646;
     text-transform: uppercase;
     padding-bottom: 5px;
     line-height: 25px;
-    color: #000;
-    transition: all 0.2s linear;
-    &:hover {
-      color: #d0a868;
+    margin: 0;
+    > a {
+      color: #000;
+      transition: all 0.2s linear;
+      &:hover {
+        color: #d0a868;
+      }
     }
   }
   &__note a {
