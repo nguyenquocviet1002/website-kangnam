@@ -22,7 +22,8 @@
     }
 
     &__desc {
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
         display: block;
         margin: 30px auto;
     }
@@ -168,10 +169,11 @@
             }
     }
     &__desSystem {
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
         font-size: 16px;
         margin: 50px auto;
-        width: 500px;
+        width: 550px;
         display: block;
     }
     &__banner {
@@ -268,7 +270,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        height: 100%;
+        min-height: 100%;
     }
     &__picTopic {
         width: 425px;
@@ -295,10 +297,12 @@
     }
     &__mainTitle{
         font-size: 24px;
+        margin: 0;
+        font-family: var(--primary-font);
     }
     &__mainContent{
         text-align: justify;
-        padding-top: 10px;
+        padding-top: 5px;
     }
     @media (max-width: 1440px) {
         &__title {
@@ -336,6 +340,11 @@
         }
     }
     @media (max-width: 767px) {
+        &__desc{
+            br{
+                display: none;
+            }
+        }
         &__item {
             flex-direction: column;
             &:nth-child(2){
@@ -352,6 +361,7 @@
         &__programme {
             &Box {
                 flex-direction: column;
+                margin: 30px 0;
             }
             &Left, 
             &Right {
