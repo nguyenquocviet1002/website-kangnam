@@ -15,16 +15,16 @@
         <div class="container">
             <div class="screen1__box">
                 <div class="screen1__menu" onclick="inputHidden()">
-                    <img width="17" height="9" class="lazy" data-src="media/images/icon.webp" alt="logo">
+                    <img width="17" height="9" class="lazy" data-src="media/images/icon.webp?ver=1" alt="logo">
                     <input type="text" value="Dịch vụ nâng mũi" readonly="false" id="inputHidden">
                     <ul id="menuItems" class="screen1__menuItems">
                         <!-- Thêm các mục menu cho các dịch vụ -->
                     </ul>
                 </div>
                 <div class="screen1__detail">
-                    <div class="screen1__title">
+                    <h1 class="screen1__title">
                         hình ảnh khách hàng
-                    </div>
+                    </h1>
                     <div class="screen1__line"></div>
                     <div class="screen1__inner">
                         <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
@@ -51,8 +51,8 @@
         </div>
     </section>
     <script>
-        let images = 'https://benhvienthammykangnam.vn/cp/pages/hinh-anh-khach-hang/';
-        // let images = '';
+        // let images = 'https://benhvienthammykangnam.vn/cp/pages/hinh-anh-khach-hang/';
+        let images = '';
         var services = [
             {
                 name: "Dịch vụ cắt mí",
@@ -60,12 +60,12 @@
                 desc: 'Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông',
                 linkVideo: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
                 images: [
-                    `${images}media/images/mat-p1.webp`,
-                    `${images}media/images/mat-p2.webp`,
-                    `${images}media/images/mat-p3.webp`,
-                    `${images}media/images/mat-p4.webp`,
-                    `${images}media/images/mat-p5.webp`,
-                    `${images}media/images/mat-p6.webp`,
+                    `${images}media/images/mat-p1.webp?ver=1`,
+                    `${images}media/images/mat-p2.webp?ver=1`,
+                    `${images}media/images/mat-p3.webp?ver=1`,
+                    `${images}media/images/mat-p4.webp?ver=1`,
+                    `${images}media/images/mat-p5.webp?ver=1`,
+                    `${images}media/images/mat-p6.webp?ver=1`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 1
                 ]
             },
@@ -75,12 +75,12 @@
                 desc: 'Chuyên khoa Thẩm mỹ mũi chuyên sâu Chuyên khoa Thẩm mỹ mũi tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, với 12 công nghệ Nâng mũi, sửa mũi được liên tục cập nhật và chuyển giao độc quyền từ Hàn Quốc. Chuyên khoa Thẩm mỹ mũi quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực thẩm mỹ mũi, giúp khách hàng sở hữu dáng mũi đẹp chuẩn tỉ lệ, phù hợp với gương mặt phụ nữ Á Đông, duy trì kết quả lâu dài.',
                 linkVideo: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
                 images: [
-                    `${images}media/images/nangmui-p1.webp`,
-                    `${images}media/images/nangmui-p2.webp`,
-                    `${images}media/images/nangmui-p3.webp`,
-                    `${images}media/images/nangmui-p4.webp`,
-                    `${images}media/images/nangmui-p5.webp`,
-                    `${images}media/images/nangmui-p6.webp`,
+                    `${images}media/images/nangmui-p1.webp?ver=1`,
+                    `${images}media/images/nangmui-p2.webp?ver=1`,
+                    `${images}media/images/nangmui-p3.webp?ver=1`,
+                    `${images}media/images/nangmui-p4.webp?ver=1`,
+                    `${images}media/images/nangmui-p5.webp?ver=1`,
+                    `${images}media/images/nangmui-p6.webp?ver=1`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 2
                 ]
             },
@@ -90,12 +90,12 @@
                 desc: 'Chuyên khoa tạo hình Vóc dáng hoạt động theo quy trình chuẩn Hàn Quốc, đem đến các giải pháp "hot", "an toàn" kiến tạo thân hình quyến rũ như ý muốn. Với đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực Phẫu thuật thẩm mỹ và Tạo hình, Chuyên khoa tạo hình Vóc dáng chắc chắn sẽ làm hài lòng tất cả khách hàng.',
                 linkVideo: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
                 images: [
-                    `${images}media/images/mo-p1.webp`,
-                    `${images}media/images/mo-p2.webp`,
-                    `${images}media/images/mo-p3.webp`,
-                    `${images}media/images/mo-p4.webp`,
-                    `${images}media/images/mo-p5.webp`,
-                    `${images}media/images/mo-p6.webp`,
+                    `${images}media/images/mo-p1.webp?ver=1`,
+                    `${images}media/images/mo-p2.webp?ver=1`,
+                    `${images}media/images/mo-p3.webp?ver=1`,
+                    `${images}media/images/mo-p4.webp?ver=1`,
+                    `${images}media/images/mo-p5.webp?ver=1`,
+                    `${images}media/images/mo-p6.webp?ver=1`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
                 ]
             },
@@ -105,12 +105,21 @@
                 desc: 'Chuyên khoa thẩm mỹ Hàm mặt của Hệ thống thẩm Mỹ Kangnam quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực tạo hình thẩm mỹ Hàn Quốc, là ekip thực hiện chương trình Hành trình Lột xác. Kangnam là đơn vị hiếm hoi có thể xử lý được những ca hàm mặt khó, phức tạp, đòi hỏi chuyên môn cao. Với sự hỗ trợ đắc lực của trang thiết bị tân tiến, các ca phẫu thuật hàm mặt tại Kangnam đều đạt kết quả ngoài mong đợi và được bảo hành trọn đời.',
                 linkVideo: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
                 images: [
-                    `${images}media/images/hammat-p1.webp`,
-                    `${images}media/images/hammat-p2.webp`,
-                    `${images}media/images/hammat-p3.webp`,
-                    `${images}media/images/hammat-p4.webp`,
-                    `${images}media/images/hammat-p5.webp`,
-                    `${images}media/images/hammat-p6.webp`,
+                    `${images}media/images/hammat-p1.webp?ver=1`,
+                    `${images}media/images/hammat-p2.webp?ver=1`,
+                    `${images}media/images/hammat-p3.webp?ver=1`,
+                    `${images}media/images/hammat-p4.webp?ver=1`,
+                    `${images}media/images/hammat-p5.webp?ver=1`,
+                    `${images}media/images/hammat-p6.webp?ver=1`,
+                    // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+                ]
+            },
+            {
+                name: "Dịch vụ điều trị da",
+                link: '#dich-vu-dieu-tri-da',
+                desc: 'Chuyên khoa Da liễu và Điều trị da công nghệ cao Kangnam quy tụ đội ngũ chuyên gia, bác sĩ Da liễu giỏi chuyên môn với hơn 10 năm kinh nghiệm cùng hệ thống máy móc công nghệ tân tiến, cung cấp đa dạng giải pháp điều trị tất cả các vấn đề da, sắc tố,... trả lại làn da như ý muốn.',
+                linkVideo: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
+                images: [
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
                 ]
             },
@@ -120,12 +129,12 @@
                 desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc với hơn 15 dịch vụ trẻ hóa, hơn 39 dịch vụ chăm sóc da cao cấp. Kangnam độc quyền bộ giải pháp trẻ hóa "Kim tự tháp" giúp khách hàng sở hữu làn da chắc khỏe, căng mịn, tràn đầy sức sống.',
                 linkVideo: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
                 images: [
-                    `${images}media/images/trehoa-p1.webp`,
-                    `${images}media/images/trehoa-p2.webp`,
-                    `${images}media/images/trehoa-p3.webp`,
-                    `${images}media/images/trehoa-p4.webp`,
-                    `${images}media/images/trehoa-p5.webp`,
-                    `${images}media/images/trehoa-p6.webp`,
+                    `${images}media/images/trehoa-p1.webp?ver=1`,
+                    `${images}media/images/trehoa-p2.webp?ver=1`,
+                    `${images}media/images/trehoa-p3.webp?ver=1`,
+                    `${images}media/images/trehoa-p4.webp?ver=1`,
+                    `${images}media/images/trehoa-p5.webp?ver=1`,
+                    `${images}media/images/trehoa-p6.webp?ver=1`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
                 ]
             },
@@ -135,12 +144,12 @@
                 desc: 'Chuyên khoa tạo hình Vóc dáng hoạt động theo quy trình chuẩn Hàn Quốc, đem đến các giải pháp "hot", "an toàn" kiến tạo thân hình quyến rũ như ý muốn. Với đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực Phẫu thuật thẩm mỹ và Tạo hình, Chuyên khoa tạo hình Vóc dáng chắc chắn sẽ làm hài lòng tất cả khách hàng.',
                 linkVideo: 'https://www.youtube.com/watch?v=2Gvrri4VZOw&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R',
                 images: [
-                    `${images}media/images/nangnguc-p1.webp`,
-                    `${images}media/images/nangnguc-p2.webp`,
-                    `${images}media/images/nangnguc-p3.webp`,
-                    `${images}media/images/nangnguc-p4.webp`,
-                    `${images}media/images/nangnguc-p5.webp`,
-                    `${images}media/images/nangnguc-p6.webp`,
+                    `${images}media/images/nangnguc-p1.webp?ver=1`,
+                    `${images}media/images/nangnguc-p2.webp?ver=1`,
+                    `${images}media/images/nangnguc-p3.webp?ver=1`,
+                    `${images}media/images/nangnguc-p4.webp?ver=1`,
+                    `${images}media/images/nangnguc-p5.webp?ver=1`,
+                    `${images}media/images/nangnguc-p6.webp?ver=1`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
                 ]
             },
@@ -150,12 +159,12 @@
                 desc: 'Nha khoa thẩm mỹ Kangnam hoạt động với sứ mệnh chăm sóc sức khỏe răng miệng toàn diện, mang lại cho khách hàng nụ cười rạng rỡ, tự tin chinh phục mọi thử thách. Kangnam ứng dụng thành công các công nghệ thẩm mỹ răng tiên tiến trên thế giới như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng…với nhiều ưu điểm vượt trội cùng đội ngũ chuyên gia, bác sĩ nha khoa đầu ngành có trình độ chuyên môn cao, giàu kinh nghiệm.',
                 linkVideo: 'https://www.youtube.com/watch?v=9MhXLdl4j1c&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R&index=5',
                 images: [
-                    `${images}media/images/nhakhoa-p1.webp`,
-                    `${images}media/images/nhakhoa-p2.webp`,
-                    `${images}media/images/nhakhoa-p3.webp`,
-                    `${images}media/images/nhakhoa-p4.webp`,
-                    `${images}media/images/nhakhoa-p5.webp`,
-                    `${images}media/images/nhakhoa-p6.webp`,
+                    `${images}media/images/nhakhoa-p1.webp?ver=1`,
+                    `${images}media/images/nhakhoa-p2.webp?ver=1`,
+                    `${images}media/images/nhakhoa-p3.webp?ver=1`,
+                    `${images}media/images/nhakhoa-p4.webp?ver=1`,
+                    `${images}media/images/nhakhoa-p5.webp?ver=1`,
+                    `${images}media/images/nhakhoa-p6.webp?ver=1`,
                     // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
                 ]
             },
