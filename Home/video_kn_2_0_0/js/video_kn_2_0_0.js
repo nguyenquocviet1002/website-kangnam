@@ -150,7 +150,8 @@ const renderVideoBoxMb = () => {
     <div class="video_kn_2_0_0__select">${html}</div>
     <div class="video_kn_2_0_0__video"></div>
     `
-    renderVideoLinkMB(cateVideo, video_kn_2_0_0_data[0].item[0].season, video_kn_2_0_0_data[0].item[0].episode)
+    const dataCateFirst = filterDataVideo(cateVideo);
+    renderVideoLinkMB(cateVideo, dataCateFirst[0].item[0].season, dataCateFirst[0].item[0].episode)
     
 }
 
