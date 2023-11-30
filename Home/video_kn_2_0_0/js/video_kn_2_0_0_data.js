@@ -7,7 +7,6 @@ const video_kn_2_0_0_data = [
             {
                 season: 'Mùa 5',
                 episode: 'Tập 1',
-                thumb: `${video_kn_2_0_0_url}images/thumb.webp?v=1`,
                 link: 'https://www.youtube.com/watch?v=LlNsk4aCDgU&list=PLROTewhS4-MbT2mRXeL80UBeJlAQ_Fp9s&index=3',
             },
             {

@@ -1,4 +1,3 @@
-let cateVideo = 'Show Hành trình lột xác';
 let cateIndexVideo = 0;
 const tabsVideo = [];
 video_kn_2_0_0_data.map(item => tabsVideo.push(item.category));
