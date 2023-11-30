@@ -15,7 +15,8 @@
         color: #fff;
         margin-top: 120px;
 
-        span {
+        h1 {
+            font-family: var(--primary-font);
             text-transform: uppercase;
             font-weight: 700;
             font-size: 32px;
@@ -147,6 +148,8 @@
     }
 
     &__name {
+        font-family: var(--primary-font);
+        margin: 0;
         font-size: 16px;
         font-weight: 700;
         color: #d0a868;
