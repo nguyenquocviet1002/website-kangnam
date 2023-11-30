@@ -22,7 +22,8 @@
     }
 
     &__desc {
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
         display: block;
         margin: 30px auto;
     }
@@ -60,7 +61,7 @@
     }
 
     &__text {
-        text-align: center;
+        text-align: justify;
         padding-top: 10px;
         font-weight: 300;
     }
