@@ -148,7 +148,7 @@ const renderVideoBoxMb = () => {
     
     document.querySelector('.video_kn_2_0_0__inner').innerHTML = `
     <div class="video_kn_2_0_0__select">${html}</div>
-    <div class="video_kn_2_0_0__video">123</div>
+    <div class="video_kn_2_0_0__video"></div>
     `
     const dataCateFirst = filterDataVideo(cateVideo);
     renderVideoLinkMB(cateVideo, dataCateFirst[0].item[0].season, dataCateFirst[0].item[0].episode)
