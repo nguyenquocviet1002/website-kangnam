@@ -6,6 +6,9 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
         innerSlide.classList.add('inner__slide');
         document.querySelector(`.${position}`).appendChild(innerSlide);
 
+        const img = document.querySelector(`.${position} img`).clientHeight;
+        document.querySelector(`.${position}`).setAttribute('style', 'min-height:' + img + 'px');
+
         const removeSlideIndex = () => {
             if (document.querySelector(`.${position} picture`)) {
                 document.querySelector(`.${position} picture`).remove();
@@ -36,9 +39,6 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
                 document.querySelector(`.${position} .inner__slide img`).classList.add('ani');
             }, 100)
             isPagination ? activePagination(index) : '';
-
-            // const img = document.getElementById('imageid');
-            // document.querySelector(`.${position}`).setAttribute('style', 'height:' + img.clientHeight + 'px');
 
             const lazy = document.querySelector(`.${position} .lazy`);
             if (checkVisible(lazy)) {
