@@ -15,11 +15,6 @@
       justify-content: space-between;
     }
   }
-  &__brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
   &__logo {
     display: block;
     width: 180px;
@@ -29,12 +24,6 @@
       height: auto;
       display: flex;
     }
-  }
-  &__name {
-    text-transform: uppercase;
-    color: #fec465;
-    font-weight: 600;
-    font-size: 16px;
   }
   &__action {
     display: flex;
@@ -157,14 +146,8 @@
     opacity: 0;
   }
   @media (max-width: 1200px) {
-    &__brand {
-      gap: 5px;
-    }
     &__logo {
       width: 150px;
-    }
-    &__name {
-      font-size: 15px;
     }
     &__redirectWeb {
       font-size: 14px;
@@ -188,8 +171,9 @@
     }
     &__logo {
       width: 140px;
+      margin-bottom: 5px;
     }
-    &__name {
+    &__global{
       display: none;
     }
     &__button {
@@ -247,9 +231,9 @@
         > a {
           padding: 10px 20px;
           text-transform: uppercase;
-        }
-        >span{
-          display: block;
+          >span{
+            display: block;
+          }
         }
         &:not(:last-child) > a {
           border-bottom: 1px solid #e1dddd;
