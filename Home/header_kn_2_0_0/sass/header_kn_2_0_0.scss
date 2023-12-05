@@ -165,21 +165,21 @@
   }
   @media (max-width: 1024px) {
     &__top {
+      padding: 8px 0;
       .container {
         flex-direction: column;
       }
     }
     &__logo {
       width: 140px;
-      margin-bottom: 5px;
     }
-    &__global{
+    &__action{
       display: none;
     }
     &__button {
       display: flex;
       position: absolute;
-      top: 20px;
+      top: 15px;
       left: 25px;
     }
     &__redirectWeb {
