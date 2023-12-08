@@ -19,4 +19,8 @@ const dataService = [
         label: 'service-5',
         layout: '<div class="service_kn_2_0_0__boxHover"> <div class="service_kn_2_0_0__content"> <div class="service_kn_2_0_0__titleChild titleHover">Chuyên khoa</div> <h2 class="service_kn_2_0_0__text textHover">Nha khoa thẩm mỹ</h2> <ul class="service_kn_2_0_0__list"> <li>Niềng răng</li> <li>Bọc răng sứ</li> <li>Cấy Implant</li> <li>Dán mặt sứ</li> </ul> </div> <div class="service_kn_2_0_0__btn btnHover"><span></span> Xem thêm</div></div>'
     },
+    {
+        label: 'service-6',
+        layout: '<div class="service_kn_2_0_0__boxHover"> <div class="service_kn_2_0_0__content"> <div class="service_kn_2_0_0__titleChild titleHover">Chuyên khoa</div> <h2 class="service_kn_2_0_0__text textHover">Kangnam clinic</h2> <ul class="service_kn_2_0_0__list"> <li>Phun xăm</li> <li>Tắm trắng</li> <li>Triệt lông</li> <li>Điêu khắc</li> </ul> </div> <div class="service_kn_2_0_0__btn btnHover"><span></span> Xem thêm</div></div>'
+    },
 ]
