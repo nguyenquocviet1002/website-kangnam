@@ -236,6 +236,12 @@
             &:nth-child(5){
                 order: 5;
             }
+            &:nth-child(6){
+                order: 6;
+                .service_kn_2_0_0__itemBox{
+                    background: #d8e5ee;
+                }
+            }
         }
     }
     @media (max-width: 370px) {
