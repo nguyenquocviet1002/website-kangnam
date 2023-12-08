@@ -2,9 +2,11 @@
     font-family: var(--primary-font);
     background: #BEE0FF;
     margin: 20px 0;
-    &__mb{
+
+    &__mb {
         display: none;
     }
+
     &__box {
         padding: 30px 0;
         display: flex;
@@ -12,36 +14,42 @@
         align-items: center;
         gap: 10px;
     }
+
     &__more {
         font-weight: bold;
-        width:135px;
+        width: 135px;
         color: #000;
-        font-size:14px;
+        font-size: 14px;
         border-radius: 31px;
         border: 1px solid #595959;
         background: transparent;
         padding: 4px 20px;
         cursor: pointer;
         display: block;
-        margin:0 auto;
+        margin: 0 auto;
         transition: all 0.2s linear;
-        background: rgba(255,255,255,.2);
+        background: rgba(255, 255, 255, .2);
+
         &:hover {
             background: #595959;
             color: #fff;
         }
     }
+
     &__item {
         text-align: center;
-        &:hover{
-            p{
+
+        &:hover {
+            p {
                 animation: bounceIn .3s;
             }
         }
+
         img {
             display: block;
             margin: 0 auto;
         }
+
         p {
             font-size: 20px;
             font-weight: 700;
@@ -49,10 +57,12 @@
             margin: 10px 0;
         }
     }
-    &__boxMb{
+
+    &__boxMb {
         padding: 30px 0;
     }
-    &__itemMb{
+
+    &__itemMb {
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -63,40 +73,48 @@
         padding: 5px 0;
         margin-bottom: 10px;
     }
-    &__icon{
+
+    &__icon {
         width: 50px;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             display: block;
         }
     }
-    &__text{
+
+    &__text {
         text-transform: uppercase;
         font-weight: 600;
         text-align: center;
-        span{
+
+        span {
             display: block;
             font-size: 1.7rem;
             line-height: 1;
         }
     }
-    &__sub{
+
+    &__sub {
         text-transform: uppercase;
         font-weight: 600;
         text-align: center;
         font-size: 1.3rem;
     }
-    &__itemForm{
+
+    &__itemForm {
         background-color: #fff;
         border: 1px solid #000;
         border-radius: 15px;
         padding: 15px 20px;
     }
-    &__form{
+
+    &__form {
         padding: 10px 0;
     }
-    &__input{
+
+    &__input {
         display: block;
         width: 100%;
         border: none;
@@ -107,11 +125,13 @@
         margin-bottom: 10px;
         outline: none;
         color: #000;
-        &::placeholder{
+
+        &::placeholder {
             color: #000;
             opacity: 1;
         }
     }
+
     select.contact_kn_2_0_0__input:not([size]) {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
         background-position: right 0.5rem center;
@@ -124,7 +144,8 @@
         -moz-appearance: none;
         appearance: none;
     }
-    &__submit{
+
+    &__submit {
         background-color: #FFD2D2;
         border: 1px solid #000;
         border-radius: 55px;
@@ -133,96 +154,120 @@
         margin: 15px auto 0;
         font-weight: 600;
     }
-    &__note{
+
+    &__note {
         font-weight: 600;
         text-align: center;
         font-style: italic;
         margin-top: 15px;
     }
-    @media (max-width: 1180px) {
-    }
-    @media (max-width: 912px) {
-    }
+
+    @media (max-width: 1180px) {}
+
+    @media (max-width: 912px) {}
+
     @media (max-width: 767px) {
-        &__pc{
+        &__pc {
             display: none;
         }
-        &__mb{
+
+        &__mb {
             display: block;
         }
-        &__box{
+
+        &__box {
             flex-wrap: wrap;
         }
+
         &__item {
-            width:40%;
-            margin:10px 0;
+            width: 40%;
+            margin: 10px 0;
+
             p {
                 font-size: 14px;
             }
+
             button {
                 font-size: 12px;
                 padding: 5px 10px;
             }
         }
     }
+
     @media (max-width: 350px) {
         &__box {
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
         }
+
         &__item {
             p {
                 font-size: 14px;
             }
+
             button {
                 font-size: 12px;
                 padding: 5px 10px;
             }
         }
     }
+    .form-group.invalid input,
+    .form-group.invalid select {
+        border: 1px solid red
+    }
+    
+    .form-group.invalid .form-message {
+        color: red;
+        margin-left: 10px;
+        padding: 0px 0 8px;
+        font-size: 13px;
+    }
 }
+
 @keyframes bounceIn {
+
     from,
     20%,
     40%,
     60%,
     80%,
     to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-  
+
     0% {
-      opacity: 0;
-      -webkit-transform: scale3d(0.3, 0.3, 0.3);
-      transform: scale3d(0.3, 0.3, 0.3);
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
     }
-  
+
     20% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1);
-      transform: scale3d(1.1, 1.1, 1.1);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
     }
-  
+
     40% {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9);
-      transform: scale3d(0.9, 0.9, 0.9);
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
     }
-  
+
     60% {
-      opacity: 1;
-      -webkit-transform: scale3d(1.03, 1.03, 1.03);
-      transform: scale3d(1.03, 1.03, 1.03);
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
     }
-  
+
     80% {
-      -webkit-transform: scale3d(0.97, 0.97, 0.97);
-      transform: scale3d(0.97, 0.97, 0.97);
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
     }
-  
+
     to {
-      opacity: 1;
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
-  }
+    
+}
