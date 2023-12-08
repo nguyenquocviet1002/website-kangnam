@@ -3,64 +3,89 @@
   background: #003c77;
   padding: 30px 0;
   font-size:14px;
-  &__header {
+  &__inner{
     display: flex;
-    gap: 30px;
-    padding: 0 30px 30px;
-    br {
-      &:nth-child(1) {
-        display: none;
-      }
-    }
+  }
+  &__aside{
+    width: 31%;
   }
   &__logo {
     max-width: 215px;
+    margin-bottom: 20px;
     img {
       width: 100%;
       height: auto;
       display: block;
     }
   }
-  &__title {
-    color: #fec465;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
-  }
   &__box {
-    display: flex;
-    padding: 0 30px 20px;
-    border-bottom: 1px solid #fff;
-    justify-content: space-between;
-    text-align: justify;
-    font-size:13px;
+    flex: 1;
+    padding: 0 50px;
   }
-  &__item {
-    width: 47%;
-    color: #fff;
-    font-weight: 300;
-  }
-  &__phone {
+  &__contact{
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    img {
-      width: 22px;
-      height: auto;
+    gap: 10px;
+    &Item{
+      width: calc(50% - 5px);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 12px;
+      padding: 5px 20px;
     }
-    p {
-      margin: 0;
-      color: #fec465;
-      a {
-        color: #fff;
+    &Icon{
+      width: 70px;
+      img{
+        width: 100%;
+        height: auto;
+        display: block;
       }
     }
+    &Text{
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.1rem;
+      span{
+        display: block;
+        color: #FEC465;
+        font-size: 2.3rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  &__item {
+    color: #fff;
+    width: 85%;
+    margin: auto;
+    margin-top: 15px;
+  }
+  &__slogan{
+    color: #FEC465;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    &--1{
+      display: none;
+    }
+  }
+  &__info{
+    text-align: justify;
+    margin-top: 5px;
+    font-size: 14px;
   }
   &__address {
     p {
       color: #fff;
+    }
+    &--1{
+      .footer_kn_2_0_0__img img{
+        width: 25px;
+      }
     }
   }
   &__img {
@@ -82,8 +107,8 @@
   }
   &__content {
     display: flex;
-    justify-content: space-between;
     margin: 15px 0;
+    gap: 10px;
   }
   &__icon {
     img {
@@ -111,61 +136,95 @@
       }
     }
   }
-  @media (max-width: 1180px) {
+  @media (max-width: 1200px) {
     &__logo {
       max-width: 190px;
     }
-    &__header {
-      padding: 0 20px 20px;
+    &__box{
+      padding: 0 30px;
     }
-    &__box {
-      padding: 0 20px 20px;
+    &__contactText span{
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 1024px){
+    &__box{
+      padding: 0 20px;
+    }
+    &__contact{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__contactItem{
+      width: 230px;
+      padding: 5px;
+    }
+    &__contactIcon{
+      width: 60px;
+    }
+    &__contactText span{
+      font-size: 1.8rem;
+    }
+    &__content{
+      flex-wrap: wrap;
     }
   }
   @media (max-width: 767px) {
-    &__title {
-      text-align: center;
-      br {
-        &:nth-child(1) {
-          display: block;
-        }
-        &:nth-child(2) {
-          display: none;
-        }
-      }
-    }
-    &__header {
+    &__inner{
       flex-direction: column;
-      align-items: center;
-      gap: 20px;
+    }
+    &__aside{
+      width: 100%;
     }
     &__logo {
       max-width: 170px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__slogan{
+      text-align: center;
+      margin-bottom: 5px;
+      &--1{
+        display: block;
+      }
+      &--2{
+        display: none;
+      }
     }
     &__box {
+     padding: 0;
+    }
+    &__contact{
       flex-direction: column;
-      gap: 20px;
-      border: none;
-      padding: 0 0px 30px;
+    }
+    &__contactItem{
+      width: 100%;
+      justify-content: center;
     }
     &__item {
       width: 100%;
     }
-    &__phone,
     &__img {
-      width: 73%;
-      margin-left: auto;
+      justify-content: center;
     }
     &__address {
       border-bottom: 1px solid #fff;
+      &--1{
+        text-align: center;
+        border: none;
+        margin-top: 10px;
+      }
     }
     &__content {
-      flex-direction: column-reverse;
+      flex-direction: column;
       margin: 0 0 30px;
       gap: 20px;
     }
     &__list {
       justify-content: center;
+      &--1{
+        order: 3;
+      }
     }
     &__pic {
       width: 43%;
@@ -175,16 +234,9 @@
     }
   }
   @media (max-width: 320px) {
-    &__title {
-      font-size: 16px;
-    }
-    &__header {
-      gap: 10px;
-    }
     &__logo {
       max-width: 160px;
     }
-    &__phone,
     &__img {
       width: 85%;
     }
