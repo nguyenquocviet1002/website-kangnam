@@ -1,6 +1,22 @@
 .screen1 {
   font-family: var(--primary-font);
   padding: 55px 0 30px;
+  &__inner{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+  &__head{
+    width: 50%;
+  }
+  &__video{
+    flex: 1;
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
   &__title {
     font-family: var(--primary-font);
     font-size: 26px;
@@ -22,8 +38,6 @@
   &__des {
     text-align: justify;
     text-align-last: center;
-    width: 65%;
-    margin: 0 auto;
   }
   &__box {
     display: flex;
