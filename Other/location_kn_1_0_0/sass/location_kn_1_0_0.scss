@@ -1,0 +1,148 @@
+.location_kn_1_0_0 {
+    font-family: var(--primary-font);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-top:107px;
+    overflow: auto;
+    animation: opac .3s;
+    z-index: 98;
+    .container{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    &__box{
+      background: #fff;
+      padding:15px;
+      width: 830px;
+    }
+
+  &.show {
+    display: block;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+    background: rgba(0, 0, 0, .5);
+    &.show {
+      display: block;
+    }
+  }
+
+  >.row {
+    padding: 15px 25px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__banner {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 15px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    position: relative;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+    // &::after {
+    //   content: "";
+    //   border-bottom: 3px solid #000;
+    //   width: 80px;
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: -2px;
+    //   display: block;
+    // }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    margin: 5px 0;
+
+    li {
+      padding: 5px 0;
+      font-size: 13px;
+    }
+
+    a {
+      transition: 0.1s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    right: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    top: 65px;
+  }
+
+  @media (max-width: 991px) {
+    &__bv {
+      margin: 5px 0;
+    }
+
+    &__vtm {
+      margin: 0 !important;
+    }
+
+    ul li a {
+      white-space: pre-wrap;
+    }
+  }
+}
+@media (max-width: 1024px){
+  .location_kn_1_0_0 {
+      background: #fff;
+      padding-top:10px;
+      top: -11px;
+      right: -5px;
+      height:123%;
+      width: 38%;
+      .container{
+        background:#fff;
+        height: 100%;
+      }
+  }
+  .location_kn_1_0_0__bg{
+    width:65%;
+  }
+}
+@media (max-width: 600px){
+  .location_kn_1_0_0 {
+      width: 65%;
+      z-index: 99;
+  }
+  .location_kn_1_0_0__box{
+    padding:10px 0 0;
+  }
+  .location_kn_1_0_0__bg{
+    width:38%;
+  }
+}
