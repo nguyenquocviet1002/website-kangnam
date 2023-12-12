@@ -131,9 +131,6 @@
     &__title {
       font-size: 22px;
     }
-    &__des {
-      width: 75%;
-    }
     &__box {
       gap: 15px;
     }
@@ -146,6 +143,16 @@
   }
   @media (max-width: 767px) {
     padding: 50px 0 30px;
+    &__inner{
+      flex-direction: column;
+    }
+    &__head{
+      width: 100%;
+    }
+    
+    &__play{
+      width: 70px;
+    }
     &__title {
       br {
         display: block;
