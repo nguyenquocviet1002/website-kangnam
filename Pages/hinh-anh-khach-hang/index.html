@@ -14,9 +14,10 @@
     <section id="page1" class="screen1">
         <div class="container">
             <div class="screen1__box">
-                <div class="screen1__menu" onclick="inputHidden()">
-                    <img width="17" height="9" class="lazy" data-src="media/images/icon.webp?ver=1" alt="logo">
-                    <input type="text" value="Dịch vụ nâng mũi" readonly="false" id="inputHidden">
+                <!-- <div class="screen1__menu" onclick="inputHidden()"> -->
+                <div class="screen1__menu">
+                    <!-- <img width="17" height="9" class="lazy" data-src="media/images/icon.webp?ver=1" alt="logo">
+                    <input type="text" value="Dịch vụ nâng mũi" readonly="false" id="inputHidden"> -->
                     <ul id="menuItems" class="screen1__menuItems">
                         <!-- Thêm các mục menu cho các dịch vụ -->
                     </ul>
@@ -280,17 +281,17 @@
                 imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
             }
 
-            document.getElementById("inputHidden").value = services[serviceId].name;
+            // document.getElementById("inputHidden").value = services[serviceId].name;
             var screenWidth =
                 window.innerWidth ||
                 document.documentElement.clientWidth ||
                 document.body.clientWidth;
-            if (screenWidth <= 767) {
-                for (var i = 0; i < menuItems.children.length; i++) {
-                    menuItems.children[i].classList.add("hidden");
-                }
-            } else {
-            }
+            // if (screenWidth <= 767) {
+            //     for (var i = 0; i < menuItems.children.length; i++) {
+            //         menuItems.children[i].classList.add("hidden");
+            //     }
+            // } else {
+            // }
         }
 
         for (var i = 0; i < services.length; i++) {
@@ -356,23 +357,23 @@
                 window.innerWidth ||
                 document.documentElement.clientWidth ||
                 document.body.clientWidth;
-            if (screenWidth <= 767) {
-                for (var i = 0; i < menuItems.children.length; i++) {
-                    menuItems.children[i].classList.add("hidden");
-                }
-            } else {
-            }
+            // if (screenWidth <= 767) {
+            //     for (var i = 0; i < menuItems.children.length; i++) {
+            //         menuItems.children[i].classList.add("hidden");
+            //     }
+            // } else {
+            // }
         }
 
         // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
         window.addEventListener("load", changeMenuStyle);
         window.addEventListener("resize", changeMenuStyle);
 
-        function inputHidden() {
-            for (var i = 0; i < menuItems.children.length; i++) {
-                menuItems.children[i].classList.remove("hidden");
-            }
-        }
+        // function inputHidden() {
+        //     for (var i = 0; i < menuItems.children.length; i++) {
+        //         menuItems.children[i].classList.remove("hidden");
+        //     }
+        // }
 
         var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
         var currentPage = 1; // Trang hiện tại
