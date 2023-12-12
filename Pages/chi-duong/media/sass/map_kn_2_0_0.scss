@@ -1,6 +1,9 @@
+@import "contact_kn_2_0_0";
+@import "popup_regist_1_2_0";
+@import "popup_regist_1_2_1";
 .map_kn_2_0_0 {
     font-family: var(--primary-font);
-    padding: 55px 0 0;
+    padding: 45px 0 0;
     &--1{
         padding: 0 0 30px;
     }
@@ -70,6 +73,7 @@
     }
 
     @media (max-width: 600px) {
+        padding: 5px 0 0;
         &__head {
             font-size: 24px;
         }
@@ -273,3 +277,4 @@
         }
     }
 }
+

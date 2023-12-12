@@ -13,11 +13,12 @@ const popup_regist_1_0_0 = `
             <article>
                 <div style="display:none">
                     <input id="iemail" name="iemail" type="textbox" placeholder="Email:">
-                    <input type="hidden" id="gclid_field" name="gclid_field" value="">
-                    <input type="hidden" id="code_campaign" name="code_campaign" value="583971142">
-                    <input type="hidden" id="name_campaign" name="name_campaign" value="[Kangnam] Sale Kangnam">
-                    <input type="hidden" id="first_url" name="first_url" value="">
-                    <input type="hidden" id="refer" name="refer" value="">
+                    <input id="gclid_field" name="referred" value="">
+                    <input id="code_campaign" name="code_campaign" value="583971142">
+                    <input id="name_campaign" name="name_campaign" value="[Kangnam] Sale Kangnam">
+                    <input id="first_link" name="first_link" value="">
+                    <input id="website" name="website" value="">
+                    <input id="location" name="location" value="">
                 </div>
                 <div class="popup_regist_1_0_0__item form-group">
                     <label>* Tên:</label>
@@ -64,8 +65,11 @@ const callBtnRegist_1_0_0 = document.querySelectorAll(".notiprice");
 for (let i = 0; i < callBtnRegist_1_0_0.length; i++) {
     callBtnRegist_1_0_0[i].addEventListener('click', () => {
         document.getElementsByTagName('body')[0].insertAdjacentHTML("beforeend", popup_regist_1_0_0);
-        document.querySelector('.popup_regist_1_0_0 input[name="first_url"]').value = document.URL;
-        document.querySelector('.popup_regist_1_0_0 input[name="refer"]').value = document.referrer;
+        document.querySelector('.popup_regist_1_0_0 input[name="first_link"]').value = document.URL;
+        document.querySelector('.popup_regist_1_0_0 input[name="website"]').value = document.referrer;
+        getLocation().then((data) => {
+            document.querySelector('.popup_regist_1_0_0 input[name="location"]').value = data.city;            
+        });
         // Validate Form
         Validator({
             form: '#popup_regist_1_0_0',
@@ -77,13 +81,13 @@ for (let i = 0; i < callBtnRegist_1_0_0.length; i++) {
                 Validator.isMobile('input[name="imob"]'),
                 Validator.isRequired('select[name="iservice"]'),
                 Validator.addInput('#popup_regist_1_0_0 #itext', () => {
-                    return 'Sử dụng dịch vụ: ' + document.querySelector('#popup_regist_1_0_0 #iservice').value;
+                    return 'Nhận báo giá dịch vụ: ' + document.querySelector('#popup_regist_1_0_0 #iservice').value;
                 }),
             ],
             onSubmit: function (data) {
                 console.log(data);
                 popup_regist_1_0_0__hideForm();
-                sendForm(this.form, '/dang-ky-thanh-cong');             
+                sendForm(data, '/dang-ky-thanh-cong');             
             }
         });
 

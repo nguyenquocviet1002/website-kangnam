@@ -11,13 +11,14 @@ const popup_call_1_0_0 = `
                 <div class="popup_call_1_0_0__form">
                     <div style="display:none">
                         <input type="text" placeholder="Họ và tên (*)" value="Yêu Cầu Gọi Lại" id="iname" name="iname">
+                        <input id="iemail" name="iemail" value="no@email.benhvienthammykangnam.vn" placeholder="Email">
                         <textarea type="text" placeholder="Nhu cầu tư vấn" id="itext" name="itext"></textarea>
-                        <input id="iemail" name="iemail" value="no@email.benhvienthammykangnam.vn" type="hidden" placeholder="Email">
-                        <input type="hidden" id="gclid_field" name="gclid_field" value="">
-                        <input type="hidden" id="name_campaign" name="name_campaign" value="[Kangnam] Yêu Cầu Gọi Lại">
-                        <input type="hidden" id="code_campaign" name="code_campaign" value="533588630">
-                        <input type="hidden" id="first_url" name="first_url" value="">
-                        <input type="hidden" id="refer" name="refer" value="">
+                        <input id="gclid_field" name="referred" value="">
+                        <input id="name_campaign" name="name_campaign" value="[Kangnam] Yêu Cầu Gọi Lại">
+                        <input id="code_campaign" name="code_campaign" value="533588630">
+                        <input id="first_link" name="first_link" value="">
+                        <input id="website" name="website" value="">
+                        <input id="location" name="location" value="">
                     </div>
                     <div class="form-group">
                         <input id="imob" name="imob" type="textbox" placeholder="Nhập số điện thoại của bạn*:">
@@ -37,9 +38,12 @@ const popup_call_1_0_0 = `
 const callBtn = document.querySelectorAll(".btnkn1call, .btncallnow, .btncallme, .bvkn_dkcall");
 for (let i = 0; i < callBtn.length; i++) {
     callBtn[i].addEventListener('click', () => {
-        document.getElementsByTagName('body')[0].insertAdjacentHTML("afterbegin", popup_call_1_0_0);
-        document.querySelector('.popup_call_1_0_0 input[name="first_url"]').value = document.URL;
-        document.querySelector('.popup_call_1_0_0 input[name="refer"]').value = document.referrer;
+        document.getElementsByTagName('body')[0].insertAdjacentHTML("beforeend", popup_call_1_0_0);
+        document.querySelector('.popup_call_1_0_0 input[name="first_link"]').value = document.URL;
+        document.querySelector('.popup_call_1_0_0 input[name="website"]').value = document.referrer;
+        getLocation().then((data) => {
+            document.querySelector('.popup_call_1_0_0 input[name="location"]').value = data.city;            
+        });
         // Call Form
         Validator({
             form: '#popup_call_1_0_0',
@@ -52,7 +56,7 @@ for (let i = 0; i < callBtn.length; i++) {
             onSubmit: function (data) {
                 console.log(data);
                 popup_call_1_0_0__hideForm();
-                sendForm(this.form, '/dang-ky-thanh-cong'); 
+                sendForm(data, '/dang-ky-thanh-cong'); 
             }
         });
         document.getElementById('popup_call_1_0_0__closePopup').addEventListener('click', () => {
