@@ -16,9 +16,10 @@
     <section id="page1" class="screen1">
         <div class="container">
             <div class="screen1__box">
-                <div class="screen1__menu" onclick="inputHidden()">
-                    <img width="17" height="9" src="media/images/icon.webp"  alt="">
-                    <input type="text"  value="Dịch vụ nâng mũi" readonly="false" id="inputHidden">
+                <!-- <div class="screen1__menu" onclick="inputHidden()"> -->
+                <div class="screen1__menu">
+                    <!-- <img width="17" height="9" src="media/images/icon.webp"  alt=""> -->
+                    <!-- <input type="text"  value="Dịch vụ nâng mũi" readonly="false" id="inputHidden"> -->
                     <ul id="menuItems" class="screen1__menuItems">
                         <!-- Thêm các mục menu cho các dịch vụ -->
                     </ul>
@@ -60,8 +61,8 @@
         // let service = '';
         var services = [
             {
-                name: "Bảng giá thẩm mỹ mũi",
-                link: '#bang-gia-tham-my-mui',
+                name: "thẩm mỹ mũi",
+                link: '#tham-my-mui',
                 desc: 'Chuyên khoa Thẩm mỹ mũi chuyên sâu Chuyên khoa Thẩm mỹ mũi tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, với 12 công nghệ Nâng mũi, sửa mũi được liên tục cập nhật và chuyển giao độc quyền từ Hàn Quốc. Chuyên khoa Thẩm mỹ mũi quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực thẩm mỹ mũi, giúp khách hàng sở hữu dáng mũi đẹp chuẩn tỉ lệ, phù hợp với gương mặt phụ nữ Á Đông, duy trì kết quả lâu dài.',
                 images: [
                     {
@@ -112,8 +113,8 @@
                 ]
             },
             {
-                name: "Bảng giá thẩm mỹ mắt",
-                link: '#bang-gia-tham-my-mat',
+                name: "thẩm mỹ mắt",
+                link: '#tham-my-mat',
                 desc: 'Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông',
                 images: [
                     {
@@ -148,8 +149,8 @@
                 ]
             },
             {
-                name: "Bảng giá thẩm mỹ hàm mặt",
-                link: '#bang-gia-tham-my-ham-mat',
+                name: "thẩm mỹ hàm mặt",
+                link: '#tham-my-ham-mat',
                 desc: 'Chuyên khoa thẩm mỹ Hàm mặt của Hệ thống thẩm Mỹ Kangnam quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực tạo hình thẩm mỹ Hàn Quốc, là ekip thực hiện chương trình Hành trình Lột xác. Kangnam là đơn vị hiếm hoi có thể xử lý được những ca hàm mặt khó, phức tạp, đòi hỏi chuyên môn cao. Với sự hỗ trợ đắc lực của trang thiết bị tân tiến, các ca phẫu thuật hàm mặt tại Kangnam đều đạt kết quả ngoài mong đợi và được bảo hành trọn đời.',
                 images: [
                     {
@@ -192,8 +193,8 @@
                 ]
             },
             {
-                name: "bảng giá thẩm mỹ vóc dáng",
-                link: '#bang-gia-tham-my-voc-dang',
+                name: "thẩm mỹ vóc dáng",
+                link: '#tham-my-voc-dang',
                 desc: 'Chuyên khoa tạo hình Vóc dáng hoạt động theo quy trình chuẩn Hàn Quốc, đem đến các giải pháp "hot", "an toàn" kiến tạo thân hình quyến rũ như ý muốn. Với đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực Phẫu thuật thẩm mỹ và Tạo hình, Chuyên khoa tạo hình Vóc dáng chắc chắn sẽ làm hài lòng tất cả khách hàng.',
                 images: [
                     {
@@ -236,8 +237,8 @@
                 ]
             },
             {
-                name: "bảng giá điều trị da công nghệ cao",
-                link: '#bang-gia-dieu-tri-da-cong-nghe-cao',
+                name: "điều trị da công nghệ cao",
+                link: '#dieu-tri-da-cong-nghe-cao',
                 desc: 'Chuyên khoa Da liễu và Điều trị da công nghệ cao quy tụ đội ngũ chuyên gia, bác sĩ da liễu giỏi chuyên môn với hơn 10 năm kinh nghiệm. Với sự hỗ trợ đắc lực của hệ thống máy móc hiện đại, các công nghệ tân tiến, chuyên khoa cung cấp đa dạng giải pháp điều trị sắc tố nám, tàn nhang, bớt, mụn,... trả lại làn da sáng khỏe như ý muốn.',
                 images: [
                     {
@@ -272,8 +273,8 @@
                 ]
             },
             {
-                name: "bảng giá trẻ hóa da công nghệ cao",
-                link: '#bang-gia-tre-hoa-da-cong-nghe-cao',
+                name: "trẻ hóa da công nghệ cao",
+                link: '#tre-hoa-da-cong-nghe-cao',
                 desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc với hơn 15 dịch vụ trẻ hóa, hơn 39 dịch vụ chăm sóc da cao cấp. Kangnam độc quyền bộ giải pháp trẻ hóa "Kim tự tháp" giúp khách hàng sở hữu làn da chắc khỏe, căng mịn, tràn đầy sức sống.',
                 images: [
                     {
@@ -308,8 +309,8 @@
                 ]
             },
             {
-                name: "bảng giá nha khoa thẩm mỹ",
-                link: '#bang-gia-nha-khoa-tham-my',
+                name: "nha khoa thẩm mỹ",
+                link: '#nha-khoa-tham-my',
                 desc: 'Nha khoa thẩm mỹ Kangnam hoạt động với sứ mệnh chăm sóc sức khỏe răng miệng toàn diện, mang lại cho khách hàng nụ cười rạng rỡ, tự tin chinh phục mọi thử thách. Kangnam ứng dụng thành công các công nghệ thẩm mỹ răng tiên tiến trên thế giới như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng…với nhiều ưu điểm vượt trội cùng đội ngũ chuyên gia, bác sĩ nha khoa đầu ngành có trình độ chuyên môn cao, giàu kinh nghiệm.',
                 images: [
                     {
@@ -336,8 +337,8 @@
                 ]
             },
             {
-                name: "bảng giá kangnam clinic",
-                link: '#bang-gia-kangnam-clinin',
+                name: "kangnam clinic",
+                link: '#kangnam-clinic',
                 desc: '',
                 images: [
                     {
@@ -479,18 +480,18 @@
                 imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
             }
 
-            document.getElementById("inputHidden").value = services[serviceId].name;
+            // document.getElementById("inputHidden").value = services[serviceId].name;
 
             var screenWidth =
                 window.innerWidth ||
                 document.documentElement.clientWidth ||
                 document.body.clientWidth;
 
-            if (screenWidth <= 767) {
-                for (var i = 0; i < menuItems.children.length; i++) {
-                    menuItems.children[i].classList.add("hidden");
-                }
-            }
+            // if (screenWidth <= 767) {
+            //     for (var i = 0; i < menuItems.children.length; i++) {
+            //         menuItems.children[i].classList.add("hidden");
+            //     }
+            // }
         }
 
         function changeMenuStyle() {
@@ -501,43 +502,43 @@
             if (screenWidth <= 767) {
                 mobileBuild();
             }
-            function mobileBuild() {
-                for (var i = 0; i < menuItems.children.length; i++) {
-                    menuItems.children[i].classList.add("hidden");
-                }
+            // function mobileBuild() {
+            //     for (var i = 0; i < menuItems.children.length; i++) {
+            //         menuItems.children[i].classList.add("hidden");
+            //     }
 
-                var itemsPerPage = 8; // Số lượng mục hiển thị trên mỗi trang
-                var currentPage = 1; // Trang hiện tại
+            //     var itemsPerPage = 8; // Số lượng mục hiển thị trên mỗi trang
+            //     var currentPage = 1; // Trang hiện tại
 
 
 
-                var totalItems = services[currentServiceId].images.length;
-                var totalPages = Math.ceil(totalItems / itemsPerPage);
-                createPagination();
-                showPage(currentPage);
+            //     var totalItems = services[currentServiceId].images.length;
+            //     var totalPages = Math.ceil(totalItems / itemsPerPage);
+            //     createPagination();
+            //     showPage(currentPage);
 
-                document.getElementById("prev").addEventListener("click", function () {
-                    if (currentPage > 1) {
-                        changePage(currentPage - 1);
-                    }
-                });
+            //     document.getElementById("prev").addEventListener("click", function () {
+            //         if (currentPage > 1) {
+            //             changePage(currentPage - 1);
+            //         }
+            //     });
 
-                document.getElementById("next").addEventListener("click", function () {
-                    if (currentPage < totalPages) {
-                        changePage(currentPage + 1);
-                    }
-                });
+            //     document.getElementById("next").addEventListener("click", function () {
+            //         if (currentPage < totalPages) {
+            //             changePage(currentPage + 1);
+            //         }
+            //     });
 
-                var paginationItems = document.querySelectorAll(".pagination__item");
-                for (var i = 0; i < paginationItems.length; i++) {
-                    paginationItems[i].addEventListener("click", function () {
-                        var page = parseInt(this.id);
-                        if (page) {
-                            changePage(page);
-                        }
-                    });
-                }
-            }
+            //     var paginationItems = document.querySelectorAll(".pagination__item");
+            //     for (var i = 0; i < paginationItems.length; i++) {
+            //         paginationItems[i].addEventListener("click", function () {
+            //             var page = parseInt(this.id);
+            //             if (page) {
+            //                 changePage(page);
+            //             }
+            //         });
+            //     }
+            // }
 
         }
 
@@ -638,11 +639,11 @@
         }
 
 
-        function inputHidden() {
-            for (var i = 0; i < menuItems.children.length; i++) {
-                menuItems.children[i].classList.remove("hidden");
-            }
-        }
+        // function inputHidden() {
+        //     for (var i = 0; i < menuItems.children.length; i++) {
+        //         menuItems.children[i].classList.remove("hidden");
+        //     }
+        // }
 
         // Xử lý tự động lấy trường dịch vụ trong Form
         function form() {
