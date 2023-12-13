@@ -42,7 +42,7 @@
             </div>
             <div class="contact_kn_2_0_0__mb">
                 <form id="contact_kn_2_0_0__boxMb" class="contact_kn_2_0_0__boxMb">
-                    <div class="contact_kn_2_0_0__itemMb">
+                    <a class="contact_kn_2_0_0__itemMb" href="tel:19006400">
                         <div class="contact_kn_2_0_0__icon">
                             <img width="43" height="43" class="lazy" data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/phone.svg" alt="">
                         </div>
@@ -50,8 +50,8 @@
                             hotline
                             <span>1900.6466</span>
                         </div>
-                    </div>
-                    <div class="contact_kn_2_0_0__itemMb">
+                    </a>
+                    <div class="contact_kn_2_0_0__itemMb kntv">
                         <div class="contact_kn_2_0_0__icon">
                             <img width="43" height="43" class="lazy" data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/calculator.svg" alt="">
                         </div>
@@ -129,72 +129,14 @@
                 ],
                 onSubmit: function (data) {
                     console.log(data);
-                    // sendForm(this.form, '/dang-ky-thanh-cong');  
-                    // const createForm = async () => {
-                    //     const info = {
-                    //         contact_name: 'Test', 
-                    //         phone: '03637881600', 
-                    //         email_from: 'dinth@scigroup.com.vn', 
-                    //         description: 'description', 
-                    //         code_campaign: '583971142', 
-                    //         name_campaign: '[Kangnam] Sale Kangnam',
-                    //     };
-                    //     const response = await fetch(`
-                    //         https://benhvienthammykangnam.vn/css/landing/sendform?
-                    //         contact_name=${info.contact_name}&
-                    //         phone=${info.phone}&
-                    //         email_from=${info.email_from}&
-                    //         description=${info.description}&
-                    //         code_campaign=${info.code_campaign}&
-                    //         name_campaign=${info.name_campaign}
-                    //     `);
-                    //     const data = await response.json();
-                    //     console.log('9. Create Form', data);
-                    //     return data;
-                    // };
-                    // createForm();           
+                    sendForm(data, '/dang-ky-thanh-cong');  
                 }
             });
         })
     </script>
-    <script src="https://huudinh.github.io/assets/js/validator.min.js"></script>
-    <script>
-        function sendForm(idForm, redirect) {
-            var  xmlhttp;
-            if(window.XMLHttpRequest){
-            xmlhttp = new XMLHttpRequest();
-            }else if(window.ActiveXObject){
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
-
-            }
-            // Instantiating the request object
-            xmlhttp.open("POST", "https://benhvienthammykangnam.vn/api_form.php", true);
-
-            // Defining event listener for readystatechange event
-            xmlhttp.onreadystatechange = function() {
-            // if (this.readyState !== "complete"){
-            //    document.getElementById("response_message").innerHTML = "Loading";
-            // }
-                if (this.readyState === 4 && this.status === 200)
-                {
-                    //alert(this.responseText); // Here is the response
-                    // document.getElementById("response_message").innerHTML = this.responseText;
-                    if(redirect){
-                        window.top.location.href = redirect;
-                    }
-                }
-            }
-
-            // Retrieving the form data
-            var leadForm = document.querySelector(idForm);
-            var formData = new FormData(leadForm);
-
-            // Sending the request to the server
-            xmlhttp.send(formData);
-        }
-    </script>
 
 </body>
+<script src="https://benhvienthammykangnam.vn/css/lib/js_v2.min.js"></script>
 <script src="https://huudinh.github.io/assets/js/module.min.js"></script>
 
 </html>
