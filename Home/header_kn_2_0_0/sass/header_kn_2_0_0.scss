@@ -4,10 +4,10 @@
   top: 0;
   z-index: 99;
   width: 100%;
-  box-shadow: 0 0 16px 1px rgba(0,0,0,.2);
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
   &__top {
     background-color: #003c77;
-    padding: 5px 0;
+    padding: 12px 0;
     position: relative;
     .container {
       display: flex;
@@ -17,8 +17,8 @@
   }
   &__logo {
     display: block;
-    width: 180px;
-    margin:0;
+    width: 142px;
+    margin: 0;
     img {
       width: 100%;
       height: auto;
@@ -49,9 +49,9 @@
       display: flex;
     }
   }
-  &__location{
+  &__location {
     cursor: pointer;
-    img{
+    img {
       width: 100%;
       height: auto;
       display: block;
@@ -80,36 +80,40 @@
         text-wrap: nowrap;
         font-weight: 500;
         > span {
-            display: none;
+          display: none;
         }
       }
       &:hover {
         > a {
-          color:#db7f27;
+          color: #db7f27;
         }
       }
-      &:last-child{
+      &:last-child {
         flex-grow: 1;
       }
     }
+  }
+  .view {
+    display: none;
   }
   &__dropdown {
     padding: 0;
     margin: 0;
     position: absolute;
-    background-color:rgba(255,255,255,.8);
+    background-color: rgba(255, 255, 255, 0.8);
     max-width: 250px;
     width: max-content;
-    box-shadow:0px 5px 11px rgba(0,0,0,.1);
+    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.1);
     &Item {
       display: inline-block;
       width: 100%;
       transition: 0.2s all linear;
+      position: relative;
       > a {
         text-transform: capitalize;
         display: block;
         padding: 8px 10px;
-        transition: 0.2s all linear;       
+        transition: 0.2s all linear;
       }
       &:not(:last-child) > a {
         border-bottom: 1px solid #fff;
@@ -118,9 +122,17 @@
         background-color: #db7f27;
         > a {
           border-color: #fff;
-          color:#fff;
+          color: #fff;
+        }
+        .header_kn_2_0_0__dropdownSub {
+          display: block;
         }
       }
+    }
+    &Sub {
+      display: none;
+      top: 0;
+      left: 100%;
     }
   }
   &__head {
@@ -155,7 +167,7 @@
   }
   @media (max-width: 1200px) {
     &__logo {
-      width: 150px;
+      width: 135px;
     }
     &__redirectWeb {
       font-size: 14px;
@@ -164,7 +176,8 @@
       margin-left: 10px;
       width: 180px;
     }
-    &__navItem > a {
+    &__navItem > a,
+    &__dropdownItem > a {
       font-size: 14px;
       display: flex;
       align-items: center;
@@ -184,10 +197,11 @@
     // &__action{
     //   display: none;
     // }
-    &__redirectWeb, &__global{
+    &__redirectWeb,
+    &__global {
       display: none;
     }
-    &__location{
+    &__location {
       position: absolute;
       top: 6px;
       right: 25px;
@@ -247,7 +261,7 @@
         > a {
           padding: 10px 20px;
           text-transform: uppercase;
-          >span{
+          > span {
             display: block;
           }
         }
@@ -256,10 +270,10 @@
         }
       }
     }
+    .view {
+      display: block;
+    }
     &__dropdown {
-      transform: translateX(100%);
-      visibility: hidden;
-      opacity: 0;
       transition: 0.2s all ease-in-out;
       display: block;
       z-index: 1;
@@ -272,6 +286,7 @@
       &Item {
         display: block;
         width: 100%;
+        position: static;
         > a {
           padding: 8px 20px;
           text-transform: uppercase;
@@ -280,12 +295,18 @@
           border-bottom: 1px solid #e1dddd;
         }
       }
-      &.show {
-        transform: translateX(0);
-        visibility: visible;
-        opacity: 1;
-        height:90vh;
-        box-shadow: none;
+      &Main,
+      &Sub {
+        transform: translateX(100%);
+        visibility: hidden;
+        opacity: 0;
+        &.show {
+          transform: translateX(0);
+          visibility: visible;
+          opacity: 1;
+          height: 90vh;
+          box-shadow: none;
+        }
       }
     }
     &__head {
@@ -301,22 +322,22 @@
       cursor: pointer;
     }
     &__bg {
-        background-color: #000;
-        opacity: 0.5;
+      background-color: #000;
+      opacity: 0.5;
     }
   }
-  @media (max-width: 767px){
-    &__bottom{
-        max-width: 280px;
+  @media (max-width: 767px) {
+    &__bottom {
+      max-width: 280px;
     }
   }
-  @media (max-width: 375px){
+  @media (max-width: 375px) {
     &__redirectWeb {
       font-size: 10px;
     }
   }
 }
-.fixed-body{
-    height: 100vh;
-    overflow: hidden;
+.fixed-body {
+  height: 100vh;
+  overflow: hidden;
 }

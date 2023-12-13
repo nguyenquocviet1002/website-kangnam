@@ -44,6 +44,7 @@ const eventMB = (data) => {
             if(innerData.length > 0){
                 document.getElementById(header_kn_2_0_0_elmId).innerHTML = innerData[0].layout;
             }
+            newFuncShowSub();
         })
     }
     header_kn_2_0_0_elmBg.addEventListener('click', () => {
@@ -90,6 +91,28 @@ const eventMB = (data) => {
             elmDown[i].classList.remove('show');
         } 
     });
+    const newFuncShowSub = () => {
+        const elmLocationSub = document.querySelectorAll('.header_kn_2_0_0__dropdownMain .link-view');
+        console.log("elmLocationSub: ", elmLocationSub);
+        for (let i = 0; i < elmLocationSub.length; i++) {
+            elmLocationSub[i].addEventListener('click', (e) => {
+                const elmCallSub = elmLocationSub[i].querySelector('.header_kn_2_0_0__dropdownMain .view')
+                if (elmCallSub.contains(e.target)) {
+                    e.preventDefault();
+                    elmLocationSub[i].parentElement.querySelector('.header_kn_2_0_0__dropdownSub').classList.add('show');
+                } else {
+
+                }
+
+            })
+        }
+        const newbtn = document.querySelectorAll('.header_kn_2_0_0__dropdownSub .header_kn_2_0_0__back');
+        for (let i = 0; i < newbtn.length; i++) {
+            newbtn[i].addEventListener('click', (e) => {
+                newbtn[i].parentElement.parentElement.classList.remove('show')
+            })
+        }
+    }
 }
 
 const resizeHeader = (data) => {
