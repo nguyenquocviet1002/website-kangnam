@@ -49,6 +49,14 @@
       display: flex;
     }
   }
+  &__location{
+    cursor: pointer;
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
   &__bottom {
     position: relative;
     z-index: 1;
@@ -173,8 +181,16 @@
     &__logo {
       width: 140px;
     }
-    &__action{
+    // &__action{
+    //   display: none;
+    // }
+    &__redirectWeb, &__global{
       display: none;
+    }
+    &__location{
+      position: absolute;
+      top: 6px;
+      right: 25px;
     }
     &__button {
       display: flex;
