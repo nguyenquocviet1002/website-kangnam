@@ -9,7 +9,6 @@ const popup_regist_1_2_1 = `
                     <b id="close-form">╳</b>
             <article>
                 <div style="display:none">
-                    <input id="iemail" name="iemail" type="textbox" placeholder="Email:">
                     <input id="gclid_field" name="referred" value="">
                     <input id="code_campaign" name="code_campaign" value="583971142">
                     <input id="name_campaign" name="name_campaign" value="[Kangnam] Sale Kangnam">
