@@ -95,6 +95,11 @@
             border-radius: 55px;
             padding: 8px 40px;
             font-weight: 600;
+            transition: all .2s linear;
+            &:hover{
+                background: #f1bebe;
+                border-color: transparent;
+            }
         }
     }
     @media (max-width: 414px) {
