@@ -7,6 +7,7 @@ let template = `
                         <div class="location_kn_1_0_0__title">Bệnh viện thẩm mỹ</div>
                         <ul class="location_kn_1_0_0__bv">
                             <li><a href="#">Sài Gòn - 666 Cách mạng tháng 8</a></li>
+                            <li><a href="#">Sài Gòn - 218 Nguyễn Trãi</a></li>
                             <li><a href="#">Hà Nội - 190 Trường Chinh</a></li>
                         </ul>
                     </div>
@@ -41,8 +42,10 @@ let template = `
 `;
 
 let location_kn_1_0_0 = document.getElementsByClassName('location');
+console.log(location_kn_1_0_0);
 for(let i = 0; i < location_kn_1_0_0.length; i ++){
-    location_kn_1_0_0[i].addEventListener('mouseenter', () => {
+    location_kn_1_0_0[i].addEventListener('click', () => {
+        console.log(document.getElementById('subLocation'));
         document.getElementById('subLocation').innerHTML = template;
         document.getElementById('location_kn_1_0_0__bg').addEventListener('click', function(){   
             document.getElementById('subLocation').innerHTML = '';
