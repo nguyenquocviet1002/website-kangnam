@@ -15,10 +15,7 @@
     <section id="page1" class="screen1">
       <div class="container">
         <div class="screen1__box">
-          <!-- <div class="screen1__menu" onclick="inputHidden()"> -->
           <div class="screen1__menu">
-            <!-- <img width="17" height="9" class="lazy" data-src="media/images/icon.webp?ver=1" alt="logo">
-                    <input type="text" value="Dịch vụ nâng mũi" readonly="false" id="inputHidden"> -->
             <ul id="menuItems" class="screen1__menuItems">
               <!-- Thêm các mục menu cho các dịch vụ -->
             </ul>
@@ -50,8 +47,13 @@
       </div>
     </section>
     <script>
-      // let images = 'https://benhvienthammykangnam.vn/cp/pages/hinh-anh-khach-hang/';
-      let images = "";
+      const url = window.location.host;
+      let images;
+      if( url == 'benhvienthammykangnam.vn'){
+        images = 'https://benhvienthammykangnam.vn/cp/pages/hinh-anh-khach-hang/';
+      } else{
+        images = "";
+      }
       var services = [
         {
           name: "Mắt",
@@ -84,14 +86,6 @@
               linkVideo: "https://www.youtube.com/watch?v=CSC57GeCkU4",
               descVideo: "Nhật ký nâng mũi của hot girl 2K1 tại Kangnam",
             },
-            // {
-            //     linkVideo: 'https://www.youtube.com/watch?v=nohLlXTM7O8&list=PLROTewhS4-MaZeM0eTuSbLBe2eiBlsgiM&index=6',
-            //     descVideo: 'Nâng mũi sau 10 ngày: Cô gái "lột xác" nhờ chiếc mũi cao, thẳng, thon gọn',
-            // },
-            // {
-            //     linkVideo: 'https://www.youtube.com/watch?v=TWc4NtXiO8I&list=PLROTewhS4-MaZeM0eTuSbLBe2eiBlsgiM&index=7',
-            //     descVideo: 'Nâng mũi sau 1 tháng trông sẽ như thế nào?',
-            // },
           ],
           images: [
             `${images}media/images/nangmui-p1.webp?ver=1`,
@@ -232,7 +226,17 @@
           name: "Spa",
           link: "#kangnam-clinic",
           desc: "Kangnam Clinic luôn cập nhật các công nghệ tiên tiến nhất, đem đến các giải pháp làm đẹp không xâm lấn, an toàn và hiệu quả. Với đội ngũ chuyên viên được đào tạo bài bản, tay nghề cao, Kangnam Clinic đã làm hài lòng hàng trăm nghìn khách hàng với các liệu trình thẩm mỹ cao cấp, chuẩn y khoa.",
+<<<<<<< HEAD
+          video: [
+            // {
+            //   linkVideo: "https://www.youtube.com/watch?v=9MhXLdl4j1c&list=PLROTewhS4-MaQ8Fb6pseOa2Py_nNDQ1-R&index=5",
+            //   descVideo: "Video cảm nhận khách hàng",
+            // },
+          ],
+          
+=======
           video: [],
+>>>>>>> origin/main
           images: [
             `${images}media/images/clinic-p9.webp?ver=1`,
             `${images}media/images/clinic-p10.webp?ver=1`,
@@ -297,6 +301,7 @@
             `;
         let htmlVideo = "";
         services[serviceId].video.map((item) => {
+          // console.log(item);
           htmlVideo += `
                 <div class="screen1__video">
                     <div onclick="playVideo('${getIdYoutube(
@@ -334,17 +339,10 @@
           ].style.display = "none";
         }
 
-        // document.getElementById("inputHidden").value = services[serviceId].name;
         var screenWidth =
           window.innerWidth ||
           document.documentElement.clientWidth ||
           document.body.clientWidth;
-        // if (screenWidth <= 767) {
-        //     for (var i = 0; i < menuItems.children.length; i++) {
-        //         menuItems.children[i].classList.add("hidden");
-        //     }
-        // } else {
-        // }
       }
 
       for (var i = 0; i < services.length; i++) {
@@ -416,23 +414,11 @@
           window.innerWidth ||
           document.documentElement.clientWidth ||
           document.body.clientWidth;
-        // if (screenWidth <= 767) {
-        //     for (var i = 0; i < menuItems.children.length; i++) {
-        //         menuItems.children[i].classList.add("hidden");
-        //     }
-        // } else {
-        // }
       }
 
       // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
       window.addEventListener("load", changeMenuStyle);
       window.addEventListener("resize", changeMenuStyle);
-
-      // function inputHidden() {
-      //     for (var i = 0; i < menuItems.children.length; i++) {
-      //         menuItems.children[i].classList.remove("hidden");
-      //     }
-      // }
 
       var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
       var currentPage = 1; // Trang hiện tại
