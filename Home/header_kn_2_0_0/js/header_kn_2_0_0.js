@@ -117,16 +117,12 @@ const eventMB = (data) => {
         const elms = document.querySelectorAll('.click-reload');
         for (let i = 0; i < elms.length; i++){
             elms[i].addEventListener('click', () => {
-                const header_kn_2_0_0_elmId = elmClick[i].getAttribute('data-id');
-                if(header_kn_2_0_0_elmId !== null){
-                    document.getElementById(header_kn_2_0_0_elmId).innerHTML = '';
-                    header_kn_2_0_0_elmBg.style.display = 'none';
-                    document.querySelector('.header_kn_2_0_0__bottom').classList.remove('show');
-                    document.body.classList.remove('fixed-body');
-                    const elmDown = document.querySelectorAll('.header_kn_2_0_0__dropdown');
-                    for(let i = 0; i < elmDown.length; i++){
-                        elmDown[i].classList.remove('show');
-                    } 
+                header_kn_2_0_0_elmBg.style.display = 'none';
+                document.querySelector('.header_kn_2_0_0__bottom').classList.remove('show');
+                document.body.classList.remove('fixed-body');
+                const elmDown = document.querySelectorAll('.header_kn_2_0_0__dropdown');
+                for(let i = 0; i < elmDown.length; i++){
+                    elmDown[i].classList.remove('show');
                 }
             })
         }
