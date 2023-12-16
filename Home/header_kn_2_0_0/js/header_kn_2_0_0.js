@@ -45,6 +45,7 @@ const eventMB = (data) => {
                 document.getElementById(header_kn_2_0_0_elmId).innerHTML = innerData[0].layout;
             }
             newFuncShowSub();
+            reloadPage();
         })
     }
     header_kn_2_0_0_elmBg.addEventListener('click', () => {
@@ -93,7 +94,6 @@ const eventMB = (data) => {
     });
     const newFuncShowSub = () => {
         const elmLocationSub = document.querySelectorAll('.header_kn_2_0_0__dropdownMain .link-view');
-        console.log("elmLocationSub: ", elmLocationSub);
         for (let i = 0; i < elmLocationSub.length; i++) {
             elmLocationSub[i].addEventListener('click', (e) => {
                 const elmCallSub = elmLocationSub[i].querySelector('.header_kn_2_0_0__dropdownMain .view')
@@ -110,6 +110,17 @@ const eventMB = (data) => {
         for (let i = 0; i < newbtn.length; i++) {
             newbtn[i].addEventListener('click', (e) => {
                 newbtn[i].parentElement.parentElement.classList.remove('show')
+            })
+        }
+    }
+    const reloadPage = () => {
+        const elms = document.querySelectorAll('.click-reload');
+        console.log("elms: ", elms);
+        for (let i = 0; i < elms.length; i++){
+            elms[i].addEventListener('click', () => {
+                setTimeout(() => {
+                    window.location.reload()
+                }, 10000)
             })
         }
     }
