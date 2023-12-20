@@ -10,8 +10,8 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
         document.querySelector(`.${position}`).setAttribute('style', 'min-height:' + img + 'px');
 
         const removeSlideIndex = () => {
-            if (document.querySelector(`.${position} picture`)) {
-                document.querySelector(`.${position} picture`).remove();
+            if (document.querySelector(`.${position} a`)) {
+                document.querySelector(`.${position} a`).remove();
             }
         }
         const myTimer = () => {
@@ -34,7 +34,14 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
         }
 
         const renderCard = (index) => {
-            document.querySelector(`.${position} .inner__slide`).innerHTML = data[index];
+            document.querySelector(`.${position} .inner__slide`).innerHTML = `
+            <a href="${data[index].link}">
+                <picture>
+                    <source media="(max-width: 1025px)" width="428" height="500" srcset="${data[index].mb}" loading="lazy">
+                    <img width="1920" height="702" class="lazy" data-src="${data[index].pc}" alt="" loading="lazy">
+                </picture>
+            </a>
+            `;
             setTimeout(() => {
                 document.querySelector(`.${position} .inner__slide img`).classList.add('ani');
             }, 100)
@@ -108,20 +115,8 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
     }
 }
 
-// Resize images
-const resize = () => {
-    if (window.innerWidth < 1025) {
-        runSlide({
-            data: dataSlide1Mb,
-            position: 'slider_kn_2_0_0',
-            isPagination: true,
-        });
-    } else {
-        runSlide({
-            data: dataSlide1,
-            position: 'slider_kn_2_0_0',
-            isPagination: true,
-        });
-    }
-}
-resize();
+runSlide({
+    data: dataSlide1,
+    position: 'slider_kn_2_0_0',
+    isPagination: true,
+})
