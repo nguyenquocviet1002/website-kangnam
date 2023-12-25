@@ -26,12 +26,12 @@
             <div class="screen1__inner">
               <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
             </div>
-            <div class="screen1__btn">
+            <!-- <div class="screen1__btn">
               <button id="screen1__viewMore">Hiển thị thêm</button>
             </div>
             <div class="screen1__btn screen1__btnHide">
               <button id="screen1__hide">Rút gọn</button>
-            </div>
+            </div> -->
             <div class="pagination">
               <a href="#" class="pagination__item" id="prev">&laquo;</a>
               <a href="#" class="pagination__item" id="1">1</a>
@@ -319,20 +319,20 @@
         currentServiceId = serviceId; // Cập nhật ID của dịch vụ hiện tại
 
         // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" dựa trên số lượng hình ảnh
-        if (serviceImages.length <= 4) {
-          viewMoreButton.style.display = "none";
-          hideButton.style.display = "none";
-        } else {
-          viewMoreButton.style.display = "block";
-          hideButton.style.display = "none";
-        }
+        // if (serviceImages.length <= 4) {
+        //   viewMoreButton.style.display = "none";
+        //   hideButton.style.display = "none";
+        // } else {
+        //   viewMoreButton.style.display = "block";
+        //   hideButton.style.display = "none";
+        // }
 
         // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-        for (var i = 4; i < serviceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "none";
-        }
+        // for (var i = 4; i < serviceImages.length; i++) {
+        //   imageContainer.querySelector(".screen1__pic").children[
+        //     i
+        //   ].style.display = "none";
+        // }
 
         var screenWidth =
           window.innerWidth ||
@@ -362,47 +362,47 @@
       window.addEventListener("hashchange", functionChangeHash);
 
       // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
-      viewMoreButton.addEventListener("click", function () {
-        // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
-        var serviceImages = services[currentServiceId].images;
-        for (var i = 4; i < serviceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "block";
-        }
-        // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
-        viewMoreButton.style.display = "none";
-        hideButton.style.display = "block";
-      });
+      // viewMoreButton.addEventListener("click", function () {
+      //   // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
+      //   var serviceImages = services[currentServiceId].images;
+      //   for (var i = 4; i < serviceImages.length; i++) {
+      //     imageContainer.querySelector(".screen1__pic").children[
+      //       i
+      //     ].style.display = "block";
+      //   }
+      //   // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
+      //   viewMoreButton.style.display = "none";
+      //   hideButton.style.display = "block";
+      // });
 
       // Xử lý sự kiện khi click vào nút "Rút gọn"
-      hideButton.addEventListener("click", function () {
-        // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-        var serviceImages = services[currentServiceId].images;
-        for (var i = 4; i < serviceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "none";
-        }
-        // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
-        viewMoreButton.style.display = "block";
-        hideButton.style.display = "none";
-      });
+      // hideButton.addEventListener("click", function () {
+      //   // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
+      //   var serviceImages = services[currentServiceId].images;
+      //   for (var i = 4; i < serviceImages.length; i++) {
+      //     imageContainer.querySelector(".screen1__pic").children[
+      //       i
+      //     ].style.display = "none";
+      //   }
+      //   // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
+      //   viewMoreButton.style.display = "block";
+      //   hideButton.style.display = "none";
+      // });
 
       // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
-      var initialServiceImages = services[currentServiceId].images;
-      if (initialServiceImages.length <= 4) {
-        viewMoreButton.style.display = "none";
-        hideButton.style.display = "none";
-      } else {
-        viewMoreButton.style.display = "block";
-        hideButton.style.display = "none";
-        for (var i = 4; i < initialServiceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "none";
-        }
-      }
+      // var initialServiceImages = services[currentServiceId].images;
+      // if (initialServiceImages.length <= 4) {
+      //   viewMoreButton.style.display = "none";
+      //   hideButton.style.display = "none";
+      // } else {
+      //   viewMoreButton.style.display = "block";
+      //   hideButton.style.display = "none";
+      //   for (var i = 4; i < initialServiceImages.length; i++) {
+      //     imageContainer.querySelector(".screen1__pic").children[
+      //       i
+      //     ].style.display = "none";
+      //   }
+      // }
 
       function changeMenuStyle() {
         var screenWidth =
