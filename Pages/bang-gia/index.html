@@ -315,7 +315,7 @@
                     },
                     {
                         title: "Điều trị mụn",
-                        price: "Giá 840.000Đ /buổi <br> (Tùy tình trạng)"
+                        price: "Giá 1.200.000Đ /buổi <br> (Tùy tình trạng)"
                     },
                     {
                         title: "Điều trị rạn da",
@@ -499,6 +499,13 @@
             <div class="screen1__pic">${imageElements}</div>
             `;
 
+            const noteElm = document.querySelector('.screen1__note');
+            if(services[serviceId].descBottom){
+                noteElm.innerHTML = services[serviceId].descBottom;
+            } else {
+                noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
+            }
+
             // Fix form Register
             popupReg();
             form();
@@ -619,6 +626,12 @@
             <div class="screen1__des">${services[currentPage].desc ? services[currentPage].desc : ''}</div>
             <div class="screen1__pic">${imageElements}</div>
             `;
+            const noteElm = document.querySelector('.screen1__note');
+            if(sservices[currentServiceId].descBottom){
+                noteElm.innerHTML = sservices[currentServiceId].descBottom;
+            } else {
+                noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
+            }
         }
 
         function createPagination() {
