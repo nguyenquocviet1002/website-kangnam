@@ -486,7 +486,7 @@
                 imageElements +=
                     `
                     <div class="screen1__item">
-                        ${thumb ? `<div class="screen1__thumb"><img src="${thumb}" alt=""></div>` : ''}
+                        ${thumb ? `<div class="screen1__thumb"><img width="260" height="323" src="${thumb}" alt=""></div>` : ''}
                         <div class="screen1__info">
                             <div class="screen1__name">${title}</div>
                             <p class="screen1__price">${price}</p>
@@ -495,10 +495,16 @@
                     `;
             }
 
-            imageContainer.innerHTML = `
+            const html = `
             <div class="screen1__des">${services[serviceId].desc ? services[serviceId].desc : ''}</div>
             <div class="screen1__pic">${imageElements}</div>
             `;
+
+            imageContainer.innerHTML = html;
+
+            setTimeout(() => {
+                imageContainer.classList.add
+            }, 100)
 
             const noteElm = document.querySelector('.screen1__note');
             if(services[serviceId].descBottom){
