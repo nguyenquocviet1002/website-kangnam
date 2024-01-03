@@ -21,27 +21,29 @@
             </ul>
           </div>
           <div class="screen1__detail">
-            <h1 class="screen1__title">hình ảnh khách hàng</h1>
-            <div class="screen1__line"></div>
-            <div class="screen1__inner">
-              <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+            <div class="screen1__ani">
+              <h1 class="screen1__title">hình ảnh khách hàng</h1>
+              <div class="screen1__line"></div>
+              <div class="screen1__inner">
+                <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+              </div>
+              <!-- <div class="screen1__btn">
+                <button id="screen1__viewMore">Hiển thị thêm</button>
+              </div>
+              <div class="screen1__btn screen1__btnHide">
+                <button id="screen1__hide">Rút gọn</button>
+              </div> -->
+              <!-- <div class="pagination">
+                <a href="#" class="pagination__item" id="prev">&laquo;</a>
+                <a href="#" class="pagination__item" id="1">1</a>
+                <a href="#" class="pagination__item" id="2">2</a>
+                <a href="#" class="pagination__item" id="3">3</a>
+                <a href="#" class="pagination__item" id="4">4</a>
+                <a href="#" class="pagination__item" id="5">5</a>
+                <a href="#" class="pagination__item" id="next">&raquo;</a>
+              </div> -->
+              <div class="screen1__innerVid"></div>
             </div>
-            <!-- <div class="screen1__btn">
-              <button id="screen1__viewMore">Hiển thị thêm</button>
-            </div>
-            <div class="screen1__btn screen1__btnHide">
-              <button id="screen1__hide">Rút gọn</button>
-            </div> -->
-            <!-- <div class="pagination">
-              <a href="#" class="pagination__item" id="prev">&laquo;</a>
-              <a href="#" class="pagination__item" id="1">1</a>
-              <a href="#" class="pagination__item" id="2">2</a>
-              <a href="#" class="pagination__item" id="3">3</a>
-              <a href="#" class="pagination__item" id="4">4</a>
-              <a href="#" class="pagination__item" id="5">5</a>
-              <a href="#" class="pagination__item" id="next">&raquo;</a>
-            </div> -->
-            <div class="screen1__innerVid"></div>
           </div>
         </div>
       </div>
@@ -266,8 +268,8 @@
       var menuItems = document.getElementById("menuItems");
       var imageContainer = document.querySelector(".screen1__inner");
       var imageContainerVid = document.querySelector(".screen1__innerVid");
-      var viewMoreButton = document.getElementById("screen1__viewMore");
-      var hideButton = document.getElementById("screen1__hide");
+      // var viewMoreButton = document.getElementById("screen1__viewMore");
+      // var hideButton = document.getElementById("screen1__hide");
       var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
       const getIdYoutube = (url) => {
@@ -279,6 +281,9 @@
         return video_id;
       };
       function showImage(serviceId, element) {
+        if(document.querySelector('.screen1__ani.ani')){
+            document.querySelector('.screen1__ani').classList.remove('ani');
+        }
         var serviceImages = services[serviceId].images;
         window.location.hash = services[serviceId].link;
         var imageElements = "";
@@ -288,15 +293,9 @@
             serviceImages[i] +
             '" alt=""></div>';
         }
-        imageContainer.innerHTML = `
-            <div class="screen1__des">${
-              services[serviceId].desc ? services[serviceId].desc : ""
-            }</div>
-            <div class="screen1__pic">${imageElements}</div>
-            `;
+        
         let htmlVideo = "";
         services[serviceId].video.map((item) => {
-          // console.log(item);
           htmlVideo += `
                 <div class="screen1__video">
                     <div onclick="playVideo('${getIdYoutube(
@@ -311,7 +310,18 @@
                 </div>
                 `;
         });
-        imageContainerVid.innerHTML = htmlVideo;
+        
+        
+        setTimeout(() => {
+          imageContainer.innerHTML = `
+            <div class="screen1__des">${
+              services[serviceId].desc ? services[serviceId].desc : ""
+            }</div>
+            <div class="screen1__pic">${imageElements}</div>
+            `;
+            imageContainerVid.innerHTML = htmlVideo;
+            document.querySelector('.screen1__ani').classList.add('ani');
+        }, 300)
         for (var i = 0; i < menuItems.children.length; i++) {
           menuItems.children[i].classList.remove("active");
         }
