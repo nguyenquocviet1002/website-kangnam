@@ -30,7 +30,7 @@ doctors.forEach((doctor, index) => {
   item.classList.add("doctor_kn_2_0_0__item");
   const img = document.createElement("div");
   img.classList.add("doctor_kn_2_0_0__img");
-  img.innerHTML = `<img src="${doctor.image}" alt="">`;
+  img.innerHTML = `<img class="lazy" data-src="${doctor.image}" alt="">`;
   const text = document.createElement("div");
   text.classList.add("doctor_kn_2_0_0__text");
   text.innerHTML = `
