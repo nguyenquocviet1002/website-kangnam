@@ -136,6 +136,14 @@
       }
     }
   }
+  &__pic{
+    max-width: 197px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
   @media (max-width: 1200px) {
     &__logo {
       max-width: 190px;
@@ -228,9 +236,6 @@
     }
     &__pic {
       width: 43%;
-      img {
-        width: 100%;
-      }
     }
   }
   @media (max-width: 320px) {

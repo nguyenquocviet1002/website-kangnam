@@ -37,8 +37,8 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
             document.querySelector(`.${position} .inner__slide`).innerHTML = `
             <a href="${data[index].link}">
                 <picture>
-                    <source media="(max-width: 1025px)" width="428" height="500" srcset="${data[index].mb}" loading="lazy">
-                    <img width="1920" height="702" class="lazy" data-src="${data[index].pc}" alt="" loading="lazy">
+                    <source media="(max-width: 767px)" width="414" height="500" srcset="${data[index].mb}" loading="lazy">
+                    <img width="1920" height="768" class="lazy" data-src="${data[index].pc}" alt="" loading="lazy">
                 </picture>
             </a>
             `;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://benhvienthammykangnam.vn/css/lib/lib.min.css">
-    <link rel="stylesheet" href="media/sass/main.min.css?ver=3">
+    <link rel="stylesheet" href="media/sass/main.min.css?ver=5">
     <link rel="stylesheet"
         href="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Popup/popup_regist_1_0_0/sass/popup_regist_1_0_0.min.css">
     <title>Bảng giá dịch vụ</title>
@@ -25,32 +25,36 @@
                     </ul>
                 </div>
                 <div class="screen1__detail">
-                    <h1 class="screen1__title"></h1>
-                    <div class="screen1__line"></div>
-                    <div class="screen1__inner">
-                        <div class="screen1__des"></div>
-                        <div class="screen1__pic">
-                            <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+                    <div class="screen1__ani">
+                        <h1 class="screen1__title"></h1>
+                        <div class="screen1__line"></div>
+                        <div class="screen1__inner">
+                            <div class="screen1__des"></div>
+                            <div class="screen1__pic">
+                                <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+                            </div>
                         </div>
-                    </div>
-                    <div class="screen1__btn">
-                        <button id="screen1__viewMore">Hiển thị thêm</button>
-                    </div>
-                    <div class="screen1__btn screen1__btnHide">
-                        <button id="screen1__hide">Rút gọn</button>
-                    </div>
-                    <!-- <div class="pagination">
-                        <a href="#" class="pagination__item" id="prev">&laquo;</a>
-                        <a href="#" class="pagination__item" id="1">1</a>
-                        <a href="#" class="pagination__item" id="2">2</a>
-                        <a href="#" class="pagination__item" id="3">3</a>
-                        <a href="#" class="pagination__item" id="4">4</a>
-                        <a href="#" class="pagination__item" id="5">5</a>
-                        <a href="#" class="pagination__item" id="next">&raquo;</a>
-                    </div> -->
-                    <div class="screen1__note">Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ</div>
-                    <div class="screen1__use">
-                        <button class="knprice">Ưu đãi HOT - Nhận ngay</button>
+                        <!-- <div class="screen1__btn">
+                            <button id="screen1__viewMore">Hiển thị thêm</button>
+                        </div>
+                        <div class="screen1__btn screen1__btnHide">
+                            <button id="screen1__hide">Rút gọn</button>
+                        </div> -->
+                        <!-- <div class="pagination">
+                            <a href="#" class="pagination__item" id="prev">&laquo;</a>
+                            <a href="#" class="pagination__item" id="1">1</a>
+                            <a href="#" class="pagination__item" id="2">2</a>
+                            <a href="#" class="pagination__item" id="3">3</a>
+                            <a href="#" class="pagination__item" id="4">4</a>
+                            <a href="#" class="pagination__item" id="5">5</a>
+                            <a href="#" class="pagination__item" id="next">&raquo;</a>
+                        </div> -->
+                        <div class="screen1__note" style="text-align: justify; text-align-last: center;">Trên đây là giá
+                            niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và
+                            bảng giá chi tiết tất cả các dịch vụ</div>
+                        <div class="screen1__use">
+                            <button class="knprice">Ưu đãi HOT - Nhận ngay</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,7 +64,7 @@
         let service = 'https://benhvienthammykangnam.vn/cp/pages/bang-gia/';
         // let service = '';
         var services = [
-        {
+            {
                 name: "mắt",
                 link: '#tham-my-mat',
                 desc: 'Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông',
@@ -286,7 +290,8 @@
                         price: "Từ 4.000.000Đ - 10.000.000Đ"
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
-                ]
+                ],
+                descBottom: "* Với các dịch vụ trẻ hóa da, chi phí phụ thuộc vào phương pháp, gói liệu trình, phân vùng cơ thể và nguồn gốc sản phẩm. Quý khách vui lòng đăng ký để nhận tư vấn trước với bác sĩ da liễu <br> *Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ"
             },
             {
                 name: "da liễu",
@@ -387,7 +392,7 @@
                     },
                     {
                         title: "Cấy ghép Impant",
-                        price: "Từ 14.000.000Đ - 32.000.000Đ /chiếc <br> (Tùy loại)",
+                        price: "Từ 16.000.000Đ - 35.000.000Đ /chiếc <br> (Tùy loại)",
                         image: `${service}media/images/giarang-p4.webp`,
                     },
                     {
@@ -406,8 +411,8 @@
 
         var menuItems = document.getElementById("menuItems");
         var imageContainer = document.querySelector(".screen1__inner");
-        var viewMoreButton = document.getElementById("screen1__viewMore");
-        var hideButton = document.getElementById("screen1__hide");
+        // var viewMoreButton = document.getElementById("screen1__viewMore");
+        // var hideButton = document.getElementById("screen1__hide");
         var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
         for (var i = 0; i < services.length; i++) {
@@ -432,49 +437,51 @@
         window.addEventListener('hashchange', functionChangeHash);
 
         // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
-        viewMoreButton.addEventListener("click", function () {
-            // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
-            var serviceImages = services[currentServiceId].images;
-            for (var i = 8; i < serviceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "block";
-            }
-            // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
-            viewMoreButton.style.display = "none";
-            hideButton.style.display = "block";
-        });
+        // viewMoreButton.addEventListener("click", function () {
+        //     // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
+        //     var serviceImages = services[currentServiceId].images;
+        //     for (var i = 8; i < serviceImages.length; i++) {
+        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "block";
+        //     }
+        //     // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
+        //     viewMoreButton.style.display = "none";
+        //     hideButton.style.display = "block";
+        // });
 
         // Xử lý sự kiện khi click vào nút "Rút gọn"
-        hideButton.addEventListener("click", function () {
-            // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-            var serviceImages = services[currentServiceId].images;
-            for (var i = 8; i < serviceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-            }
-            // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
-            viewMoreButton.style.display = "block";
-            hideButton.style.display = "none";
-        });
+        // hideButton.addEventListener("click", function () {
+        //     // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
+        //     var serviceImages = services[currentServiceId].images;
+        //     for (var i = 8; i < serviceImages.length; i++) {
+        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
+        //     }
+        //     // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
+        //     viewMoreButton.style.display = "block";
+        //     hideButton.style.display = "none";
+        // });
 
         // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
-        var initialServiceImages = services[currentServiceId].images;
-        if (initialServiceImages.length <= 8) {
-            viewMoreButton.style.display = "none";
-            hideButton.style.display = "none";
-        } else {
-            viewMoreButton.style.display = "block";
-            hideButton.style.display = "none";
-            for (var i = 8; i < initialServiceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-            }
-        }
+        // var initialServiceImages = services[currentServiceId].images;
+        // if (initialServiceImages.length <= 8) {
+        //     viewMoreButton.style.display = "none";
+        //     hideButton.style.display = "none";
+        // } else {
+        //     viewMoreButton.style.display = "block";
+        //     hideButton.style.display = "none";
+        //     for (var i = 8; i < initialServiceImages.length; i++) {
+        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
+        //     }
+        // }
 
         function showImage(serviceId, element) {
+            if(document.querySelector('.screen1__ani.ani')){
+                document.querySelector('.screen1__ani').classList.remove('ani');
+            }
             var serviceImages = services[serviceId].images;
             window.location.hash = services[serviceId].link;
             var imageElements = "";
 
             var titleElement = document.querySelector(".screen1__title");
-            titleElement.innerHTML = services[serviceId].name;
 
             for (var i = 0; i < serviceImages.length; i++) {
                 var image = serviceImages[i];
@@ -485,7 +492,7 @@
                 imageElements +=
                     `
                     <div class="screen1__item">
-                        ${thumb ? `<div class="screen1__thumb"><img src="${thumb}" alt=""></div>` : ''}
+                        ${thumb ? `<div class="screen1__thumb"><img width="260" height="323" src="${thumb}" alt=""></div>` : ''}
                         <div class="screen1__info">
                             <div class="screen1__name">${title}</div>
                             <p class="screen1__price">${price}</p>
@@ -494,17 +501,22 @@
                     `;
             }
 
-            imageContainer.innerHTML = `
+            const html = `
             <div class="screen1__des">${services[serviceId].desc ? services[serviceId].desc : ''}</div>
             <div class="screen1__pic">${imageElements}</div>
             `;
 
-            const noteElm = document.querySelector('.screen1__note');
-            if(services[serviceId].descBottom){
-                noteElm.innerHTML = services[serviceId].descBottom;
-            } else {
-                noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
-            }
+            setTimeout(() => {
+                titleElement.innerHTML = services[serviceId].name;
+                imageContainer.innerHTML = html;
+                const noteElm = document.querySelector('.screen1__note');
+                if (services[serviceId].descBottom) {
+                    noteElm.innerHTML = services[serviceId].descBottom;
+                } else {
+                    noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
+                }
+                document.querySelector('.screen1__ani').classList.add('ani');
+            }, 500)
 
             // Fix form Register
             popupReg();
@@ -517,24 +529,24 @@
             element.classList.add("active");
             currentServiceId = serviceId;
 
-            if (serviceImages.length <= 8) {
-                viewMoreButton.style.display = "none";
-                hideButton.style.display = "none";
-            } else {
-                viewMoreButton.style.display = "block";
-                hideButton.style.display = "none";
-            }
+            // if (serviceImages.length <= 8) {
+            //     viewMoreButton.style.display = "none";
+            //     hideButton.style.display = "none";
+            // } else {
+            //     viewMoreButton.style.display = "block";
+            //     hideButton.style.display = "none";
+            // }
 
-            for (var i = 8; i < serviceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-            }
+            // for (var i = 8; i < serviceImages.length; i++) {
+            //     imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
+            // }
 
             // document.getElementById("inputHidden").value = services[serviceId].name;
 
-            var screenWidth =
-                window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
+            // var screenWidth =
+            //     window.innerWidth ||
+            //     document.documentElement.clientWidth ||
+            //     document.body.clientWidth;
 
             // if (screenWidth <= 767) {
             //     for (var i = 0; i < menuItems.children.length; i++) {
@@ -543,155 +555,155 @@
             // }
         }
 
-        function changeMenuStyle() {
-            var screenWidth =
-                window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
-            if (screenWidth <= 767) {
-                mobileBuild();
-            }
-            // function mobileBuild() {
-            //     for (var i = 0; i < menuItems.children.length; i++) {
-            //         menuItems.children[i].classList.add("hidden");
-            //     }
+        // function changeMenuStyle() {
+        //     var screenWidth =
+        //         window.innerWidth ||
+        //         document.documentElement.clientWidth ||
+        //         document.body.clientWidth;
+        //     if (screenWidth <= 767) {
+        //         mobileBuild();
+        //     }
+        //     // function mobileBuild() {
+        //     //     for (var i = 0; i < menuItems.children.length; i++) {
+        //     //         menuItems.children[i].classList.add("hidden");
+        //     //     }
 
-            //     var itemsPerPage = 8; // Số lượng mục hiển thị trên mỗi trang
-            //     var currentPage = 1; // Trang hiện tại
+        //     //     var itemsPerPage = 8; // Số lượng mục hiển thị trên mỗi trang
+        //     //     var currentPage = 1; // Trang hiện tại
 
 
 
-            //     var totalItems = services[currentServiceId].images.length;
-            //     var totalPages = Math.ceil(totalItems / itemsPerPage);
-            //     createPagination();
-            //     showPage(currentPage);
+        //     //     var totalItems = services[currentServiceId].images.length;
+        //     //     var totalPages = Math.ceil(totalItems / itemsPerPage);
+        //     //     createPagination();
+        //     //     showPage(currentPage);
 
-            //     document.getElementById("prev").addEventListener("click", function () {
-            //         if (currentPage > 1) {
-            //             changePage(currentPage - 1);
-            //         }
-            //     });
+        //     //     document.getElementById("prev").addEventListener("click", function () {
+        //     //         if (currentPage > 1) {
+        //     //             changePage(currentPage - 1);
+        //     //         }
+        //     //     });
 
-            //     document.getElementById("next").addEventListener("click", function () {
-            //         if (currentPage < totalPages) {
-            //             changePage(currentPage + 1);
-            //         }
-            //     });
+        //     //     document.getElementById("next").addEventListener("click", function () {
+        //     //         if (currentPage < totalPages) {
+        //     //             changePage(currentPage + 1);
+        //     //         }
+        //     //     });
 
-            //     var paginationItems = document.querySelectorAll(".pagination__item");
-            //     for (var i = 0; i < paginationItems.length; i++) {
-            //         paginationItems[i].addEventListener("click", function () {
-            //             var page = parseInt(this.id);
-            //             if (page) {
-            //                 changePage(page);
-            //             }
-            //         });
-            //     }
-            // }
+        //     //     var paginationItems = document.querySelectorAll(".pagination__item");
+        //     //     for (var i = 0; i < paginationItems.length; i++) {
+        //     //         paginationItems[i].addEventListener("click", function () {
+        //     //             var page = parseInt(this.id);
+        //     //             if (page) {
+        //     //                 changePage(page);
+        //     //             }
+        //     //         });
+        //     //     }
+        //     // }
 
-        }
+        // }
 
         // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
-        window.addEventListener("load", changeMenuStyle);
-        window.addEventListener("resize", changeMenuStyle);
+        // window.addEventListener("load", changeMenuStyle);
+        // window.addEventListener("resize", changeMenuStyle);
 
 
-        function showPage(page) {
-            var startIndex = (page - 1) * itemsPerPage;
-            var endIndex = startIndex + itemsPerPage;
-            var serviceImages = services[currentServiceId].images.slice(
-                startIndex,
-                endIndex
-            );
-            var imageElements = "";
-            for (var i = 0; i < serviceImages.length; i++) {
-                var image = serviceImages[i];
-                var title = image.title;
-                var price = image.price;
-                var thumb = image.image;
+        // function showPage(page) {
+        //     var startIndex = (page - 1) * itemsPerPage;
+        //     var endIndex = startIndex + itemsPerPage;
+        //     var serviceImages = services[currentServiceId].images.slice(
+        //         startIndex,
+        //         endIndex
+        //     );
+        //     var imageElements = "";
+        //     for (var i = 0; i < serviceImages.length; i++) {
+        //         var image = serviceImages[i];
+        //         var title = image.title;
+        //         var price = image.price;
+        //         var thumb = image.image;
 
-                imageElements +=
-                    `
-                            <div class="screen1__item">
-                                ${thumb ? `<div class="screen1__thumb"><img src="${thumb}" alt=""></div>` : ''}
-                                <div class="screen1__info">
-                                    <div class="screen1__name">${title}</div>
-                                    <p class="screen1__price">${price}</p>
-                                    <div class="screen1__cta">Đăng ký</div>
-                                </div>
-                            </div>
-                            `;
-            }
-            imageContainer.innerHTML = `
-            <div class="screen1__des">${services[currentPage].desc ? services[currentPage].desc : ''}</div>
-            <div class="screen1__pic">${imageElements}</div>
-            `;
-            const noteElm = document.querySelector('.screen1__note');
-            if(sservices[currentServiceId].descBottom){
-                noteElm.innerHTML = sservices[currentServiceId].descBottom;
-            } else {
-                noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
-            }
-        }
+        //         imageElements +=
+        //             `
+        //                     <div class="screen1__item">
+        //                         ${thumb ? `<div class="screen1__thumb"><img width="260" height="323" src="${thumb}" alt=""></div>` : ''}
+        //                         <div class="screen1__info">
+        //                             <div class="screen1__name">${title}</div>
+        //                             <p class="screen1__price">${price}</p>
+        //                             <div class="screen1__cta">Đăng ký</div>
+        //                         </div>
+        //                     </div>
+        //                     `;
+        //     }
+        //     imageContainer.innerHTML = `
+        //     <div class="screen1__des">${services[currentPage].desc ? services[currentPage].desc : ''}</div>
+        //     <div class="screen1__pic">${imageElements}</div>
+        //     `;
+        //     const noteElm = document.querySelector('.screen1__note');
+        //     if (sservices[currentServiceId].descBottom) {
+        //         noteElm.innerHTML = sservices[currentServiceId].descBottom;
+        //     } else {
+        //         noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
+        //     }
+        // }
 
-        function createPagination() {
-            var totalItems = services[currentServiceId].images.length;
-            var totalPages = Math.ceil(totalItems / itemsPerPage);
+        // function createPagination() {
+        //     var totalItems = services[currentServiceId].images.length;
+        //     var totalPages = Math.ceil(totalItems / itemsPerPage);
 
-            var paginationElement = document.querySelector(".pagination");
-            paginationElement.innerHTML = "";
+        //     var paginationElement = document.querySelector(".pagination");
+        //     paginationElement.innerHTML = "";
 
-            var prevButton = document.createElement("a");
-            prevButton.href = "#";
-            prevButton.classList.add("pagination__item");
-            prevButton.id = "prev";
-            prevButton.innerHTML = "&laquo;";
-            paginationElement.appendChild(prevButton);
+        //     var prevButton = document.createElement("a");
+        //     prevButton.href = "#";
+        //     prevButton.classList.add("pagination__item");
+        //     prevButton.id = "prev";
+        //     prevButton.innerHTML = "&laquo;";
+        //     paginationElement.appendChild(prevButton);
 
-            for (var i = 1; i <= totalPages; i++) {
-                var pageButton = document.createElement("a");
-                pageButton.href = "#";
-                pageButton.classList.add("pagination__item");
-                pageButton.id = i;
-                pageButton.innerHTML = i;
-                paginationElement.appendChild(pageButton);
+        //     for (var i = 1; i <= totalPages; i++) {
+        //         var pageButton = document.createElement("a");
+        //         pageButton.href = "#";
+        //         pageButton.classList.add("pagination__item");
+        //         pageButton.id = i;
+        //         pageButton.innerHTML = i;
+        //         paginationElement.appendChild(pageButton);
 
-                // Kích hoạt số 1 khi trang được tải lần đầu tiên
-                if (i === 1) {
-                    pageButton.classList.add("active");
-                }
-            }
+        //         // Kích hoạt số 1 khi trang được tải lần đầu tiên
+        //         if (i === 1) {
+        //             pageButton.classList.add("active");
+        //         }
+        //     }
 
-            var nextButton = document.createElement("a");
-            nextButton.href = "#";
-            nextButton.classList.add("pagination__item");
-            nextButton.id = "next";
-            nextButton.innerHTML = "&raquo;";
-            paginationElement.appendChild(nextButton);
-        }
+        //     var nextButton = document.createElement("a");
+        //     nextButton.href = "#";
+        //     nextButton.classList.add("pagination__item");
+        //     nextButton.id = "next";
+        //     nextButton.innerHTML = "&raquo;";
+        //     paginationElement.appendChild(nextButton);
+        // }
 
-        function changePage(page) {
-            currentPage = page;
-            showPage(currentPage);
+        // function changePage(page) {
+        //     currentPage = page;
+        //     showPage(currentPage);
 
-            var paginationItems = document.querySelectorAll(".pagination__item");
-            for (var i = 0; i < paginationItems.length; i++) {
-                paginationItems[i].classList.remove("active");
-            }
-            document.getElementById(currentPage).classList.add("active");
+        //     var paginationItems = document.querySelectorAll(".pagination__item");
+        //     for (var i = 0; i < paginationItems.length; i++) {
+        //         paginationItems[i].classList.remove("active");
+        //     }
+        //     document.getElementById(currentPage).classList.add("active");
 
-            // Disable/enable prev/next buttons
-            if (currentPage == 1) {
-                document.getElementById("prev").classList.add("disabled");
-            } else {
-                document.getElementById("prev").classList.remove("disabled");
-            }
-            if (currentPage == totalPages) {
-                document.getElementById("next").classList.add("disabled");
-            } else {
-                document.getElementById("next").classList.remove("disabled");
-            }
-        }
+        //     // Disable/enable prev/next buttons
+        //     if (currentPage == 1) {
+        //         document.getElementById("prev").classList.add("disabled");
+        //     } else {
+        //         document.getElementById("prev").classList.remove("disabled");
+        //     }
+        //     if (currentPage == totalPages) {
+        //         document.getElementById("next").classList.add("disabled");
+        //     } else {
+        //         document.getElementById("next").classList.remove("disabled");
+        //     }
+        // }
 
 
         // function inputHidden() {
