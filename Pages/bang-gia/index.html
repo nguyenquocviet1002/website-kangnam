@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://benhvienthammykangnam.vn/css/lib/lib.min.css">
-    <link rel="stylesheet" href="media/sass/main.min.css?ver=3">
+    <link rel="stylesheet" href="media/sass/main.min.css?ver=5">
     <link rel="stylesheet"
         href="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Popup/popup_regist_1_0_0/sass/popup_regist_1_0_0.min.css">
     <title>Bảng giá dịch vụ</title>
@@ -25,32 +25,36 @@
                     </ul>
                 </div>
                 <div class="screen1__detail">
-                    <h1 class="screen1__title"></h1>
-                    <div class="screen1__line"></div>
-                    <div class="screen1__inner">
-                        <div class="screen1__des"></div>
-                        <div class="screen1__pic">
-                            <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+                    <div class="screen1__ani">
+                        <h1 class="screen1__title"></h1>
+                        <div class="screen1__line"></div>
+                        <div class="screen1__inner">
+                            <div class="screen1__des"></div>
+                            <div class="screen1__pic">
+                                <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+                            </div>
                         </div>
-                    </div>
-                    <div class="screen1__btn">
-                        <button id="screen1__viewMore">Hiển thị thêm</button>
-                    </div>
-                    <div class="screen1__btn screen1__btnHide">
-                        <button id="screen1__hide">Rút gọn</button>
-                    </div>
-                    <!-- <div class="pagination">
-                        <a href="#" class="pagination__item" id="prev">&laquo;</a>
-                        <a href="#" class="pagination__item" id="1">1</a>
-                        <a href="#" class="pagination__item" id="2">2</a>
-                        <a href="#" class="pagination__item" id="3">3</a>
-                        <a href="#" class="pagination__item" id="4">4</a>
-                        <a href="#" class="pagination__item" id="5">5</a>
-                        <a href="#" class="pagination__item" id="next">&raquo;</a>
-                    </div> -->
-                    <div class="screen1__note">Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ</div>
-                    <div class="screen1__use">
-                        <button class="knprice">Ưu đãi HOT - Nhận ngay</button>
+                        <!-- <div class="screen1__btn">
+                            <button id="screen1__viewMore">Hiển thị thêm</button>
+                        </div>
+                        <div class="screen1__btn screen1__btnHide">
+                            <button id="screen1__hide">Rút gọn</button>
+                        </div> -->
+                        <!-- <div class="pagination">
+                            <a href="#" class="pagination__item" id="prev">&laquo;</a>
+                            <a href="#" class="pagination__item" id="1">1</a>
+                            <a href="#" class="pagination__item" id="2">2</a>
+                            <a href="#" class="pagination__item" id="3">3</a>
+                            <a href="#" class="pagination__item" id="4">4</a>
+                            <a href="#" class="pagination__item" id="5">5</a>
+                            <a href="#" class="pagination__item" id="next">&raquo;</a>
+                        </div> -->
+                        <div class="screen1__note" style="text-align: justify; text-align-last: center;">Trên đây là giá
+                            niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và
+                            bảng giá chi tiết tất cả các dịch vụ</div>
+                        <div class="screen1__use">
+                            <button class="knprice">Ưu đãi HOT - Nhận ngay</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,46 +64,46 @@
         let service = 'https://benhvienthammykangnam.vn/cp/pages/bang-gia/';
         // let service = '';
         var services = [
-        {
+            {
                 name: "mắt",
                 link: '#tham-my-mat',
                 desc: 'Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông',
                 images: [
                     {
                         title: "Cắt mí Hàn Quốc Plasma",
-                        price: "giá 9.000.000đ",
+                        price: "Giá 9.000.000Đ",
                         image: `${service}media/images/giamat-p1.webp`,
                     },
                     {
                         title: "Cắt mí 6D",
-                        price: "giá 16.000.000đ",
+                        price: "Giá 16.000.000Đ",
                         image: `${service}media/images/giamat-p2.webp`,
                     },
                     {
                         title: "Cắt mí Perfect eyes",
-                        price: "giá 29.000.000đ",
+                        price: "Giá 29.000.000Đ",
                         image: `${service}media/images/giamat-p3.webp`,
                     },
                     {
                         title: "Tạo khóe mắt",
-                        price: "giá 7.000.000đ",
+                        price: "Giá 7.000.000Đ",
                         image: `${service}media/images/giamat-p4.webp`,
                     },
                     {
-                        title: "Nâng chung chân mày",
-                        price: "giá 9.000.000đ"
+                        title: "Nâng cung chân mày",
+                        price: "Giá 9.000.000Đ"
                     },
                     {
                         title: "Xóa cơ cau mày 6D",
-                        price: "giá 20.000.000đ"
+                        price: "Giá 20.000.000Đ"
                     },
                     {
                         title: "Lấy mỡ nội soi mí trên/ dưới",
-                        price: "giá 7.000.000đ"
+                        price: "Giá 7.000.000Đ"
                     },
                     {
                         title: "Cấy mỡ/ Ghép mỡ mí trên/ dưới",
-                        price: "giá 14.000.000đ"
+                        price: "Giá 14.000.000Đ"
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 2
                 ]
@@ -111,47 +115,39 @@
                 images: [
                     {
                         title: "nâng mũi 6d không đau - nanoform",
-                        price: "giá 59.000.000đ",
+                        price: "Giá 59.000.000Đ",
                         image: `${service}media/images/giamui-p1.webp`,
                     },
                     {
                         title: "nâng mũi cấu trúc 4d",
-                        price: "giá 35.000.000đ",
+                        price: "Giá 35.000.000Đ",
                         image: `${service}media/images/giamui-p2.webp`,
                     },
                     {
                         title: "nâng mũi cấu trúc idol line",
-                        price: "giá 46.000.000đ",
+                        price: "Giá 46.000.000Đ",
                         image: `${service}media/images/giamui-p3.webp`,
                     },
                     {
                         title: "nâng mũi sụn sườn surgiform",
-                        price: "giá 62.000.000đ",
+                        price: "Giá 94.000.000Đ",
                         image: `${service}media/images/giamui-p4.webp`,
                     },
                     {
                         title: "nâng mũi 6d không đau - surgiform",
-                        price: "giá 74.000.000đ"
+                        price: "Giá 74.000.000Đ"
                     },
                     {
                         title: "cắt cánh mũi",
-                        price: "giá 10.000.000đ"
+                        price: "Giá 6.000.000Đ"
                     },
                     {
                         title: "nâng mũi 6D VIP",
-                        price: "giá 84.000.000đ"
+                        price: "Giá 84.000.000Đ"
                     },
                     {
                         title: "nâng mũi sụn sườn 100%",
-                        price: "giá 10.000.000đ"
-                    },
-                    {
-                        title: "thu gọn đầu mũi",
-                        price: "giá 10.000.000đ"
-                    },
-                    {
-                        title: "mài gồ, chình xương",
-                        price: "giá 10.000.000đ"
+                        price: "Giá 98.000.000Đ"
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 1
                 ]
@@ -163,39 +159,47 @@
                 images: [
                     {
                         title: "Chỉnh Hàm hô móm 3D",
-                        price: "giá 74.000.000đ",
+                        price: "Giá 74.000.000Đ",
                         image: `${service}media/images/giahammat-p1.webp`,
                     },
                     {
                         title: "Thu gọn góc hàm Vline 3D",
-                        price: "giá 74.000.000đ",
+                        price: "Giá 74.000.000Đ",
                         image: `${service}media/images/giahammat-p2.webp`,
                     },
                     {
                         title: "Trượt cằm 3D/Gọt cằm 3D",
-                        price: "giá 45.000.000đ",
+                        price: "Giá 45.000.000Đ",
                         image: `${service}media/images/giahammat-p3.webp`,
                     },
                     {
                         title: "Độn cằm Hàn Quốc",
-                        price: "giá 25.000.000đ",
+                        price: "Giá 25.000.000Đ",
                         image: `${service}media/images/giahammat-p4.webp`,
                     },
                     {
                         title: "Độn cằm 6D",
-                        price: "giá 34.000.000đ"
+                        price: "Giá 34.000.000Đ"
+                    },
+                    {
+                        title: "Hạ gò má 3D",
+                        price: "Giá 34.000.000Đ"
+                    },
+                    {
+                        title: "Hạ gò má 6D",
+                        price: "Giá 94.000.000Đ"
                     },
                     {
                         title: "Phẫu thuật cười hở lợi",
-                        price: "giá 12.000.000đ"
+                        price: "Giá 12.000.000Đ"
                     },
                     {
                         title: "tạo má lúm",
-                        price: "giá 5.000.000đ/ bên"
+                        price: "Giá 5.000.000Đ /bên"
                     },
                     {
                         title: "Combo thu mỏng môi + tạo môi trái tim",
-                        price: "giá 16.000.000đ"
+                        price: "Giá 16.000.000Đ"
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
@@ -207,39 +211,39 @@
                 images: [
                     {
                         title: "Nâng ngực K-Nature 4D",
-                        price: "giá 69.000.000đ",
+                        price: "Giá 69.000.000Đ",
                         image: `${service}media/images/giavocdang-p1.webp`,
                     },
                     {
                         title: "Nâng ngực 6D không chạm",
-                        price: "giá 79.000.000đ",
+                        price: "Giá 79.000.000Đ",
                         image: `${service}media/images/giavocdang-p2.webp`,
                     },
                     {
                         title: "Nâng ngực 6D - VIP",
-                        price: "giá 109.000.000đ",
+                        price: "Giá 109.000.000Đ",
                         image: `${service}media/images/giavocdang-p3.webp`,
                     },
                     {
                         title: "Giảm mỡ Vaser 4D",
-                        price: "giá 54.000.000đ",
+                        price: "Giá 20.000.000Đ/vùng",
                         image: `${service}media/images/giavocdang-p4.webp`,
                     },
                     {
                         title: "Giảm mỡ 6D tia sương",
-                        price: "giá 69.000.000đ"
+                        price: "Giá 25.000.000Đ/vùng"
                     },
                     {
                         title: "Căng da tạo hình bụng mini",
-                        price: "giá 40.000.000đ"
+                        price: "Giá 40.000.000Đ"
                     },
                     {
                         title: "Nâng mông cấy mỡ tự thân",
-                        price: "giá 70.000.000đ"
+                        price: "Giá 70.000.000Đ"
                     },
                     {
                         title: "Nâng mông chất liệu độn",
-                        price: "giá 85.000.000đ"
+                        price: "Giá 85.000.000Đ"
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
@@ -251,42 +255,43 @@
                 images: [
                     {
                         title: "Căng chỉ X-line Bio Young",
-                        price: "Từ 23.000.000 - 99.000.000/lần",
+                        price: "Từ 23.000.000Đ - 99.000.000Đ",
                         image: `${service}media/images/giatreda-p1.webp`,
                     },
                     {
                         title: "Trẻ hóa Meso Young",
-                        price: "12.000.000/lần",
+                        price: "Giá 12.000.000Đ",
                         image: `${service}media/images/giatreda-p2.webp`,
                     },
                     {
                         title: "Tiêm trẻ hóa Profhilo",
-                        price: "20.000.000/lần",
+                        price: "Giá 20.000.000Đ /2CC",
                         image: `${service}media/images/giatreda-p3.webp`,
                     },
                     {
                         title: "Trẻ hóa Thermage FLX",
-                        price: "100.000.000/lần",
+                        price: "từ 50.000.000Đ - 120.000.000Đ <br> (Tùy vùng)",
                         image: `${service}media/images/giatreda-p4.webp`,
                     },
                     {
                         title: "Botox",
-                        price: "Từ 3.500.000 - 24.000.000/lần"
+                        price: "Từ 3.500.000Đ - 24.000.000Đ"
                     },
                     {
                         title: "Filler",
-                        price: "Từ 5.000.000 - 10.000.000/lần"
+                        price: "Từ 5.000.000Đ - 12.000.000Đ"
                     },
                     {
                         title: "Trẻ hóa căng bóng & trắng sáng Soyoung",
-                        price: "9.600.000/buổi"
+                        price: "Giá 9.600.000Đ"
                     },
                     {
                         title: "Trẻ hóa da bằng công nghệ Tempsure",
-                        price: "10.000.000/lần"
+                        price: "Từ 4.000.000Đ - 10.000.000Đ"
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
-                ]
+                ],
+                descBottom: "* Với các dịch vụ trẻ hóa da, chi phí phụ thuộc vào phương pháp, gói liệu trình, phân vùng cơ thể và nguồn gốc sản phẩm. Quý khách vui lòng đăng ký để nhận tư vấn trước với bác sĩ da liễu <br> *Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ"
             },
             {
                 name: "da liễu",
@@ -295,42 +300,43 @@
                 images: [
                     {
                         title: "Điều trị nám",
-                        price: "Từ 2.600.000 - 5.600.000/lần",
+                        price: "Từ 2.000.000Đ - 8.000.000Đ /buổi <br> (Tùy tình trạng)",
                         image: `${service}media/images/giada-p1.webp`,
                     },
                     {
                         title: "Điều trị tàn nhang",
-                        price: "Từ 4.550.000 - 19.500.000/trọn gói",
+                        price: "Từ 4.550.000Đ - 19.500.000Đ /trọn gói <br> (Tùy tình trạng)",
                         image: `${service}media/images/giada-p2.webp`,
                     },
                     {
                         title: "Điều trị sẹo lõm Bio Fractional",
-                        price: "Từ 3.000.000 - 6.000.000/lần",
+                        price: "Từ 3.000.000Đ - 6.000.000Đ /buổi <br> (Tùy tình trạng)",
                         image: `${service}media/images/giada-p3.webp`,
                     },
                     {
                         title: "Điều trị sẹo lồi",
-                        price: "Từ 800.000 - 5.000.000/lần",
+                        price: "Từ 800.000Đ - 5.000.000Đ /buổi <br> (Tùy tình trạng)",
                         image: `${service}media/images/giada-p4.webp`,
                     },
                     {
                         title: "Điều trị mụn",
-                        price: "840.000/lần"
+                        price: "Giá 1.200.000Đ /buổi <br> (Tùy tình trạng)"
                     },
                     {
                         title: "Điều trị rạn da",
-                        price: "Từ 2.600.000 - 7.800.000/lần"
+                        price: "Từ 2.600.000Đ - 7.800.000Đ /buổi <br> (Tùy tình trạng)"
                     },
                     {
                         title: "Xóa chàm bớt Laser Picosure (<=10cm2)",
-                        price: "4.000.000/lần"
+                        price: "Giá 4.000.000Đ /buổi <br> (Tùy tình trạng)"
                     },
                     {
                         title: "Tẩy nốt ruồi",
-                        price: "200.000/nốt"
+                        price: "Giá 200.000Đ /nốt <br> (Tùy tình trạng)"
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
-                ]
+                ],
+                descBottom: "* Đối với tình trạng da liễu, chi phí phụ thuộc vào tình trạng và gói liệu trình, phương pháp. Quý khách đăng ký để nhận tư vấn trước với bác sĩ da liễu <br> *Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ"
             },
             {
                 name: "spa",
@@ -339,23 +345,27 @@
                 images: [
                     {
                         title: "Phun môi Plascell",
-                        price: "7.000.000/lần",
+                        price: "Giá 7.000.000Đ",
                         image: `${service}media/images/clinic-p1.webp`,
                     },
                     {
                         title: "Phun mày Plascell",
-                        price: "4.000.000/lần",
+                        price: "Giá 4.000.000Đ",
                         image: `${service}media/images/clinic-p2.webp`,
                     },
                     {
                         title: "Điêu khắc Hair stoke",
-                        price: "4.500.000/lần",
+                        price: "Giá 4.500.000Đ",
                         image: `${service}media/images/clinic-p3.webp`,
                     },
                     {
                         title: "Tắm trắng",
-                        price: "3.000.000/lần",
+                        price: "Giá 3.000.000Đ",
                         image: `${service}media/images/clinic-p4.webp`,
+                    },
+                    {
+                        title: "Chăm sóc da mặt Nanoskin",
+                        price: "Giá 2.000.000Đ",
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
@@ -367,23 +377,31 @@
                 images: [
                     {
                         title: "Tẩy trắng răng",
-                        price: "2.500.000/lần",
+                        price: "Giá 2.500.000Đ",
                         image: `${service}media/images/giarang-p1.webp`,
                     },
                     {
                         title: "Niềng răng",
-                        price: "Từ 30.000.000 - 120.000.000đ",
+                        price: "Từ 30.000.000Đ - 120.000.000Đ <br> (Tùy phương pháp)",
                         image: `${service}media/images/giarang-p2.webp`,
                     },
                     {
                         title: "Bọc răng sứ",
-                        price: "Từ 2.500.000 - 18.000.000/chiếc",
+                        price: "Từ 2.500.000Đ - 18.000.000Đ /răng <br> (Tùy loại sứ)",
                         image: `${service}media/images/giarang-p3.webp`,
                     },
                     {
                         title: "Cấy ghép Impant",
-                        price: "Từ 14.000.000 - 32.000.000/chiếc",
+                        price: "Từ 16.000.000Đ - 35.000.000Đ /chiếc <br> (Tùy loại)",
                         image: `${service}media/images/giarang-p4.webp`,
+                    },
+                    {
+                        title: "Đánh bóng răng",
+                        price: "Giá 100.000Đ",
+                    },
+                    {
+                        title: "Cạo vôi răng và đánh bóng",
+                        price: "Giá 150.000Đ - 400.000Đ <br> (Tùy mức độ)",
                     },
                     // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
@@ -393,8 +411,8 @@
 
         var menuItems = document.getElementById("menuItems");
         var imageContainer = document.querySelector(".screen1__inner");
-        var viewMoreButton = document.getElementById("screen1__viewMore");
-        var hideButton = document.getElementById("screen1__hide");
+        // var viewMoreButton = document.getElementById("screen1__viewMore");
+        // var hideButton = document.getElementById("screen1__hide");
         var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
         for (var i = 0; i < services.length; i++) {
@@ -419,49 +437,51 @@
         window.addEventListener('hashchange', functionChangeHash);
 
         // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
-        viewMoreButton.addEventListener("click", function () {
-            // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
-            var serviceImages = services[currentServiceId].images;
-            for (var i = 8; i < serviceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "block";
-            }
-            // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
-            viewMoreButton.style.display = "none";
-            hideButton.style.display = "block";
-        });
+        // viewMoreButton.addEventListener("click", function () {
+        //     // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
+        //     var serviceImages = services[currentServiceId].images;
+        //     for (var i = 8; i < serviceImages.length; i++) {
+        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "block";
+        //     }
+        //     // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
+        //     viewMoreButton.style.display = "none";
+        //     hideButton.style.display = "block";
+        // });
 
         // Xử lý sự kiện khi click vào nút "Rút gọn"
-        hideButton.addEventListener("click", function () {
-            // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-            var serviceImages = services[currentServiceId].images;
-            for (var i = 8; i < serviceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-            }
-            // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
-            viewMoreButton.style.display = "block";
-            hideButton.style.display = "none";
-        });
+        // hideButton.addEventListener("click", function () {
+        //     // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
+        //     var serviceImages = services[currentServiceId].images;
+        //     for (var i = 8; i < serviceImages.length; i++) {
+        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
+        //     }
+        //     // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
+        //     viewMoreButton.style.display = "block";
+        //     hideButton.style.display = "none";
+        // });
 
         // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
-        var initialServiceImages = services[currentServiceId].images;
-        if (initialServiceImages.length <= 8) {
-            viewMoreButton.style.display = "none";
-            hideButton.style.display = "none";
-        } else {
-            viewMoreButton.style.display = "block";
-            hideButton.style.display = "none";
-            for (var i = 8; i < initialServiceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-            }
-        }
+        // var initialServiceImages = services[currentServiceId].images;
+        // if (initialServiceImages.length <= 8) {
+        //     viewMoreButton.style.display = "none";
+        //     hideButton.style.display = "none";
+        // } else {
+        //     viewMoreButton.style.display = "block";
+        //     hideButton.style.display = "none";
+        //     for (var i = 8; i < initialServiceImages.length; i++) {
+        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
+        //     }
+        // }
 
         function showImage(serviceId, element) {
+            if(document.querySelector('.screen1__ani.ani')){
+                document.querySelector('.screen1__ani').classList.remove('ani');
+            }
             var serviceImages = services[serviceId].images;
             window.location.hash = services[serviceId].link;
             var imageElements = "";
 
             var titleElement = document.querySelector(".screen1__title");
-            titleElement.innerHTML = services[serviceId].name;
 
             for (var i = 0; i < serviceImages.length; i++) {
                 var image = serviceImages[i];
@@ -472,7 +492,7 @@
                 imageElements +=
                     `
                     <div class="screen1__item">
-                        ${thumb ? `<div class="screen1__thumb"><img src="${thumb}" alt=""></div>` : ''}
+                        ${thumb ? `<div class="screen1__thumb"><img width="260" height="323" src="${thumb}" alt=""></div>` : ''}
                         <div class="screen1__info">
                             <div class="screen1__name">${title}</div>
                             <p class="screen1__price">${price}</p>
@@ -481,10 +501,22 @@
                     `;
             }
 
-            imageContainer.innerHTML = `
+            const html = `
             <div class="screen1__des">${services[serviceId].desc ? services[serviceId].desc : ''}</div>
             <div class="screen1__pic">${imageElements}</div>
             `;
+
+            setTimeout(() => {
+                titleElement.innerHTML = services[serviceId].name;
+                imageContainer.innerHTML = html;
+                const noteElm = document.querySelector('.screen1__note');
+                if (services[serviceId].descBottom) {
+                    noteElm.innerHTML = services[serviceId].descBottom;
+                } else {
+                    noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
+                }
+                document.querySelector('.screen1__ani').classList.add('ani');
+            }, 500)
 
             // Fix form Register
             popupReg();
@@ -497,24 +529,24 @@
             element.classList.add("active");
             currentServiceId = serviceId;
 
-            if (serviceImages.length <= 8) {
-                viewMoreButton.style.display = "none";
-                hideButton.style.display = "none";
-            } else {
-                viewMoreButton.style.display = "block";
-                hideButton.style.display = "none";
-            }
+            // if (serviceImages.length <= 8) {
+            //     viewMoreButton.style.display = "none";
+            //     hideButton.style.display = "none";
+            // } else {
+            //     viewMoreButton.style.display = "block";
+            //     hideButton.style.display = "none";
+            // }
 
-            for (var i = 8; i < serviceImages.length; i++) {
-                imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-            }
+            // for (var i = 8; i < serviceImages.length; i++) {
+            //     imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
+            // }
 
             // document.getElementById("inputHidden").value = services[serviceId].name;
 
-            var screenWidth =
-                window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
+            // var screenWidth =
+            //     window.innerWidth ||
+            //     document.documentElement.clientWidth ||
+            //     document.body.clientWidth;
 
             // if (screenWidth <= 767) {
             //     for (var i = 0; i < menuItems.children.length; i++) {
@@ -523,149 +555,155 @@
             // }
         }
 
-        function changeMenuStyle() {
-            var screenWidth =
-                window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth;
-            if (screenWidth <= 767) {
-                mobileBuild();
-            }
-            // function mobileBuild() {
-            //     for (var i = 0; i < menuItems.children.length; i++) {
-            //         menuItems.children[i].classList.add("hidden");
-            //     }
+        // function changeMenuStyle() {
+        //     var screenWidth =
+        //         window.innerWidth ||
+        //         document.documentElement.clientWidth ||
+        //         document.body.clientWidth;
+        //     if (screenWidth <= 767) {
+        //         mobileBuild();
+        //     }
+        //     // function mobileBuild() {
+        //     //     for (var i = 0; i < menuItems.children.length; i++) {
+        //     //         menuItems.children[i].classList.add("hidden");
+        //     //     }
 
-            //     var itemsPerPage = 8; // Số lượng mục hiển thị trên mỗi trang
-            //     var currentPage = 1; // Trang hiện tại
+        //     //     var itemsPerPage = 8; // Số lượng mục hiển thị trên mỗi trang
+        //     //     var currentPage = 1; // Trang hiện tại
 
 
 
-            //     var totalItems = services[currentServiceId].images.length;
-            //     var totalPages = Math.ceil(totalItems / itemsPerPage);
-            //     createPagination();
-            //     showPage(currentPage);
+        //     //     var totalItems = services[currentServiceId].images.length;
+        //     //     var totalPages = Math.ceil(totalItems / itemsPerPage);
+        //     //     createPagination();
+        //     //     showPage(currentPage);
 
-            //     document.getElementById("prev").addEventListener("click", function () {
-            //         if (currentPage > 1) {
-            //             changePage(currentPage - 1);
-            //         }
-            //     });
+        //     //     document.getElementById("prev").addEventListener("click", function () {
+        //     //         if (currentPage > 1) {
+        //     //             changePage(currentPage - 1);
+        //     //         }
+        //     //     });
 
-            //     document.getElementById("next").addEventListener("click", function () {
-            //         if (currentPage < totalPages) {
-            //             changePage(currentPage + 1);
-            //         }
-            //     });
+        //     //     document.getElementById("next").addEventListener("click", function () {
+        //     //         if (currentPage < totalPages) {
+        //     //             changePage(currentPage + 1);
+        //     //         }
+        //     //     });
 
-            //     var paginationItems = document.querySelectorAll(".pagination__item");
-            //     for (var i = 0; i < paginationItems.length; i++) {
-            //         paginationItems[i].addEventListener("click", function () {
-            //             var page = parseInt(this.id);
-            //             if (page) {
-            //                 changePage(page);
-            //             }
-            //         });
-            //     }
-            // }
+        //     //     var paginationItems = document.querySelectorAll(".pagination__item");
+        //     //     for (var i = 0; i < paginationItems.length; i++) {
+        //     //         paginationItems[i].addEventListener("click", function () {
+        //     //             var page = parseInt(this.id);
+        //     //             if (page) {
+        //     //                 changePage(page);
+        //     //             }
+        //     //         });
+        //     //     }
+        //     // }
 
-        }
+        // }
 
         // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
-        window.addEventListener("load", changeMenuStyle);
-        window.addEventListener("resize", changeMenuStyle);
+        // window.addEventListener("load", changeMenuStyle);
+        // window.addEventListener("resize", changeMenuStyle);
 
 
-        function showPage(page) {
-            var startIndex = (page - 1) * itemsPerPage;
-            var endIndex = startIndex + itemsPerPage;
-            var serviceImages = services[currentServiceId].images.slice(
-                startIndex,
-                endIndex
-            );
-            var imageElements = "";
-            for (var i = 0; i < serviceImages.length; i++) {
-                var image = serviceImages[i];
-                var title = image.title;
-                var price = image.price;
-                var thumb = image.image;
+        // function showPage(page) {
+        //     var startIndex = (page - 1) * itemsPerPage;
+        //     var endIndex = startIndex + itemsPerPage;
+        //     var serviceImages = services[currentServiceId].images.slice(
+        //         startIndex,
+        //         endIndex
+        //     );
+        //     var imageElements = "";
+        //     for (var i = 0; i < serviceImages.length; i++) {
+        //         var image = serviceImages[i];
+        //         var title = image.title;
+        //         var price = image.price;
+        //         var thumb = image.image;
 
-                imageElements +=
-                    `
-                            <div class="screen1__item">
-                                ${thumb ? `<div class="screen1__thumb"><img src="${thumb}" alt=""></div>` : ''}
-                                <div class="screen1__info">
-                                    <div class="screen1__name">${title}</div>
-                                    <p class="screen1__price">${price}</p>
-                                    <div class="screen1__cta">Đăng ký</div>
-                                </div>
-                            </div>
-                            `;
-            }
-            imageContainer.innerHTML = `
-            <div class="screen1__des">${services[currentPage].desc ? services[currentPage].desc : ''}</div>
-            <div class="screen1__pic">${imageElements}</div>
-            `;
-        }
+        //         imageElements +=
+        //             `
+        //                     <div class="screen1__item">
+        //                         ${thumb ? `<div class="screen1__thumb"><img width="260" height="323" src="${thumb}" alt=""></div>` : ''}
+        //                         <div class="screen1__info">
+        //                             <div class="screen1__name">${title}</div>
+        //                             <p class="screen1__price">${price}</p>
+        //                             <div class="screen1__cta">Đăng ký</div>
+        //                         </div>
+        //                     </div>
+        //                     `;
+        //     }
+        //     imageContainer.innerHTML = `
+        //     <div class="screen1__des">${services[currentPage].desc ? services[currentPage].desc : ''}</div>
+        //     <div class="screen1__pic">${imageElements}</div>
+        //     `;
+        //     const noteElm = document.querySelector('.screen1__note');
+        //     if (sservices[currentServiceId].descBottom) {
+        //         noteElm.innerHTML = sservices[currentServiceId].descBottom;
+        //     } else {
+        //         noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
+        //     }
+        // }
 
-        function createPagination() {
-            var totalItems = services[currentServiceId].images.length;
-            var totalPages = Math.ceil(totalItems / itemsPerPage);
+        // function createPagination() {
+        //     var totalItems = services[currentServiceId].images.length;
+        //     var totalPages = Math.ceil(totalItems / itemsPerPage);
 
-            var paginationElement = document.querySelector(".pagination");
-            paginationElement.innerHTML = "";
+        //     var paginationElement = document.querySelector(".pagination");
+        //     paginationElement.innerHTML = "";
 
-            var prevButton = document.createElement("a");
-            prevButton.href = "#";
-            prevButton.classList.add("pagination__item");
-            prevButton.id = "prev";
-            prevButton.innerHTML = "&laquo;";
-            paginationElement.appendChild(prevButton);
+        //     var prevButton = document.createElement("a");
+        //     prevButton.href = "#";
+        //     prevButton.classList.add("pagination__item");
+        //     prevButton.id = "prev";
+        //     prevButton.innerHTML = "&laquo;";
+        //     paginationElement.appendChild(prevButton);
 
-            for (var i = 1; i <= totalPages; i++) {
-                var pageButton = document.createElement("a");
-                pageButton.href = "#";
-                pageButton.classList.add("pagination__item");
-                pageButton.id = i;
-                pageButton.innerHTML = i;
-                paginationElement.appendChild(pageButton);
+        //     for (var i = 1; i <= totalPages; i++) {
+        //         var pageButton = document.createElement("a");
+        //         pageButton.href = "#";
+        //         pageButton.classList.add("pagination__item");
+        //         pageButton.id = i;
+        //         pageButton.innerHTML = i;
+        //         paginationElement.appendChild(pageButton);
 
-                // Kích hoạt số 1 khi trang được tải lần đầu tiên
-                if (i === 1) {
-                    pageButton.classList.add("active");
-                }
-            }
+        //         // Kích hoạt số 1 khi trang được tải lần đầu tiên
+        //         if (i === 1) {
+        //             pageButton.classList.add("active");
+        //         }
+        //     }
 
-            var nextButton = document.createElement("a");
-            nextButton.href = "#";
-            nextButton.classList.add("pagination__item");
-            nextButton.id = "next";
-            nextButton.innerHTML = "&raquo;";
-            paginationElement.appendChild(nextButton);
-        }
+        //     var nextButton = document.createElement("a");
+        //     nextButton.href = "#";
+        //     nextButton.classList.add("pagination__item");
+        //     nextButton.id = "next";
+        //     nextButton.innerHTML = "&raquo;";
+        //     paginationElement.appendChild(nextButton);
+        // }
 
-        function changePage(page) {
-            currentPage = page;
-            showPage(currentPage);
+        // function changePage(page) {
+        //     currentPage = page;
+        //     showPage(currentPage);
 
-            var paginationItems = document.querySelectorAll(".pagination__item");
-            for (var i = 0; i < paginationItems.length; i++) {
-                paginationItems[i].classList.remove("active");
-            }
-            document.getElementById(currentPage).classList.add("active");
+        //     var paginationItems = document.querySelectorAll(".pagination__item");
+        //     for (var i = 0; i < paginationItems.length; i++) {
+        //         paginationItems[i].classList.remove("active");
+        //     }
+        //     document.getElementById(currentPage).classList.add("active");
 
-            // Disable/enable prev/next buttons
-            if (currentPage == 1) {
-                document.getElementById("prev").classList.add("disabled");
-            } else {
-                document.getElementById("prev").classList.remove("disabled");
-            }
-            if (currentPage == totalPages) {
-                document.getElementById("next").classList.add("disabled");
-            } else {
-                document.getElementById("next").classList.remove("disabled");
-            }
-        }
+        //     // Disable/enable prev/next buttons
+        //     if (currentPage == 1) {
+        //         document.getElementById("prev").classList.add("disabled");
+        //     } else {
+        //         document.getElementById("prev").classList.remove("disabled");
+        //     }
+        //     if (currentPage == totalPages) {
+        //         document.getElementById("next").classList.add("disabled");
+        //     } else {
+        //         document.getElementById("next").classList.remove("disabled");
+        //     }
+        // }
 
 
         // function inputHidden() {

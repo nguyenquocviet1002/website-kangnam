@@ -38,6 +38,16 @@
   }
   &__detail {
     width: 100%;
+    min-height: calc(100vh - 200px);
+  }
+  &__ani{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s linear all;
+    &.ani{
+      visibility: visible;
+      opacity: 1;
+    }
   }
   &__pic {
     display: flex;
@@ -87,7 +97,6 @@
     text-transform: uppercase;
   }
   &__price {
-    text-transform: uppercase;
     margin: 0;
   }
   &__cta {
@@ -237,7 +246,7 @@
       } 
     }
     &__detail {
-      width: 100%;
+      min-height: 100vh;
     }
     // &__btn {
     //   display: none;

@@ -30,7 +30,7 @@ doctors.forEach((doctor, index) => {
   item.classList.add("doctor_kn_2_0_0__item");
   const img = document.createElement("div");
   img.classList.add("doctor_kn_2_0_0__img");
-  img.innerHTML = `<img src="${doctor.image}" alt="">`;
+  img.innerHTML = `<img width="162" height="123" class="lazy" data-src="${doctor.image}" alt="">`;
   const text = document.createElement("div");
   text.classList.add("doctor_kn_2_0_0__text");
   text.innerHTML = `
@@ -40,7 +40,7 @@ doctors.forEach((doctor, index) => {
 `;
   const icon = document.createElement("div");
   icon.classList.add("doctor_kn_2_0_0__icon");
-  icon.innerHTML = `<img src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/doctor_kn_2_0_0/images/icon.webp" alt="" loading="lazy">`;
+  icon.innerHTML = `<img width="41" height="41" class="lazy" data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/doctor_kn_2_0_0/images/icon.webp" alt="" loading="lazy">`;
   item.appendChild(img);
   item.appendChild(text);
   item.appendChild(icon);

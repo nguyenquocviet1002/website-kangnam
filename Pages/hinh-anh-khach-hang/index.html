@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://benhvienthammykangnam.vn/css/lib/lib.min.css"
     />
-    <link rel="stylesheet" href="media/sass/main.min.css?v=2" />
+    <link rel="stylesheet" href="media/sass/main.min.css?v=3" />
     <title>Hình ảnh khách hàng</title>
   </head>
 
@@ -21,27 +21,29 @@
             </ul>
           </div>
           <div class="screen1__detail">
-            <h1 class="screen1__title">hình ảnh khách hàng</h1>
-            <div class="screen1__line"></div>
-            <div class="screen1__inner">
-              <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+            <div class="screen1__ani">
+              <h1 class="screen1__title">hình ảnh khách hàng</h1>
+              <div class="screen1__line"></div>
+              <div class="screen1__inner">
+                <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+              </div>
+              <!-- <div class="screen1__btn">
+                <button id="screen1__viewMore">Hiển thị thêm</button>
+              </div>
+              <div class="screen1__btn screen1__btnHide">
+                <button id="screen1__hide">Rút gọn</button>
+              </div> -->
+              <!-- <div class="pagination">
+                <a href="#" class="pagination__item" id="prev">&laquo;</a>
+                <a href="#" class="pagination__item" id="1">1</a>
+                <a href="#" class="pagination__item" id="2">2</a>
+                <a href="#" class="pagination__item" id="3">3</a>
+                <a href="#" class="pagination__item" id="4">4</a>
+                <a href="#" class="pagination__item" id="5">5</a>
+                <a href="#" class="pagination__item" id="next">&raquo;</a>
+              </div> -->
+              <div class="screen1__innerVid"></div>
             </div>
-            <div class="screen1__btn">
-              <button id="screen1__viewMore">Hiển thị thêm</button>
-            </div>
-            <div class="screen1__btn screen1__btnHide">
-              <button id="screen1__hide">Rút gọn</button>
-            </div>
-            <div class="pagination">
-              <a href="#" class="pagination__item" id="prev">&laquo;</a>
-              <a href="#" class="pagination__item" id="1">1</a>
-              <a href="#" class="pagination__item" id="2">2</a>
-              <a href="#" class="pagination__item" id="3">3</a>
-              <a href="#" class="pagination__item" id="4">4</a>
-              <a href="#" class="pagination__item" id="5">5</a>
-              <a href="#" class="pagination__item" id="next">&raquo;</a>
-            </div>
-            <div class="screen1__innerVid"></div>
           </div>
         </div>
       </div>
@@ -266,8 +268,8 @@
       var menuItems = document.getElementById("menuItems");
       var imageContainer = document.querySelector(".screen1__inner");
       var imageContainerVid = document.querySelector(".screen1__innerVid");
-      var viewMoreButton = document.getElementById("screen1__viewMore");
-      var hideButton = document.getElementById("screen1__hide");
+      // var viewMoreButton = document.getElementById("screen1__viewMore");
+      // var hideButton = document.getElementById("screen1__hide");
       var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
       const getIdYoutube = (url) => {
@@ -279,6 +281,9 @@
         return video_id;
       };
       function showImage(serviceId, element) {
+        if(document.querySelector('.screen1__ani.ani')){
+            document.querySelector('.screen1__ani').classList.remove('ani');
+        }
         var serviceImages = services[serviceId].images;
         window.location.hash = services[serviceId].link;
         var imageElements = "";
@@ -288,15 +293,9 @@
             serviceImages[i] +
             '" alt=""></div>';
         }
-        imageContainer.innerHTML = `
-            <div class="screen1__des">${
-              services[serviceId].desc ? services[serviceId].desc : ""
-            }</div>
-            <div class="screen1__pic">${imageElements}</div>
-            `;
+        
         let htmlVideo = "";
         services[serviceId].video.map((item) => {
-          // console.log(item);
           htmlVideo += `
                 <div class="screen1__video">
                     <div onclick="playVideo('${getIdYoutube(
@@ -311,7 +310,18 @@
                 </div>
                 `;
         });
-        imageContainerVid.innerHTML = htmlVideo;
+        
+        
+        setTimeout(() => {
+          imageContainer.innerHTML = `
+            <div class="screen1__des">${
+              services[serviceId].desc ? services[serviceId].desc : ""
+            }</div>
+            <div class="screen1__pic">${imageElements}</div>
+            `;
+            imageContainerVid.innerHTML = htmlVideo;
+            document.querySelector('.screen1__ani').classList.add('ani');
+        }, 300)
         for (var i = 0; i < menuItems.children.length; i++) {
           menuItems.children[i].classList.remove("active");
         }
@@ -319,25 +329,25 @@
         currentServiceId = serviceId; // Cập nhật ID của dịch vụ hiện tại
 
         // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" dựa trên số lượng hình ảnh
-        if (serviceImages.length <= 4) {
-          viewMoreButton.style.display = "none";
-          hideButton.style.display = "none";
-        } else {
-          viewMoreButton.style.display = "block";
-          hideButton.style.display = "none";
-        }
+        // if (serviceImages.length <= 4) {
+        //   viewMoreButton.style.display = "none";
+        //   hideButton.style.display = "none";
+        // } else {
+        //   viewMoreButton.style.display = "block";
+        //   hideButton.style.display = "none";
+        // }
 
         // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-        for (var i = 4; i < serviceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "none";
-        }
+        // for (var i = 4; i < serviceImages.length; i++) {
+        //   imageContainer.querySelector(".screen1__pic").children[
+        //     i
+        //   ].style.display = "none";
+        // }
 
-        var screenWidth =
-          window.innerWidth ||
-          document.documentElement.clientWidth ||
-          document.body.clientWidth;
+        // var screenWidth =
+        //   window.innerWidth ||
+        //   document.documentElement.clientWidth ||
+        //   document.body.clientWidth;
       }
 
       for (var i = 0; i < services.length; i++) {
@@ -362,195 +372,195 @@
       window.addEventListener("hashchange", functionChangeHash);
 
       // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
-      viewMoreButton.addEventListener("click", function () {
-        // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
-        var serviceImages = services[currentServiceId].images;
-        for (var i = 4; i < serviceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "block";
-        }
-        // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
-        viewMoreButton.style.display = "none";
-        hideButton.style.display = "block";
-      });
+      // viewMoreButton.addEventListener("click", function () {
+      //   // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
+      //   var serviceImages = services[currentServiceId].images;
+      //   for (var i = 4; i < serviceImages.length; i++) {
+      //     imageContainer.querySelector(".screen1__pic").children[
+      //       i
+      //     ].style.display = "block";
+      //   }
+      //   // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
+      //   viewMoreButton.style.display = "none";
+      //   hideButton.style.display = "block";
+      // });
 
       // Xử lý sự kiện khi click vào nút "Rút gọn"
-      hideButton.addEventListener("click", function () {
-        // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-        var serviceImages = services[currentServiceId].images;
-        for (var i = 4; i < serviceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "none";
-        }
-        // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
-        viewMoreButton.style.display = "block";
-        hideButton.style.display = "none";
-      });
+      // hideButton.addEventListener("click", function () {
+      //   // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
+      //   var serviceImages = services[currentServiceId].images;
+      //   for (var i = 4; i < serviceImages.length; i++) {
+      //     imageContainer.querySelector(".screen1__pic").children[
+      //       i
+      //     ].style.display = "none";
+      //   }
+      //   // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
+      //   viewMoreButton.style.display = "block";
+      //   hideButton.style.display = "none";
+      // });
 
       // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
-      var initialServiceImages = services[currentServiceId].images;
-      if (initialServiceImages.length <= 4) {
-        viewMoreButton.style.display = "none";
-        hideButton.style.display = "none";
-      } else {
-        viewMoreButton.style.display = "block";
-        hideButton.style.display = "none";
-        for (var i = 4; i < initialServiceImages.length; i++) {
-          imageContainer.querySelector(".screen1__pic").children[
-            i
-          ].style.display = "none";
-        }
-      }
+      // var initialServiceImages = services[currentServiceId].images;
+      // if (initialServiceImages.length <= 4) {
+      //   viewMoreButton.style.display = "none";
+      //   hideButton.style.display = "none";
+      // } else {
+      //   viewMoreButton.style.display = "block";
+      //   hideButton.style.display = "none";
+      //   for (var i = 4; i < initialServiceImages.length; i++) {
+      //     imageContainer.querySelector(".screen1__pic").children[
+      //       i
+      //     ].style.display = "none";
+      //   }
+      // }
 
-      function changeMenuStyle() {
-        var screenWidth =
-          window.innerWidth ||
-          document.documentElement.clientWidth ||
-          document.body.clientWidth;
-      }
+      // function changeMenuStyle() {
+      //   var screenWidth =
+      //     window.innerWidth ||
+      //     document.documentElement.clientWidth ||
+      //     document.body.clientWidth;
+      // }
 
-      // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
-      window.addEventListener("load", changeMenuStyle);
-      window.addEventListener("resize", changeMenuStyle);
+      // // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
+      // window.addEventListener("load", changeMenuStyle);
+      // window.addEventListener("resize", changeMenuStyle);
 
-      var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
-      var currentPage = 1; // Trang hiện tại
+      // var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
+      // var currentPage = 1; // Trang hiện tại
 
-      function showPage(page) {
-        var startIndex = (page - 1) * itemsPerPage;
-        var endIndex = startIndex + itemsPerPage;
-        var serviceImages = services[currentServiceId].images.slice(
-          startIndex,
-          endIndex
-        );
+      // function showPage(page) {
+      //   var startIndex = (page - 1) * itemsPerPage;
+      //   var endIndex = startIndex + itemsPerPage;
+      //   var serviceImages = services[currentServiceId].images.slice(
+      //     startIndex,
+      //     endIndex
+      //   );
 
-        var imageElements = "";
-        for (var i = 0; i < serviceImages.length; i++) {
-          imageElements +=
-            '<div class="screen1__item"><img width="327" height="259" src="' +
-            serviceImages[i] +
-            '" alt=""></div>';
-        }
-        imageContainer.innerHTML = `
-            <div class="screen1__des">${
-              services[currentPage].desc ? services[currentPage].desc : ""
-            }</div>
-            <div class="screen1__pic">${imageElements}</div>
-            `;
+      //   var imageElements = "";
+      //   for (var i = 0; i < serviceImages.length; i++) {
+      //     imageElements +=
+      //       '<div class="screen1__item"><img width="327" height="259" src="' +
+      //       serviceImages[i] +
+      //       '" alt=""></div>';
+      //   }
+      //   imageContainer.innerHTML = `
+      //       <div class="screen1__des">${
+      //         services[currentPage].desc ? services[currentPage].desc : ""
+      //       }</div>
+      //       <div class="screen1__pic">${imageElements}</div>
+      //       `;
 
-        let htmlVideo = "";
-        services[currentPage].video.map((item) => {
-          htmlVideo += `
-                <div class="screen1__video">
-                    <div onclick="playVideo('${getIdYoutube(
-                      item.linkVideo
-                    )}')" style="position: relative">
-                        <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(
-                          item.linkVideo
-                        )}/maxresdefault.jpg" alt="">
-                        <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt=""></button>
-                    </div>
-                    <div class="screen1__note">${item.descVideo}</div>
-                </div>
-                `;
-        });
-        imageContainerVid.innerHTML = htmlVideo;
-      }
+      //   let htmlVideo = "";
+      //   services[currentPage].video.map((item) => {
+      //     htmlVideo += `
+      //           <div class="screen1__video">
+      //               <div onclick="playVideo('${getIdYoutube(
+      //                 item.linkVideo
+      //               )}')" style="position: relative">
+      //                   <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(
+      //                     item.linkVideo
+      //                   )}/maxresdefault.jpg" alt="">
+      //                   <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt=""></button>
+      //               </div>
+      //               <div class="screen1__note">${item.descVideo}</div>
+      //           </div>
+      //           `;
+      //   });
+      //   imageContainerVid.innerHTML = htmlVideo;
+      // }
 
-      function createPagination() {
-        var totalItems = services[currentServiceId].images.length;
-        var totalPages = Math.ceil(totalItems / itemsPerPage);
+      // function createPagination() {
+      //   var totalItems = services[currentServiceId].images.length;
+      //   var totalPages = Math.ceil(totalItems / itemsPerPage);
 
-        var paginationElement = document.querySelector(".pagination");
-        paginationElement.innerHTML = "";
+      //   var paginationElement = document.querySelector(".pagination");
+      //   paginationElement.innerHTML = "";
 
-        var prevButton = document.createElement("a");
-        prevButton.href = "#";
-        prevButton.classList.add("pagination__item");
-        prevButton.id = "prev";
-        prevButton.innerHTML = "&laquo;";
-        paginationElement.appendChild(prevButton);
+      //   var prevButton = document.createElement("a");
+      //   prevButton.href = "#";
+      //   prevButton.classList.add("pagination__item");
+      //   prevButton.id = "prev";
+      //   prevButton.innerHTML = "&laquo;";
+      //   paginationElement.appendChild(prevButton);
 
-        for (var i = 1; i <= totalPages; i++) {
-          var pageButton = document.createElement("a");
-          pageButton.href = "#";
-          pageButton.classList.add("pagination__item");
-          pageButton.id = i;
-          pageButton.innerHTML = i;
-          paginationElement.appendChild(pageButton);
+      //   for (var i = 1; i <= totalPages; i++) {
+      //     var pageButton = document.createElement("a");
+      //     pageButton.href = "#";
+      //     pageButton.classList.add("pagination__item");
+      //     pageButton.id = i;
+      //     pageButton.innerHTML = i;
+      //     paginationElement.appendChild(pageButton);
 
-          // Kích hoạt số 1 khi trang được tải lần đầu tiên
-          if (i === 1) {
-            pageButton.classList.add("active");
-          }
-        }
+      //     // Kích hoạt số 1 khi trang được tải lần đầu tiên
+      //     if (i === 1) {
+      //       pageButton.classList.add("active");
+      //     }
+      //   }
 
-        var nextButton = document.createElement("a");
-        nextButton.href = "#";
-        nextButton.classList.add("pagination__item");
-        nextButton.id = "next";
-        nextButton.innerHTML = "&raquo;";
-        paginationElement.appendChild(nextButton);
-      }
+      //   var nextButton = document.createElement("a");
+      //   nextButton.href = "#";
+      //   nextButton.classList.add("pagination__item");
+      //   nextButton.id = "next";
+      //   nextButton.innerHTML = "&raquo;";
+      //   paginationElement.appendChild(nextButton);
+      // }
 
-      function changePage(page) {
-        currentPage = page;
-        showPage(currentPage);
+      // function changePage(page) {
+      //   currentPage = page;
+      //   showPage(currentPage);
 
-        var paginationItems = document.querySelectorAll(".pagination__item");
-        for (var i = 0; i < paginationItems.length; i++) {
-          paginationItems[i].classList.remove("active");
-        }
-        document.getElementById(currentPage).classList.add("active");
+      //   var paginationItems = document.querySelectorAll(".pagination__item");
+      //   for (var i = 0; i < paginationItems.length; i++) {
+      //     paginationItems[i].classList.remove("active");
+      //   }
+      //   document.getElementById(currentPage).classList.add("active");
 
-        // Disable/enable prev/next buttons
-        if (currentPage == 1) {
-          document.getElementById("prev").classList.add("disabled");
-        } else {
-          document.getElementById("prev").classList.remove("disabled");
-        }
-        if (currentPage == totalPages) {
-          document.getElementById("next").classList.add("disabled");
-        } else {
-          document.getElementById("next").classList.remove("disabled");
-        }
-      }
+      //   // Disable/enable prev/next buttons
+      //   if (currentPage == 1) {
+      //     document.getElementById("prev").classList.add("disabled");
+      //   } else {
+      //     document.getElementById("prev").classList.remove("disabled");
+      //   }
+      //   if (currentPage == totalPages) {
+      //     document.getElementById("next").classList.add("disabled");
+      //   } else {
+      //     document.getElementById("next").classList.remove("disabled");
+      //   }
+      // }
 
-      var totalItems = services[currentServiceId].images.length;
-      var totalPages = Math.ceil(totalItems / itemsPerPage);
-      createPagination();
-      var screenWidth =
-        window.innerWidth ||
-        document.documentElement.clientWidth ||
-        document.body.clientWidth;
-      if (screenWidth <= 767) {
-        showPage(currentPage);
-      } else {
-      }
+      // var totalItems = services[currentServiceId].images.length;
+      // var totalPages = Math.ceil(totalItems / itemsPerPage);
+      // createPagination();
+      // var screenWidth =
+      //   window.innerWidth ||
+      //   document.documentElement.clientWidth ||
+      //   document.body.clientWidth;
+      // if (screenWidth <= 767) {
+      //   showPage(currentPage);
+      // } else {
+      // }
 
-      document.getElementById("prev").addEventListener("click", function () {
-        if (currentPage > 1) {
-          changePage(currentPage - 1);
-        }
-      });
+      // document.getElementById("prev").addEventListener("click", function () {
+      //   if (currentPage > 1) {
+      //     changePage(currentPage - 1);
+      //   }
+      // });
 
-      document.getElementById("next").addEventListener("click", function () {
-        if (currentPage < totalPages) {
-          changePage(currentPage + 1);
-        }
-      });
+      // document.getElementById("next").addEventListener("click", function () {
+      //   if (currentPage < totalPages) {
+      //     changePage(currentPage + 1);
+      //   }
+      // });
 
-      var paginationItems = document.querySelectorAll(".pagination__item");
-      for (var i = 0; i < paginationItems.length; i++) {
-        paginationItems[i].addEventListener("click", function () {
-          var page = parseInt(this.id);
-          if (page) {
-            changePage(page);
-          }
-        });
-      }
+      // var paginationItems = document.querySelectorAll(".pagination__item");
+      // for (var i = 0; i < paginationItems.length; i++) {
+      //   paginationItems[i].addEventListener("click", function () {
+      //     var page = parseInt(this.id);
+      //     if (page) {
+      //       changePage(page);
+      //     }
+      //   });
+      // }
 
       const removeModal = (id) => {
         document.getElementById(id).remove();

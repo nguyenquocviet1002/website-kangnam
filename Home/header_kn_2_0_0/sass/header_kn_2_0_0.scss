@@ -7,8 +7,9 @@
   box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
   &__top {
     background-color: #003c77;
-    padding: 12px 0;
     position: relative;
+    height: 65px;
+    display: flex;
     .container {
       display: flex;
       align-items: center;
@@ -51,6 +52,7 @@
   }
   &__location {
     cursor: pointer;
+    width: 32px;
     img {
       width: 100%;
       height: auto;
@@ -103,7 +105,7 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     max-width: 250px;
     width: max-content;
     box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.1);
@@ -189,9 +191,10 @@
   }
   @media (max-width: 1024px) {
     &__top {
-      padding: 8px 0;
+      height: 58px;
       .container {
         flex-direction: column;
+        justify-content: center;
       }
     }
     &__logo {
@@ -206,13 +209,13 @@
     }
     &__location {
       position: absolute;
-      top: 6px;
+      top: 13px;
       right: 25px;
     }
     &__button {
       display: flex;
       position: absolute;
-      top: 15px;
+      top: 20px;
       left: 25px;
     }
     &__redirectWeb {
