@@ -2,31 +2,43 @@
   font-family: var(--primary-font);
   background: #003c77;
   padding: 30px 0;
-  font-size:14px;
-  &__inner{
+  font-size: 14px;
+  &__link{
+    color:#fff;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__inner {
     display: flex;
   }
-  &__aside{
+
+  &__aside {
     width: 31%;
   }
+
   &__logo {
     max-width: 215px;
     margin-bottom: 20px;
+
     img {
       width: 100%;
       height: auto;
       display: block;
     }
   }
+
   &__box {
     flex: 1;
     padding: 0 50px;
   }
-  &__contact{
+
+  &__contact {
     display: flex;
     align-items: center;
     gap: 10px;
-    &Item{
+
+    &Item {
       width: calc(50% - 5px);
       display: flex;
       align-items: center;
@@ -37,20 +49,24 @@
       border-radius: 12px;
       padding: 5px 20px;
     }
-    &Icon{
+
+    &Icon {
       width: 70px;
-      img{
+
+      img {
         width: 100%;
         height: auto;
         display: block;
       }
     }
-    &Text{
+
+    &Text {
       text-align: center;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 1.1rem;
-      span{
+
+      span {
         display: block;
         color: #FEC465;
         font-size: 2.3rem;
@@ -58,77 +74,93 @@
       }
     }
   }
+
   &__item {
     color: #fff;
     width: 85%;
     margin: auto;
     margin-top: 15px;
   }
-  &__slogan{
+
+  &__slogan {
     color: #FEC465;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.2rem;
-    &--1{
+
+    &--1 {
       display: none;
     }
   }
-  &__info{
+
+  &__info {
     text-align: justify;
     margin-top: 5px;
     font-size: 14px;
   }
+
   &__address {
     p {
       color: #fff;
     }
-    &--1{
-      .footer_kn_2_0_0__img img{
+
+    &--1 {
+      .footer_kn_2_0_0__img img {
         width: 25px;
       }
     }
   }
+
   &__img {
     display: flex;
     align-items: center;
     gap: 5px;
     margin-bottom: 10px;
+
     p {
       margin: 0;
       color: #fec465;
+
       a {
         color: #fff;
       }
     }
+
     img {
       width: 20px;
       height: auto;
     }
   }
+
   &__content {
     display: flex;
     margin: 15px 0;
     gap: 10px;
   }
+
   &__icon {
     img {
       height: auto;
       display: block;
       transition: .5s;
+
       &:hover {
         opacity: 0.5;
       }
     }
   }
+
   &__list {
     display: flex;
     align-items: center;
     gap: 10px;
+
     span {
       color: #fff;
       padding: 5px 15px;
       border-radius: 30px;
       border: 1px solid #fff;
+
       &:hover {
         background-color: #fff;
         color: #003c77;
@@ -136,118 +168,150 @@
       }
     }
   }
-  &__pic{
+
+  &__pic {
     max-width: 197px;
+
     img {
       width: 100%;
       height: auto;
       display: block;
     }
   }
+
   @media (max-width: 1200px) {
     &__logo {
       max-width: 190px;
     }
-    &__box{
+
+    &__box {
       padding: 0 30px;
     }
-    &__contactText span{
+
+    &__contactText span {
       font-size: 2rem;
     }
   }
-  @media (max-width: 1024px){
-    &__box{
+
+  @media (max-width: 1024px) {
+    &__box {
       padding: 0 20px;
     }
-    &__contact{
+
+    &__contact {
       flex-wrap: wrap;
       justify-content: center;
     }
-    &__contactItem{
+
+    &__contactItem {
       width: 230px;
       padding: 5px;
     }
-    &__contactIcon{
+
+    &__contactIcon {
       width: 60px;
     }
-    &__contactText span{
+
+    &__contactText span {
       font-size: 1.8rem;
     }
-    &__content{
+
+    &__content {
       flex-wrap: wrap;
     }
   }
+
   @media (max-width: 767px) {
-    &__inner{
+    &__inner {
       flex-direction: column;
     }
-    &__aside{
+
+    &__aside {
       width: 100%;
     }
+
     &__logo {
       max-width: 170px;
       margin-left: auto;
       margin-right: auto;
     }
-    &__slogan{
+
+    &__slogan {
       text-align: center;
       margin-bottom: 5px;
-      &--1{
+
+      &--1 {
         display: block;
       }
-      &--2{
+
+      &--2 {
         display: none;
       }
     }
+
     &__box {
-     padding: 0;
+      padding: 0;
     }
-    &__contact{
+
+    &__contact {
       flex-direction: column;
     }
-    &__contactItem{
+
+    &__contactItem {
       width: 100%;
       justify-content: center;
     }
+
     &__item {
       width: 100%;
     }
+
     &__img {
       justify-content: center;
     }
+
     &__address {
       border-bottom: 1px solid #fff;
-      &--1{
+
+      &--1 {
         text-align: center;
         border: none;
         margin-top: 10px;
       }
     }
+
     &__content {
       flex-direction: column;
       margin: 0 0 30px;
       gap: 20px;
     }
+
     &__list {
       justify-content: center;
-      &--1{
+
+      &--1 {
         order: 3;
       }
     }
+
     &__pic {
       width: 43%;
     }
   }
+
   @media (max-width: 320px) {
     &__logo {
       max-width: 160px;
     }
+
     &__img {
       width: 85%;
     }
+
     &__pic {
       width: 50%;
     }
+
     &__list span {
       padding: 5px;
       font-size: 12px;
