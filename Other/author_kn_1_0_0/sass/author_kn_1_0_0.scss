@@ -1,0 +1,55 @@
+.author_kn_1_0_0 {
+    &__title {
+        text-transform: uppercase;
+        padding: 5px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #005699;
+        position: relative;
+        font-weight: 600;
+        display: table;
+        color: #005699;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__pic {
+        width: 60px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 100%;
+        }
+    }
+
+    &__name {
+        margin: 0 0 2px 0;
+        text-transform: uppercase;
+        color: #005699;
+        font-weight: 600;
+        font-size: 17px;
+    }
+
+    &__desc {
+        margin: 0;
+        color: #000;
+        font-size: 16px;
+    }
+
+    @media (max-width: 280px) {
+        &__name {
+            font-size: 16px;
+        }
+
+        &__desc {
+            font-size: 14px;
+        }
+    }
+}
