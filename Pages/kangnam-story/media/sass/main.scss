@@ -80,7 +80,17 @@
                 font-size: 14px;
             }
         }
+
+        &__banner {
+            margin-top: -10px;
+        }
+
+        .container {
+            padding: 0;
+        }
     }
+
+
 
     @media (max-width: 320px) {
         &__item {
