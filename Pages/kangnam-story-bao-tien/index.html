@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://benhvienthammykangnam.vn/css/lib/lib.min.css">
     <link rel="stylesheet" href="media/sass/main.min.css">
     <title>Kangnam Story Detail</title>
@@ -12,7 +13,10 @@
     <section class="storyDetail_kn_1_0_0">
         <div class="container">
             <div class="storyDetail_kn_1_0_0__page1">
-                <img width="1139" height="794" src="media/images/img-page1.jpg" alt="">
+                <picture>
+                    <source media="(min-width:640px)" srcset="media/images/img-page1.jpg">
+                    <img width="640" height="478" src="media/images/img-page1-mb.jpg" alt="">
+                </picture>
             </div>
             <div class="storyDetail_kn_1_0_0__page2">
                 <img width="1140" height="1496" class="lazy" src="media/images/img-page2.jpg" alt="">
@@ -37,10 +41,8 @@
                 </div>
             </div>
             <div class="storyDetail_kn_1_0_0__page5">
-                <div class="storyDetail_kn_1_0_0__pic">
-                    <a href="">
-                        <img width="748" height="247" class="lazy" src="media/images/img1-page5.jpg" alt="">
-                    </a>
+                <div class="storyDetail_kn_1_0_0__video modal-clip" data-video="F1eR4TIKKrQ" data-modal="modal-clip">
+                    <img width="748" height="247" class="lazy" src="media/images/img1-page5.jpg" alt="">
                 </div>
                 <div class="storyDetail_kn_1_0_0__pic">
                     <img width="389" height="426" class="lazy" src="media/images/img2-page5.jpg" alt="">
@@ -60,14 +62,12 @@
                 </h3>
             </div>
             <div class="doctor_kn_2_1_0">
-                <div class="container">
-                    <div class="doctor_kn_2_1_0__main">
-                        <div class="doctor_kn_2_1_0__category"></div>
-                        <div class="doctor_kn_2_1_0__doctor"></div>
+                <div class="doctor_kn_2_1_0__main">
+                    <div class="doctor_kn_2_1_0__category"></div>
+                    <div class="doctor_kn_2_1_0__doctor"></div>
 
-                        <div class="doctor_kn_2_1_0__pagination">
+                    <div class="doctor_kn_2_1_0__pagination">
 
-                        </div>
                     </div>
                 </div>
             </div>
@@ -173,6 +173,8 @@
         render()
     }
 </script>
+
+<script src="https://benhvienthammykangnam.vn/css/lib/lib.min.js"></script>
 <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
 
 </html>
