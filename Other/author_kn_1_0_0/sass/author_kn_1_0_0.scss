@@ -1,4 +1,5 @@
 .author_kn_1_0_0 {
+    margin-top:15px;
     &__title {
         text-transform: uppercase;
         padding: 5px 0;
@@ -8,9 +9,11 @@
         font-weight: 600;
         display: table;
         color: #005699;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
-
+    &__info{
+        flex:1;
+    }
     &__item {
         display: flex;
         align-items: center;
@@ -20,7 +23,6 @@
 
     &__pic {
         width: 60px;
-
         img {
             width: 100%;
             height: auto;
