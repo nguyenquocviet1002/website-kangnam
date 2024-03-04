@@ -28,6 +28,7 @@
         font-weight: 500;
         text-transform: uppercase;
         line-height: 28px;
+        font-family: var(--primary-font);
     }
 
     &__page2 {
@@ -72,6 +73,16 @@
         }
     }
 
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
     &__page4,
     &__page5 {
         display: flex;
@@ -94,7 +105,7 @@
         font-family: var(--primary-font);
     }
 
-    &__title {
+    &__titleDoctor {
         color: #003C77;
         text-align: center;
         text-transform: uppercase;
@@ -104,7 +115,7 @@
         font-family: var(--primary-font);
     }
 
-    &__desc {
+    &__descDoctor {
         background: #E9F4FF;
         border-radius: 50px;
         text-align: center;
@@ -153,7 +164,7 @@
             bottom: 112px;
         }
 
-        &__desc {
+        &__descDoctor {
             width: 100%;
         }
     }
@@ -173,27 +184,23 @@
             font-size: 16px;
         }
 
-        &__title {
+        &__titleDoctor {
             font-size: 35px;
         }
 
-        &__desc {
+        &__descDoctor {
             font-size: 14px;
             padding: 15px;
+
+            br {
+                display: none;
+            }
         }
 
         &__play {
             width: 42px !important;
             top: calc(50% - 26px);
             left: calc(50% - 26px);
-        }
-    }
-
-    @media (max-width: 390px) {
-        &__desc {
-            br {
-                display: none;
-            }
         }
     }
 }
