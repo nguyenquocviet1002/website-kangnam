@@ -12,7 +12,6 @@
     &__box {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         gap: 40px;
         padding: 30px;
     }
@@ -26,7 +25,8 @@
 
         img {
             width: 100%;
-            height: auto;
+            height: 380px;
+            object-fit: cover;
             display: block;
         }
     }
@@ -34,6 +34,7 @@
     &__info {
         background: #E9F4FF;
         padding: 15px 20px;
+        height: 160px;
     }
 
     &__name {
@@ -55,13 +56,29 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        &__info {
+            height: 190px;
+        }
+    }
+
     @media (max-width: 820px) {
+        &__box {
+            gap: 28px;
+        }
+
         &__item {
-            width: calc(33% - 25px);
+            width: calc(33% - 17px);
         }
 
         &__name {
             font-size: 16px;
+        }
+
+        &__pic {
+            img {
+                height: 260px;
+            }
         }
     }
 
@@ -87,12 +104,15 @@
             margin-top: -10px;
         }
 
+        &__info {
+            height: 180px;
+            padding: 10px;
+        }
+
         .container {
             padding: 0;
         }
     }
-
-
 
     @media (max-width: 320px) {
         &__item {
