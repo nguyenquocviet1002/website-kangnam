@@ -3,7 +3,7 @@
   background: #003c77;
   padding: 30px 0;
   font-size: 14px;
-  &__link{
+  &__link, a{
     color:#fff;
     &:hover{
       text-decoration: underline;
