@@ -103,6 +103,12 @@
 
         img {
             cursor: pointer;
+            opacity: 70%;
+            transition: all .2s linear;
+
+            &:hover {
+                opacity: 100%;
+            }
         }
     }
 
