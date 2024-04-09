@@ -60,17 +60,31 @@
         }
     }
 
+    &__bgOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 14, 14, 0.50);
+        display: block;
+        cursor: pointer;
+        transition: all .3s linear;
+    }
+
     &__video {
         position: relative;
 
+        &:hover {
+            .storyDetail_kn_1_0_0__bgOverlay {
+                background: rgba(14, 14, 14, 0.30);
+                transition: all .3s linear;
+            }
+        }
+
         img {
             cursor: pointer;
-            opacity: 100%;
             transition: all .2s linear;
-
-            &:hover {
-                opacity: 70%;
-            }
         }
     }
 
@@ -79,20 +93,6 @@
         position: absolute;
         top: calc(50% - 40px);
         left: calc(50% - 40px);
-
-        &:hover {
-            animation: spin .8s linear;
-        }
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
     }
 
     &__note {
