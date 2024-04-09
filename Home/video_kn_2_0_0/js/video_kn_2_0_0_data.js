@@ -5,6 +5,11 @@ const video_kn_2_0_0_data = [
         thumb: `${video_kn_2_0_0_url}images/thumb-video.webp?v=1`,
         item: [
             {
+                season: 'Mùa 6',
+                episode: 'Tập 1',
+                link: 'https://www.youtube.com/watch?v=lvnrY3d0NUs',
+            },
+            {
                 season: 'Mùa 5',
                 episode: 'Tập 1',
                 link: 'https://www.youtube.com/watch?v=LlNsk4aCDgU&list=PLROTewhS4-MbT2mRXeL80UBeJlAQ_Fp9s&index=3',
