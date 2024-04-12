@@ -8,8 +8,7 @@ function displayDoctor(doctor) {
     doctor.picture;
   contentContainer.querySelector(".doctor_kn_2_0_0__level").textContent =
     doctor.level;
-  contentContainer.querySelector(".doctor_kn_2_0_0__name").textContent =
-    doctor.name;
+  contentContainer.querySelector(".doctor_kn_2_0_0__name").innerHTML = `<a href="${doctor.link}">${doctor.name}</a>`;
   contentContainer.querySelector(".doctor_kn_2_0_0__position").textContent =
     doctor.position;
   contentContainer.querySelector(".doctor_kn_2_0_0__note").innerHTML =
@@ -19,7 +18,7 @@ function displayDoctor(doctor) {
 function displayDoctorPopup(doctor) {
   popup.querySelector(".doctor_kn_2_0_0__pic img").src = doctor.picture;
   popup.querySelector(".doctor_kn_2_0_0__level").textContent = doctor.level;
-  popup.querySelector(".doctor_kn_2_0_0__name").textContent = doctor.name;
+  popup.querySelector(".doctor_kn_2_0_0__name").innerHTML = `<a href="${doctor.link}">${doctor.name}</a>`;
   popup.querySelector(".doctor_kn_2_0_0__position").textContent =
     doctor.position;
   popup.querySelector(".doctor_kn_2_0_0__note").innerHTML = doctor.note;
