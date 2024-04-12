@@ -7,7 +7,8 @@ const video_kn_2_0_0_data = [
             {
                 season: 'Mùa 6',
                 episode: 'Tập 1',
-                link: 'https://www.youtube.com/watch?v=lvnrY3d0NUs',
+                link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-1-ninh-thi-thu-huong/',
+                thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/04/thumb-th.jpg'
             },
             {
                 season: 'Mùa 5',
