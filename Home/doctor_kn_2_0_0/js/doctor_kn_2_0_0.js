@@ -33,10 +33,10 @@ doctors.forEach((doctor, index) => {
   const text = document.createElement("div");
   text.classList.add("doctor_kn_2_0_0__text");
   text.innerHTML = `
-<div class="doctor_kn_2_0_0__level">${doctor.level}</div>
-<div class="doctor_kn_2_0_0__name">${doctor.name}</div>
-<div class="doctor_kn_2_0_0__position">${doctor.position}</div>
-`;
+    <div class="doctor_kn_2_0_0__level">${doctor.level}</div>
+    <div class="doctor_kn_2_0_0__name">${doctor.name}</div>
+    <div class="doctor_kn_2_0_0__position">${doctor.position}</div>
+  `;
   const icon = document.createElement("div");
   icon.classList.add("doctor_kn_2_0_0__icon");
   icon.innerHTML = `<img width="41" height="41" class="lazy" data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/doctor_kn_2_0_0/images/icon.webp" alt="" loading="lazy">`;
