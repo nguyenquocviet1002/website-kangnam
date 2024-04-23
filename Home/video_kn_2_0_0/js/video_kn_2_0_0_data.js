@@ -6,6 +6,12 @@ const video_kn_2_0_0_data = [
         item: [
             {
                 season: 'Mùa 6',
+                episode: 'Tập 2',
+                link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-2-tran-thi-xuan-mai/',
+                thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/04/thumb-vid-xuan-mai.jpg'
+            },
+            {
+                season: 'Mùa 6',
                 episode: 'Tập 1',
                 link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-1-ninh-thi-thu-huong/',
                 thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/04/thumb-th.jpg'
