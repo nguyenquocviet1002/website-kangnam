@@ -17,6 +17,11 @@ const header_kn_2_0_0_data = [
   {
     label: "header_kn_2_0_0_dropdown-4",
     layout:
-      '<li class="header_kn_2_0_0__head"><span class="header_kn_2_0_0__back">&#10094;</span>Giới Thiệu Kangnam</li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/gioi-thieu/">Về Kangnam</a></li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/chi-duong/">Chỉ đường</a></li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/tuyen-dung/">Tuyển dụng</a></li>',
+      '<li class="header_kn_2_0_0__head"><span class="header_kn_2_0_0__back">&#10094;</span>Tin tức - sự kiện</li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/tin-tuc-thuong-hieu/">Tin tức thương hiệu</a></li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/">Hành trình lột xác</a></li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/">Làm đẹp cùng kangnam</a></li>',
+  },
+  {
+    label: "header_kn_2_0_0_dropdown-5",
+    layout:
+      '<li class="header_kn_2_0_0__head"><span class="header_kn_2_0_0__back">&#10094;</span>Giới Thiệu Kangnam</li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/gioi-thieu/">Về Kangnam</a></li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/co-so-vat-chat/">Cơ sở vật chất</a></li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/chi-duong/">Chỉ đường</a></li><li class="header_kn_2_0_0__dropdownItem"><a href="https://benhvienthammykangnam.vn/tuyen-dung/">Tuyển dụng</a></li>',
   },
 ];
