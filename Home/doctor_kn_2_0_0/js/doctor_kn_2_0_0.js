@@ -6,11 +6,10 @@ const overlay = document.getElementById("overlay");
 function displayDoctor(doctor) {
   contentContainer.querySelector(".doctor_kn_2_0_0__pic img").src =
     doctor.picture;
-  contentContainer.querySelector(".doctor_kn_2_0_0__level").textContent =
+  contentContainer.querySelector(".doctor_kn_2_0_0__level").innerHTML =
     doctor.level;
-  contentContainer.querySelector(".doctor_kn_2_0_0__name").textContent =
-    doctor.name;
-  contentContainer.querySelector(".doctor_kn_2_0_0__position").textContent =
+  contentContainer.querySelector(".doctor_kn_2_0_0__name").innerHTML = `<a href="${doctor.link}">${doctor.name}</a>`;
+  contentContainer.querySelector(".doctor_kn_2_0_0__position").innerHTML =
     doctor.position;
   contentContainer.querySelector(".doctor_kn_2_0_0__note").innerHTML =
     doctor.note;
@@ -18,9 +17,9 @@ function displayDoctor(doctor) {
 
 function displayDoctorPopup(doctor) {
   popup.querySelector(".doctor_kn_2_0_0__pic img").src = doctor.picture;
-  popup.querySelector(".doctor_kn_2_0_0__level").textContent = doctor.level;
-  popup.querySelector(".doctor_kn_2_0_0__name").textContent = doctor.name;
-  popup.querySelector(".doctor_kn_2_0_0__position").textContent =
+  popup.querySelector(".doctor_kn_2_0_0__level").innerHTML = doctor.level;
+  popup.querySelector(".doctor_kn_2_0_0__name").innerHTML = `<a href="${doctor.link}">${doctor.name}</a>`;
+  popup.querySelector(".doctor_kn_2_0_0__position").innerHTML =
     doctor.position;
   popup.querySelector(".doctor_kn_2_0_0__note").innerHTML = doctor.note;
 }
@@ -34,10 +33,10 @@ doctors.forEach((doctor, index) => {
   const text = document.createElement("div");
   text.classList.add("doctor_kn_2_0_0__text");
   text.innerHTML = `
-<div class="doctor_kn_2_0_0__level">${doctor.level}</div>
-<div class="doctor_kn_2_0_0__name">${doctor.name}</div>
-<div class="doctor_kn_2_0_0__position">${doctor.position}</div>
-`;
+    <div class="doctor_kn_2_0_0__level">${doctor.level}</div>
+    <div class="doctor_kn_2_0_0__name">${doctor.name}</div>
+    <div class="doctor_kn_2_0_0__position">${doctor.position}</div>
+  `;
   const icon = document.createElement("div");
   icon.classList.add("doctor_kn_2_0_0__icon");
   icon.innerHTML = `<img width="41" height="41" class="lazy" data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/doctor_kn_2_0_0/images/icon.webp" alt="" loading="lazy">`;
