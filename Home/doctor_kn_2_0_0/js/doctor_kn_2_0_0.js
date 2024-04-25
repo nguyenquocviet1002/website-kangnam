@@ -6,6 +6,7 @@ const overlay = document.getElementById("overlay");
 function displayDoctor(doctor) {
   contentContainer.querySelector(".doctor_kn_2_0_0__pic img").src =
     doctor.picture;
+  contentContainer.querySelector(".doctor_kn_2_0_0__pic img").alt = `${doctor.level} ${doctor.name} ${doctor.position}`;
   contentContainer.querySelector(".doctor_kn_2_0_0__level").innerHTML =
     doctor.level;
   contentContainer.querySelector(".doctor_kn_2_0_0__name").innerHTML = `<a href="${doctor.link}">${doctor.name}</a>`;
@@ -17,6 +18,7 @@ function displayDoctor(doctor) {
 
 function displayDoctorPopup(doctor) {
   popup.querySelector(".doctor_kn_2_0_0__pic img").src = doctor.picture;
+  popup.querySelector(".doctor_kn_2_0_0__pic img").alt = `${doctor.level} ${doctor.name} ${doctor.position}`;
   popup.querySelector(".doctor_kn_2_0_0__level").innerHTML = doctor.level;
   popup.querySelector(".doctor_kn_2_0_0__name").innerHTML = `<a href="${doctor.link}">${doctor.name}</a>`;
   popup.querySelector(".doctor_kn_2_0_0__position").innerHTML =
@@ -29,7 +31,7 @@ doctors.forEach((doctor, index) => {
   item.classList.add("doctor_kn_2_0_0__item");
   const img = document.createElement("div");
   img.classList.add("doctor_kn_2_0_0__img");
-  img.innerHTML = `<img width="162" height="123" class="lazy" data-src="${doctor.image}" alt="">`;
+  img.innerHTML = `<img width="162" height="123" class="lazy" data-src="${doctor.image}" alt="${doctor.level} ${doctor.name} ${doctor.position}">`;
   const text = document.createElement("div");
   text.classList.add("doctor_kn_2_0_0__text");
   text.innerHTML = `
