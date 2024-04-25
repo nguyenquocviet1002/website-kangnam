@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:image"
+        content="https://benhvienthammykangnam.vn/kangnam-story/xuan-mai/media/images/thumb.jpg" />
+    <link rel="stylesheet" href="https://benhvienthammykangnam.vn/css/lib/lib.min.css">
+    <link rel="stylesheet" href="media/sass/main.min.css">
+    <title>Khách hàng Xuân Mai</title>
+</head>
+
+<body>
+    <section class="screen1 load">
+        <img width="600" height="463" src="media/images/page1-bg.jpg" alt="">
+    </section>
+
+    <section class="screen2 load">
+        <div class="container">
+            <div class="screen2__title"><span class="strong">3 tháng</span> thay đổi của <span class="strong">Xuân
+                    Mai</span></div>
+            <div class="screen2__img"><img width="500" height="766" class="lazy" data-src="media/images/page2-bg.jpg"
+                    alt=""></div>
+        </div>
+    </section>
+
+    <section class="screen3 load">
+        <img width="600" height="327" src="media/images/page3-bg.jpg" alt="">
+    </section>
+
+    <section class="screen4 load">
+        <div class="container">
+            <div class="screen4__title"><span class="strong">Giải pháp bác sĩ Kangnam</span><br> dành cho <span
+                    class="strong">Xuân Mai</span></div>
+            <div class="screen4__img"><img width="600" height="335" class="lazy" data-src="media/images/page4-p1.jpg"
+                    alt=""></div>
+            <div class="screen4__turn"><span class="strong">Lần 1:</span> PT chỉnh hình hàm mặt + Đeo khí cụ R.E.D</div>
+            <div class="screen4__img"><img width="600" height="336" class="lazy" data-src="media/images/page4-p2.jpg"
+                    alt=""></div>
+            <div class="screen4__desc">Điều chỉnh kéo dãn xương hàm ra mỗi ngày <span class="strong">(3 tháng)</span>
+            </div>
+            <div class="screen4__img"><img width="600" height="315" class="lazy" data-src="media/images/page4-p3.jpg"
+                    alt=""></div>
+            <div class="screen4__turn"><span class="strong">Lần 2:</span> Tháo khí cụ + Nâng mũi sụn sườn + Cấy mỡ mặt +
+                Sửa sẹo môi</div>
+            <div class="screen4__img"><img width="600" height="314" class="lazy" data-src="media/images/page4-p4.jpg"
+                    alt=""></div>
+            <div class="screen4__turn"><span class="strong">Lần 3:</span> Làm răng sứ</div>
+        </div>
+    </section>
+
+    <!-- <section id="page5" class="screen5 load">
+        <img width="768" height="1004" class="lazy" data-src="media/images/page5-bg.jpg" alt="">
+    </section> -->
+
+    <section id="page5" class="screen5 load">
+        <div class="container">
+            <div class="screen5__video modal-clip" data-video="XF1viIp5Fug" data-modal="modal-clip">
+                <div class="screen5__bgOverlay"></div>
+                <img width="320" height="180" class="lazy" data-src="media/images/thumb-video-mb.jpg" alt="">
+                <img class="screen5__play" width="100" height="100" src="media/images/icon-play.png" alt="">
+            </div>
+            <img width="600" height="1129" class="lazy" data-src="media/images/page5-bg.jpg" alt="">
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- <div class="storyDetail_kn_1_0_0__note">
+            <h3 class="storyDetail_kn_1_0_0__textNote">Bệnh viện Thẩm mỹ Kangnam - Nơi hàng triệu khách hàng gửi
+                trọn niềm tin</h3>
+        </div> -->
+        <div class="storyDetail_kn_1_0_0__boxText">
+            <h2 class="storyDetail_kn_1_0_0__titleDoctor">
+                Đội ngũ bác sĩ của Kangnam
+            </h2>
+            <h3 class="storyDetail_kn_1_0_0__descDoctor">
+                "Chúng tôi luôn nỗ lực kiến tạo nhan sắc cho khách hàng <br> bằng cả tình yêu, tâm huyết, lòng nhiệt
+                thành"
+            </h3>
+        </div>
+        <div class="doctor_kn_2_1_0">
+            <div class="doctor_kn_2_1_0__main">
+                <div class="doctor_kn_2_1_0__category"></div>
+                <div class="doctor_kn_2_1_0__doctor"></div>
+
+                <div class="doctor_kn_2_1_0__pagination">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // Get API User
+    const getDoctor = async () => {
+        const response = await fetch(`https://benhvienthammykangnam.vn/wp-json/api/v1/doctor-list/`);
+        const data = await response.json();
+        console.log("data: ", data);
+        return data;
+    };
+
+    let doctor_kn_2_1_0__data = [];
+
+    const categories = ['Bác sĩ phẫu thuật thẩm mỹ', 'Bác sĩ da liễu', 'Bác sĩ răng hàm mặt']
+
+    let cate = 'Bác sĩ phẫu thuật thẩm mỹ';
+    let cateIndex = 0
+    const filterData = (filter) => doctor_kn_2_1_0__data.filter(item => item.category === filter)
+    const handleCate = (item) => {
+        cate = item
+        cateIndex = categories.indexOf(item)
+        render()
+    }
+    const nextCate = () => {
+        if (cateIndex < categories.length - 1) {
+            cateIndex++
+        }
+        cate = categories[cateIndex]
+        render()
+    }
+    const preCate = () => {
+        if (cateIndex > 0) {
+            cateIndex--
+        }
+        cate = categories[cateIndex]
+        render()
+    }
+    const renderDoctor = (data) => {
+        document.querySelector('.doctor_kn_2_1_0__doctor')
+            .innerHTML = data.map((item) => {
+                let experience = '';
+                if (item.experience) {
+                    experience = `<span>${item.experience}</span>`;
+                }
+                return `
+                    <a class="doctor_kn_2_1_0__item" href="${item.url}">
+                    <div class="doctor_kn_2_1_0__img">
+                        <img width="269" height="456" src="${item.image}" alt="">
+                    </div>
+                    <div class="doctor_kn_2_1_0__box">
+                        <div class="doctor_kn_2_1_0__info">
+                            <div class="doctor_kn_2_1_0__content">                                
+                                <div class="doctor_kn_2_1_0__degree">${item.degree}</div>
+                                <h2 class="doctor_kn_2_1_0__name">${item.name}</h2>
+                            </div>
+                            ${experience}
+                        </div>
+                        <div class="doctor_kn_2_1_0__line"></div>
+                        <div class="doctor_kn_2_1_0__pos">${item.pos}</div>
+                    </div>
+                </a>`
+            }).join('')
+    }
+    const renderCate = () => {
+        document.querySelector('.doctor_kn_2_1_0__category').innerHTML = ` 
+        <button onclick="preCate()">❮</button>
+        <ul>
+            ${categories.map(item => {
+            return `<li class="${cate === item ? 'doctor_kn_2_1_0__categoryActive' : ''}" onclick="handleCate('${item}')">${item}</li>`
+        }).join('')}
+        </ul>
+        <button onclick="nextCate()">❯</button>`
+    }
+    const renderPagination = () => {
+        const data = filterData(cate)
+        if (data.length <= 8) {
+            document.querySelector('.doctor_kn_2_1_0__pagination').innerHTML = ''
+            return
+        }
+        document.querySelector('.doctor_kn_2_1_0__pagination').innerHTML = ` 
+        <button>❮</button>
+        <ul>
+            <li class="doctor_kn_2_1_0__active">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <button>❯</button>`
+    }
+
+    const render = () => {
+        renderCate()
+        // renderPagination()
+        renderDoctor(filterData(cate))
+    }
+
+    window.onload = async () => {
+        doctor_kn_2_1_0__data = await getDoctor()
+        render()
+    }
+</script>
+
+<script>
+    document.addEventListener("scroll", function () {
+        myLazy('img.lazy', 'src');
+        myLazy('source.lazy', 'srcset');
+        myLazy('.lazy-bg', 'img-bg');
+        myLazy('.load', 'loaded');
+        myLazy('.slide_run', 'slide');
+        // onScroll('.header_1_1_0__list a', 'section', 'active');
+    });
+    LazyShowScreen('img.lazy', 'src')
+
+    // scrollClick('.header_1_1_0__list a, a[href="#pageReg"]');
+
+    function myLazy(sec, attr) {
+        const section_loads = document.querySelectorAll(sec);
+        let winTop = window.innerHeight;
+
+        for (let i = 0; i < section_loads.length; i++) {
+            let pos_top = section_loads[i].getBoundingClientRect().top;
+            let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
+            if (pos_top <= winTop && pos_bottom >= 0) {
+                switch (attr) {
+                    case 'src':
+                        section_loads[i].src = section_loads[i].dataset.src;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'srcset':
+                        section_loads[i].srcset = section_loads[i].dataset.srcset;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'img-bg':
+                        section_loads[i].classList.remove('lazy-bg');
+                        section_loads[i].classList.add('img-bg');
+                        break;
+                    case 'loaded':
+                        section_loads[i].classList.remove('load');
+                        section_loads[i].classList.add('loaded');
+                        break;
+                    case 'slide':
+                        section_loads[i].classList.add('slide');
+                        break;
+                    default:
+                        console.log(`Sorry, we are out of ${attr}.`);
+                }
+
+            }
+        }
+    }
+    function LazyShowScreen(sec, attr) {
+        const section_loads = document.querySelectorAll(sec);
+        let win_height = screen.height;
+
+        for (let i = 0; i < section_loads.length; i++) {
+            if (section_loads[i].getBoundingClientRect().top < win_height) {
+                switch (attr) {
+                    case 'loaded':
+                        section_loads[i].classList.add('loaded');
+                        break;
+                    case 'src':
+                        section_loads[i].src = section_loads[i].dataset.src;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'srcset':
+                        section_loads[i].srcset = section_loads[i].dataset.srcset;
+                        section_loads[i].classList.remove('lazy');
+                        break;
+                    case 'img-bg':
+                        section_loads[i].classList.remove('lazy-bg');
+                        section_loads[i].classList.add('img-bg');
+                        break;
+                    case 'slide':
+                        section_loads[i].classList.remove('slide');
+                        section_loads[i].classList.add('slide');
+                        break;
+                    default:
+                        console.log(`Sorry, we are out of ${attr}.`);
+                }
+            }
+        }
+    }
+</script>
+
+<script src="https://benhvienthammykangnam.vn/css/lib/lib.min.js"></script>
+<script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
+
+</html>
