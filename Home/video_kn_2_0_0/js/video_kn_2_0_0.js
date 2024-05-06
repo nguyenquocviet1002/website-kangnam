@@ -87,7 +87,7 @@ const renderVideoLink = (cate, season, ep) => {
     const dataVideo = dataCate[0].item.filter(item => item.season === seasonNow && item.episode === epNow)
 
     document.querySelector('.video_kn_2_0_0 .video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb ? dataVideo[0].thumb : getThumbYoutube(dataVideo[0].link)}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank" aria-label="play"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb ? dataVideo[0].thumb : getThumbYoutube(dataVideo[0].link)}" alt="${dataVideo[0].alt}"><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank" aria-label="play"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt="${dataVideo[0].alt}"></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
@@ -101,7 +101,7 @@ const renderVideoBox = (data) => {
     document.querySelector('.video_kn_2_0_0 .video_kn_2_0_0__inner').innerHTML = `
     <div class="video_kn_2_0_0__select">
         <div class="video_kn_2_0_0__thumbCate">
-            <img width="271" height="275" src="${dataItem.thumb}" alt="">
+            <img width="271" height="275" src="${dataItem.thumb}" alt="${dataItem.category}">
         </div>
         <div class="video_kn_2_0_0__selectVideo">
             <select class="video_kn_2_0_0__selectChoice video_kn_2_0_0__selectChoice--ss" onchange="renderSeasonEp('${cateVideo}', 'video_kn_2_0_0__selectChoice--ss')"></select>
@@ -121,7 +121,7 @@ const renderVideoLinkMB = (cate, season, ep) => {
     const dataCate = filterDataVideo(cate);
     const dataVideo = dataCate[0].item.filter(item => item.season === season && item.episode === ep)
     document.querySelector('.video_kn_2_0_0 .video_kn_2_0_0__video').innerHTML = `
-        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb ? dataVideo[0].thumb : getThumbYoutube(dataVideo[0].link)}" alt=""><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank" aria-label="play"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt=""></a></div>
+        <div class="video_kn_2_0_0__thumb"><img width="664" height="363" src="${dataVideo[0].thumb ? dataVideo[0].thumb : getThumbYoutube(dataVideo[0].link)}" alt="${dataVideo[0].alt}"><a href="${dataVideo[0].link}" class="video_kn_2_0_0__play" target="_blank" aria-label="play"><img width="208" height="208" src="${video_kn_2_0_0_url}images/play.webp" alt="${dataVideo[0].alt}"></a></div>
         <div class="video_kn_2_0_0__title">
             <span class="video_kn_2_0_0__name">${dataCate[0].category}</span>
             <span class="video_kn_2_0_0__ep">${dataVideo[0].episode}</span>
@@ -138,7 +138,7 @@ const renderVideoBoxMb = () => {
             <div class="video_kn_2_0_0__item" onclick="renderVideoLinkMB('${video_kn_2_0_0_data[i].category}', '${video_kn_2_0_0_data[i].item[j].season}', '${video_kn_2_0_0_data[i].item[j].episode}')">
                 <div class="video_kn_2_0_0__titleItem">${video_kn_2_0_0_data[i].category} <br> ${video_kn_2_0_0_data[i].item[j].season} ${video_kn_2_0_0_data[i].item[j].episode}</div>
                 <div class="video_kn_2_0_0__thumb">
-                    <img width="271" height="275" src="${video_kn_2_0_0_data[i].thumb}" alt="">
+                    <img width="271" height="275" src="${video_kn_2_0_0_data[i].thumb}" alt="${video_kn_2_0_0_data[i].item[j].alt}">
                 </div>
             </div>
             </div>
