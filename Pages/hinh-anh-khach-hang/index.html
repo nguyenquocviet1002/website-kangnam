@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://benhvienthammykangnam.vn/css/lib/lib.min.css"
-    />
-    <link rel="stylesheet" href="media/sass/main.min.css?v=3" />
-    <title>Hình ảnh khách hàng</title>
-  </head>
 
-  <body>
-    <section id="page1" class="screen1">
-      <div class="container">
-        <div class="screen1__box">
-          <div class="screen1__menu">
-            <ul id="menuItems" class="screen1__menuItems">
-              <!-- Thêm các mục menu cho các dịch vụ -->
-            </ul>
-          </div>
-          <div class="screen1__detail">
-            <div class="screen1__ani">
-              <h1 class="screen1__title">hình ảnh khách hàng</h1>
-              <div class="screen1__line"></div>
-              <div class="screen1__inner">
-                <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
-              </div>
-              <!-- <div class="screen1__btn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://benhvienthammykangnam.vn/css/lib/lib.min.css" />
+  <link rel="stylesheet" href="media/sass/main.min.css?v=3" />
+  <title>Hình ảnh khách hàng</title>
+</head>
+
+<body>
+  <section id="page1" class="screen1">
+    <div class="container">
+      <div class="screen1__box">
+        <div class="screen1__menu">
+          <ul id="menuItems" class="screen1__menuItems">
+            <!-- Thêm các mục menu cho các dịch vụ -->
+          </ul>
+        </div>
+        <div class="screen1__detail">
+          <div class="screen1__ani">
+            <h1 class="screen1__title">hình ảnh khách hàng</h1>
+            <div class="screen1__line"></div>
+            <div class="screen1__inner">
+              <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
+            </div>
+            <!-- <div class="screen1__btn">
                 <button id="screen1__viewMore">Hiển thị thêm</button>
               </div>
               <div class="screen1__btn screen1__btnHide">
                 <button id="screen1__hide">Rút gọn</button>
               </div> -->
-              <!-- <div class="pagination">
+            <!-- <div class="pagination">
                 <a href="#" class="pagination__item" id="prev">&laquo;</a>
                 <a href="#" class="pagination__item" id="1">1</a>
                 <a href="#" class="pagination__item" id="2">2</a>
@@ -42,531 +40,530 @@
                 <a href="#" class="pagination__item" id="5">5</a>
                 <a href="#" class="pagination__item" id="next">&raquo;</a>
               </div> -->
-              <div class="screen1__innerVid"></div>
-            </div>
+            <div class="screen1__innerVid"></div>
           </div>
         </div>
       </div>
-    </section>
-    <script>
-      const url = window.location.host;
-      let images;
-      if( url == 'benhvienthammykangnam.vn'){
-        images = 'https://benhvienthammykangnam.vn/cp/pages/hinh-anh-khach-hang/';
-      } else{
-        images = "";
-      }
-      var services = [
-        {
-          name: "Mắt",
-          link: "#cat-mi",
-          desc: "Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông",
-          video: [
-            {
-              linkVideo: "https://www.youtube.com/watch?v=b-Pg_JGDFjc",
-              descVideo: "Hành trình cắt mí của Streamer Hà Naga tại Kangnam",
-            },
-          ],
-          images: [
-            `${images}media/images/mat-p1.webp?ver=1`,
-            `${images}media/images/mat-p2.webp?ver=1`,
-            `${images}media/images/mat-p3.webp?ver=1`,
-            `${images}media/images/mat-p4.webp?ver=1`,
-            `${images}media/images/mat-p5.webp?ver=1`,
-            `${images}media/images/mat-p6.webp?ver=1`,
-            `${images}media/images/mat-p7.webp?ver=1`,
-            `${images}media/images/mat-p8.webp?ver=1`,
-            // Thêm các đường dẫn hình ảnh khác cho dịch vụ 1
-          ],
-        },
-        {
-          name: "Mũi",
-          link: "#nang-mui",
-          desc: "Chuyên khoa Thẩm mỹ mũi chuyên sâu Chuyên khoa Thẩm mỹ mũi tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, với 12 công nghệ Nâng mũi, sửa mũi được liên tục cập nhật và chuyển giao độc quyền từ Hàn Quốc. Chuyên khoa Thẩm mỹ mũi quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực thẩm mỹ mũi, giúp khách hàng sở hữu dáng mũi đẹp chuẩn tỉ lệ, phù hợp với gương mặt phụ nữ Á Đông, duy trì kết quả lâu dài.",
-          video: [
-            {
-              linkVideo: "https://www.youtube.com/watch?v=CSC57GeCkU4",
-              descVideo: "Nhật ký nâng mũi của hot girl 2K1 tại Kangnam",
-            },
-          ],
-          images: [
-            `${images}media/images/nangmui-p1.webp?ver=1`,
-            `${images}media/images/nangmui-p2.webp?ver=1`,
-            `${images}media/images/nangmui-p3.webp?ver=1`,
-            `${images}media/images/nangmui-p4.webp?ver=1`,
-            `${images}media/images/nangmui-p5.webp?ver=1`,
-            `${images}media/images/nangmui-p6.webp?ver=1`,
-            `${images}media/images/nangmui-p7.webp?ver=1`,
-            `${images}media/images/nangmui-p8.webp?ver=1`,
-            `${images}media/images/nangmui-p9.webp?ver=1`,
-            `${images}media/images/nangmui-p10.webp?ver=1`,
-            // Thêm các đường dẫn hình ảnh khác cho dịch vụ 2
-          ],
-        },
-        {
-          name: "Khuôn mặt",
-          link: "#ham-mat",
-          desc: "Chuyên khoa thẩm mỹ Hàm mặt của Hệ thống thẩm Mỹ Kangnam quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực tạo hình thẩm mỹ Hàn Quốc, là ekip thực hiện chương trình Hành trình Lột xác. Kangnam là đơn vị hiếm hoi có thể xử lý được những ca hàm mặt khó, phức tạp, đòi hỏi chuyên môn cao. Với sự hỗ trợ đắc lực của trang thiết bị tân tiến, các ca phẫu thuật hàm mặt tại Kangnam đều đạt kết quả ngoài mong đợi và được bảo hành trọn đời.",
-          video: [
-            {
-              linkVideo:
-                "https://www.youtube.com/watch?v=qFQSS0D5TY4&list=PLROTewhS4-MaKB-175oV9oa3fYm13BKdv&index=12",
-              descVideo: 'Hành trình 30 ngày "Lột xác" của Cô vũ công Sài Gòn',
-            },
-            {
-              linkVideo:
-                "https://www.youtube.com/watch?v=R_jPmRLE4ew",
-              descVideo: 'Ca phẫu thuật thay đổi cuộc đời chàng trai hở hàm ếch',
-            },
-            {
-              linkVideo:
-                "https://www.youtube.com/watch?v=sih5mhAInQw",
-              descVideo: 'Hành trình chinh phục ước mơ ca hát của cô gái "sứt môi hở hàm ếch"',
-            },
-          ],
-          images: [
-            `${images}media/images/hammat-p1.webp?ver=1`,
-            `${images}media/images/hammat-p2.webp?ver=1`,
-            `${images}media/images/hammat-p3.webp?ver=1`,
-            `${images}media/images/hammat-p4.webp?ver=1`,
-            `${images}media/images/hammat-p5.webp?ver=1`,
-            `${images}media/images/hammat-p6.webp?ver=1`,
-            `${images}media/images/hammat-p7.webp?ver=1`,
-            `${images}media/images/hammat-p8.webp?ver=1`,
-            `${images}media/images/hammat-p9.webp?ver=2`,
-            `${images}media/images/hammat-p10.webp?ver=1`,
-            // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
-          ],
-        },
-        {
-          name: "Body",
-          link: "#tao-hinh-voc-dang",
-          desc: 'Chuyên khoa tạo hình Vóc dáng hoạt động theo quy trình chuẩn Hàn Quốc, đem đến các giải pháp "hot", "an toàn" kiến tạo thân hình quyến rũ như ý muốn. Với đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực Phẫu thuật thẩm mỹ và Tạo hình, Chuyên khoa tạo hình Vóc dáng chắc chắn sẽ làm hài lòng tất cả khách hàng.',
-          video: [
-            {
-              linkVideo:
-                "https://www.youtube.com/watch?v=t7ZI-kvnhBY",
-              descVideo: "Hot mom được chồng đưa đi nâng ngực ở Kangnam và cái kết",
-            },
-            {
-              linkVideo:
-                "https://www.youtube.com/watch?v=F1eR4TIKKrQ",
-              descVideo: "Diễn viên Bảo Tiên lột xác nóng bỏng sau nâng ngực K - nature 4D",
-            },
-            {
-              linkVideo:
-                "https://www.youtube.com/watch?v=MEWuKEvF2_c",
-              descVideo: "Hành trình lấy lại vòng eo con kiến của mẹ bỉm hiện đại",
-            },
-          ],
-          images: [
-            `${images}media/images/nangnguc-p2.webp?ver=1`,
-            `${images}media/images/nangnguc-p3.webp?ver=1`,
-            `${images}media/images/mo-p1.webp?ver=1`,
-            `${images}media/images/mo-p2.webp?ver=1`,
-            `${images}media/images/nangnguc-p1.webp?ver=1`,
-            `${images}media/images/nangnguc-p4.webp?ver=1`,
-            `${images}media/images/mo-p3.webp?ver=1`,
-            `${images}media/images/mo-p4.webp?ver=1`,
-            `${images}media/images/mo-p5.webp?ver=1`,
-            `${images}media/images/mo-p6.webp?ver=1`,
-            `${images}media/images/mo-p7.webp?ver=1`,
-            `${images}media/images/mo-p8.webp?ver=1`,
-            `${images}media/images/nangnguc-p5.webp?ver=1`,
-            `${images}media/images/nangnguc-p6.webp?ver=1`,
-            `${images}media/images/nangnguc-p7.webp?ver=2`,
-            `${images}media/images/nangnguc-p8.webp?ver=2`,
-            // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
-          ],
-        },
-        {
-          name: "Trẻ hóa da",
-          link: "#tre-hoa",
-          desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc với hơn 15 dịch vụ trẻ hóa, hơn 39 dịch vụ chăm sóc da cao cấp. Kangnam độc quyền bộ giải pháp trẻ hóa "Kim tự tháp" giúp khách hàng sở hữu làn da chắc khỏe, căng mịn, tràn đầy sức sống.',
-          video: [
-            {
-              linkVideo: "https://www.youtube.com/watch?v=ptri6c0H4xE",
-              descVideo: "Hoa hậu Hàn Quốc 2022 chăm sóc da tại Kangnam",
-            },
-          ],
-          images: [
-            `${images}media/images/trehoa-p1.webp?ver=1`,
-            `${images}media/images/trehoa-p2.webp?ver=1`,
-            `${images}media/images/trehoa-p3.webp?ver=1`,
-            `${images}media/images/trehoa-p4.webp?ver=1`,
-            `${images}media/images/trehoa-p5.webp?ver=1`,
-            `${images}media/images/trehoa-p6.webp?ver=1`,
-            `${images}media/images/trehoa-p7.webp?ver=1`,
-            `${images}media/images/trehoa-p8.webp?ver=1`,
-            // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
-          ],
-        },
-        {
-          name: "Da liễu",
-          link: "#dieu-tri-da",
-          desc: "Chuyên khoa Da liễu và Điều trị da công nghệ cao quy tụ đội ngũ chuyên gia, bác sĩ da liễu giỏi chuyên môn với hơn 10 năm kinh nghiệm. Với sự hỗ trợ đắc lực của hệ thống máy móc hiện đại, các công nghệ tân tiến, chuyên khoa cung cấp đa dạng giải pháp điều trị sắc tố nám, tàn nhang, bớt, mụn,... trả lại làn da sáng khỏe như ý muốn.",
-          video: [
-            {
-              linkVideo: "https://www.youtube.com/watch?v=wD3uimEND6c",
-              descVideo: "Hành trình trị nám của U40 - Huy Ngọc",
-            },
-          ],
-          images: [
-            `${images}media/images/dieutrida-p1.webp?ver=1`,
-            `${images}media/images/dieutrida-p2.webp?ver=1`,
-            `${images}media/images/dieutrida-p3.webp?ver=1`,
-            `${images}media/images/dieutrida-p4.webp?ver=1`,
-            `${images}media/images/dieutrida-p5.webp?ver=1`,
-            `${images}media/images/dieutrida-p6.webp?ver=1`,
-            `${images}media/images/dieutrida-p7.webp?ver=1`,
-            `${images}media/images/dieutrida-p8.webp?ver=1`,
-            `${images}media/images/dieutrida-p9.webp?ver=1`,
-            `${images}media/images/dieutrida-p10.webp?ver=1`,
-          ],
-        },
-        {
-          name: "Spa",
-          link: "#kangnam-clinic",
-          desc: "Kangnam Clinic luôn cập nhật các công nghệ tiên tiến nhất, đem đến các giải pháp làm đẹp không xâm lấn, an toàn và hiệu quả. Với đội ngũ chuyên viên được đào tạo bài bản, tay nghề cao, Kangnam Clinic đã làm hài lòng hàng trăm nghìn khách hàng với các liệu trình thẩm mỹ cao cấp, chuẩn y khoa.",
-          video: [],
-          images: [
-            `${images}media/images/clinic-p9.webp?ver=1`,
-            `${images}media/images/clinic-p10.webp?ver=1`,
-            `${images}media/images/clinic-p11.webp?ver=1`,
-            `${images}media/images/clinic-p12.webp?ver=1`,
-            `${images}media/images/clinic-p1.webp?ver=2`,
-            `${images}media/images/clinic-p2.webp?ver=2`,
-            `${images}media/images/clinic-p3.webp?ver=2`,
-            `${images}media/images/clinic-p4.webp?ver=2`,
-            // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
-          ],
-        },
-        {
-          name: "nha khoa",
-          link: "#nha-khoa",
-          desc: "Nha khoa thẩm mỹ Kangnam hoạt động với sứ mệnh chăm sóc sức khỏe răng miệng toàn diện, mang lại cho khách hàng nụ cười rạng rỡ, tự tin chinh phục mọi thử thách. Kangnam ứng dụng thành công các công nghệ thẩm mỹ răng tiên tiến trên thế giới như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng…với nhiều ưu điểm vượt trội cùng đội ngũ chuyên gia, bác sĩ nha khoa đầu ngành có trình độ chuyên môn cao, giàu kinh nghiệm.",
-          video: [
-            {
-              linkVideo: "https://www.youtube.com/watch?v=ZBqfkiS8okU",
-              descVideo: "Cảm nhận khách hàng Việt Kiều Mỹ thực hiện cấy ghép Impant tại Kangnam",
-            }
-          ],
-          images: [
-            `${images}media/images/nhakhoa-p1.webp?ver=1`,
-            `${images}media/images/nhakhoa-p2.webp?ver=1`,
-            `${images}media/images/nhakhoa-p3.webp?ver=1`,
-            `${images}media/images/nhakhoa-p4.webp?ver=1`,
-            `${images}media/images/nhakhoa-p5.webp?ver=1`,
-            `${images}media/images/nhakhoa-p6.webp?ver=1`,
-            `${images}media/images/nhakhoa-p7.webp?ver=2`,
-            `${images}media/images/nhakhoa-p8.webp?ver=2`,
-            // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
-          ],
-        },
-        // Thêm các đối tượng dịch vụ khác vào mảng services
-      ];
-      var menuItems = document.getElementById("menuItems");
-      var imageContainer = document.querySelector(".screen1__inner");
-      var imageContainerVid = document.querySelector(".screen1__innerVid");
-      // var viewMoreButton = document.getElementById("screen1__viewMore");
-      // var hideButton = document.getElementById("screen1__hide");
-      var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
+    </div>
+  </section>
+  <script>
+    const url = window.location.host;
+    let images;
+    if (url == 'benhvienthammykangnam.vn') {
+      images = 'https://benhvienthammykangnam.vn/cp/pages/hinh-anh-khach-hang/';
+    } else {
+      images = "";
+    }
+    var services = [
+      {
+        name: "Mắt",
+        link: "#cat-mi",
+        desc: "Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông",
+        video: [
+          {
+            linkVideo: "https://www.youtube.com/watch?v=b-Pg_JGDFjc",
+            descVideo: "Hành trình cắt mí của Streamer Hà Naga tại Kangnam",
+          },
+        ],
+        images: [
+          `${images}media/images/mat-p1.webp?ver=1`,
+          `${images}media/images/mat-p2.webp?ver=1`,
+          `${images}media/images/mat-p3.webp?ver=1`,
+          `${images}media/images/mat-p4.webp?ver=1`,
+          `${images}media/images/mat-p5.webp?ver=1`,
+          `${images}media/images/mat-p6.webp?ver=1`,
+          `${images}media/images/mat-p7.webp?ver=1`,
+          `${images}media/images/mat-p8.webp?ver=1`,
+          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 1
+        ],
+      },
+      {
+        name: "Mũi",
+        link: "#nang-mui",
+        desc: "Chuyên khoa Thẩm mỹ mũi chuyên sâu Chuyên khoa Thẩm mỹ mũi tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, với 12 công nghệ Nâng mũi, sửa mũi được liên tục cập nhật và chuyển giao độc quyền từ Hàn Quốc. Chuyên khoa Thẩm mỹ mũi quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực thẩm mỹ mũi, giúp khách hàng sở hữu dáng mũi đẹp chuẩn tỉ lệ, phù hợp với gương mặt phụ nữ Á Đông, duy trì kết quả lâu dài.",
+        video: [
+          {
+            linkVideo: "https://www.youtube.com/watch?v=CSC57GeCkU4",
+            descVideo: "Nhật ký nâng mũi của hot girl 2K1 tại Kangnam",
+          },
+        ],
+        images: [
+          `${images}media/images/nangmui-p1.webp?ver=1`,
+          `${images}media/images/nangmui-p2.webp?ver=1`,
+          `${images}media/images/nangmui-p3.webp?ver=1`,
+          `${images}media/images/nangmui-p4.webp?ver=1`,
+          `${images}media/images/nangmui-p5.webp?ver=1`,
+          `${images}media/images/nangmui-p6.webp?ver=1`,
+          `${images}media/images/nangmui-p7.webp?ver=1`,
+          `${images}media/images/nangmui-p8.webp?ver=1`,
+          `${images}media/images/nangmui-p9.webp?ver=1`,
+          `${images}media/images/nangmui-p10.webp?ver=1`,
+          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 2
+        ],
+      },
+      {
+        name: "Khuôn mặt",
+        link: "#ham-mat",
+        desc: "Chuyên khoa thẩm mỹ Hàm mặt của Hệ thống thẩm Mỹ Kangnam quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực tạo hình thẩm mỹ Hàn Quốc, là ekip thực hiện chương trình Hành trình Lột xác. Kangnam là đơn vị hiếm hoi có thể xử lý được những ca hàm mặt khó, phức tạp, đòi hỏi chuyên môn cao. Với sự hỗ trợ đắc lực của trang thiết bị tân tiến, các ca phẫu thuật hàm mặt tại Kangnam đều đạt kết quả ngoài mong đợi và được bảo hành trọn đời.",
+        video: [
+          {
+            linkVideo:
+              "https://www.youtube.com/watch?v=qFQSS0D5TY4&list=PLROTewhS4-MaKB-175oV9oa3fYm13BKdv&index=12",
+            descVideo: 'Hành trình 30 ngày "Lột xác" của Cô vũ công Sài Gòn',
+          },
+          {
+            linkVideo:
+              "https://www.youtube.com/watch?v=R_jPmRLE4ew",
+            descVideo: 'Ca phẫu thuật thay đổi cuộc đời chàng trai hở hàm ếch',
+          },
+          {
+            linkVideo:
+              "https://www.youtube.com/watch?v=sih5mhAInQw",
+            descVideo: 'Hành trình chinh phục ước mơ ca hát của cô gái "sứt môi hở hàm ếch"',
+          },
+        ],
+        images: [
+          `${images}media/images/hammat-p1.webp?ver=1`,
+          `${images}media/images/hammat-p2.webp?ver=1`,
+          `${images}media/images/hammat-p3.webp?ver=1`,
+          `${images}media/images/hammat-p4.webp?ver=1`,
+          `${images}media/images/hammat-p5.webp?ver=1`,
+          `${images}media/images/hammat-p6.webp?ver=1`,
+          `${images}media/images/hammat-p7.webp?ver=1`,
+          `${images}media/images/hammat-p8.webp?ver=1`,
+          `${images}media/images/hammat-p9.webp?ver=2`,
+          `${images}media/images/hammat-p10.webp?ver=1`,
+          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+        ],
+      },
+      {
+        name: "Body",
+        link: "#tao-hinh-voc-dang",
+        desc: 'Chuyên khoa tạo hình Vóc dáng hoạt động theo quy trình chuẩn Hàn Quốc, đem đến các giải pháp "hot", "an toàn" kiến tạo thân hình quyến rũ như ý muốn. Với đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực Phẫu thuật thẩm mỹ và Tạo hình, Chuyên khoa tạo hình Vóc dáng chắc chắn sẽ làm hài lòng tất cả khách hàng.',
+        video: [
+          {
+            linkVideo:
+              "https://www.youtube.com/watch?v=t7ZI-kvnhBY",
+            descVideo: "Hot mom được chồng đưa đi nâng ngực ở Kangnam và cái kết",
+          },
+          {
+            linkVideo:
+              "https://www.youtube.com/watch?v=F1eR4TIKKrQ",
+            descVideo: "Diễn viên Bảo Tiên lột xác nóng bỏng sau nâng ngực K - nature 4D",
+          },
+          {
+            linkVideo:
+              "https://www.youtube.com/watch?v=MEWuKEvF2_c",
+            descVideo: "Hành trình lấy lại vòng eo con kiến của mẹ bỉm hiện đại",
+          },
+        ],
+        images: [
+          `${images}media/images/nangnguc-p2.webp?ver=1`,
+          `${images}media/images/nangnguc-p3.webp?ver=1`,
+          `${images}media/images/mo-p1.webp?ver=1`,
+          `${images}media/images/mo-p2.webp?ver=1`,
+          `${images}media/images/nangnguc-p1.webp?ver=1`,
+          `${images}media/images/nangnguc-p4.webp?ver=1`,
+          `${images}media/images/mo-p3.webp?ver=1`,
+          `${images}media/images/mo-p4.webp?ver=1`,
+          `${images}media/images/mo-p5.webp?ver=1`,
+          `${images}media/images/mo-p6.webp?ver=1`,
+          `${images}media/images/mo-p7.webp?ver=1`,
+          `${images}media/images/mo-p8.webp?ver=1`,
+          `${images}media/images/nangnguc-p5.webp?ver=1`,
+          `${images}media/images/nangnguc-p6.webp?ver=1`,
+          `${images}media/images/nangnguc-p7.webp?ver=2`,
+          `${images}media/images/nangnguc-p8.webp?ver=2`,
+          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+        ],
+      },
+      {
+        name: "Trẻ hóa da",
+        link: "#tre-hoa",
+        desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc với hơn 15 dịch vụ trẻ hóa, hơn 39 dịch vụ chăm sóc da cao cấp. Kangnam độc quyền bộ giải pháp trẻ hóa "Kim tự tháp" giúp khách hàng sở hữu làn da chắc khỏe, căng mịn, tràn đầy sức sống.',
+        video: [
+          {
+            linkVideo: "https://www.youtube.com/watch?v=ptri6c0H4xE",
+            descVideo: "Hoa hậu Hàn Quốc 2022 chăm sóc da tại Kangnam",
+          },
+        ],
+        images: [
+          `${images}media/images/trehoa-p1.webp?ver=1`,
+          `${images}media/images/trehoa-p2.webp?ver=1`,
+          `${images}media/images/trehoa-p3.webp?ver=1`,
+          `${images}media/images/trehoa-p4.webp?ver=1`,
+          `${images}media/images/trehoa-p5.webp?ver=1`,
+          `${images}media/images/trehoa-p6.webp?ver=1`,
+          `${images}media/images/trehoa-p7.webp?ver=1`,
+          `${images}media/images/trehoa-p8.webp?ver=1`,
+          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+        ],
+      },
+      {
+        name: "Da liễu",
+        link: "#dieu-tri-da",
+        desc: "Chuyên khoa Da liễu và Điều trị da công nghệ cao quy tụ đội ngũ chuyên gia, bác sĩ da liễu giỏi chuyên môn với hơn 10 năm kinh nghiệm. Với sự hỗ trợ đắc lực của hệ thống máy móc hiện đại, các công nghệ tân tiến, chuyên khoa cung cấp đa dạng giải pháp điều trị sắc tố nám, tàn nhang, bớt, mụn,... trả lại làn da sáng khỏe như ý muốn.",
+        video: [
+          {
+            linkVideo: "https://www.youtube.com/watch?v=wD3uimEND6c",
+            descVideo: "Hành trình trị nám của U40 - Huy Ngọc",
+          },
+        ],
+        images: [
+          `${images}media/images/dieutrida-p1.webp?ver=1`,
+          `${images}media/images/dieutrida-p2.webp?ver=1`,
+          `${images}media/images/dieutrida-p3.webp?ver=1`,
+          `${images}media/images/dieutrida-p4.webp?ver=1`,
+          `${images}media/images/dieutrida-p5.webp?ver=1`,
+          `${images}media/images/dieutrida-p6.webp?ver=1`,
+          `${images}media/images/dieutrida-p7.webp?ver=1`,
+          `${images}media/images/dieutrida-p8.webp?ver=1`,
+          `${images}media/images/dieutrida-p9.webp?ver=1`,
+          `${images}media/images/dieutrida-p10.webp?ver=1`,
+        ],
+      },
+      {
+        name: "Spa",
+        link: "#kangnam-clinic",
+        desc: "Kangnam Clinic luôn cập nhật các công nghệ tiên tiến nhất, đem đến các giải pháp làm đẹp không xâm lấn, an toàn và hiệu quả. Với đội ngũ chuyên viên được đào tạo bài bản, tay nghề cao, Kangnam Clinic đã làm hài lòng hàng trăm nghìn khách hàng với các liệu trình thẩm mỹ cao cấp, chuẩn y khoa.",
+        video: [],
+        images: [
+          `${images}media/images/clinic-p9.webp?ver=1`,
+          `${images}media/images/clinic-p10.webp?ver=1`,
+          `${images}media/images/clinic-p11.webp?ver=1`,
+          `${images}media/images/clinic-p12.webp?ver=1`,
+          `${images}media/images/clinic-p1.webp?ver=2`,
+          `${images}media/images/clinic-p2.webp?ver=2`,
+          `${images}media/images/clinic-p3.webp?ver=2`,
+          `${images}media/images/clinic-p4.webp?ver=2`,
+          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+        ],
+      },
+      {
+        name: "nha khoa",
+        link: "#nha-khoa",
+        desc: "Nha khoa thẩm mỹ Kangnam hoạt động với sứ mệnh chăm sóc sức khỏe răng miệng toàn diện, mang lại cho khách hàng nụ cười rạng rỡ, tự tin chinh phục mọi thử thách. Kangnam ứng dụng thành công các công nghệ thẩm mỹ răng tiên tiến trên thế giới như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng…với nhiều ưu điểm vượt trội cùng đội ngũ chuyên gia, bác sĩ nha khoa đầu ngành có trình độ chuyên môn cao, giàu kinh nghiệm.",
+        video: [
+          {
+            linkVideo: "https://www.youtube.com/watch?v=ZBqfkiS8okU",
+            descVideo: "Cảm nhận khách hàng Việt Kiều Mỹ thực hiện cấy ghép Impant tại Kangnam",
+          }
+        ],
+        images: [
+          `${images}media/images/nhakhoa-p1.webp?ver=1`,
+          `${images}media/images/nhakhoa-p2.webp?ver=1`,
+          `${images}media/images/nhakhoa-p3.webp?ver=1`,
+          `${images}media/images/nhakhoa-p4.webp?ver=1`,
+          `${images}media/images/nhakhoa-p5.webp?ver=1`,
+          `${images}media/images/nhakhoa-p6.webp?ver=1`,
+          `${images}media/images/nhakhoa-p7.webp?ver=2`,
+          `${images}media/images/nhakhoa-p8.webp?ver=2`,
+          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+        ],
+      },
+      // Thêm các đối tượng dịch vụ khác vào mảng services
+    ];
+    var menuItems = document.getElementById("menuItems");
+    var imageContainer = document.querySelector(".screen1__inner");
+    var imageContainerVid = document.querySelector(".screen1__innerVid");
+    // var viewMoreButton = document.getElementById("screen1__viewMore");
+    // var hideButton = document.getElementById("screen1__hide");
+    var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
-      const getIdYoutube = (url) => {
-        let video_id = url.split("v=")[1];
-        const ampersandPosition = video_id.indexOf("&");
-        if (ampersandPosition != -1) {
-          video_id = video_id.substring(0, ampersandPosition);
-        }
-        return video_id;
-      };
-      function showImage(serviceId, element) {
-        if(document.querySelector('.screen1__ani.ani')){
-            document.querySelector('.screen1__ani').classList.remove('ani');
-        }
-        var serviceImages = services[serviceId].images;
-        window.location.hash = services[serviceId].link;
-        var imageElements = "";
-        for (var i = 0; i < serviceImages.length; i++) {
-          imageElements +=
-            '<div class="screen1__item"><img width="327" height="259" src="' +
-            serviceImages[i] +
-            '" alt=""></div>';
-        }
-        
-        let htmlVideo = "";
-        services[serviceId].video.map((item) => {
-          htmlVideo += `
+    const getIdYoutube = (url) => {
+      let video_id = url.split("v=")[1];
+      const ampersandPosition = video_id.indexOf("&");
+      if (ampersandPosition != -1) {
+        video_id = video_id.substring(0, ampersandPosition);
+      }
+      return video_id;
+    };
+    function showImage(serviceId, element) {
+      if (document.querySelector('.screen1__ani.ani')) {
+        document.querySelector('.screen1__ani').classList.remove('ani');
+      }
+      var serviceImages = services[serviceId].images;
+      window.location.hash = services[serviceId].link;
+      var imageElements = "";
+      for (var i = 0; i < serviceImages.length; i++) {
+        imageElements +=
+          '<div class="screen1__item"><img width="327" height="259" src="' +
+          serviceImages[i] +
+          '" alt="Hình ảnh khách hàng"></div>';
+      }
+
+      let htmlVideo = "";
+      services[serviceId].video.map((item) => {
+        htmlVideo += `
                 <div class="screen1__video">
                     <div onclick="playVideo('${getIdYoutube(
-                      item.linkVideo
-                    )}')" style="position: relative">
+          item.linkVideo
+        )}')" style="position: relative">
                         <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(
-                          item.linkVideo
-                        )}/maxresdefault.jpg" alt="">
-                        <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt=""></button>
+          item.linkVideo
+        )}/maxresdefault.jpg" alt="Video khách hàng">
+                        <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt="play video"></button>
                     </div>
                     <div class="screen1__note">${item.descVideo}</div>
                 </div>
                 `;
-        });
-        
-        
-        setTimeout(() => {
-          imageContainer.innerHTML = `
-            <div class="screen1__des">${
-              services[serviceId].desc ? services[serviceId].desc : ""
-            }</div>
+      });
+
+
+      setTimeout(() => {
+        imageContainer.innerHTML = `
+            <div class="screen1__des">${services[serviceId].desc ? services[serviceId].desc : ""
+          }</div>
             <div class="screen1__pic">${imageElements}</div>
             `;
-            imageContainerVid.innerHTML = htmlVideo;
-            document.querySelector('.screen1__ani').classList.add('ani');
-        }, 300)
-        for (var i = 0; i < menuItems.children.length; i++) {
-          menuItems.children[i].classList.remove("active");
-        }
-        element.classList.add("active");
-        currentServiceId = serviceId; // Cập nhật ID của dịch vụ hiện tại
-
-        // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" dựa trên số lượng hình ảnh
-        // if (serviceImages.length <= 4) {
-        //   viewMoreButton.style.display = "none";
-        //   hideButton.style.display = "none";
-        // } else {
-        //   viewMoreButton.style.display = "block";
-        //   hideButton.style.display = "none";
-        // }
-
-        // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-        // for (var i = 4; i < serviceImages.length; i++) {
-        //   imageContainer.querySelector(".screen1__pic").children[
-        //     i
-        //   ].style.display = "none";
-        // }
-
-        // var screenWidth =
-        //   window.innerWidth ||
-        //   document.documentElement.clientWidth ||
-        //   document.body.clientWidth;
+        imageContainerVid.innerHTML = htmlVideo;
+        document.querySelector('.screen1__ani').classList.add('ani');
+      }, 300)
+      for (var i = 0; i < menuItems.children.length; i++) {
+        menuItems.children[i].classList.remove("active");
       }
+      element.classList.add("active");
+      currentServiceId = serviceId; // Cập nhật ID của dịch vụ hiện tại
 
-      for (var i = 0; i < services.length; i++) {
-        var menuItem = document.createElement("li");
-        menuItem.classList.add("menu__item");
-        menuItem.innerText = services[i].name;
-        menuItem.setAttribute("onclick", "showImage(" + i + ", this)");
-        menuItems.appendChild(menuItem);
-      }
-
-      if (window.location.hash === "") window.location.hash = services[0].link;
-      const functionChangeHash = () => {
-        services.forEach((item) => {
-          if (window.location.hash === item.link) {
-            const index = services.findIndex((x) => x.link === item.link);
-            showImage(index, document.querySelectorAll(".menu__item")[index]);
-          }
-        });
-      };
-      functionChangeHash();
-
-      window.addEventListener("hashchange", functionChangeHash);
-
-      // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
-      // viewMoreButton.addEventListener("click", function () {
-      //   // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
-      //   var serviceImages = services[currentServiceId].images;
-      //   for (var i = 4; i < serviceImages.length; i++) {
-      //     imageContainer.querySelector(".screen1__pic").children[
-      //       i
-      //     ].style.display = "block";
-      //   }
-      //   // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
-      //   viewMoreButton.style.display = "none";
-      //   hideButton.style.display = "block";
-      // });
-
-      // Xử lý sự kiện khi click vào nút "Rút gọn"
-      // hideButton.addEventListener("click", function () {
-      //   // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-      //   var serviceImages = services[currentServiceId].images;
-      //   for (var i = 4; i < serviceImages.length; i++) {
-      //     imageContainer.querySelector(".screen1__pic").children[
-      //       i
-      //     ].style.display = "none";
-      //   }
-      //   // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
-      //   viewMoreButton.style.display = "block";
-      //   hideButton.style.display = "none";
-      // });
-
-      // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
-      // var initialServiceImages = services[currentServiceId].images;
-      // if (initialServiceImages.length <= 4) {
+      // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" dựa trên số lượng hình ảnh
+      // if (serviceImages.length <= 4) {
       //   viewMoreButton.style.display = "none";
       //   hideButton.style.display = "none";
       // } else {
       //   viewMoreButton.style.display = "block";
       //   hideButton.style.display = "none";
-      //   for (var i = 4; i < initialServiceImages.length; i++) {
-      //     imageContainer.querySelector(".screen1__pic").children[
-      //       i
-      //     ].style.display = "none";
-      //   }
       // }
 
-      // function changeMenuStyle() {
-      //   var screenWidth =
-      //     window.innerWidth ||
-      //     document.documentElement.clientWidth ||
-      //     document.body.clientWidth;
+      // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
+      // for (var i = 4; i < serviceImages.length; i++) {
+      //   imageContainer.querySelector(".screen1__pic").children[
+      //     i
+      //   ].style.display = "none";
       // }
 
-      // // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
-      // window.addEventListener("load", changeMenuStyle);
-      // window.addEventListener("resize", changeMenuStyle);
-
-      // var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
-      // var currentPage = 1; // Trang hiện tại
-
-      // function showPage(page) {
-      //   var startIndex = (page - 1) * itemsPerPage;
-      //   var endIndex = startIndex + itemsPerPage;
-      //   var serviceImages = services[currentServiceId].images.slice(
-      //     startIndex,
-      //     endIndex
-      //   );
-
-      //   var imageElements = "";
-      //   for (var i = 0; i < serviceImages.length; i++) {
-      //     imageElements +=
-      //       '<div class="screen1__item"><img width="327" height="259" src="' +
-      //       serviceImages[i] +
-      //       '" alt=""></div>';
-      //   }
-      //   imageContainer.innerHTML = `
-      //       <div class="screen1__des">${
-      //         services[currentPage].desc ? services[currentPage].desc : ""
-      //       }</div>
-      //       <div class="screen1__pic">${imageElements}</div>
-      //       `;
-
-      //   let htmlVideo = "";
-      //   services[currentPage].video.map((item) => {
-      //     htmlVideo += `
-      //           <div class="screen1__video">
-      //               <div onclick="playVideo('${getIdYoutube(
-      //                 item.linkVideo
-      //               )}')" style="position: relative">
-      //                   <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(
-      //                     item.linkVideo
-      //                   )}/maxresdefault.jpg" alt="">
-      //                   <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt=""></button>
-      //               </div>
-      //               <div class="screen1__note">${item.descVideo}</div>
-      //           </div>
-      //           `;
-      //   });
-      //   imageContainerVid.innerHTML = htmlVideo;
-      // }
-
-      // function createPagination() {
-      //   var totalItems = services[currentServiceId].images.length;
-      //   var totalPages = Math.ceil(totalItems / itemsPerPage);
-
-      //   var paginationElement = document.querySelector(".pagination");
-      //   paginationElement.innerHTML = "";
-
-      //   var prevButton = document.createElement("a");
-      //   prevButton.href = "#";
-      //   prevButton.classList.add("pagination__item");
-      //   prevButton.id = "prev";
-      //   prevButton.innerHTML = "&laquo;";
-      //   paginationElement.appendChild(prevButton);
-
-      //   for (var i = 1; i <= totalPages; i++) {
-      //     var pageButton = document.createElement("a");
-      //     pageButton.href = "#";
-      //     pageButton.classList.add("pagination__item");
-      //     pageButton.id = i;
-      //     pageButton.innerHTML = i;
-      //     paginationElement.appendChild(pageButton);
-
-      //     // Kích hoạt số 1 khi trang được tải lần đầu tiên
-      //     if (i === 1) {
-      //       pageButton.classList.add("active");
-      //     }
-      //   }
-
-      //   var nextButton = document.createElement("a");
-      //   nextButton.href = "#";
-      //   nextButton.classList.add("pagination__item");
-      //   nextButton.id = "next";
-      //   nextButton.innerHTML = "&raquo;";
-      //   paginationElement.appendChild(nextButton);
-      // }
-
-      // function changePage(page) {
-      //   currentPage = page;
-      //   showPage(currentPage);
-
-      //   var paginationItems = document.querySelectorAll(".pagination__item");
-      //   for (var i = 0; i < paginationItems.length; i++) {
-      //     paginationItems[i].classList.remove("active");
-      //   }
-      //   document.getElementById(currentPage).classList.add("active");
-
-      //   // Disable/enable prev/next buttons
-      //   if (currentPage == 1) {
-      //     document.getElementById("prev").classList.add("disabled");
-      //   } else {
-      //     document.getElementById("prev").classList.remove("disabled");
-      //   }
-      //   if (currentPage == totalPages) {
-      //     document.getElementById("next").classList.add("disabled");
-      //   } else {
-      //     document.getElementById("next").classList.remove("disabled");
-      //   }
-      // }
-
-      // var totalItems = services[currentServiceId].images.length;
-      // var totalPages = Math.ceil(totalItems / itemsPerPage);
-      // createPagination();
       // var screenWidth =
       //   window.innerWidth ||
       //   document.documentElement.clientWidth ||
       //   document.body.clientWidth;
-      // if (screenWidth <= 767) {
-      //   showPage(currentPage);
-      // } else {
-      // }
+    }
 
-      // document.getElementById("prev").addEventListener("click", function () {
-      //   if (currentPage > 1) {
-      //     changePage(currentPage - 1);
-      //   }
-      // });
+    for (var i = 0; i < services.length; i++) {
+      var menuItem = document.createElement("li");
+      menuItem.classList.add("menu__item");
+      menuItem.innerText = services[i].name;
+      menuItem.setAttribute("onclick", "showImage(" + i + ", this)");
+      menuItems.appendChild(menuItem);
+    }
 
-      // document.getElementById("next").addEventListener("click", function () {
-      //   if (currentPage < totalPages) {
-      //     changePage(currentPage + 1);
-      //   }
-      // });
+    if (window.location.hash === "") window.location.hash = services[0].link;
+    const functionChangeHash = () => {
+      services.forEach((item) => {
+        if (window.location.hash === item.link) {
+          const index = services.findIndex((x) => x.link === item.link);
+          showImage(index, document.querySelectorAll(".menu__item")[index]);
+        }
+      });
+    };
+    functionChangeHash();
 
-      // var paginationItems = document.querySelectorAll(".pagination__item");
-      // for (var i = 0; i < paginationItems.length; i++) {
-      //   paginationItems[i].addEventListener("click", function () {
-      //     var page = parseInt(this.id);
-      //     if (page) {
-      //       changePage(page);
-      //     }
-      //   });
-      // }
+    window.addEventListener("hashchange", functionChangeHash);
 
-      const removeModal = (id) => {
-        document.getElementById(id).remove();
-      };
-      const playVideo = (id) => {
-        const html = `
+    // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
+    // viewMoreButton.addEventListener("click", function () {
+    //   // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
+    //   var serviceImages = services[currentServiceId].images;
+    //   for (var i = 4; i < serviceImages.length; i++) {
+    //     imageContainer.querySelector(".screen1__pic").children[
+    //       i
+    //     ].style.display = "block";
+    //   }
+    //   // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
+    //   viewMoreButton.style.display = "none";
+    //   hideButton.style.display = "block";
+    // });
+
+    // Xử lý sự kiện khi click vào nút "Rút gọn"
+    // hideButton.addEventListener("click", function () {
+    //   // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
+    //   var serviceImages = services[currentServiceId].images;
+    //   for (var i = 4; i < serviceImages.length; i++) {
+    //     imageContainer.querySelector(".screen1__pic").children[
+    //       i
+    //     ].style.display = "none";
+    //   }
+    //   // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
+    //   viewMoreButton.style.display = "block";
+    //   hideButton.style.display = "none";
+    // });
+
+    // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
+    // var initialServiceImages = services[currentServiceId].images;
+    // if (initialServiceImages.length <= 4) {
+    //   viewMoreButton.style.display = "none";
+    //   hideButton.style.display = "none";
+    // } else {
+    //   viewMoreButton.style.display = "block";
+    //   hideButton.style.display = "none";
+    //   for (var i = 4; i < initialServiceImages.length; i++) {
+    //     imageContainer.querySelector(".screen1__pic").children[
+    //       i
+    //     ].style.display = "none";
+    //   }
+    // }
+
+    // function changeMenuStyle() {
+    //   var screenWidth =
+    //     window.innerWidth ||
+    //     document.documentElement.clientWidth ||
+    //     document.body.clientWidth;
+    // }
+
+    // // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
+    // window.addEventListener("load", changeMenuStyle);
+    // window.addEventListener("resize", changeMenuStyle);
+
+    // var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
+    // var currentPage = 1; // Trang hiện tại
+
+    // function showPage(page) {
+    //   var startIndex = (page - 1) * itemsPerPage;
+    //   var endIndex = startIndex + itemsPerPage;
+    //   var serviceImages = services[currentServiceId].images.slice(
+    //     startIndex,
+    //     endIndex
+    //   );
+
+    //   var imageElements = "";
+    //   for (var i = 0; i < serviceImages.length; i++) {
+    //     imageElements +=
+    //       '<div class="screen1__item"><img width="327" height="259" src="' +
+    //       serviceImages[i] +
+    //       '" alt=""></div>';
+    //   }
+    //   imageContainer.innerHTML = `
+    //       <div class="screen1__des">${
+    //         services[currentPage].desc ? services[currentPage].desc : ""
+    //       }</div>
+    //       <div class="screen1__pic">${imageElements}</div>
+    //       `;
+
+    //   let htmlVideo = "";
+    //   services[currentPage].video.map((item) => {
+    //     htmlVideo += `
+    //           <div class="screen1__video">
+    //               <div onclick="playVideo('${getIdYoutube(
+    //                 item.linkVideo
+    //               )}')" style="position: relative">
+    //                   <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(
+    //                     item.linkVideo
+    //                   )}/maxresdefault.jpg" alt="">
+    //                   <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt=""></button>
+    //               </div>
+    //               <div class="screen1__note">${item.descVideo}</div>
+    //           </div>
+    //           `;
+    //   });
+    //   imageContainerVid.innerHTML = htmlVideo;
+    // }
+
+    // function createPagination() {
+    //   var totalItems = services[currentServiceId].images.length;
+    //   var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    //   var paginationElement = document.querySelector(".pagination");
+    //   paginationElement.innerHTML = "";
+
+    //   var prevButton = document.createElement("a");
+    //   prevButton.href = "#";
+    //   prevButton.classList.add("pagination__item");
+    //   prevButton.id = "prev";
+    //   prevButton.innerHTML = "&laquo;";
+    //   paginationElement.appendChild(prevButton);
+
+    //   for (var i = 1; i <= totalPages; i++) {
+    //     var pageButton = document.createElement("a");
+    //     pageButton.href = "#";
+    //     pageButton.classList.add("pagination__item");
+    //     pageButton.id = i;
+    //     pageButton.innerHTML = i;
+    //     paginationElement.appendChild(pageButton);
+
+    //     // Kích hoạt số 1 khi trang được tải lần đầu tiên
+    //     if (i === 1) {
+    //       pageButton.classList.add("active");
+    //     }
+    //   }
+
+    //   var nextButton = document.createElement("a");
+    //   nextButton.href = "#";
+    //   nextButton.classList.add("pagination__item");
+    //   nextButton.id = "next";
+    //   nextButton.innerHTML = "&raquo;";
+    //   paginationElement.appendChild(nextButton);
+    // }
+
+    // function changePage(page) {
+    //   currentPage = page;
+    //   showPage(currentPage);
+
+    //   var paginationItems = document.querySelectorAll(".pagination__item");
+    //   for (var i = 0; i < paginationItems.length; i++) {
+    //     paginationItems[i].classList.remove("active");
+    //   }
+    //   document.getElementById(currentPage).classList.add("active");
+
+    //   // Disable/enable prev/next buttons
+    //   if (currentPage == 1) {
+    //     document.getElementById("prev").classList.add("disabled");
+    //   } else {
+    //     document.getElementById("prev").classList.remove("disabled");
+    //   }
+    //   if (currentPage == totalPages) {
+    //     document.getElementById("next").classList.add("disabled");
+    //   } else {
+    //     document.getElementById("next").classList.remove("disabled");
+    //   }
+    // }
+
+    // var totalItems = services[currentServiceId].images.length;
+    // var totalPages = Math.ceil(totalItems / itemsPerPage);
+    // createPagination();
+    // var screenWidth =
+    //   window.innerWidth ||
+    //   document.documentElement.clientWidth ||
+    //   document.body.clientWidth;
+    // if (screenWidth <= 767) {
+    //   showPage(currentPage);
+    // } else {
+    // }
+
+    // document.getElementById("prev").addEventListener("click", function () {
+    //   if (currentPage > 1) {
+    //     changePage(currentPage - 1);
+    //   }
+    // });
+
+    // document.getElementById("next").addEventListener("click", function () {
+    //   if (currentPage < totalPages) {
+    //     changePage(currentPage + 1);
+    //   }
+    // });
+
+    // var paginationItems = document.querySelectorAll(".pagination__item");
+    // for (var i = 0; i < paginationItems.length; i++) {
+    //   paginationItems[i].addEventListener("click", function () {
+    //     var page = parseInt(this.id);
+    //     if (page) {
+    //       changePage(page);
+    //     }
+    //   });
+    // }
+
+    const removeModal = (id) => {
+      document.getElementById(id).remove();
+    };
+    const playVideo = (id) => {
+      const html = `
             <div class="modal modal-clipBox"style="display: flex;" id="modal-clip">
                 <div class="modal-closePic" onclick="removeModal('modal-clip')">×</div>
                 <div class="modal-box modal-box-video animate-zoom">
@@ -577,10 +574,11 @@
                 <div class="modal-bg" onclick="removeModal('modal-clip')"></div>
             </div>
             `;
-        document.body.insertAdjacentHTML("beforeend", html);
-      };
-    </script>
-    <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
-    <script src="https://benhvienthammykangnam.vn/css/lib/module.min.js?v=1"></script>
-  </body>
+      document.body.insertAdjacentHTML("beforeend", html);
+    };
+  </script>
+  <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
+  <script src="https://benhvienthammykangnam.vn/css/lib/module.min.js?v=1"></script>
+</body>
+
 </html>

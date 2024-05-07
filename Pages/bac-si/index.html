@@ -15,7 +15,9 @@
             <div class="container">
                 <div class="doctor_kn_2_1_0__text">
                     <h1>Đội ngũ chuyên gia Kangnam</h1>
-                    <p>Đội ngũ chuyên gia, bác sĩ tại Hệ thống Thẩm mỹ Kangnam được đào tạo bài bản, chuyên môn vững vàng và dày dặn kinh nghiệm. Dưới sự dẫn dắt của Tiến sĩ, bác sĩ Richard Huy, đội ngũ bác sĩ Kangnam luôn tận tâm, cần mẫn trong hành trình “làm đẹp cho người, làm đẹp cho đời”</p>
+                    <p>Đội ngũ chuyên gia, bác sĩ tại Hệ thống Thẩm mỹ Kangnam được đào tạo bài bản, chuyên môn vững
+                        vàng và dày dặn kinh nghiệm. Dưới sự dẫn dắt của Tiến sĩ, bác sĩ Richard Huy, đội ngũ bác sĩ
+                        Kangnam luôn tận tâm, cần mẫn trong hành trình “làm đẹp cho người, làm đẹp cho đời”</p>
                 </div>
             </div>
         </div>
@@ -71,13 +73,13 @@
         document.querySelector('.doctor_kn_2_1_0__doctor')
             .innerHTML = data.map((item) => {
                 let experience = '';
-                if (item.experience){
-                    experience =  `<span>${item.experience}</span>`;
+                if (item.experience) {
+                    experience = `<span>${item.experience}</span>`;
                 }
                 return `
                     <a class="doctor_kn_2_1_0__item" href="${item.url}">
                     <div class="doctor_kn_2_1_0__img">
-                        <img width="269" height="456" src="${item.image}" alt="">
+                        <img width="269" height="456" src="${item.image}" alt="${item.name}">
                     </div>
                     <div class="doctor_kn_2_1_0__box">
                         <div class="doctor_kn_2_1_0__info">
@@ -91,20 +93,21 @@
                         <div class="doctor_kn_2_1_0__pos">${item.pos}</div>
                     </div>
                 </a>`
-        }).join('')
+            }).join('')
     }
     const renderCate = () => {
-            document.querySelector('.doctor_kn_2_1_0__category').innerHTML = ` 
+        document.querySelector('.doctor_kn_2_1_0__category').innerHTML = ` 
         <button onclick="preCate()">❮</button>
         <ul>
-            ${categories.map(item=> {
-                return`<li class="${cate===item?'doctor_kn_2_1_0__categoryActive':''}" onclick="handleCate('${item}')">${item}</li>`}).join('')}
+            ${categories.map(item => {
+            return `<li class="${cate === item ? 'doctor_kn_2_1_0__categoryActive' : ''}" onclick="handleCate('${item}')">${item}</li>`
+        }).join('')}
         </ul>
         <button onclick="nextCate()">❯</button>`
     }
-    const renderPagination= ()=>{
-        const data= filterData(cate)
-        if(data.length<=8){
+    const renderPagination = () => {
+        const data = filterData(cate)
+        if (data.length <= 8) {
             document.querySelector('.doctor_kn_2_1_0__pagination').innerHTML = ''
             return
         }
@@ -117,17 +120,18 @@
         </ul>
         <button>❯</button>`
     }
-    
-    const render=()=>{
+
+    const render = () => {
         renderCate()
         // renderPagination()
         renderDoctor(filterData(cate))
     }
-    
+
     window.onload = async () => {
         doctor_kn_2_1_0__data = await getDoctor()
         render()
     }
 </script>
 <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
+
 </html>
