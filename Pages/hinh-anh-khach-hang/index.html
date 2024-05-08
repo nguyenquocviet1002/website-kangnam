@@ -25,21 +25,6 @@
             <div class="screen1__inner">
               <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
             </div>
-            <!-- <div class="screen1__btn">
-                <button id="screen1__viewMore">Hiển thị thêm</button>
-              </div>
-              <div class="screen1__btn screen1__btnHide">
-                <button id="screen1__hide">Rút gọn</button>
-              </div> -->
-            <!-- <div class="pagination">
-                <a href="#" class="pagination__item" id="prev">&laquo;</a>
-                <a href="#" class="pagination__item" id="1">1</a>
-                <a href="#" class="pagination__item" id="2">2</a>
-                <a href="#" class="pagination__item" id="3">3</a>
-                <a href="#" class="pagination__item" id="4">4</a>
-                <a href="#" class="pagination__item" id="5">5</a>
-                <a href="#" class="pagination__item" id="next">&raquo;</a>
-              </div> -->
             <div class="screen1__innerVid"></div>
           </div>
         </div>
@@ -54,220 +39,452 @@
     } else {
       images = "";
     }
+    
     var services = [
       {
         name: "Mắt",
         link: "#cat-mi",
-        desc: "Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông",
+        desc: "Chuyên khoa Thẩm mỹ Mắt phong cách Hàn Quốc, với mục tiêu cung cấp đa dạng các công nghệ hiện đại, tiên tiến khắc phục tất cả các khuyết điểm về mắt, trẻ hóa đôi mắt toàn diện cho khách hàng. Với đội ngũ bác sĩ là các chuyên gia đầu ngành trong lĩnh vực Thẩm mỹ mắt, chắc chắn sẽ mang đến cho khách hàng đôi mắt hai mí cân đối, rõ nét, hài hòa như mong đợi.",
         video: [
           {
             linkVideo: "https://www.youtube.com/watch?v=b-Pg_JGDFjc",
             descVideo: "Hành trình cắt mí của Streamer Hà Naga tại Kangnam",
+            alt: 'HÀNH TRÌNH CẮT MÍ CỦA STREAMER HÀ NAGA TẠI KANGNAM'
           },
         ],
         images: [
-          `${images}media/images/mat-p1.webp?ver=1`,
-          `${images}media/images/mat-p2.webp?ver=1`,
-          `${images}media/images/mat-p3.webp?ver=1`,
-          `${images}media/images/mat-p4.webp?ver=1`,
-          `${images}media/images/mat-p5.webp?ver=1`,
-          `${images}media/images/mat-p6.webp?ver=1`,
-          `${images}media/images/mat-p7.webp?ver=1`,
-          `${images}media/images/mat-p8.webp?ver=1`,
-          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 1
+          {
+            link: `${images}media/images/mat-p1.webp?ver=1`,
+            alt: "Ms.Bích Hằng Khách hàng sử dụng dịch vụ cắt mí"
+          },
+          {
+            link: `${images}media/images/mat-p2.webp?ver=1`,
+            alt: "Ms.Thuỳ Chi Khách hàng hài lòng khi sử dụng dịch vụ cắt mí"
+          },
+          {
+            link: `${images}media/images/mat-p3.webp?ver=1`,
+            alt: "Ms.Ngọc Thảo Sự thay đổi trẻ trung sau khi cắt mí"
+          },
+          {
+            link: `${images}media/images/mat-p4.webp?ver=1`,
+            alt: "Ms.Thu Hà Kết quả ấn tượng khi sử dụng dịch vụ cắt mí"
+          },
+          {
+            link: `${images}media/images/mat-p5.webp?ver=1`,
+            alt: "Ms.Hạnh Dương Sở hữu mí đẹp tự nhiên, không lộ vết tích thẩm mỹ cắt mí"
+          },
+          {
+            link: `${images}media/images/mat-p6.webp?ver=1`,
+            alt: "Ms.Thúy Hằng Mí đẹp tự nhiên, không sưng, không sẹo sau 1 tháng cắt mí"
+          },
+          {
+            link: `${images}media/images/mat-p7.webp?ver=1`,
+            alt: "Ms.Mai Hương Mí vào form rõ nét sau 1 tháng cắt mí, đôi mắt đẹp tự nhiên"
+          },
+          {
+            link: `${images}media/images/mat-p8.webp?ver=1`,
+            alt: "Ms.Kim Hoa Dịch vụ mí đẹp tự nhiên hút ánh nhìn"
+          },
         ],
       },
       {
         name: "Mũi",
         link: "#nang-mui",
-        desc: "Chuyên khoa Thẩm mỹ mũi chuyên sâu Chuyên khoa Thẩm mỹ mũi tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, với 12 công nghệ Nâng mũi, sửa mũi được liên tục cập nhật và chuyển giao độc quyền từ Hàn Quốc. Chuyên khoa Thẩm mỹ mũi quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực thẩm mỹ mũi, giúp khách hàng sở hữu dáng mũi đẹp chuẩn tỉ lệ, phù hợp với gương mặt phụ nữ Á Đông, duy trì kết quả lâu dài.",
+        desc: "Sở hữu Chuyên khoa Thẩm mỹ mũi chuyên sâu theo tiêu chuẩn Hàn Quốc, ứng dụng công nghệ nâng mũi độc quyền được chuyển giao từ Hàn Quốc. Đội ngũ chuyên gia thẩm mỹ mũi sẽ giúp khách hàng sở hữu dáng mũi đẹp chuẩn tỷ lệ vàng, mang đậm dấu ấn cá nhân, tôn lên được các đường nét trên khuôn mặt và duy trì được vẻ đẹp lâu dài với chi phí hợp lý.",
         video: [
           {
             linkVideo: "https://www.youtube.com/watch?v=CSC57GeCkU4",
             descVideo: "Nhật ký nâng mũi của hot girl 2K1 tại Kangnam",
+            alt: "NHẬT KÝ NÂNG MŨI CỦA HOT GIRL 2K1 TẠI KANGNAM"
           },
         ],
         images: [
-          `${images}media/images/nangmui-p1.webp?ver=1`,
-          `${images}media/images/nangmui-p2.webp?ver=1`,
-          `${images}media/images/nangmui-p3.webp?ver=1`,
-          `${images}media/images/nangmui-p4.webp?ver=1`,
-          `${images}media/images/nangmui-p5.webp?ver=1`,
-          `${images}media/images/nangmui-p6.webp?ver=1`,
-          `${images}media/images/nangmui-p7.webp?ver=1`,
-          `${images}media/images/nangmui-p8.webp?ver=1`,
-          `${images}media/images/nangmui-p9.webp?ver=1`,
-          `${images}media/images/nangmui-p10.webp?ver=1`,
-          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 2
+          {
+            link: `${images}media/images/nangmui-p1.webp?ver=1`,
+            alt: "Ms.Bích Ngọc Khắc phục mũi thấp với dịch vụ Nâng mũi cấu trúc 6D"
+          },
+          {
+            link: `${images}media/images/nangmui-p2.webp?ver=1`,
+            alt: "Ms.Yến Trang Chinh phục ánh nhìn sau khi thực hiện Nâng mũi cấu trúc 4D"
+          },
+          {
+            link: `${images}media/images/nangmui-p3.webp?ver=1`,
+            alt: "Ms.Lan Phương Nâng mũi 6D không đau giúp tăng sức hút với dáng mũi cao đẹp từng li "
+          },
+          {
+            link: `${images}media/images/nangmui-p4.webp?ver=1`,
+            alt: "Ms.Phương Linh Thay đổi diện mạo với dịch vụ Nâng mũi Idol Line"
+          },
+          {
+            link: `${images}media/images/nangmui-p5.webp?ver=1`,
+            alt: "Ms.Ngọc Mai Dáng mũi cao xinh hơn sau khi sử dụng dịch vụ nâng mũi cấu trúc sụn sườn"
+          },
+          {
+            link: `${images}media/images/nangmui-p6.webp?ver=1`,
+            alt: "Ms.Ngọc Trinh Thoát kiếp mũi tẹt với phương pháp nâng mũi Idol Surgiform"
+          },
+          {
+            link: `${images}media/images/nangmui-p7.webp?ver=1`,
+            alt: "Ms.Quỳnh Giang Lựa chọn dịch vụ Nâng mũi 6D không đau"
+          },
+          {
+            link: `${images}media/images/nangmui-p8.webp?ver=1`,
+            alt: "Ms.Thanh Mai Nâng mũi cấu trúc 4D tôn dáng mũi, thanh thoát hơn"
+          },
+          {
+            link: `${images}media/images/nangmui-p9.webp?ver=1`,
+            alt: "Ms.Phương Anh Khắc phục tình trạng mũi lệch với dịch vụ nâng mũi 6D không đau"
+          },
+          {
+            link: `${images}media/images/nangmui-p10.webp?ver=1`,
+            alt: "Mr.Gia Bảo Hết mũi vẹo, thay đổi hoàn toàn nhờ nâng mũi 6D không đau "
+          },
         ],
       },
       {
         name: "Khuôn mặt",
         link: "#ham-mat",
-        desc: "Chuyên khoa thẩm mỹ Hàm mặt của Hệ thống thẩm Mỹ Kangnam quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực tạo hình thẩm mỹ Hàn Quốc, là ekip thực hiện chương trình Hành trình Lột xác. Kangnam là đơn vị hiếm hoi có thể xử lý được những ca hàm mặt khó, phức tạp, đòi hỏi chuyên môn cao. Với sự hỗ trợ đắc lực của trang thiết bị tân tiến, các ca phẫu thuật hàm mặt tại Kangnam đều đạt kết quả ngoài mong đợi và được bảo hành trọn đời.",
+        desc: "Tại Kangnam quy tụ được đội ngũ chuyên gia - bác sĩ thẩm mỹ hàm mặt hàng đầu tại Việt Nam, là thành viên trong ekip chương trình Hành trình Lột xác. Đội ngũ các bác sĩ đều là những chuyên gia đầu ngành, có kiến thức, chuyên môn và chỉnh sửa được những ca thẩm mỹ hàm mặt phức tạp. Kangnam thường xuyên cập nhật, ứng dụng những công nghệ chỉnh hàm mặt chuẩn Hàn, đảm bảo mang lại kết quả tối ưu nhất cho khách hàng.",
         video: [
           {
-            linkVideo:
-              "https://www.youtube.com/watch?v=qFQSS0D5TY4&list=PLROTewhS4-MaKB-175oV9oa3fYm13BKdv&index=12",
+            linkVideo: "https://www.youtube.com/watch?v=qFQSS0D5TY4&list=PLROTewhS4-MaKB-175oV9oa3fYm13BKdv&index=12",
             descVideo: 'Hành trình 30 ngày "Lột xác" của Cô vũ công Sài Gòn',
+            alt: "HÀNH TRÌNH 30 NGÀY 'LỘT XÁC' CỦA CÔ VŨ CÔNG SÀI GÒN"
           },
           {
-            linkVideo:
-              "https://www.youtube.com/watch?v=R_jPmRLE4ew",
+            linkVideo: "https://www.youtube.com/watch?v=R_jPmRLE4ew",
             descVideo: 'Ca phẫu thuật thay đổi cuộc đời chàng trai hở hàm ếch',
+            alt: "CA PHẪU THUẬT THAY ĐỔI CUỘC ĐỜI CHÀNG TRAI HỞ HÀM ẾCH"
           },
           {
-            linkVideo:
-              "https://www.youtube.com/watch?v=sih5mhAInQw",
+            linkVideo: "https://www.youtube.com/watch?v=sih5mhAInQw",
             descVideo: 'Hành trình chinh phục ước mơ ca hát của cô gái "sứt môi hở hàm ếch"',
+            alt: 'HÀNH TRÌNH CHINH PHỤC ƯỚC MƠ CA HÁT CỦA CÔ GÁI "SỨT MÔI HỞ HÀM ẾCH"'
           },
         ],
         images: [
-          `${images}media/images/hammat-p1.webp?ver=1`,
-          `${images}media/images/hammat-p2.webp?ver=1`,
-          `${images}media/images/hammat-p3.webp?ver=1`,
-          `${images}media/images/hammat-p4.webp?ver=1`,
-          `${images}media/images/hammat-p5.webp?ver=1`,
-          `${images}media/images/hammat-p6.webp?ver=1`,
-          `${images}media/images/hammat-p7.webp?ver=1`,
-          `${images}media/images/hammat-p8.webp?ver=1`,
-          `${images}media/images/hammat-p9.webp?ver=2`,
-          `${images}media/images/hammat-p10.webp?ver=1`,
-          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+          {
+            link: `${images}media/images/hammat-p1.webp?ver=1`,
+            alt: "Ms.Yến Hồng Thay đổi thành công với thẩm mỹ hàm mặt"
+          },
+          {
+            link: `${images}media/images/hammat-p2.webp?ver=1`,
+            alt: "Ms.Ngọc Anh Biển đổi nhan sắc sau khi thực hiện thẩm mỹ hàm mặt"
+          },
+          {
+            link: `${images}media/images/hammat-p3.webp?ver=1`,
+            alt: "Ms. Hồng Diễm Lấy lại sự tự tin nhờ thẩm mỳ hàm mặt"
+          },
+          {
+            link: `${images}media/images/hammat-p4.webp?ver=1`,
+            alt: "Ms.Mai Duyên Diện mạo mới sau khi sử dụng dịch vụ thẩm mỹ hàm mặt"
+          },
+          {
+            link: `${images}media/images/hammat-p5.webp?ver=1`,
+            alt: "Ms.Phương Mai Trước và sau khi sử dụng dịch vụ hàm mặt"
+          },
+          {
+            link: `${images}media/images/hammat-p6.webp?ver=1`,
+            alt: "Ms.Phan Thị May Khách hàng sử dụng dịch vụ chỉnh hàm hô, hạ gò má, nâng mũi, bấm mí, cấy mỡ"
+          },
+          {
+            link: `${images}media/images/hammat-p7.webp?ver=1`,
+            alt: "Ms.Ngọc Hà Chỉnh hàm móm giúp khách hàng rạng rỡ hơn với diện mạo mới"
+          },
+          {
+            link: `${images}media/images/hammat-p8.webp?ver=1`,
+            alt: "Ms.Hải Anh Khách hàng thay đổi hoàn toàn nhờ chỉnh hàm móm"		
+          },
+          {
+            link: `${images}media/images/hammat-p9.webp?ver=2`,
+            alt: "Ms.Lan Anh Khách hàng trở nên thanh tú hơn sau khi chỉnh hàm hô"
+          },
+          {
+            link: `${images}media/images/hammat-p10.webp?ver=1`,
+            alt: "Ms.Quỳnh Anh Diện mạo sắc sảo hơn sau khi gọt hàm"
+          },
         ],
       },
       {
         name: "Body",
         link: "#tao-hinh-voc-dang",
-        desc: 'Chuyên khoa tạo hình Vóc dáng hoạt động theo quy trình chuẩn Hàn Quốc, đem đến các giải pháp "hot", "an toàn" kiến tạo thân hình quyến rũ như ý muốn. Với đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực Phẫu thuật thẩm mỹ và Tạo hình, Chuyên khoa tạo hình Vóc dáng chắc chắn sẽ làm hài lòng tất cả khách hàng.',
+        desc: 'Chuyên khoa thẩm mỹ vóc dáng mang đến những giải pháp “điêu khắc, kiến tạo” body quyến rũ, sexy như mong muốn của khách hàng. Với đội ngũ bác sĩ chuyên gia hàng đầu trong lĩnh vực phẫu thuật thẩm mỹ và Tạo hình, chuyên khoa tạo hình vóc dáng tại Kangnam chắc chắn sẽ không làm khách hàng thất vọng.',
         video: [
           {
-            linkVideo:
-              "https://www.youtube.com/watch?v=t7ZI-kvnhBY",
+            linkVideo: "https://www.youtube.com/watch?v=t7ZI-kvnhBY",
             descVideo: "Hot mom được chồng đưa đi nâng ngực ở Kangnam và cái kết",
+            alt: "HOT MOM ĐƯỢC CHỒNG ĐƯA ĐI NÂNG NGỰC Ở KANGNAM VÀ CÁI KẾT"
           },
           {
-            linkVideo:
-              "https://www.youtube.com/watch?v=F1eR4TIKKrQ",
+            linkVideo: "https://www.youtube.com/watch?v=F1eR4TIKKrQ",
             descVideo: "Diễn viên Bảo Tiên lột xác nóng bỏng sau nâng ngực K - nature 4D",
+            alt: "DIỄN VIÊN BẢO TIÊN LỘT XÁC NÓNG BỎNG SAU NÂNG NGỰC K - NATURE 4D"
           },
           {
-            linkVideo:
-              "https://www.youtube.com/watch?v=MEWuKEvF2_c",
+            linkVideo: "https://www.youtube.com/watch?v=MEWuKEvF2_c",
             descVideo: "Hành trình lấy lại vòng eo con kiến của mẹ bỉm hiện đại",
+            alt: "HÀNH TRÌNH LẤY LẠI VÒNG EO CON KIẾN CỦA MẸ BỈM HIỆN ĐẠI"
           },
         ],
         images: [
-          `${images}media/images/nangnguc-p2.webp?ver=1`,
-          `${images}media/images/nangnguc-p3.webp?ver=1`,
-          `${images}media/images/mo-p1.webp?ver=1`,
-          `${images}media/images/mo-p2.webp?ver=1`,
-          `${images}media/images/nangnguc-p1.webp?ver=1`,
-          `${images}media/images/nangnguc-p4.webp?ver=1`,
-          `${images}media/images/mo-p3.webp?ver=1`,
-          `${images}media/images/mo-p4.webp?ver=1`,
-          `${images}media/images/mo-p5.webp?ver=1`,
-          `${images}media/images/mo-p6.webp?ver=1`,
-          `${images}media/images/mo-p7.webp?ver=1`,
-          `${images}media/images/mo-p8.webp?ver=1`,
-          `${images}media/images/nangnguc-p5.webp?ver=1`,
-          `${images}media/images/nangnguc-p6.webp?ver=1`,
-          `${images}media/images/nangnguc-p7.webp?ver=2`,
-          `${images}media/images/nangnguc-p8.webp?ver=2`,
-          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+          {
+            link: `${images}media/images/nangnguc-p2.webp?ver=1`,
+            alt: "Ms.Ngọc Huyền Khách hàng sử dụng dịch vụ nâng ngực"
+          },
+          {
+            link: `${images}media/images/nangnguc-p3.webp?ver=1`,
+            alt: "Ms.Lan Vy Dịch vụ nâng ngực tự nhiên như ngực thật"
+          },
+          {
+            link: `${images}media/images/mo-p1.webp?ver=1`,
+            alt: "Ms.Khánh Ngọc Chinh phục vẻ đẹp lý tưởng nhờ dịch vụ giảm mỡ hiệu quả"
+          },
+          {
+            link: `${images}media/images/mo-p2.webp?ver=1`,
+            alt: "Ms.Bảo Lan Tự tin khoe vóc dáng sau khi sử dụng dịch vụ giảm mỡ"
+          },
+          {
+            link: `${images}media/images/nangnguc-p1.webp?ver=1`,
+            alt: "Ms.Hương Giang Vòng một ước mơ với dịch vụ nâng ngực"
+          },
+          {
+            link: `${images}media/images/nangnguc-p4.webp?ver=1`,
+            alt: "Ms.Thùy Linh Nâng ngực giúp ngực khách hàng đầy đặn, to tròn hơn"
+          },
+          {
+            link: `${images}media/images/mo-p3.webp?ver=1`,
+            alt: "Ms.Ngọc Ánh Giảm mỡ không phẫu thuật - Không cần giảm cân"
+          },
+          {
+            link: `${images}media/images/mo-p4.webp?ver=1`,
+            alt: "Ms.Reena Roy Chọn giảm mỡ Kangnam giải cứu vòng eo 130cm"
+          },
+          {
+            link: `${images}media/images/mo-p5.webp?ver=1`,
+            alt: "Ca sĩ Alvir Antoine Lột xác sau 30 ngày tạo hình bụng"
+          },
+          {
+            link: `${images}media/images/mo-p6.webp?ver=1`,
+            alt: "Ms.Kim Ngân Giảm mỡ thừa bất chấp mọi cấp độ, mọi phân vùng"
+          },
+          {
+            link: `${images}media/images/mo-p7.webp?ver=1`,
+            alt: "Ms.Hà My Giảm mỡ thần tốc giúp khách hàng lấy lại vóc dáng"
+          },
+          {
+            link: `${images}media/images/mo-p8.webp?ver=1`,
+            alt: "Ms.Thảo Nguyên Những thay đổi rõ rệt trên cơ thể sau khi lựa chọn dịch vụ giảm mỡ"
+          },
+          {
+            link: `${images}media/images/nangnguc-p5.webp?ver=1`,
+            alt: "Ms.Lan hương gen Z Khách hàng sử dụng dịch vụ nâng ngực"
+          },
+          {
+            link: `${images}media/images/nangnguc-p6.webp?ver=1`,
+            alt: "Ms.Ngọc thúy Khách hàng sử dụng dịch vụ nâng ngực, trẻ hóa da"
+          },
+          {
+            link: `${images}media/images/nangnguc-p7.webp?ver=2`,
+            alt: "Ms.Bảo tiên Khách hàng sử dụng dịch vụ nâng ngực"
+          },
+          {
+            link: `${images}media/images/nangnguc-p8.webp?ver=2`,
+            alt: "Ms.Thanh Hằng Lựa chọn dịch vụ nâng ngực để có vòng một hoàn hảo"
+          },
         ],
       },
       {
         name: "Trẻ hóa da",
         link: "#tre-hoa",
-        desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc với hơn 15 dịch vụ trẻ hóa, hơn 39 dịch vụ chăm sóc da cao cấp. Kangnam độc quyền bộ giải pháp trẻ hóa "Kim tự tháp" giúp khách hàng sở hữu làn da chắc khỏe, căng mịn, tràn đầy sức sống.',
+        desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc với đa dạng các dịch vụ trẻ hóa, với hơn 39 dịch vụ làm đẹp, chăm sóc da cao cấp. Tại Kangnam ứng dụng độc quyền các giải pháp trẻ hóa theo “Kim tự tháp” giúp khách hàng sở hữu làn da mịn màng, tươi trẻ và tràn đầy sức sống.',
         video: [
           {
             linkVideo: "https://www.youtube.com/watch?v=ptri6c0H4xE",
             descVideo: "Hoa hậu Hàn Quốc 2022 chăm sóc da tại Kangnam",
+            alt: "HOA HẬU HÀN QUỐC 2022 CHĂM SÓC DA TẠI KANGNAM"
           },
         ],
         images: [
-          `${images}media/images/trehoa-p1.webp?ver=1`,
-          `${images}media/images/trehoa-p2.webp?ver=1`,
-          `${images}media/images/trehoa-p3.webp?ver=1`,
-          `${images}media/images/trehoa-p4.webp?ver=1`,
-          `${images}media/images/trehoa-p5.webp?ver=1`,
-          `${images}media/images/trehoa-p6.webp?ver=1`,
-          `${images}media/images/trehoa-p7.webp?ver=1`,
-          `${images}media/images/trehoa-p8.webp?ver=1`,
-          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+          {
+            link: `${images}media/images/trehoa-p1.webp?ver=1`,
+            alt: "Ms.Thúy Nga Gương mặt căng bóng, mịn màng sau khi thực hiện dịch vụ trẻ hóa"
+          },
+          {
+            link: `${images}media/images/trehoa-p2.webp?ver=1`,
+            alt: "Ms.Hải Yến Làn da trắng sáng sau khi sử dụng dịch vụ trẻ hóa"
+          },
+          {
+            link: `${images}media/images/trehoa-p3.webp?ver=1`,
+            alt: "Ms.Thu Hằng Làn da trở nên mềm mịn hơn nhờ dịch vụ trẻ hóa"
+          },
+          {
+            link: `${images}media/images/trehoa-p4.webp?ver=1`,
+            alt: "Ms.Thanh Thảo Dịch vụ trẻ hóa giúp da trở nên đều màu và có sự đàn hồi hơn"
+          },
+          {
+            link: `${images}media/images/trehoa-p5.webp?ver=1`,
+            alt: "Ms.Mai Phương Da căng đẹp như gái 25 nhờ trẻ hóa da"
+          },
+          {
+            link: `${images}media/images/trehoa-p6.webp?ver=1`,
+            alt: "Ms.Ánh Ngọc Dịch vụ trẻ hóa da sự lựa chọn hoàn hảo cho làn da trẻ trung"
+          },
+          {
+            link: `${images}media/images/trehoa-p7.webp?ver=1`,
+            alt: "Ms.Hạnh Nhi Trẻ hơn 10 tuổi nhờ công nghệ trẻ hóa da"
+          },
+          {
+            link: `${images}media/images/trehoa-p8.webp?ver=1`,
+            alt: "Ms.Trang Linh Da mịn màng và đàn hồi sau khi thực hiện trẻ hóa da"
+          },
         ],
       },
       {
         name: "Da liễu",
         link: "#dieu-tri-da",
-        desc: "Chuyên khoa Da liễu và Điều trị da công nghệ cao quy tụ đội ngũ chuyên gia, bác sĩ da liễu giỏi chuyên môn với hơn 10 năm kinh nghiệm. Với sự hỗ trợ đắc lực của hệ thống máy móc hiện đại, các công nghệ tân tiến, chuyên khoa cung cấp đa dạng giải pháp điều trị sắc tố nám, tàn nhang, bớt, mụn,... trả lại làn da sáng khỏe như ý muốn.",
+        desc: "Chuyên khoa Da liễu và Điều trị da công nghệ cao, tân tiến, hiện đại giúp khách hàng khắc phục triệt để các vấn đề về da như: nám - tàn nhang, mụn, sẹo lõm, sẹo rỗ, sẹo lồi….Tại Kangnam chiêu mộ được đội ngũ bác sĩ chuyên gia da liễu nhiều năm kinh nghiệm. Sau khi thăm khám, bác sĩ sẽ đánh giá và đưa ra phác đồ điều trị cá nhân hóa phù hợp với tình trạng của mỗi khách hàng, trả lại làn da sáng khỏe như ý muốn.",
         video: [
           {
             linkVideo: "https://www.youtube.com/watch?v=wD3uimEND6c",
             descVideo: "Hành trình trị nám của U40 - Huy Ngọc",
+            alt: "HÀNH TRÌNH TRỊ NÁM CỦA U40 - HUY NGỌC",
           },
         ],
         images: [
-          `${images}media/images/dieutrida-p1.webp?ver=1`,
-          `${images}media/images/dieutrida-p2.webp?ver=1`,
-          `${images}media/images/dieutrida-p3.webp?ver=1`,
-          `${images}media/images/dieutrida-p4.webp?ver=1`,
-          `${images}media/images/dieutrida-p5.webp?ver=1`,
-          `${images}media/images/dieutrida-p6.webp?ver=1`,
-          `${images}media/images/dieutrida-p7.webp?ver=1`,
-          `${images}media/images/dieutrida-p8.webp?ver=1`,
-          `${images}media/images/dieutrida-p9.webp?ver=1`,
-          `${images}media/images/dieutrida-p10.webp?ver=1`,
+          {
+            link: `${images}media/images/dieutrida-p1.webp?ver=1`,
+            alt: "Mr.Thanh Tùng Làn da được tái sinh, mềm mịn nhờ dịch vụ điều trị bớt",
+          },
+          {
+            link: `${images}media/images/dieutrida-p2.webp?ver=1`,
+            alt: "Ms.Minh Châu Lấy lại sự mềm mịn và đầy sức sống sau khi thực hiện điều trị nám",
+          },
+          {
+            link: `${images}media/images/dieutrida-p3.webp?ver=1`,
+            alt: "Ms.Mai Phượng Kết quả trị tàn nhang bằng Laser Toning sau 1 tháng",
+          },
+          {
+            link: `${images}media/images/dieutrida-p4.webp?ver=1`,
+            alt: "Ms.Thanh Thúy Điều trị tàn nhang bằng Laser Picosure Pro thay đổi rõ rệt",
+          },
+          {
+            link: `${images}media/images/dieutrida-p5.webp?ver=1`,
+            alt: "Ms.Kim Anh Khách hàng điều trị tàn nhang thành công",
+          },
+          {
+            link: `${images}media/images/dieutrida-p6.webp?ver=1`,
+            alt: "Ms.Thảo Ngọc Trị nám bằng laser hiệu quả tới 95%",
+          },
+          {
+            link: `${images}media/images/dieutrida-p7.webp?ver=1`,
+            alt: "Ms.Linh Chi Cải thiện bớt lâu năm với dịch vụ điều trị bớt",
+          },
+          {
+            link: `${images}media/images/dieutrida-p8.webp?ver=1`,
+            alt: "Ms.Ánh Dương Loại bỏ tàn nhang một cách hiệu quả",
+          },
+          {
+            link: `${images}media/images/dieutrida-p9.webp?ver=1`,
+            alt: "Ms.Hoàng Yến Hiệu quả trị tàn nhang đã được kiểm nghiệm với hiệu quả rõ rệt",
+          },
+          {
+            link: `${images}media/images/dieutrida-p10.webp?ver=1`,
+            alt: "Ms.Hoài An Khách hàng đánh giá rất cao dịch vụ điều trị tàn nhang",
+          }
         ],
       },
       {
         name: "Spa",
         link: "#kangnam-clinic",
-        desc: "Kangnam Clinic luôn cập nhật các công nghệ tiên tiến nhất, đem đến các giải pháp làm đẹp không xâm lấn, an toàn và hiệu quả. Với đội ngũ chuyên viên được đào tạo bài bản, tay nghề cao, Kangnam Clinic đã làm hài lòng hàng trăm nghìn khách hàng với các liệu trình thẩm mỹ cao cấp, chuẩn y khoa.",
+        desc: "Kangnam cung cấp các dịch vụ Spa làm đẹp như: phun xăm, triệt lông, tắm trắng….mang đến những giải pháp làm đẹp toàn diện, an toàn và hiệu quả cao. Với đội ngũ chuyên môn được đào tạo bài bản, chuyên môn và nghiệp vụ vững vàng. Kangnam đã làm hài lòng đông đảo khách hàng với các liệu trình thẩm mỹ cao cấp, với chi phí tiết kiệm.",
         video: [],
         images: [
-          `${images}media/images/clinic-p9.webp?ver=1`,
-          `${images}media/images/clinic-p10.webp?ver=1`,
-          `${images}media/images/clinic-p11.webp?ver=1`,
-          `${images}media/images/clinic-p12.webp?ver=1`,
-          `${images}media/images/clinic-p1.webp?ver=2`,
-          `${images}media/images/clinic-p2.webp?ver=2`,
-          `${images}media/images/clinic-p3.webp?ver=2`,
-          `${images}media/images/clinic-p4.webp?ver=2`,
-          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+          {
+            link: `${images}media/images/clinic-p9.webp?ver=1`,
+            alt: "Ms.Minh Anh Combo mày + môi khơi gợi nét đẹp tự nhiên",
+          },
+          {
+            link: `${images}media/images/clinic-p10.webp?ver=1`,
+            alt: "Ms.Linh Nhi Phục hồi sự trẻ trung dễ dàng, nhanh chóng khi thực hiện combo mày + môi",
+          },
+          {
+            link: `${images}media/images/clinic-p11.webp?ver=1`,
+            alt: "Ms.Thu Hiền Phun xăm mày: Giải pháp cho đôi mắt trẻ trung và quyến rũ",
+          },
+          {
+            link: `${images}media/images/clinic-p12.webp?ver=1`,
+            alt: "Ms.Mai Anh Điêu khắc chânmày 3D đẹp tự nhiên như thật",
+          },
+          {
+            link: `${images}media/images/clinic-p1.webp?ver=2`,
+            alt: "Phun xăm môi giúp tăng vẻ đẹp tự nhiên trên khuôn mặt",
+          },
+          {
+            link: `${images}media/images/clinic-p2.webp?ver=2`,
+            alt: "Môi trái tim hoàn hảo trong 30 phút với dịch vụ phun xăm môi",
+          },
+          {
+            link: `${images}media/images/clinic-p3.webp?ver=2`,
+            alt: "Đôi môi căng mọng gợi cảm với phun xăm môi",
+          },
+          {
+            link: `${images}media/images/clinic-p4.webp?ver=2`,
+            alt: "Phun xăm môi khắc phục môi nhợt nhạt",
+          },
+          
         ],
       },
       {
         name: "nha khoa",
         link: "#nha-khoa",
-        desc: "Nha khoa thẩm mỹ Kangnam hoạt động với sứ mệnh chăm sóc sức khỏe răng miệng toàn diện, mang lại cho khách hàng nụ cười rạng rỡ, tự tin chinh phục mọi thử thách. Kangnam ứng dụng thành công các công nghệ thẩm mỹ răng tiên tiến trên thế giới như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng…với nhiều ưu điểm vượt trội cùng đội ngũ chuyên gia, bác sĩ nha khoa đầu ngành có trình độ chuyên môn cao, giàu kinh nghiệm.",
+        desc: "Nha khoa thẩm mỹ Kangnam cung cấp đa dạng các dịch vụ như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng…ứng dụng công nghệ thẩm mỹ răng tiên tiến nhất, mang lại cho khách hàng nụ cười rạng rỡ, tự tin khi giao tiếp. Với đội ngũ bác sĩ chuyên gia có trình độ chuyên môn cao, nhiều năm kinh nghiệm trong nghề, giúp khách hàng rút ngắn được thời gian điều trị",
         video: [
           {
             linkVideo: "https://www.youtube.com/watch?v=ZBqfkiS8okU",
             descVideo: "Cảm nhận khách hàng Việt Kiều Mỹ thực hiện cấy ghép Impant tại Kangnam",
+            alt: "CẢM NHẬN KHÁCH HÀNG VIỆT KIỀU MỸ THỰC HIỆN CẤY GHÉP IMPANT TẠI KANGNAM",
           }
         ],
         images: [
-          `${images}media/images/nhakhoa-p1.webp?ver=1`,
-          `${images}media/images/nhakhoa-p2.webp?ver=1`,
-          `${images}media/images/nhakhoa-p3.webp?ver=1`,
-          `${images}media/images/nhakhoa-p4.webp?ver=1`,
-          `${images}media/images/nhakhoa-p5.webp?ver=1`,
-          `${images}media/images/nhakhoa-p6.webp?ver=1`,
-          `${images}media/images/nhakhoa-p7.webp?ver=2`,
-          `${images}media/images/nhakhoa-p8.webp?ver=2`,
-          // Thêm các đường dẫn hình ảnh khác cho dịch vụ 3
+          {
+            link: `${images}media/images/nhakhoa-p1.webp?ver=1`,
+            alt: "Mr.Quang Thắng Nụ cười tự tin sau khi lựa chọn bọc răng sứ",
+          },
+          {
+            link: `${images}media/images/nhakhoa-p2.webp?ver=1`,
+            alt: "Ms.Thùy Dung Thực hiện bọc răng sứ giúp nụ cười tỏa sáng",
+          },
+          {
+            link: `${images}media/images/nhakhoa-p3.webp?ver=1`,
+            alt: "Mr.Trọng Hoàng Niềng răng giúp khách hàng cải thiện các khuyết điểm, mang đến gương mặt cân đối",
+          },
+          {
+            link: `${images}media/images/nhakhoa-p4.webp?ver=1`,
+            alt: "Mr.Đình Trọng Khách hàng lấy lại nụ cười rạng ngời với dịch vụ trồng răng Implant",
+          },
+          {
+            link: `${images}media/images/nhakhoa-p5.webp?ver=1`,
+            alt: "Ms.Ngọc Trâm Bọc răng sứ giúp răng trắng sáng ngạc nhiên",
+          },
+          {
+            link: `${images}media/images/nhakhoa-p6.webp?ver=1`,
+            alt: "Ms.Hồng Ngọc Nụ cười mê đắm người nhìn với bọc răng sứ",
+          },
+          {
+            link: `${images}media/images/nhakhoa-p7.webp?ver=2`,
+            alt: "Ms.Hồng Nhung Khách hàng xinh đẹp rạng ngời sau khi niềng răng",
+          },
+          {
+            link: `${images}media/images/nhakhoa-p8.webp?ver=2`,
+            alt: "Ms.Lan Vy Trồng răng Implant giải pháp hết móm an toàn",
+          }
         ],
       },
-      // Thêm các đối tượng dịch vụ khác vào mảng services
     ];
+
     var menuItems = document.getElementById("menuItems");
     var imageContainer = document.querySelector(".screen1__inner");
     var imageContainerVid = document.querySelector(".screen1__innerVid");
-    // var viewMoreButton = document.getElementById("screen1__viewMore");
-    // var hideButton = document.getElementById("screen1__hide");
     var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
     const getIdYoutube = (url) => {
@@ -278,6 +495,7 @@
       }
       return video_id;
     };
+
     function showImage(serviceId, element) {
       if (document.querySelector('.screen1__ani.ani')) {
         document.querySelector('.screen1__ani').classList.remove('ani');
@@ -286,36 +504,26 @@
       window.location.hash = services[serviceId].link;
       var imageElements = "";
       for (var i = 0; i < serviceImages.length; i++) {
-        imageElements +=
-          '<div class="screen1__item"><img width="327" height="259" src="' +
-          serviceImages[i] +
-          '" alt="Hình ảnh khách hàng"></div>';
+        imageElements += `<div class="screen1__item"><img width="327" height="259" src="${serviceImages[i]['link']}" alt="${serviceImages[i]['alt']}"></div>`;
       }
 
       let htmlVideo = "";
       services[serviceId].video.map((item) => {
         htmlVideo += `
-                <div class="screen1__video">
-                    <div onclick="playVideo('${getIdYoutube(
-          item.linkVideo
-        )}')" style="position: relative">
-                        <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(
-          item.linkVideo
-        )}/maxresdefault.jpg" alt="Video khách hàng">
-                        <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt="play video"></button>
-                    </div>
-                    <div class="screen1__note">${item.descVideo}</div>
-                </div>
-                `;
+          <div class="screen1__video">
+              <div onclick="playVideo('${getIdYoutube(item.linkVideo)}')" style="position: relative">
+                  <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(item.linkVideo)}/maxresdefault.jpg" alt="${item.alt}">
+                  <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt="${item.alt}"></button>
+              </div>
+              <div class="screen1__note">${item.descVideo}</div>
+          </div>
+        `;
       });
-
 
       setTimeout(() => {
         imageContainer.innerHTML = `
-            <div class="screen1__des">${services[serviceId].desc ? services[serviceId].desc : ""
-          }</div>
-            <div class="screen1__pic">${imageElements}</div>
-            `;
+            <div class="screen1__des">${services[serviceId].desc ? services[serviceId].desc : ""}</div>
+            <div class="screen1__pic">${imageElements}</div>`;
         imageContainerVid.innerHTML = htmlVideo;
         document.querySelector('.screen1__ani').classList.add('ani');
       }, 300)
@@ -324,27 +532,6 @@
       }
       element.classList.add("active");
       currentServiceId = serviceId; // Cập nhật ID của dịch vụ hiện tại
-
-      // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" dựa trên số lượng hình ảnh
-      // if (serviceImages.length <= 4) {
-      //   viewMoreButton.style.display = "none";
-      //   hideButton.style.display = "none";
-      // } else {
-      //   viewMoreButton.style.display = "block";
-      //   hideButton.style.display = "none";
-      // }
-
-      // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-      // for (var i = 4; i < serviceImages.length; i++) {
-      //   imageContainer.querySelector(".screen1__pic").children[
-      //     i
-      //   ].style.display = "none";
-      // }
-
-      // var screenWidth =
-      //   window.innerWidth ||
-      //   document.documentElement.clientWidth ||
-      //   document.body.clientWidth;
     }
 
     for (var i = 0; i < services.length; i++) {
@@ -368,197 +555,6 @@
 
     window.addEventListener("hashchange", functionChangeHash);
 
-    // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
-    // viewMoreButton.addEventListener("click", function () {
-    //   // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
-    //   var serviceImages = services[currentServiceId].images;
-    //   for (var i = 4; i < serviceImages.length; i++) {
-    //     imageContainer.querySelector(".screen1__pic").children[
-    //       i
-    //     ].style.display = "block";
-    //   }
-    //   // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
-    //   viewMoreButton.style.display = "none";
-    //   hideButton.style.display = "block";
-    // });
-
-    // Xử lý sự kiện khi click vào nút "Rút gọn"
-    // hideButton.addEventListener("click", function () {
-    //   // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-    //   var serviceImages = services[currentServiceId].images;
-    //   for (var i = 4; i < serviceImages.length; i++) {
-    //     imageContainer.querySelector(".screen1__pic").children[
-    //       i
-    //     ].style.display = "none";
-    //   }
-    //   // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
-    //   viewMoreButton.style.display = "block";
-    //   hideButton.style.display = "none";
-    // });
-
-    // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
-    // var initialServiceImages = services[currentServiceId].images;
-    // if (initialServiceImages.length <= 4) {
-    //   viewMoreButton.style.display = "none";
-    //   hideButton.style.display = "none";
-    // } else {
-    //   viewMoreButton.style.display = "block";
-    //   hideButton.style.display = "none";
-    //   for (var i = 4; i < initialServiceImages.length; i++) {
-    //     imageContainer.querySelector(".screen1__pic").children[
-    //       i
-    //     ].style.display = "none";
-    //   }
-    // }
-
-    // function changeMenuStyle() {
-    //   var screenWidth =
-    //     window.innerWidth ||
-    //     document.documentElement.clientWidth ||
-    //     document.body.clientWidth;
-    // }
-
-    // // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
-    // window.addEventListener("load", changeMenuStyle);
-    // window.addEventListener("resize", changeMenuStyle);
-
-    // var itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
-    // var currentPage = 1; // Trang hiện tại
-
-    // function showPage(page) {
-    //   var startIndex = (page - 1) * itemsPerPage;
-    //   var endIndex = startIndex + itemsPerPage;
-    //   var serviceImages = services[currentServiceId].images.slice(
-    //     startIndex,
-    //     endIndex
-    //   );
-
-    //   var imageElements = "";
-    //   for (var i = 0; i < serviceImages.length; i++) {
-    //     imageElements +=
-    //       '<div class="screen1__item"><img width="327" height="259" src="' +
-    //       serviceImages[i] +
-    //       '" alt=""></div>';
-    //   }
-    //   imageContainer.innerHTML = `
-    //       <div class="screen1__des">${
-    //         services[currentPage].desc ? services[currentPage].desc : ""
-    //       }</div>
-    //       <div class="screen1__pic">${imageElements}</div>
-    //       `;
-
-    //   let htmlVideo = "";
-    //   services[currentPage].video.map((item) => {
-    //     htmlVideo += `
-    //           <div class="screen1__video">
-    //               <div onclick="playVideo('${getIdYoutube(
-    //                 item.linkVideo
-    //               )}')" style="position: relative">
-    //                   <img width="753" height="417" class="lazy" data-src="https://img.youtube.com/vi/${getIdYoutube(
-    //                     item.linkVideo
-    //                   )}/maxresdefault.jpg" alt="">
-    //                   <button class="screen1__play"><img width="100" height="100" class="lazy" data-src="media/images/icon-play.png" alt=""></button>
-    //               </div>
-    //               <div class="screen1__note">${item.descVideo}</div>
-    //           </div>
-    //           `;
-    //   });
-    //   imageContainerVid.innerHTML = htmlVideo;
-    // }
-
-    // function createPagination() {
-    //   var totalItems = services[currentServiceId].images.length;
-    //   var totalPages = Math.ceil(totalItems / itemsPerPage);
-
-    //   var paginationElement = document.querySelector(".pagination");
-    //   paginationElement.innerHTML = "";
-
-    //   var prevButton = document.createElement("a");
-    //   prevButton.href = "#";
-    //   prevButton.classList.add("pagination__item");
-    //   prevButton.id = "prev";
-    //   prevButton.innerHTML = "&laquo;";
-    //   paginationElement.appendChild(prevButton);
-
-    //   for (var i = 1; i <= totalPages; i++) {
-    //     var pageButton = document.createElement("a");
-    //     pageButton.href = "#";
-    //     pageButton.classList.add("pagination__item");
-    //     pageButton.id = i;
-    //     pageButton.innerHTML = i;
-    //     paginationElement.appendChild(pageButton);
-
-    //     // Kích hoạt số 1 khi trang được tải lần đầu tiên
-    //     if (i === 1) {
-    //       pageButton.classList.add("active");
-    //     }
-    //   }
-
-    //   var nextButton = document.createElement("a");
-    //   nextButton.href = "#";
-    //   nextButton.classList.add("pagination__item");
-    //   nextButton.id = "next";
-    //   nextButton.innerHTML = "&raquo;";
-    //   paginationElement.appendChild(nextButton);
-    // }
-
-    // function changePage(page) {
-    //   currentPage = page;
-    //   showPage(currentPage);
-
-    //   var paginationItems = document.querySelectorAll(".pagination__item");
-    //   for (var i = 0; i < paginationItems.length; i++) {
-    //     paginationItems[i].classList.remove("active");
-    //   }
-    //   document.getElementById(currentPage).classList.add("active");
-
-    //   // Disable/enable prev/next buttons
-    //   if (currentPage == 1) {
-    //     document.getElementById("prev").classList.add("disabled");
-    //   } else {
-    //     document.getElementById("prev").classList.remove("disabled");
-    //   }
-    //   if (currentPage == totalPages) {
-    //     document.getElementById("next").classList.add("disabled");
-    //   } else {
-    //     document.getElementById("next").classList.remove("disabled");
-    //   }
-    // }
-
-    // var totalItems = services[currentServiceId].images.length;
-    // var totalPages = Math.ceil(totalItems / itemsPerPage);
-    // createPagination();
-    // var screenWidth =
-    //   window.innerWidth ||
-    //   document.documentElement.clientWidth ||
-    //   document.body.clientWidth;
-    // if (screenWidth <= 767) {
-    //   showPage(currentPage);
-    // } else {
-    // }
-
-    // document.getElementById("prev").addEventListener("click", function () {
-    //   if (currentPage > 1) {
-    //     changePage(currentPage - 1);
-    //   }
-    // });
-
-    // document.getElementById("next").addEventListener("click", function () {
-    //   if (currentPage < totalPages) {
-    //     changePage(currentPage + 1);
-    //   }
-    // });
-
-    // var paginationItems = document.querySelectorAll(".pagination__item");
-    // for (var i = 0; i < paginationItems.length; i++) {
-    //   paginationItems[i].addEventListener("click", function () {
-    //     var page = parseInt(this.id);
-    //     if (page) {
-    //       changePage(page);
-    //     }
-    //   });
-    // }
-
     const removeModal = (id) => {
       document.getElementById(id).remove();
     };
@@ -577,6 +573,7 @@
       document.body.insertAdjacentHTML("beforeend", html);
     };
   </script>
+
   <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js"></script>
   <script src="https://benhvienthammykangnam.vn/css/lib/module.min.js?v=1"></script>
 </body>

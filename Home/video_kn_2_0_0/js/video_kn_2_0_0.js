@@ -101,7 +101,7 @@ const renderVideoBox = (data) => {
     document.querySelector('.video_kn_2_0_0 .video_kn_2_0_0__inner').innerHTML = `
     <div class="video_kn_2_0_0__select">
         <div class="video_kn_2_0_0__thumbCate">
-            <img width="271" height="275" src="${dataItem.thumb}" alt="${dataItem.category}">
+            <img width="271" height="275" src="${dataItem.thumb}" alt="${dataItem.alt}">
         </div>
         <div class="video_kn_2_0_0__selectVideo">
             <select class="video_kn_2_0_0__selectChoice video_kn_2_0_0__selectChoice--ss" onchange="renderSeasonEp('${cateVideo}', 'video_kn_2_0_0__selectChoice--ss')"></select>
