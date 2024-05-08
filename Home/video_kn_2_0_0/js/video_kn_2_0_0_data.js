@@ -3,6 +3,7 @@ const video_kn_2_0_0_data = [
         category: 'Show Hành trình lột xác',
         description: 'Hành trình lột xác - show thẩm mỹ "đắt giá" được tổ chức bởi Hệ thống Thẩm mỹ Kangnam. Chương trình mang đậm tính nhân văn sâu sắc, giúp thí sinh “lột xác” với diện mạo mới, đón nhận nhiều cơ hội mới trong cuộc sống.',
         thumb: `${video_kn_2_0_0_url}images/thumb-video.webp?v=1`,
+        alt: 'Hành trình lột xác mùa 6',
         item: [
             {
                 season: 'Mùa 6',
@@ -42,6 +43,7 @@ const video_kn_2_0_0_data = [
         category: 'Show Beauty Up',
         description: 'Beauty Up - show thẩm mỹ mới toanh kể về hành trình nâng tầm nhan sắc của những phụ nữ thời hiện đại. Họ có cá tính riêng, màu sắc riêng, đa dạng độ tuổi, nghề nghiệp, vùng miền nhưng đều yêu thương bản thân, có mong muốn làm đẹp tích cực, chủ động để hoàn thiện mình mỗi ngày.',
         thumb: `https://benhvienthammykangnam.vn/wp-content/uploads/2023/11/thumb-bu.webp`,
+        alt: 'Beauty Up',
         item: [
             {
                 season: 'Mùa 1',
@@ -68,6 +70,7 @@ const video_kn_2_0_0_data = [
         category: 'Giải cứu mũi hỏng',
         description: '"Giải cứu mũi hỏng" là chiến dịch do Kangnam kết hợp với báo điện tử VnExpress tổ chức. Chiến dịch tiếp nhận những trường hợp mũi biến dạng, phức tạp, trực tiếp chỉnh sửa, giúp cho khách hàng lấy lại chiếc mũi đẹp và sự tự tin trong cuộc sống.',
         thumb: `https://benhvienthammykangnam.vn/wp-content/uploads/2023/11/thumb-gc.webp`,
+        alt: 'Giải cứu mũi hỏng',
         item: [
             {
                 season: 'Mùa 1',
