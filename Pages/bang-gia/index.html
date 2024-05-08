@@ -16,10 +16,7 @@
     <section id="page1" class="screen1">
         <div class="container">
             <div class="screen1__box">
-                <!-- <div class="screen1__menu" onclick="inputHidden()"> -->
                 <div class="screen1__menu">
-                    <!-- <img width="17" height="9" src="media/images/icon.webp"  alt=""> -->
-                    <!-- <input type="text"  value="Dịch vụ nâng mũi" readonly="false" id="inputHidden"> -->
                     <ul id="menuItems" class="screen1__menuItems">
                         <!-- Thêm các mục menu cho các dịch vụ -->
                     </ul>
@@ -34,21 +31,6 @@
                                 <!-- Thêm các thẻ <div> để bao bọc hình ảnh -->
                             </div>
                         </div>
-                        <!-- <div class="screen1__btn">
-                            <button id="screen1__viewMore">Hiển thị thêm</button>
-                        </div>
-                        <div class="screen1__btn screen1__btnHide">
-                            <button id="screen1__hide">Rút gọn</button>
-                        </div> -->
-                        <!-- <div class="pagination">
-                            <a href="#" class="pagination__item" id="prev">&laquo;</a>
-                            <a href="#" class="pagination__item" id="1">1</a>
-                            <a href="#" class="pagination__item" id="2">2</a>
-                            <a href="#" class="pagination__item" id="3">3</a>
-                            <a href="#" class="pagination__item" id="4">4</a>
-                            <a href="#" class="pagination__item" id="5">5</a>
-                            <a href="#" class="pagination__item" id="next">&raquo;</a>
-                        </div> -->
                         <div class="screen1__note" style="text-align: justify; text-align-last: center;">Trên đây là giá
                             niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn
                             và
@@ -62,13 +44,19 @@
         </div>
     </section>
     <script>
-        let service = 'https://benhvienthammykangnam.vn/cp/pages/bang-gia/';
-        // let service = '';
+        const url = window.location.host;
+        let service;
+        if (url == 'benhvienthammykangnam.vn') {
+            service = 'https://benhvienthammykangnam.vn/cp/pages/bang-gia/';
+        } else {
+            service = "";
+        }
+
         var services = [
             {
                 name: "mắt",
                 link: '#tham-my-mat',
-                desc: 'Chuyên khoa Thẩm mỹ Mắt tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, đem đến giải pháp khắc phục mọi khuyết điểm mắt, trẻ hóa mắt toàn diện. Với đội ngũ chuyên gia, bác sĩ đầu ngành giàu kinh nghiệm trong lĩnh vực Thẩm mỹ Mắt chắc chắn sẽ đem đến cho khách hàng đôi mắt đẹp như mong ước, phù hợp với tỷ lệ gương mặt phụ nữ Á Đông',
+                desc: 'Dịch vụ thẩm mỹ mắt tiêu chuẩn Hàn Quốc, trẻ hóa đôi mắt toàn diện và khắc phục mọi khuyết điểm về mắt. Trực tiếp đội ngũ bác sĩ chuyên khoa thẩm mỹ mắt thăm khám và thực hiện. Kiến tạo đường mí phù hợp với tỷ lệ gương mặt phụ nữ Á Đông với sự đa dạng trong từng công nghệ và phù hợp về mức giá.',
                 images: [
                     {
                         title: "Cắt mí Hàn Quốc Plasma (trên/dưới)",
@@ -102,13 +90,12 @@
                         title: "Xóa cơ cau mày 6D",
                         price: "Giá 19.000.000Đ"
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 2
                 ]
             },
             {
                 name: "mũi",
                 link: '#tham-my-mui',
-                desc: 'Chuyên khoa Thẩm mỹ mũi chuyên sâu Chuyên khoa Thẩm mỹ mũi tiêu chuẩn Hàn Quốc đầu tiên tại Việt Nam, với 12 công nghệ Nâng mũi, sửa mũi được liên tục cập nhật và chuyển giao độc quyền từ Hàn Quốc. Chuyên khoa Thẩm mỹ mũi quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực thẩm mỹ mũi, giúp khách hàng sở hữu dáng mũi đẹp chuẩn tỉ lệ, phù hợp với gương mặt phụ nữ Á Đông, duy trì kết quả lâu dài.',
+                desc: 'Quy trình nâng mũi chuyên sâu với công nghệ tiên tiến, thiết kế dáng mũi tự nhiên, phù hợp với khuôn mặt và duy trì kết quả lâu dài. Ứng dụng công nghệ hàng đầu từ Hàn Quốc, đảm bảo mang lại tính an toàn và hiệu quả cao, điều chỉnh hình dáng mũi theo mong muốn của khách hàng. Với mức giá được cân đối dựa trên công nghệ sử dụng và mức độ phức tạp của từng trường hợp, chúng tôi đảm bảo mang đến mức chi phí hợp lý cho từng dịch vụ nâng mũi.',
                 images: [
                     {
                         title: "Nâng mũi Hàn Quốc",
@@ -138,13 +125,12 @@
                         title: "Nâng mũi không đau 6D - Surgiform",
                         price: "Giá 69.000.000Đ"
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 1
                 ]
             },
             {
                 name: "khuôn mặt",
                 link: '#tham-my-ham-mat',
-                desc: 'Chuyên khoa thẩm mỹ Hàm mặt của Hệ thống thẩm Mỹ Kangnam quy tụ đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực tạo hình thẩm mỹ Hàn Quốc, là ekip thực hiện chương trình Hành trình Lột xác. Kangnam là đơn vị hiếm hoi có thể xử lý được những ca hàm mặt khó, phức tạp, đòi hỏi chuyên môn cao. Với sự hỗ trợ đắc lực của trang thiết bị tân tiến, các ca phẫu thuật hàm mặt tại Kangnam đều đạt kết quả ngoài mong đợi và được bảo hành trọn đời.',
+                desc: 'Chuyên khoa thẩm mỹ Hàm mặt quy tụ đội ngũ bác sĩ, chuyên gia đầu ngành, là ekip thực hiện chương trình Hành trình Lột xác. Các bác sĩ tại Kangnam có khả năng chẩn đoán chính xác và chỉnh sửa những trường hợp hàm mặt khó, phức tạp, đòi hỏi chuyên môn cao. Kangnam tập trung ứng dụng các trang thiết bị tân tiến, công nghệ chỉnh hình hàm mặt chuẩn Hàn hiện đại để mang lại kết quả ngoài mong đợi nhưng vẫn cân đối mức chi phí phù hợp và bảo hành trọn đời cho khách hàng.',
                 images: [
                     {
                         title: "Chỉnh hình hàm hô/móm 3D (1 hàm trên/dưới)",
@@ -178,13 +164,12 @@
                         title: "Phẫu thuật cười hở lợi",
                         price: "Giá 12.000.000Đ",
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
             },
             {
                 name: "body",
                 link: '#tham-my-voc-dang',
-                desc: 'Chuyên khoa tạo hình Vóc dáng hoạt động theo quy trình chuẩn Hàn Quốc, đem đến các giải pháp "hot", "an toàn" kiến tạo thân hình quyến rũ như ý muốn. Với đội ngũ chuyên gia, bác sĩ đầu ngành trong lĩnh vực Phẫu thuật thẩm mỹ và Tạo hình, Chuyên khoa tạo hình Vóc dáng chắc chắn sẽ làm hài lòng tất cả khách hàng.',
+                desc: 'Chuyên khoa Tạo hình vóc dáng mang lại cho khách hàng thân hình quyến rũ và nóng bỏng. Với sự kết hợp giữa kỹ thuật tiên tiến và đội ngũ bác sĩ tận tâm, Kangnam mang đến các dịch vụ tạo hình vóc dáng chất lượng với mức giá đa dạng, phù hợp với mức thu nhập của đa số khách hàng.',
                 images: [
                     {
                         title: "Nâng ngực 4D (nano)",
@@ -222,13 +207,12 @@
                         title: "Nâng mông chất liệu độn",
                         price: "Giá 85.000.000Đ"
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
             },
             {
                 name: "trẻ hóa da",
                 link: '#tre-hoa-da-cong-nghe-cao',
-                desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc với hơn 15 dịch vụ trẻ hóa, hơn 39 dịch vụ chăm sóc da cao cấp. Kangnam độc quyền bộ giải pháp trẻ hóa "Kim tự tháp" giúp khách hàng sở hữu làn da chắc khỏe, căng mịn, tràn đầy sức sống.',
+                desc: 'Viện trẻ hóa Kangnam - Trung tâm trẻ đẹp chuẩn Hàn Quốc bao gồm 15 dịch vụ trẻ hóa, hơn 39 dịch vụ chăm sóc da cao cấp được Kangnam chuyển giao độc quyền từ Hàn Quốc. Các dịch vụ trẻ hóa và chăm sóc da giúp khách hàng sở hữu làn da căng bóng, săn chắc và giải quyết tốt các vấn đề về lão hóa. Các dịch vụ trẻ hóa đa dạng với mức chi phí phù hợp theo từng công nghệ và tình trạng.',
                 images: [
                     {
                         title: "Căng chỉ X-line Bio Young",
@@ -262,14 +246,13 @@
                         title: "Filler",
                         price: "Từ 5.000.000Đ - 10.000.000Đ/ống"
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ],
                 descBottom: "* Với các dịch vụ trẻ hóa da, chi phí phụ thuộc vào phương pháp, gói liệu trình, phân vùng cơ thể và nguồn gốc sản phẩm. Quý khách vui lòng đăng ký để nhận tư vấn trước với bác sĩ da liễu <br> *Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ"
             },
             {
                 name: "da liễu",
                 link: '#dieu-tri-da-cong-nghe-cao',
-                desc: 'Chuyên khoa Da liễu và Điều trị da công nghệ cao quy tụ đội ngũ chuyên gia, bác sĩ da liễu giỏi chuyên môn với hơn 10 năm kinh nghiệm. Với sự hỗ trợ đắc lực của hệ thống máy móc hiện đại, các công nghệ tân tiến, chuyên khoa cung cấp đa dạng giải pháp điều trị sắc tố nám, tàn nhang, bớt, mụn,... trả lại làn da sáng khỏe như ý muốn.',
+                desc: 'Chuyên khoa Da liễu và Điều trị da ứng dụng công nghệ tiên tiến, khắc phục tốt các vấn đề về da như mụn, nám, tàn nhang, sẹo lõm, sẹo rỗ, … Kangnam quy tụ đội ngũ bác sĩ da liễu chuyên môn cao, hơn 10 năm kinh nghiệm. Các bác sĩ da liễu sẽ đưa ra phác đồ điều trị phù hợp với tình trạng da của mỗi khách hàng, đảm bảo mang đến liệu trình điều trị ngắn với mức chi phí hợp lý.',
                 images: [
                     {
                         title: "Điều trị nám",
@@ -299,14 +282,13 @@
                         title: "Điều trị mụn",
                         price: "Giá 500.000Đ/lần <br> (Tùy tình trạng)"
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ],
                 descBottom: "* Đối với tình trạng da liễu, chi phí phụ thuộc vào tình trạng và gói liệu trình, phương pháp. Quý khách đăng ký để nhận tư vấn trước với bác sĩ da liễu <br> *Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ"
             },
             {
                 name: "spa",
                 link: '#kangnam-clinic',
-                desc: '',
+                desc: 'Kangnam cung cấp đa dạng các dịch vụ Spa như tắm trắng, triệt lông, phun xăm, chăm sóc da mặt. Mang đến cho khách hàng những dịch vụ làm đẹp chất lượng, ứng dụng công nghệ tiên tiến và các máy móc hiện đại nhất với mức chi phí tiết kiệm.',
                 images: [
                     {
                         title: "Phun môi Plascell",
@@ -336,13 +318,12 @@
                         title: "Chăm sóc da mặt Nanoskin",
                         price: "Giá 2.500.000Đ",
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
             },
             {
                 name: "nha khoa",
                 link: '#nha-khoa-tham-my',
-                desc: 'Nha khoa thẩm mỹ Kangnam hoạt động với sứ mệnh chăm sóc sức khỏe răng miệng toàn diện, mang lại cho khách hàng nụ cười rạng rỡ, tự tin chinh phục mọi thử thách. Kangnam ứng dụng thành công các công nghệ thẩm mỹ răng tiên tiến trên thế giới như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng…với nhiều ưu điểm vượt trội cùng đội ngũ chuyên gia, bác sĩ nha khoa đầu ngành có trình độ chuyên môn cao, giàu kinh nghiệm.',
+                desc: 'Nha khoa thẩm mỹ Kangnam cung cấp đa dạng các dịch vụ chăm sóc sức khỏe răng miệng toàn diện và chất lượng. Kangnam ứng dụng thành công các công nghệ chỉnh nha tiên tiến như: Niềng răng, Bọc răng sứ, Cấy ghép Implant, Tẩy trắng răng, … Nhờ có công nghệ và kỹ thuật hiện đại, các dịch vụ nha khoa thẩm mỹ tại Kangnam rút ngắn thời gian điều trị và tiết kiệm tối đa chi phí.',
                 images: [
                     {
                         title: "Tẩy trắng răng",
@@ -376,16 +357,12 @@
                         title: "Cạo vôi răng và đánh bóng",
                         price: "Giá 150.000Đ - 400.000Đ <br> (Tùy mức độ)",
                     },
-                    // Thêm các đối tượng hình ảnh khác cho dịch vụ 3
                 ]
             },
-            // Thêm các đối tượng dịch vụ khác vào mảng services
         ];
 
         var menuItems = document.getElementById("menuItems");
         var imageContainer = document.querySelector(".screen1__inner");
-        // var viewMoreButton = document.getElementById("screen1__viewMore");
-        // var hideButton = document.getElementById("screen1__hide");
         var currentServiceId = 0; // Biến để lưu trữ ID của dịch vụ hiện tại
 
         for (var i = 0; i < services.length; i++) {
@@ -408,43 +385,6 @@
         functionChangeHash();
 
         window.addEventListener('hashchange', functionChangeHash);
-
-        // Xử lý sự kiện khi click vào nút "Hiển thị thêm"
-        // viewMoreButton.addEventListener("click", function () {
-        //     // Hiển thị tất cả các hình ảnh từ hình ảnh thứ 5 trở đi
-        //     var serviceImages = services[currentServiceId].images;
-        //     for (var i = 8; i < serviceImages.length; i++) {
-        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "block";
-        //     }
-        //     // Ẩn nút "Hiển thị thêm" và hiển thị nút "Rút gọn"
-        //     viewMoreButton.style.display = "none";
-        //     hideButton.style.display = "block";
-        // });
-
-        // Xử lý sự kiện khi click vào nút "Rút gọn"
-        // hideButton.addEventListener("click", function () {
-        //     // Ẩn các hình ảnh từ hình ảnh thứ 7 trở đi
-        //     var serviceImages = services[currentServiceId].images;
-        //     for (var i = 8; i < serviceImages.length; i++) {
-        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-        //     }
-        //     // Hiển thị nút "Hiển thị thêm" và ẩn nút "Rút gọn"
-        //     viewMoreButton.style.display = "block";
-        //     hideButton.style.display = "none";
-        // });
-
-        // Kiểm tra và hiển thị hoặc ẩn nút "Hiển thị thêm" và "Rút gọn" khi tải trang
-        // var initialServiceImages = services[currentServiceId].images;
-        // if (initialServiceImages.length <= 8) {
-        //     viewMoreButton.style.display = "none";
-        //     hideButton.style.display = "none";
-        // } else {
-        //     viewMoreButton.style.display = "block";
-        //     hideButton.style.display = "none";
-        //     for (var i = 8; i < initialServiceImages.length; i++) {
-        //         imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-        //     }
-        // }
 
         function showImage(serviceId, element) {
             if (document.querySelector('.screen1__ani.ani')) {
@@ -502,189 +442,7 @@
 
             element.classList.add("active");
             currentServiceId = serviceId;
-
-            // if (serviceImages.length <= 8) {
-            //     viewMoreButton.style.display = "none";
-            //     hideButton.style.display = "none";
-            // } else {
-            //     viewMoreButton.style.display = "block";
-            //     hideButton.style.display = "none";
-            // }
-
-            // for (var i = 8; i < serviceImages.length; i++) {
-            //     imageContainer.querySelector('.screen1__pic').children[i].style.display = "none";
-            // }
-
-            // document.getElementById("inputHidden").value = services[serviceId].name;
-
-            // var screenWidth =
-            //     window.innerWidth ||
-            //     document.documentElement.clientWidth ||
-            //     document.body.clientWidth;
-
-            // if (screenWidth <= 767) {
-            //     for (var i = 0; i < menuItems.children.length; i++) {
-            //         menuItems.children[i].classList.add("hidden");
-            //     }
-            // }
         }
-
-        // function changeMenuStyle() {
-        //     var screenWidth =
-        //         window.innerWidth ||
-        //         document.documentElement.clientWidth ||
-        //         document.body.clientWidth;
-        //     if (screenWidth <= 767) {
-        //         mobileBuild();
-        //     }
-        //     // function mobileBuild() {
-        //     //     for (var i = 0; i < menuItems.children.length; i++) {
-        //     //         menuItems.children[i].classList.add("hidden");
-        //     //     }
-
-        //     //     var itemsPerPage = 8; // Số lượng mục hiển thị trên mỗi trang
-        //     //     var currentPage = 1; // Trang hiện tại
-
-
-
-        //     //     var totalItems = services[currentServiceId].images.length;
-        //     //     var totalPages = Math.ceil(totalItems / itemsPerPage);
-        //     //     createPagination();
-        //     //     showPage(currentPage);
-
-        //     //     document.getElementById("prev").addEventListener("click", function () {
-        //     //         if (currentPage > 1) {
-        //     //             changePage(currentPage - 1);
-        //     //         }
-        //     //     });
-
-        //     //     document.getElementById("next").addEventListener("click", function () {
-        //     //         if (currentPage < totalPages) {
-        //     //             changePage(currentPage + 1);
-        //     //         }
-        //     //     });
-
-        //     //     var paginationItems = document.querySelectorAll(".pagination__item");
-        //     //     for (var i = 0; i < paginationItems.length; i++) {
-        //     //         paginationItems[i].addEventListener("click", function () {
-        //     //             var page = parseInt(this.id);
-        //     //             if (page) {
-        //     //                 changePage(page);
-        //     //             }
-        //     //         });
-        //     //     }
-        //     // }
-
-        // }
-
-        // // Gọi hàm changeMenuStyle khi trang được tải và khi kích thước màn hình thay đổi
-        // window.addEventListener("load", changeMenuStyle);
-        // window.addEventListener("resize", changeMenuStyle);
-
-
-        // function showPage(page) {
-        //     var startIndex = (page - 1) * itemsPerPage;
-        //     var endIndex = startIndex + itemsPerPage;
-        //     var serviceImages = services[currentServiceId].images.slice(
-        //         startIndex,
-        //         endIndex
-        //     );
-        //     var imageElements = "";
-        //     for (var i = 0; i < serviceImages.length; i++) {
-        //         var image = serviceImages[i];
-        //         var title = image.title;
-        //         var price = image.price;
-        //         var thumb = image.image;
-
-        //         imageElements +=
-        //             `
-        //                     <div class="screen1__item">
-        //                         ${thumb ? `<div class="screen1__thumb"><img width="260" height="323" src="${thumb}" alt=""></div>` : ''}
-        //                         <div class="screen1__info">
-        //                             <div class="screen1__name">${title}</div>
-        //                             <p class="screen1__price">${price}</p>
-        //                             <div class="screen1__cta">Đăng ký</div>
-        //                         </div>
-        //                     </div>
-        //                     `;
-        //     }
-        //     imageContainer.innerHTML = `
-        //     <div class="screen1__des">${services[currentPage].desc ? services[currentPage].desc : ''}</div>
-        //     <div class="screen1__pic">${imageElements}</div>
-        //     `;
-        //     const noteElm = document.querySelector('.screen1__note');
-        //     if (sservices[currentServiceId].descBottom) {
-        //         noteElm.innerHTML = sservices[currentServiceId].descBottom;
-        //     } else {
-        //         noteElm.innerHTML = 'Trên đây là giá niêm yết của các dịch vụ chính. Quý khách vui lòng đăng ký thông tin để nhận ưu đãi hấp dẫn và bảng giá chi tiết tất cả các dịch vụ'
-        //     }
-        // }
-
-        // function createPagination() {
-        //     var totalItems = services[currentServiceId].images.length;
-        //     var totalPages = Math.ceil(totalItems / itemsPerPage);
-
-        //     var paginationElement = document.querySelector(".pagination");
-        //     paginationElement.innerHTML = "";
-
-        //     var prevButton = document.createElement("a");
-        //     prevButton.href = "#";
-        //     prevButton.classList.add("pagination__item");
-        //     prevButton.id = "prev";
-        //     prevButton.innerHTML = "&laquo;";
-        //     paginationElement.appendChild(prevButton);
-
-        //     for (var i = 1; i <= totalPages; i++) {
-        //         var pageButton = document.createElement("a");
-        //         pageButton.href = "#";
-        //         pageButton.classList.add("pagination__item");
-        //         pageButton.id = i;
-        //         pageButton.innerHTML = i;
-        //         paginationElement.appendChild(pageButton);
-
-        //         // Kích hoạt số 1 khi trang được tải lần đầu tiên
-        //         if (i === 1) {
-        //             pageButton.classList.add("active");
-        //         }
-        //     }
-
-        //     var nextButton = document.createElement("a");
-        //     nextButton.href = "#";
-        //     nextButton.classList.add("pagination__item");
-        //     nextButton.id = "next";
-        //     nextButton.innerHTML = "&raquo;";
-        //     paginationElement.appendChild(nextButton);
-        // }
-
-        // function changePage(page) {
-        //     currentPage = page;
-        //     showPage(currentPage);
-
-        //     var paginationItems = document.querySelectorAll(".pagination__item");
-        //     for (var i = 0; i < paginationItems.length; i++) {
-        //         paginationItems[i].classList.remove("active");
-        //     }
-        //     document.getElementById(currentPage).classList.add("active");
-
-        //     // Disable/enable prev/next buttons
-        //     if (currentPage == 1) {
-        //         document.getElementById("prev").classList.add("disabled");
-        //     } else {
-        //         document.getElementById("prev").classList.remove("disabled");
-        //     }
-        //     if (currentPage == totalPages) {
-        //         document.getElementById("next").classList.add("disabled");
-        //     } else {
-        //         document.getElementById("next").classList.remove("disabled");
-        //     }
-        // }
-
-
-        // function inputHidden() {
-        //     for (var i = 0; i < menuItems.children.length; i++) {
-        //         menuItems.children[i].classList.remove("hidden");
-        //     }
-        // }
 
         // Xử lý tự động lấy trường dịch vụ trong Form
         function form() {
