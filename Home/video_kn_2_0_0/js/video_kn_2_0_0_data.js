@@ -7,6 +7,20 @@ const video_kn_2_0_0_data = [
         item: [
             {
                 season: 'Mùa 6',
+                episode: 'Tập 4',
+                link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-4-tran-van-tu/',
+                thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/05/thumb-tvt.jpg',
+                alt: 'Hành Trình Lột Xác mùa 6 | Tập 4: Trần Văn Tự - Chàng sứt môi',
+            },
+            {
+                season: 'Mùa 6',
+                episode: 'Tập 3',
+                link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-3-pham-dieu-linh/',
+                thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/05/thumb-linh.jpg',
+                alt: 'Hành Trình Lột Xác mùa 6 | Tập 3: Phạm Diệu Linh - Giải cứu sẹo bỏng dài 30cm',
+            },
+            {
+                season: 'Mùa 6',
                 episode: 'Tập 2',
                 link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-2-tran-thi-xuan-mai/',
                 thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/04/thumb-vid-xuan-mai.jpg',
