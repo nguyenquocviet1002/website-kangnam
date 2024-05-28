@@ -23,8 +23,284 @@
         </div>
         <div class="container">
             <div class="doctor_kn_2_1_0__main">
-                <div class="doctor_kn_2_1_0__category"></div>
-                <div class="doctor_kn_2_1_0__doctor"></div>
+                <div class="doctor_kn_2_1_0__category">
+                    <button onclick="preCate()">❮</button>
+                    <ul>
+                        <li class="doctor_kn_2_1_0__categoryActive" onclick="handleCate('Bác sĩ phẫu thuật thẩm mỹ')">
+                            Bác sĩ phẫu thuật thẩm mỹ</li>
+                        <li class="" onclick="handleCate('Bác sĩ da liễu')">Bác sĩ da liễu</li>
+                        <li class="" onclick="handleCate('Bác sĩ răng hàm mặt')">Bác sĩ răng hàm mặt</li>
+                    </ul>
+                    <button onclick="nextCate()">❯</button>
+                </div>
+                <div class="doctor_kn_2_1_0__doctor">
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/richard-huy/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2020/01/Richard-1.png"
+                                alt="RICHARD HUY">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Tiến sĩ - Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">RICHARD HUY</h2>
+                                </div>
+                                <span>20 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Giám đốc chuyên môn</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/bac-si-ck1-dr-felix-tran/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2020/01/Felix.png"
+                                alt="Felix Trần">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ CK1</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Felix Trần</h2>
+                                </div>
+                                <span>20 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Cố vấn chuyên môn</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/henry-nguyen/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2020/11/Henry.png"
+                                alt="HENRY NGUYỄN">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">HENRY NGUYỄN</h2>
+                                </div>
+                                <span>12 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-robinson/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Robinson.png"
+                                alt="Robinson">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Robinson</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-donald-trung/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Patrick.png"
+                                alt="Donald Trung">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Donald Trung</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-frankie-vu/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Frankie.png"
+                                alt="Frankie Vũ">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Frankie Vũ</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-albert-bui/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Albert.png"
+                                alt="Albert Bùi">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Albert Bùi</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-jihun-huynh/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Jihyun.png"
+                                alt="Jihun Huỳnh">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Jihun Huỳnh</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-louis-truong/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Louis.png"
+                                alt="Louis Trương">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Louis Trương</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-mark-nguyen/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Mark.png"
+                                alt="Mark Nguyễn">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Mark Nguyễn</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-harvey-nguyen/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Harvey.png"
+                                alt="Harvey Nguyễn">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Harvey Nguyễn</h2>
+                                </div>
+                                <span>20 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-william-t-hai/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/William.png"
+                                alt="William T.Hai">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">William T.Hai</h2>
+                                </div>
+                                <span>8 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/dr-steven-hoang/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2022/09/Steven.png"
+                                alt="Steven Hoàng">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ</div>
+                                    <h2 class="doctor_kn_2_1_0__name">Steven Hoàng</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Bác sĩ phẫu thuật thẩm mỹ</div>
+                        </div>
+                    </a>
+                    <a class="doctor_kn_2_1_0__item"
+                        href="https://benhvienthammykangnam.vn/doi-ngu-bac-si/thomas-nguyen/">
+                        <div class="doctor_kn_2_1_0__img">
+                            <img width="269" height="456"
+                                src="https://benhvienthammykangnam.vn/wp-content/uploads/2023/11/Thomas.png"
+                                alt="THOMAS NGUYEN">
+                        </div>
+                        <div class="doctor_kn_2_1_0__box">
+                            <div class="doctor_kn_2_1_0__info">
+                                <div class="doctor_kn_2_1_0__content">
+                                    <div class="doctor_kn_2_1_0__degree">Bác sĩ CK1</div>
+                                    <h2 class="doctor_kn_2_1_0__name">THOMAS NGUYEN</h2>
+                                </div>
+                                <span>10 năm</span>
+                            </div>
+                            <div class="doctor_kn_2_1_0__line"></div>
+                            <div class="doctor_kn_2_1_0__pos">Chuyên gia Tạo hình Vóc dáng</div>
+                        </div>
+                    </a>
+                </div>
 
                 <div class="doctor_kn_2_1_0__pagination">
 
