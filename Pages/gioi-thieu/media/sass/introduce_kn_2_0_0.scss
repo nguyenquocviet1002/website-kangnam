@@ -23,6 +23,29 @@
         margin: 0 auto;
     }
 
+    &__bgPic {
+        width: 1140px;
+        max-width: 100%;
+        position: relative;
+    }
+
+    &__ratioBox {
+        width: 100%;
+        padding-top: 40%;
+    }
+
+    &__picContent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 22px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(../images/page2-dt.webp) center 0 no-repeat;
+    }
+
     &__desc {
         text-align: justify;
         text-align-last: center;
@@ -590,6 +613,14 @@
                 width: 85px;
                 height: 50px;
             }
+        }
+
+        &__picContent {
+            background: url(../images/page2-mb.webp) center 0 no-repeat;
+        }
+
+        &__ratioBox {
+            padding-top: 130%;
         }
     }
 
