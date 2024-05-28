@@ -44,6 +44,7 @@
         justify-content: center;
         align-items: center;
         background: url(../images/page2-dt.webp) center 0 no-repeat;
+        background-size: 100%;
     }
 
     &__desc {
@@ -617,6 +618,7 @@
 
         &__picContent {
             background: url(../images/page2-mb.webp) center 0 no-repeat;
+            background-size: 100%;
         }
 
         &__ratioBox {
