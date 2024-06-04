@@ -7,6 +7,13 @@ const video_kn_2_0_0_data = [
         item: [
             {
                 season: 'Mùa 6',
+                episode: 'Tập 5',
+                link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-5-kim-phuong-co-gai-ho-loi-lot-xac/',
+                thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/06/thumb-vid-kp.jpg',
+                alt: 'Hành Trình Lột Xác mùa 6 | Tập 5: Kim Phượng – Cô gái “hở lợi” lột xác',
+            },
+            {
+                season: 'Mùa 6',
                 episode: 'Tập 4',
                 link: 'https://benhvienthammykangnam.vn/hanh-trinh-lot-xac-kangnam/hanh-trinh-lot-xac-mua-6-tap-4-tran-van-tu/',
                 thumb: 'https://benhvienthammykangnam.vn/wp-content/uploads/2024/05/thumb-tvt.jpg',
