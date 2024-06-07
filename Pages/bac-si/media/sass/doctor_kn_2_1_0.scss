@@ -1,25 +1,29 @@
 .doctor_kn_2_1_0 {
     font-family: var(--primary-font);
-
+    .container-full {
+        margin: 0 100px;
+    }
     &__banner {
-        background: url(../images/banner.jpg) center 0 no-repeat;
+        background: url(../images/banner-v2.webp) center 0 no-repeat;
         background-size: 1920px;
         min-height: 702px;
+        max-width: 1920px;
+        margin: 0 auto;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        padding-bottom: 50px;
     }
 
     &__text {
-        margin-left: auto;
-        width: 48%;
+        width: 25%;
         color: #fff;
-        margin-top: 120px;
+        text-align: justify;
 
-        h1 {
+        span {
             font-family: var(--primary-font);
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 32px;
+            font-size: 31px;
             display: block;
             margin-bottom: 10px;
         }
@@ -208,15 +212,40 @@
     &__active {
         border-color: #000 !important;
     }
-
+    @media (max-width: 1690px) {
+        &__banner {
+          background-size: 1690px;
+          min-height: 615px;
+        }
+    }
     @media (max-width: 1440px) {
         &__banner {
             background-size: 1440px;
             min-height: 525px;
         }
+        &__text {
+            span {
+                font-size: 28px;
+            }
+    
+            p {
+                font-size: 14px;
+            }
+        }
     }
 
     @media (max-width: 1200px) {
+        .container-full {
+            margin: 0 65px;
+        }
+        &__banner {
+            background-size: 1200px;
+            min-height: 435px;
+            padding-bottom: 30px;
+        }
+        &__text {
+            width: 30%;
+        }
         &__img {
             height: 360px;
         }
@@ -235,15 +264,26 @@
     }
 
     @media (max-width: 1024px) {
+        &__banner {
+            background-size: 1024px;
+            min-height: 375px;
+            padding-bottom: 30px;
+        }
+        &__text {
+            width: 35%;
+        }
         &__img {
             height: 35vw;
         }
     }
 
     @media (max-width: 912px) {
+        .container-full {
+            margin: 0 25px;
+        }
         &__banner {
-            background-size: 1080px;
-            min-height: 396px;
+            background-size: 1200px;
+            min-height: 435px;
         }
 
         &__item {
@@ -255,8 +295,7 @@
         }
 
         &__text {
-            width: 50%;
-            margin-top: 30px;
+            width: 35%;
 
             span {
                 font-size: 23px;
@@ -284,10 +323,9 @@
         &__line{
             display: none;
         }
-        &__banner {
-            display: none;
+        &__text {
+            width: 50%;
         }
-
         &__doctor {
             justify-content: center;
         }
@@ -319,7 +357,21 @@
             width: 48%;
         }
     }
-
+    @media (max-width: 500px) {
+        .container-full {
+          margin-right: auto;
+          margin-left: auto;
+        }
+        &__banner {
+          background: url(../images/banner-v2mb.webp) center 0 no-repeat;
+          background-size: 500px;
+          min-height: 680px;
+          padding-bottom: 30px;
+        }
+        &__text {
+          width: 100%;
+        }
+    }
     @media (max-width: 374px) {
         &__item {
             width: 100%;
