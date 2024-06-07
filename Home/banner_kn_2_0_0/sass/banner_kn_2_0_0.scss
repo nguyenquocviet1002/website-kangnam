@@ -1,87 +1,116 @@
 .banner_kn_2_0_0 {
-    font-family: var(--primary-font);
+  font-family: var(--primary-font);
+  .container-full {
+    margin: 0 100px;
+  }
+  &__banner {
+    background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/banner_kn_2_0_0/images/banner-v2.webp') center 0 no-repeat;
+    // background: url(../images/banner-v2.webp) center 0 no-repeat;
+    background-size: 1920px;
+    min-height: 702px;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 50px;
+  }
+  &__text {
+    width: 25%;
+    color: #fff;
+    text-align: justify;
+    span {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 31px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+  @media (max-width: 1690px) {
     &__banner {
-        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/banner_kn_2_0_0/images/banner.webp') center 0 no-repeat;
-        background-size: 1920px;
-        min-height: 702px;
-        display: flex;
-        align-items: center;
+      background-size: 1690px;
+      min-height: 615px;
+    }
+  }
+  @media (max-width: 1440px) {
+    &__banner {
+      background-size: 1440px;
+      min-height: 525px;
     }
     &__text {
-        margin-left: auto;
-        width: 48%;
-        color: #fff;
-        margin-top: 120px;
-        span {
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 31px;
-            display: block;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 16px;
-            font-weight: 400;
-            margin: 0;
-        }
+      span {
+        font-size: 28px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
-    @media (max-width: 1440px) {
-        &__banner {
-            background-size: 1440px;
-            min-height: 525px;
-        }
+  }
+  @media (max-width: 1200px) {
+    .container-full {
+      margin: 0 65px;
     }
-    @media (max-width: 1180px) {
-        &__text {
-            span {
-                font-size: 28px;
-            }
-            p {
-                font-size: 14px;
-            }
-        }
+    &__banner {
+      background-size: 1200px;
+      min-height: 435px;
+      padding-bottom: 30px;
     }
-    @media (max-width: 912px) {
-        &__banner {
-            background-size: 1080px;
-            min-height: 396px;
-        }
-        &__text {
-            width: 50%;
-            margin-top: 30px;
-            span {
-                font-size: 23px;
-            }
-        }
+    &__text {
+      width: 30%;
     }
-    @media (max-width: 767px) {
-        &__banner {
-            display: none;
-        }
-        &__item {
-            p {
-                font-size: 14px;
-            }
-            button {
-                font-size: 12px;
-                padding: 5px 10px;
-            }
-        }
+  }
+  @media (max-width: 1024px) {
+    &__banner {
+      background-size: 1024px;
+      min-height: 375px;
+      padding-bottom: 30px;
     }
-    @media (max-width: 350px) {
-        &__box {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        &__item {
-            p {
-                font-size: 14px;
-            }
-            button {
-                font-size: 12px;
-                padding: 5px 10px;
-            }
-        }
+    &__text {
+      width: 35%;
     }
+  }
+  @media (max-width: 912px) {
+    .container-full {
+      margin: 0 25px;
+    }
+    &__banner {
+      background-size: 1200px;
+      min-height: 435px;
+    }
+    &__text {
+      width: 35%;
+      span {
+        font-size: 23px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    &__banner {
+        display: none;
+    }
+    &__text {
+      width: 50%;
+    }
+  }
+  @media (max-width: 500px) {
+    .container-full {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    &__banner {
+      background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/banner_kn_2_0_0/images/banner-v2mb.webp') center 0 no-repeat;
+      // background: url(../images/banner-v2mb.webp) center 0 no-repeat;
+      background-size: 500px;
+      min-height: 680px;
+      padding-bottom: 30px;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
 }
