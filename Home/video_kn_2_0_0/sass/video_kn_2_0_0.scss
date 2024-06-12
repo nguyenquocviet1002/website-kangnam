@@ -48,6 +48,13 @@
     &__inner{
         display: flex;
         gap: 50px;
+        &--pc{
+            display: flex;
+            gap: 50px;
+        }
+        &--mb{
+            display: none;
+        }
     }
     &__select{
         width: 35%;
@@ -160,6 +167,14 @@
         &__inner{
             flex-direction: column-reverse;
             gap: 15px;
+            &--pc{
+                display: none;
+            }
+            &--mb{
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 15px;
+            }
         }
         &__select{
             width: initial;

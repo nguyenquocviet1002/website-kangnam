@@ -38,7 +38,7 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
             <a href="${data[index].link}">
                 <picture>
                     <source media="(max-width: 767px)" width="414" height="500" srcset="${data[index].mb}" loading="lazy">
-                    <img width="1920" height="768" class="lazy" data-src="${data[index].pc}" alt="" loading="lazy">
+                    <img width="1920" height="768" class="lazy" data-src="${data[index].pc}" alt="${data[index].title}" loading="lazy">
                 </picture>
             </a>
             `;
@@ -115,8 +115,31 @@ function runSlide({ data = [], position = '', isPagination = false, isControl = 
     }
 }
 
-runSlide({
-    data: dataSlide1,
-    position: 'slider_kn_2_0_0',
-    isPagination: true,
-})
+const querySlide = async () => {
+    const response =  await fetch('https://benhvienthammykangnam.vn/wp-json/wp/v2/pages/257729');
+    const data =  await response.json();
+    const dataAcfLayout = data.acf.group_page_field.body_custom;
+    const dataAfcLayoutFilter = dataAcfLayout.filter(item => {
+        return item.acf_fc_layout === "slider_kn_2_0_0";
+    });
+    const dataSlide1 = [];
+    dataAfcLayoutFilter[0].slide.map(item => {
+        const splitData = item.img.split('\r\n');
+        dataSlide1.push({
+            title: splitData[0],
+            pc: splitData[1],
+            mb: splitData[2],
+            link: splitData[3],
+        });
+    });
+
+    runSlide({
+        data: dataSlide1,
+        position: 'slider_kn_2_0_0',
+        isPagination: true,
+    })
+}
+
+querySlide();
+
+window.addEventListener("resize", () => location.reload());
