@@ -182,7 +182,7 @@
   <script src="https://benhvienthammykangnam.vn/css/lib/lib.min.js"></script>
   <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js?ver=10"></script>
   <script src="https://benhvienthammykangnam.vn/css/lib/js_v2.min.js"></script>
-  
+
   <script>
     // Get API User
     const getDoctor = async () => {
@@ -191,14 +191,29 @@
       console.log("data: ", data);
       return data;
     };
-  
+
     let doctor_kn_2_1_0__data = [];
-  
+
     const categories = ['Bác sĩ phẫu thuật thẩm mỹ', 'Bác sĩ da liễu', 'Bác sĩ răng hàm mặt']
-  
+
     let cate = 'Bác sĩ phẫu thuật thẩm mỹ';
     let cateIndex = 0
-    const filterData = (filter) => doctor_kn_2_1_0__data.filter(item => item.category === filter)
+    const filterData = (filter) => {
+      const arrDoctor = [];
+      doctor_kn_2_1_0__data.map(item => {
+        if (typeof item.category === 'string') {
+          if (item.category === filter) {
+            arrDoctor.push(item);
+          };
+        }
+        else {
+          for (let i = 0; i < item.category.length; i++) {
+            if (item.category[i] === filter) arrDoctor.push(item);
+          }
+        }
+      })
+      return arrDoctor;
+    }
     const handleCate = (item) => {
       cate = item
       cateIndex = categories.indexOf(item)
@@ -269,19 +284,19 @@
           </ul>
           <button>❯</button>`
     }
-  
+
     const render = () => {
       renderCate()
       // renderPagination()
       renderDoctor(filterData(cate))
     }
-  
+
     window.onload = async () => {
       doctor_kn_2_1_0__data = await getDoctor()
       render()
     }
   </script>
-  
+
   <script>
     document.querySelector(
       '#contact_kn_2_0_0__boxMb input[name="first_url"]'
@@ -316,7 +331,7 @@
       });
     });
   </script>
-  
+
   <script>
     document.addEventListener("scroll", function () {
       myLazy('img.lazy', 'src');
@@ -327,13 +342,13 @@
       // onScroll('.header_1_1_0__list a', 'section', 'active');
     });
     LazyShowScreen('img.lazy', 'src')
-  
+
     // scrollClick('.header_1_1_0__list a, a[href="#pageReg"]');
-  
+
     function myLazy(sec, attr) {
       const section_loads = document.querySelectorAll(sec);
       let winTop = window.innerHeight;
-  
+
       for (let i = 0; i < section_loads.length; i++) {
         let pos_top = section_loads[i].getBoundingClientRect().top;
         let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
@@ -361,14 +376,14 @@
             default:
               console.log(`Sorry, we are out of ${attr}.`);
           }
-  
+
         }
       }
     }
     function LazyShowScreen(sec, attr) {
       const section_loads = document.querySelectorAll(sec);
       let win_height = screen.height;
-  
+
       for (let i = 0; i < section_loads.length; i++) {
         if (section_loads[i].getBoundingClientRect().top < win_height) {
           switch (attr) {
