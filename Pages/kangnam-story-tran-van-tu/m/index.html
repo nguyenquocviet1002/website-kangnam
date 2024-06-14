@@ -135,7 +135,22 @@
 
     let cate = 'Bác sĩ phẫu thuật thẩm mỹ';
     let cateIndex = 0
-    const filterData = (filter) => doctor_kn_2_1_0__data.filter(item => item.category === filter)
+    const filterData = (filter) => {
+        const arrDoctor = [];
+        doctor_kn_2_1_0__data.map(item => {
+            if (typeof item.category === 'string') {
+                if (item.category === filter) {
+                    arrDoctor.push(item);
+                };
+            }
+            else {
+                for (let i = 0; i < item.category.length; i++) {
+                    if (item.category[i] === filter) arrDoctor.push(item);
+                }
+            }
+        })
+        return arrDoctor;
+    }
     const handleCate = (item) => {
         cate = item
         cateIndex = categories.indexOf(item)
