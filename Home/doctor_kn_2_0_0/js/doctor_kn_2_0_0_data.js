@@ -44,5 +44,14 @@ const doctors = [
     note: "- Phó khoa Tạo hình vóc dáng BVTM Kangnam. <br> - Trên 10 năm kinh nghiệm.",
     link: 'https://benhvienthammykangnam.vn/doi-ngu-bac-si/thomas-nguyen/',
   },
+  {
+    name: "Joy Nguyen",
+    image: "https://benhvienthammykangnam.vn/wp-content/uploads/2024/06/bacsi-small8.jpg",
+    picture: "https://benhvienthammykangnam.vn/wp-content/uploads/2024/06/bacsi.jpg",
+    level: "Bác sĩ",
+    position: "Chuyên gia răng hàm mặt",
+    note: "- Trưởng khoa Hàm mặt, Bệnh viện Thẩm mỹ Kangnam Sài Gòn. <br> - Cố vấn chuyên môn, bác sĩ phẫu thuật chương trình thực tế 'Hành trình Lột xác' <br/> - 10 năm kinh nghiệm trong lĩnh vực Hàm mặt.",
+    link: 'https://benhvienthammykangnam.vn/doi-ngu-bac-si/thomas-nguyen/',
+  },
   // Thêm các thông tin của bác sĩ khác vào đây
 ];
