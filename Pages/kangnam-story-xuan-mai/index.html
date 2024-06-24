@@ -13,7 +13,7 @@
 <body>
   <section class="screen1 load">
     <div class="container">
-      <img width="1140" height="691" src="media/images/page1-bg.jpg"
+      <img width="1140" height="691" class="lazy" data-src="media/images/page1-bg.jpg"
         alt="Rồi ngày mai mùa xuân sẽ đến Trần Thị Xuân Mai">
     </div>
   </section>
@@ -29,7 +29,8 @@
 
   <section class="screen3 load">
     <div class="container">
-      <img width="1140" height="644" src="media/images/page3-bg.jpg" alt="Tình trạng Xuân Mai gặp phải">
+      <img width="1140" height="644" class="lazy" data-src="media/images/page3-bg.jpg"
+        alt="Tình trạng Xuân Mai gặp phải">
     </div>
   </section>
 
@@ -60,7 +61,7 @@
         <div class="screen5__bgOverlay"></div>
         <img width="1140" height="779" class="lazy" data-src="media/images/thumb-video.jpg"
           alt="Xuân Mai cô bé Vương miện sắt">
-        <img class="screen5__play" width="100" height="100" src="media/images/icon-play.png" alt="play">
+        <img class="screen5__play lazy" width="100" height="100" data-src="media/images/icon-play.png" alt="play">
       </div>
       <img width="1140" height="1182" class="lazy" data-src="media/images/page5-bg2.jpg" alt="Ngày mai có mùa Xuân">
     </div>
@@ -71,15 +72,15 @@
       <div class="contact_kn_2_0_0__pc">
         <div class="contact_kn_2_0_0__box load fadeInUp">
           <div class="contact_kn_2_0_0__item">
-            <img width="43" height="43"
-              src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/like.svg"
+            <img width="43" height="43" class="lazy"
+              data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/like.svg"
               alt="báo giá" />
             <p>Nhận báo giá</p>
             <button class="contact_kn_2_0_0__more knprice">Nhận ngay</button>
           </div>
           <div class="contact_kn_2_0_0__item">
-            <img width="43" height="43"
-              src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/doctor.svg"
+            <img width="43" height="43" class="lazy"
+              data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/doctor.svg"
               alt="tư vấn" />
             <p>Đặt lịch tư vấn</p>
             <button class="contact_kn_2_0_0__more kntv">Tư vấn ngay</button>
@@ -179,11 +180,11 @@
       </div>
     </div>
   </div>
-  
+
   <script src="https://benhvienthammykangnam.vn/css/lib/lib.min.js"></script>
   <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js?ver=10"></script>
   <script src="https://benhvienthammykangnam.vn/css/lib/js_v2.min.js"></script>
-  
+
   <script>
     // Get API User
     const getDoctor = async () => {
@@ -192,11 +193,11 @@
       console.log("data: ", data);
       return data;
     };
-  
+
     let doctor_kn_2_1_0__data = [];
-  
+
     const categories = ['Bác sĩ phẫu thuật thẩm mỹ', 'Bác sĩ da liễu', 'Bác sĩ răng hàm mặt']
-  
+
     let cate = 'Bác sĩ phẫu thuật thẩm mỹ';
     let cateIndex = 0
     const filterData = (filter) => doctor_kn_2_1_0__data.filter(item => item.category === filter)
@@ -270,19 +271,19 @@
           </ul>
           <button>❯</button>`
     }
-  
+
     const render = () => {
       renderCate()
       // renderPagination()
       renderDoctor(filterData(cate))
     }
-  
+
     window.onload = async () => {
       doctor_kn_2_1_0__data = await getDoctor()
       render()
     }
   </script>
-  
+
   <script>
     document.querySelector(
       '#contact_kn_2_0_0__boxMb input[name="first_url"]'
@@ -317,7 +318,7 @@
       });
     });
   </script>
-  
+
   <script>
     document.addEventListener("scroll", function () {
       myLazy('img.lazy', 'src');
@@ -328,13 +329,13 @@
       // onScroll('.header_1_1_0__list a', 'section', 'active');
     });
     LazyShowScreen('img.lazy', 'src')
-  
+
     // scrollClick('.header_1_1_0__list a, a[href="#pageReg"]');
-  
+
     function myLazy(sec, attr) {
       const section_loads = document.querySelectorAll(sec);
       let winTop = window.innerHeight;
-  
+
       for (let i = 0; i < section_loads.length; i++) {
         let pos_top = section_loads[i].getBoundingClientRect().top;
         let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
@@ -362,14 +363,14 @@
             default:
               console.log(`Sorry, we are out of ${attr}.`);
           }
-  
+
         }
       }
     }
     function LazyShowScreen(sec, attr) {
       const section_loads = document.querySelectorAll(sec);
       let win_height = screen.height;
-  
+
       for (let i = 0; i < section_loads.length; i++) {
         if (section_loads[i].getBoundingClientRect().top < win_height) {
           switch (attr) {

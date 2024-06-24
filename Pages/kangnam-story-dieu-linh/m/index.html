@@ -14,7 +14,7 @@
 <body>
     <section class="screen1 load">
         <div class="container">
-            <img width="1140" height="807" src="media/images/page1-bg.jpg"
+            <img width="1140" height="807" class="lazy" data-src="media/images/page1-bg.jpg"
                 alt="Giải cứu sẹo dài từ quá khứ Phạm Diệu Linh	">
         </div>
     </section>
@@ -31,18 +31,18 @@
             <div class="screen3__box">
                 <p class="screen3__title">Phương án dành riêng <br> <span>dành cho</span> Diệu Linh</p>
                 <div class="screen3__boxPic">
-                    <img width="1140" height="641" src="media/images/page3-img1.jpg"
+                    <img width="1140" height="641" class="lazy" data-src="media/images/page3-img1.jpg"
                         alt="DIỆU LINH ĐẶT TÚI DÃN DA (TẠO VÙNG DA THỪA GHÉP VÀO KHU VỰC SẸO XẤU)">
                     <p class="screen3__textPic2">Đặt túi dãn da (tạo vùng da thừa ghép vào khu vực sẹo xấu)</p>
                 </div>
                 <div class="screen3__boxPic2">
                     <div class="screen3__itemPic">
-                        <img width="570" height="643" src="media/images/page3-img2.jpg"
+                        <img width="570" height="643" class="lazy" data-src="media/images/page3-img2.jpg"
                             alt="DIỆU LINH NUÔI CẤY DA MỚI Ở VÙNG CẮT BỎ SẸO">
                         <p class="screen3__textPic1">Cắt bỏ sẹo xấu</p>
                     </div>
                     <div class="screen3__itemPic">
-                        <img width="570" height="643" src="media/images/page3-img3.jpg"
+                        <img width="570" height="643" class="lazy" data-src="media/images/page3-img3.jpg"
                             alt="CẮT BỎ SẸO XẤU CHO DIỆU LINH">
                         <p class="screen3__textPic1">Nuôi cấy da mới ở vùng cắt bỏ sẹo</p>
                     </div>
@@ -92,17 +92,18 @@
                 <div class="screen6__boxLeft">
                     <div class="screen6__video modal-clip" data-video="024WR7rmE48" data-modal="modal-clip">
                         <div class="screen6__bgOverlay"></div>
-                        <img width="575" height="497" src="media/images/thumb-video.jpg"
+                        <img width="575" height="497" class="lazy" data-src="media/images/thumb-video.jpg"
                             alt="Diệu Linh giải cứu sẹo bỏng dài 30cm">
-                        <img class="screen6__play" width="100" height="100" src="media/images/icon-play.png" alt="play">
+                        <img class="screen6__play lazy" width="100" height="100" data-src="media/images/icon-play.png"
+                            alt="play">
                     </div>
-                    <img width="575" height="497" src="media/images/page6-img1.jpg"
+                    <img width="575" height="497" class="lazy" data-src="media/images/page6-img1.jpg"
                         alt="Diệu Linh lột xác sau phẫu thuật">
                 </div>
                 <div class="screen6__boxRight">
-                    <img width="569" height="506" src="media/images/page6-img3.jpg"
+                    <img width="569" height="506" class="lazy" data-src="media/images/page6-img3.jpg"
                         alt="Ngoại hình hiện tại của Diệu Linh">
-                    <img width="574" height="506" src="media/images/page6-img2.jpg"
+                    <img width="574" height="506" class="lazy" data-src="media/images/page6-img2.jpg"
                         alt="Diệu Linh thấy tự tin hơn khi giao tiếp với người khác">
                 </div>
             </div>
@@ -114,15 +115,15 @@
             <div class="contact_kn_2_0_0__pc">
                 <div class="contact_kn_2_0_0__box load fadeInUp">
                     <div class="contact_kn_2_0_0__item">
-                        <img width="43" height="43"
-                            src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/like.svg"
+                        <img width="43" height="43" class="lazy"
+                            data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/like.svg"
                             alt="báo giá" />
                         <p>Nhận báo giá</p>
                         <button class="contact_kn_2_0_0__more knprice">Nhận ngay</button>
                     </div>
                     <div class="contact_kn_2_0_0__item">
-                        <img width="43" height="43"
-                            src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/doctor.svg"
+                        <img width="43" height="43" class="lazy"
+                            data-src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/contact_kn_2_0_0/images/doctor.svg"
                             alt="tư vấn" />
                         <p>Đặt lịch tư vấn</p>
                         <button class="contact_kn_2_0_0__more kntv">Tư vấn ngay</button>
@@ -226,7 +227,7 @@
     <script src="https://benhvienthammykangnam.vn/css/lib/lib.min.js"></script>
     <script src="https://benhvienthammykangnam.vn/css/landing/option.min.js?ver=10"></script>
     <script src="https://benhvienthammykangnam.vn/css/lib/js_v2.min.js"></script>
-    
+
     <script>
         // Get API User
         const getDoctor = async () => {
@@ -235,11 +236,11 @@
             console.log("data: ", data);
             return data;
         };
-    
+
         let doctor_kn_2_1_0__data = [];
-    
+
         const categories = ['Bác sĩ phẫu thuật thẩm mỹ', 'Bác sĩ da liễu', 'Bác sĩ răng hàm mặt']
-    
+
         let cate = 'Bác sĩ phẫu thuật thẩm mỹ';
         let cateIndex = 0
         const filterData = (filter) => doctor_kn_2_1_0__data.filter(item => item.category === filter)
@@ -313,19 +314,19 @@
             </ul>
             <button>❯</button>`
         }
-    
+
         const render = () => {
             renderCate()
             // renderPagination()
             renderDoctor(filterData(cate))
         }
-    
+
         window.onload = async () => {
             doctor_kn_2_1_0__data = await getDoctor()
             render()
         }
     </script>
-    
+
     <script>
         document.querySelector(
             '#contact_kn_2_0_0__boxMb input[name="first_url"]'
@@ -360,7 +361,7 @@
             });
         });
     </script>
-    
+
     <script>
         document.addEventListener("scroll", function () {
             myLazy('img.lazy', 'src');
@@ -371,13 +372,13 @@
             // onScroll('.header_1_1_0__list a', 'section', 'active');
         });
         LazyShowScreen('img.lazy', 'src')
-    
+
         // scrollClick('.header_1_1_0__list a, a[href="#pageReg"]');
-    
+
         function myLazy(sec, attr) {
             const section_loads = document.querySelectorAll(sec);
             let winTop = window.innerHeight;
-    
+
             for (let i = 0; i < section_loads.length; i++) {
                 let pos_top = section_loads[i].getBoundingClientRect().top;
                 let pos_bottom = section_loads[i].getBoundingClientRect().bottom;
@@ -405,14 +406,14 @@
                         default:
                             console.log(`Sorry, we are out of ${attr}.`);
                     }
-    
+
                 }
             }
         }
         function LazyShowScreen(sec, attr) {
             const section_loads = document.querySelectorAll(sec);
             let win_height = screen.height;
-    
+
             for (let i = 0; i < section_loads.length; i++) {
                 if (section_loads[i].getBoundingClientRect().top < win_height) {
                     switch (attr) {
