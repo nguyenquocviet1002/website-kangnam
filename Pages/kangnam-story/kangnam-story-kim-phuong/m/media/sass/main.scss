@@ -18,6 +18,10 @@
 
 .screen1,
 .screen2 {
+    .container {
+        padding: 0;
+    }
+
     img {
         width: 100%;
         height: auto;
@@ -37,7 +41,7 @@
         padding: 12px;
         width: 75%;
         display: block;
-        margin: 35px auto;
+        margin: 0 auto 35px;
 
         span {
             font-weight: 500;
