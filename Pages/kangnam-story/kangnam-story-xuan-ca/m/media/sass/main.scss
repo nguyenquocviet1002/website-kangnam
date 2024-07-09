@@ -173,6 +173,20 @@
             padding: 10px 30px;
         }
     }
+    .form-group {
+        margin-bottom: 10px;
+        &.invalid {
+          input,
+          select {
+            border: 1px solid red;
+          }
+        }
+      }
+      
+      .form-message {
+        color: #fff;
+        font-size: 12px;
+      }
 }
 
 .storyDetail_kn_1_0_0 {
