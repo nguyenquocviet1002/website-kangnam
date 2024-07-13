@@ -45,7 +45,7 @@ const doctors = [
     link: 'https://benhvienthammykangnam.vn/doi-ngu-bac-si/thomas-nguyen/',
   },
   {
-    name: "Joy Nguyen",
+    name: "Edward Nguyễn",
     image: "https://benhvienthammykangnam.vn/wp-content/uploads/2024/06/bacsi-small8.jpg",
     picture: "https://benhvienthammykangnam.vn/wp-content/uploads/2024/06/bacsi.jpg",
     level: "Bác sĩ",
