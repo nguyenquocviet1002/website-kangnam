@@ -1,0 +1,76 @@
+body {
+    padding-top: 0 !important;
+}
+
+.header_kn_2_0_0 {
+    display: none;
+}
+
+.header_1_0_0 {
+    background-color: #003c77;
+    position: relative;
+    height: 65px;
+    display: flex;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: block;
+        width: 142px;
+        margin: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: flex;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .container {
+            justify-content: center;
+        }
+
+        &__pic {
+            display: none;
+        }
+    }
+}
+
+.content_1_0_0 {
+    &__title {
+        margin: 20px 0 10px;
+        font-size: 23px;
+        font-weight: 700;
+        color: #005699;
+    }
+
+    &__box {
+
+        p,
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 430px) {
+        &__title {
+            font-size: 20px;
+        }
+    }
+}
+
+.footer_kn_2_0_0 {
+    &__contact {
+        justify-content: center !important;
+    }
+
+    &__contactItem.kntv {
+        display: none !important;
+    }
+}
