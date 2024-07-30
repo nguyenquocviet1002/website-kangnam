@@ -4,7 +4,7 @@ const popup_regist_1_2_0 = `
         <div class="popup_regist_1_2_0__form" id="regist_ft_1_0_0__form">          
             <div class="popup_regist_1_2_0__title">
                 <img width="130" height="auto"
-                    src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Popup/popup_regist_1_2_0/images/head.webp" alt="Logo Kangnam">
+                    src="https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Popup/popup_regist_1_2_0/images/head.jpg" alt="Logo Kangnam">
                     </div>
                     <b id="close-form">╳</b>
             <article>
