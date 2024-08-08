@@ -51,7 +51,7 @@ const doctors = [
     level: "Bác sĩ",
     position: "Chuyên gia răng hàm mặt",
     note: "- Trưởng khoa Hàm mặt, Bệnh viện Thẩm mỹ Kangnam Sài Gòn. <br> - Cố vấn chuyên môn, bác sĩ phẫu thuật chương trình thực tế 'Hành trình Lột xác' <br/> - 10 năm kinh nghiệm trong lĩnh vực Hàm mặt.",
-    link: 'https://benhvienthammykangnam.vn/doi-ngu-bac-si/thomas-nguyen/',
+    link: 'https://benhvienthammykangnam.vn/doi-ngu-bac-si/edward-nguyen/',
   },
   // Thêm các thông tin của bác sĩ khác vào đây
 ];
