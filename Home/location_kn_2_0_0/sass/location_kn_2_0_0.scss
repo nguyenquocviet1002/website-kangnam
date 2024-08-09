@@ -13,11 +13,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
     &__item {
         position: relative;
-        width: 48%;
+        width: calc(50% - 14px);
+        margin: 7px;
         border: 1px solid #000000;
         padding: 15px 20px;
         border-radius: 15px;
@@ -32,7 +32,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
         &:nth-child(2n) {
             padding-left: 15px;
         }
@@ -56,8 +55,8 @@
     }
     &__action {
         display: flex;
-        gap: 10px;
         align-items: center;
+        justify-content: space-between;
         width: 60px;
         &Item {
             padding: 0;
@@ -72,11 +71,11 @@
         }
     }
     &__location {
-        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/location-icon.webp') center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/location-icon.png') center 0 no-repeat;
         background-size: 100%;
     }
     &__call {
-        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/phone-icon.webp') center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/phone-icon.png') center 0 no-repeat;
         background-size: 100%;
         &.callMB {
             display: none;
@@ -85,7 +84,7 @@
     &__plus {
         position: absolute;
         left: 0;
-        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/plus-icon.webp') center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/plus-icon.png') center 0 no-repeat;
         background-size: 100%;
         width: 30px;
         height: 34px;
@@ -158,8 +157,8 @@
         }
     }
     @media (max-width: 600px) {
-        &__box{
-            gap:10px;
+        &__item{
+            margin: 5px 0;
         }
         &__call {
             &.callPC {
@@ -182,11 +181,8 @@
                 font-size: 14px;
             }
         }
-        &__wrapper {
-            gap: 5px;
-        }
         &__action {
-            gap: 5px;
+            width: 50px;
             a {
                 width: 20px;
                 height: 20px;
