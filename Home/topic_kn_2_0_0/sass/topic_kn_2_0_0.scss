@@ -11,7 +11,6 @@
     &__box {
         display: flex;
         align-items: center;
-        gap: 30px;
         overflow-x: scroll;
         position: relative;
         scrollbar-width: thin;
@@ -30,9 +29,12 @@
     }
     &__item {
         position: relative;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
     }
     &__pic {
-        width: 358px;
+        width: 480px;
         overflow: hidden;
         img {
             width: 100%;
@@ -46,14 +48,14 @@
     }
     &__content {
         font-family: var(--primary-font);
-        font-weight: 600;
+        position: absolute;
+        bottom: 0;
         // background: #BEE0FF;
         padding: 18px;
         font-size: 15px;
         text-align: center;
         width: 100%;
         margin-bottom: 0;
-        margin-top: 0;
         background: rgba(190,224,255,.9);
         min-height: 80px;
         box-shadow: 0 0 4px rgba(0,0,0,.1);
@@ -61,8 +63,15 @@
         backdrop-filter: blur(5px);
     }
     @media (max-width: 600px) {
+        &__content{
+            font-size:13px;
+            padding:5px;
+            min-height: 55px;
+            position: relative;
+            margin: 0;
+        }
         &__pic {
-            width: 360px;
+            width: 220px;
         }
         &__title {
             font-size: 24px;
