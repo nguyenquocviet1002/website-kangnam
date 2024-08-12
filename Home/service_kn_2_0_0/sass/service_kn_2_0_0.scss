@@ -11,13 +11,12 @@
     &__box {
         display: flex;
         flex-wrap: wrap;
-        gap: 22px;
-        justify-content: center;
     }
     &__item {
         position: relative;
         z-index: 1;
-        width: 48%;
+        width: calc(50% - 20px);
+        margin: 10px 10px;
         transition: all 0.2s linear;
         &:hover {
             .service_kn_2_0_0__itemInner {
@@ -200,7 +199,6 @@
         &__btn--1 {
             display: flex;
             justify-content: flex-end;
-            gap: 5px;
             border-bottom: 1px solid #333;
             width: fit-content;
             text-align: right;
@@ -210,6 +208,7 @@
             span{
                 width: 10px;
                 height: 9px;
+                margin-left: 5px;
             }
         }
         &__itemInner {
@@ -222,6 +221,7 @@
         }
         &__item {
             width: 100%;
+            margin: 10px 0;
             &:nth-child(1){
                 order: 1;
             }
