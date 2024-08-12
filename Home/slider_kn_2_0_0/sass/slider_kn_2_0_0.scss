@@ -1,25 +1,26 @@
 .slider_kn_2_0_0{
     font-family: var(--primary-font);
-    position: relative;
     img{
-        opacity: 0.5;
-        visibility: hidden;
-        transition: 0.2s all ease-in-out;
+        display: block;
+        position: absolute;
+        inset: 0;
         width: 100%;
-        height: auto;
-        display: flex;
-        &.ani{
-            opacity: 1;
-            visibility: visible;
-        }
+        height: 100%;
+        object-fit: cover;
+    }
+    a{
+        padding-top: 40%;
+        display: block;
+        position: relative;
     }
     .pagination{
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
         display: flex;
+        justify-content: center;
         align-items: center;
+        position: relative;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        margin-top: -40px;
         &__item{
             background-color: #ffffff80;
             width: 25px;
@@ -36,14 +37,9 @@
             }
         }
     }
-    @media (max-width: 768px){
-        .pagination{
-            bottom: 5px;
-            &__item{
-                width: 20px;
-                height: 20px;
-                font-size: 14px;
-            }
+    @media (max-width: 767px){
+        a{
+            padding-top: 120%;
         }
     }
 }
