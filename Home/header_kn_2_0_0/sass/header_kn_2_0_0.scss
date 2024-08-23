@@ -136,6 +136,16 @@
     }
   }
 
+  &__search{
+    width: fit-content;
+    margin-left: 20px;
+    >a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   .view {
     display: none;
     width: 10%;
@@ -342,6 +352,9 @@
 
           >span {
             display: block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
           }
         }
 
@@ -349,6 +362,10 @@
           border-bottom: 1px solid #e1dddd;
         }
       }
+    }
+
+    &__search{
+      display: none;
     }
 
     .view {

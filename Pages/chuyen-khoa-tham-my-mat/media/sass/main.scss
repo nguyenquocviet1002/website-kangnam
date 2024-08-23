@@ -3,15 +3,16 @@
   padding: 55px 0 30px;
   &__inner{
     display: flex;
-    gap: 50px;
     align-items: center;
   }
   &__head{
     width: 50%;
+    margin: 0 10px;
   }
   &__video{
     flex: 1;
     position: relative;
+    margin: 0 10px;
     img{
       width: 100%;
       height: auto;
@@ -61,11 +62,11 @@
   &__box {
     display: flex;
     justify-content: center;
-    gap: 20px;
     padding: 30px 0 0;
   }
   &__item {
-    width: 24%;
+    width: calc(25% - 20px);
+    margin: 0 10px;
     text-align: center;
   }
   &__pic {
@@ -131,14 +132,17 @@
     &__title {
       font-size: 22px;
     }
-    &__box {
-      gap: 15px;
-    }
     &__name {
       font-size: 16px;
     }
     &__content {
       height: 90px;
+    }
+    &__box {
+    }
+    &__item{
+      width: calc(25% - 10px);
+      margin: 0 5px;
     }
   }
   @media (max-width: 767px) {
@@ -148,6 +152,10 @@
     }
     &__head{
       width: 100%;
+      margin: 0 0 10px;
+    }
+    &__video{
+      margin: 0;
     }
     &__play{
       width: 70px;
@@ -164,11 +172,11 @@
       width: 100%;
     }
     &__box {
-      gap: 10px;
       flex-wrap: wrap;
     }
     &__item {
-      width: 48%;
+      width: calc(50% - 10px);
+      margin-bottom: 10px;
     }
     &__name {
       font-size: 16px;
@@ -263,15 +271,18 @@
     }
     &__pic {
       width: 100%;
+      margin-top: 10px;
     }
     &__box {
-      gap: 20px;
       &:nth-child(2),
       &:nth-child(4),
       &:nth-child(6),
       &:nth-child(8) {
         flex-direction: column-reverse;
       }
+    }
+    &__text{
+      padding-top: 0;
     }
   }
 }
@@ -289,10 +300,10 @@
   &__items{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
   }
   &__item{
     width: calc(50% - 10px);
+    margin: 0 5px 10px;
     img{
       width: 100%;
       height: auto;
@@ -345,7 +356,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
   }
 
   &__more {
@@ -402,13 +412,13 @@
     justify-content: center;
     border: 1px solid #000;
     border-radius: 15px;
-    gap: 10px;
     padding: 5px 0;
     margin-bottom: 10px;
   }
 
   &__icon {
     width: 50px;
+    margin-right: 10px;
 
     img {
       width: 100%;
@@ -534,9 +544,7 @@
     &__box {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
     }
-
     &__item {
       p {
         font-size: 14px;
