@@ -10,8 +10,8 @@ const doctors = [
   },
   {
     name: "henry nguyễn",
-    image: `${doctor_kn_2_0_0_url}images/bacsi-small3.jpg?ver=2`,
-    picture: `${doctor_kn_2_0_0_url}images/bacsi3.jpg?ver=2`,
+    image: `${doctor_kn_2_0_0_url}images/bacsi-small3.jpg?ver=3`,
+    picture: `${doctor_kn_2_0_0_url}images/bacsi3.jpg?ver=3`,
     level: "bác sĩ",
     position: "chuyên gia thẩm mỹ gương mặt",
     note: "- Phó khoa Phẫu thuật thẩm mỹ gương mặt BVTM Kangnam. <br> - Trên 12 năm kinh nghiệm.",
@@ -46,12 +46,11 @@ const doctors = [
   },
   {
     name: "Edward Nguyễn",
-    image: "https://benhvienthammykangnam.vn/wp-content/uploads/2024/06/bacsi-small8.jpg",
-    picture: "https://benhvienthammykangnam.vn/wp-content/uploads/2024/06/bacsi.jpg",
+    image: `${doctor_kn_2_0_0_url}images/bacsi-small8.jpg`,
+    picture: `${doctor_kn_2_0_0_url}images/bacsi8.jpg`,
     level: "Bác sĩ",
     position: "Chuyên gia răng hàm mặt",
     note: "- Trưởng khoa Hàm mặt, Bệnh viện Thẩm mỹ Kangnam Sài Gòn. <br> - Cố vấn chuyên môn, bác sĩ phẫu thuật chương trình thực tế 'Hành trình Lột xác' <br/> - 10 năm kinh nghiệm trong lĩnh vực Hàm mặt.",
     link: 'https://benhvienthammykangnam.vn/doi-ngu-bac-si/edward-nguyen/',
   },
-  // Thêm các thông tin của bác sĩ khác vào đây
 ];

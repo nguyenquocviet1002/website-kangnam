@@ -225,6 +225,9 @@
     &__scroll{
         width: 300%;
         display: flex;
+        &.hide{
+            pointer-events: none;
+        }
     }
     &__single{
         position: relative;

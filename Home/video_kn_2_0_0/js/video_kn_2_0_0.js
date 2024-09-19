@@ -329,11 +329,12 @@ const funcDrag = (element) => {
 
     const stopDragging = (e) => {
         mouseDown = false;
+        document.querySelector('.video_kn_2_0_0__scroll').classList.remove('hide');
     }
 
     const move = (e) => {
-        e.preventDefault();
         if (!mouseDown) { return; }
+        document.querySelector('.video_kn_2_0_0__scroll').classList.add('hide');
         const x = e.pageX - slider.offsetLeft;
         const scroll = x - startX;
         slider.scrollLeft = scrollLeft - scroll;
