@@ -1,6 +1,4 @@
 @import "contact_kn_2_0_0";
-@import "popup_regist_1_2_0";
-@import "popup_regist_1_2_1";
 
 .map_kn_2_0_0 {
     font-family: var(--primary-font);
@@ -109,13 +107,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
 
     &__item {
         cursor: pointer;
         position: relative;
-        width: 48%;
+        width: calc(50% - 10px);
+        margin: 0 5px 10px;
         border: 1px solid #000000;
         padding: 15px 20px;
         border-radius: 15px;
@@ -133,7 +131,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
 
         &:nth-child(2n) {
             padding-left: 15px;
@@ -163,8 +160,8 @@
 
     &__action {
         display: flex;
-        gap: 10px;
         align-items: center;
+        justify-content: space-between;
         width: 60px;
 
         &Item {
@@ -182,12 +179,12 @@
     }
 
     &__location {
-        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/location-icon.webp') center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/location-icon.png') center 0 no-repeat;
         background-size: 100%;
     }
 
     &__call {
-        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/phone-icon.webp') center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/phone-icon.png') center 0 no-repeat;
         background-size: 100%;
 
         &.callMB {
@@ -198,7 +195,7 @@
     &__plus {
         position: absolute;
         left: 0;
-        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/plus-icon.webp') center 0 no-repeat;
+        background: url('https://benhvienthammykangnam.vn/wp-content/themes/SCI_Theme_v3/Module/Home/location_kn_2_0_0/images/plus-icon.png') center 0 no-repeat;
         background-size: 100%;
         width: 30px;
         height: 34px;
@@ -272,6 +269,7 @@
 
         &__item {
             width: 100%;
+            margin: 0 0 10px;
         }
 
         &__text {
@@ -286,10 +284,6 @@
     }
 
     @media (max-width: 600px) {
-        &__box {
-            gap: 10px;
-        }
-
         &__call {
             &.callPC {
                 display: none;
@@ -316,13 +310,7 @@
             }
         }
 
-        &__wrapper {
-            gap: 5px;
-        }
-
         &__action {
-            gap: 5px;
-
             a {
                 width: 20px;
                 height: 20px;
