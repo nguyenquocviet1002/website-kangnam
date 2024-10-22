@@ -1,3 +1,5 @@
+@import 'lib';
+
 .screen1 {
   padding: 55px 0 30px;
   &__title {
@@ -101,6 +103,10 @@
     padding-top: 33.4%;
     margin: 0 10px 20px;
     overflow: hidden;
+    display: none;
+    &.active{
+      display: block;
+    }
     img {
       position: absolute;
       top: 0;
